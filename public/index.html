@@ -3,42 +3,213 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Keel — Deal intelligence for B2B sales reps. Meet Sara, your AI deal companion who surfaces the gap between what you think is happening and what actually is." />
     <meta name="theme-color" content="#0B0B0B" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>keel — Clarity That Closes | AI Deal Intelligence for B2B Sales Reps</title>
+    <meta name="description" content="Keel — Deal intelligence for B2B sales reps. Meet Sara, your AI deal companion who surfaces the gap between what you think is happening and what actually is. The CRM says it's closing. Sara has questions." />
+    <meta name="keywords" content="B2B sales, deal intelligence, sales AI, sales coaching, AI deal companion, sales rep tools, pipeline management, account executives, CRM" />
+    <meta name="author" content="keel" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <link rel="canonical" href="https://getkeel.io/" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="msapplication-TileColor" content="#0B0B0B" />
 
     <!-- Open Graph -->
+    <meta property="og:site_name" content="keel" />
     <meta property="og:title" content="keel — Clarity That Closes" />
     <meta property="og:description" content="The CRM says it's closing. Sara has questions. Meet your AI deal companion." />
     <meta property="og:url" content="https://getkeel.io" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://getkeel.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="keel — Clarity That Closes. AI deal intelligence for B2B sales reps." />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="keel — Clarity That Closes" />
     <meta name="twitter:description" content="The CRM says it's closing. Sara has questions." />
+    <meta name="twitter:image" content="https://getkeel.io/og-image.png" />
+    <meta name="twitter:image:alt" content="keel — Clarity That Closes. AI deal intelligence for B2B sales reps." />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Favicon placeholder — replace with real favicon -->
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-
-    <title>keel — Clarity That Closes</title>
+    <!-- JSON-LD: Organization + Product -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://getkeel.io/#organization",
+          "name": "keel",
+          "url": "https://getkeel.io",
+          "logo": "https://getkeel.io/android-chrome-512x512.png",
+          "sameAs": [
+            "https://x.com/getkeel",
+            "https://www.linkedin.com/company/getkeel"
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "keel — Sara",
+          "alternateName": "Sara",
+          "applicationCategory": "BusinessApplication",
+          "applicationSubCategory": "Sales Intelligence Software",
+          "operatingSystem": "Web",
+          "description": "AI deal intelligence for B2B sales reps. Sara is your AI deal companion who runs a 2-minute Socratic debrief after every call, surfacing the gap between what you think is happening and what actually is.",
+          "url": "https://getkeel.io",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free during beta. Founding members lock in a permanent rate after.",
+            "availability": "https://schema.org/PreOrder"
+          },
+          "creator": { "@id": "https://getkeel.io/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Will my manager see what Sara flags?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Sara reports to you, not your org chart. Everything she surfaces goes to you first — and only you, unless you choose to share it."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does the debrief actually take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Two minutes. Sara asks three to four targeted questions right after your call while the context is still fresh."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "My CRM is a mess. Does Keel still work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Sara doesn't rely on your CRM being clean or current. She builds the picture from what you actually say in calls and debriefs."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is this different from Gong or Chorus?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Gong and Chorus record and analyze calls for managers. Sara works for you. She doesn't score your performance or build reports for your VP — she asks the questions that surface what you're missing before it becomes a loss."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
     <style>
       * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { background: #0B0B0B; color: #F5F5F5; }
       body {
-        background: #0B0B0B;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
       #root { min-height: 100vh; }
+
+      /* SEO fallback content — visible only when JS is disabled */
+      .seo-fallback {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 80px 24px;
+        color: #F5F5F5;
+      }
+      .seo-fallback h1 {
+        font-size: 48px;
+        line-height: 1.05;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      .seo-fallback h1 .accent { color: #FF5A1F; }
+      .seo-fallback .lede {
+        font-style: italic;
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 24px;
+      }
+      .seo-fallback p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #BBB;
+        margin-bottom: 16px;
+      }
+      .seo-fallback a.cta {
+        display: inline-block;
+        margin-top: 24px;
+        padding: 14px 28px;
+        background: #FF5A1F;
+        color: #000;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 0.01em;
+      }
+      .seo-fallback .meta {
+        margin-top: 40px;
+        padding-top: 24px;
+        border-top: 1px solid #1A1A1A;
+        font-size: 13px;
+        color: #555;
+      }
+
+      /* Hide SEO-only H1 from sighted users but keep it accessible to crawlers/screen readers */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
     </style>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <!-- SEO H1: visible to crawlers and screen readers, hidden from sighted users
+         (the React app renders the same headline visually) -->
+    <h1 class="sr-only">keel — Clarity That Closes. AI deal intelligence for B2B sales reps. Meet Sara, your AI deal companion.</h1>
+
+    <noscript>
+      <main class="seo-fallback">
+        <h1>Clarity <span class="accent">That Closes.</span></h1>
+        <p class="lede">"The CRM says it's closing. Sara has questions."</p>
+        <p>Meet Sara — your AI deal companion who surfaces the gap between what you think is happening and what actually is, before it costs you the deal.</p>
+        <p>Keel runs a 2-minute Socratic debrief after every sales call. It connects to your calls, emails, and CRM, asks the questions your brain skipped, and flags drift before it becomes a loss you can't recover.</p>
+        <p>Built for mid-market B2B Account Executives carrying 8–20 active deals. Sara reports to you, not your manager.</p>
+        <a class="cta" href="mailto:hello@getkeel.io?subject=Founding%20Cohort%20Application">Join the founding cohort waitlist</a>
+        <p class="meta">Beta opens August 2026. Founding access is free during the beta, with a permanent founding-member rate locked in after. <a href="https://getkeel.io/sitemap.xml" style="color:#888;">Sitemap</a> · <a href="https://getkeel.io/llms.txt" style="color:#888;">llms.txt</a> · <a href="https://getkeel.io/robots.txt" style="color:#888;">robots.txt</a></p>
+      </main>
+    </noscript>
+
+    <main id="root" role="main"></main>
   </body>
 </html>
