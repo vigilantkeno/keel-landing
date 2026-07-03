@@ -1,0 +1,56 @@
+# keel
+
+> AI deal intelligence for B2B sales reps. Sara is your AI deal companion who surfaces the gap between what you think is happening and what actually is — before it costs you the deal.
+
+## What this is
+
+keel is an AI-powered deal-intelligence tool for quota-carrying B2B Account Executives. It connects to your calls, emails, and CRM, then runs a 2-minute Socratic debrief after every call asking the questions your brain skipped.
+
+Founded 2026. Beta opens August 2026.
+
+## Key facts
+
+- Product: Sara — an AI deal companion for B2B AEs
+- Pricing: Free during beta. Founding members lock in a permanent rate after.
+- Stage: Pre-launch, accepting founding cohort applications
+- Target user: Mid-market B2B AEs carrying 8–20 active deals
+- Differentiator: Rep-first, not manager-first. Sara reports to you, not your org chart.
+
+## How Sara works
+
+1. Sara listens — connects to calls, emails, and CRM
+2. Sara asks — runs a 2-minute Socratic debrief after every call
+3. Sara tells you first — flags drift before it costs you the deal
+
+## Use cases
+
+- Catching silent deal drift before quarter-end surprises
+- Spotting a champion who's gone quiet before the deal collapses
+- Getting an objective read on budget re-opens and competitor activity
+- 2-minute post-call debrief without filling out CRM fields
+
+## Differentiators vs competitors
+
+- vs Gong / Chorus: Sara works for the rep, not the manager. No performance scoring, no manager reports.
+- vs Conversation Intelligence tools: Sara asks Socratic questions, doesn't just transcribe.
+- vs CRM hygiene tools: Works even when your CRM is a mess. Builds the picture from what you say.
+
+## Common questions
+
+- Will my manager see what Sara flags? — No. Sara reports to you first.
+- How long is the debrief? — Two minutes. Three to four targeted questions.
+- Does Sara work with a messy CRM? — Yes. That's the environment she was designed for.
+- Do I need IT/manager approval to sign up? — No. Individual sign-up, no procurement.
+
+## Links
+
+- Main site: https://getkeel.io
+- Founding cohort waitlist: https://getkeel.io/#waitlist
+- Contact: hello@getkeel.io
+- Twitter / X: https://x.com/getkeel
+- LinkedIn: https://www.linkedin.com/company/getkeel
+
+## Optional
+
+- [Privacy policy](https://getkeel.io/privacy)
+- [Terms](https://getkeel.io/terms)
