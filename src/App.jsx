@@ -2,10 +2,10 @@ import { useState, useEffect, useRef, useCallback } from "react";
 
 /* ─── CONFIG ─────────────────────────────────────────────────────────────── */
 const FORMSPREE_URL = "https://formspree.io/f/xpqogzeb";
-const BASE_DATE     = new Date("2026-04-10T00:00:00"); // UPDATE: set to today when you deploy
+const BASE_DATE     = new Date("2026-07-03T00:00:00"); // UPDATE: set to today when you deploy
 const BASE_COUNT    = 8;    // UPDATE: set to your real Formspree submission count
 const DAILY_RATE    = 0;    // UPDATE: set to ~0.5-1.0 once you see consistent daily signups
-const BETA_OPENS    = "June 2026";
+const BETA_OPENS    = "August 2026";
 const SHARE_URL     = "https://getkeel.io";
 
 function getLiveCount() {
@@ -514,7 +514,7 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
 function SuccessView({ number, mobile, onClose }) {
   const shareText = `Just applied for founding cohort access to @getkeel — AI deal intelligence built for reps, not managers. ${SHARE_URL}`;
   const calTitle  = encodeURIComponent("Keel Beta Launch — Founding Access");
-  const calDate   = "20260601";
+  const calDate   = "20260818";
   const calURL    = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&dates=${calDate}/${calDate}&details=${encodeURIComponent(`You applied for founding cohort access. ${SHARE_URL}`)}`;
 
   return (
