@@ -10,6 +10,7 @@ const BASE_COUNT    = 8;    // UPDATE: set to your real Formspree submission cou
 const DAILY_RATE    = 0;    // UPDATE: set to ~0.5-1.0 once you see consistent daily signups
 const BETA_OPENS    = "August 2026";
 const SHARE_URL     = "https://getkeel.io";
+const SHOW_LIVE_COUNTER = false; // Re-enable when count exceeds 50
 
 function getLiveCount() {
   const days = (Date.now() - BASE_DATE.getTime()) / 86400000;
@@ -21,6 +22,7 @@ const O   = "#FF5A1F";
 const OL  = "#FF7A3D";
 const BK  = "#0B0B0B";
 const BK2 = "#0F0F0F";
+const MICRO = "#8a8a8a"; // functional microlabels — WCAG AA on near-black
 
 const F = {
   sans: "'Plus Jakarta Sans',sans-serif",
@@ -138,22 +140,10 @@ function LiveCounter({ target, style = {} }) {
 }
 
 /* ─── SARA DEAL CARD ─────────────────────────────────────────────────────── */
-function SaraDealCard({ mobile, revealed, onReveal }) {
-  const [alertVisible, setAlertVisible] = useState(false);
-  useEffect(() => {
-    if (revealed) {
-      const t = setTimeout(() => setAlertVisible(true), 900);
-      return () => clearTimeout(t);
-    } else {
-      setAlertVisible(false);
-    }
-  }, [revealed]);
-
+function SaraDealCard({ mobile }) {
   return (
-    <div onClick={!revealed ? onReveal : undefined}
-      style={{ background:"#0D0D0D", border:`1px solid #222`,
-        overflow:"hidden", boxShadow:"0 32px 72px rgba(0,0,0,0.65)",
-        cursor: revealed?"default":"pointer", userSelect:"none" }}>
+    <div style={{ background:"#0D0D0D", border:"1px solid #222",
+      boxShadow:"0 32px 72px rgba(0,0,0,0.65)" }}>
 
       <div style={{ background:"#141414", borderBottom:"1px solid #222",
         padding:`${mobile?9:10}px 16px`,
@@ -161,7 +151,7 @@ function SaraDealCard({ mobile, revealed, onReveal }) {
         <div style={{ display:"flex", alignItems:"center", gap:7 }}>
           <Mark size={12} variant="dim"/>
           <span style={{ fontFamily:F.mono, fontSize:9,
-            color:"#3A3A3A", letterSpacing:"0.16em" }}>
+            color:MICRO, letterSpacing:"0.16em" }}>
             SARA SESSION · DEAL DEBRIEF
           </span>
         </div>
@@ -173,83 +163,55 @@ function SaraDealCard({ mobile, revealed, onReveal }) {
 
       <div style={{ padding:`${mobile?14:18}px 16px 12px`,
         borderBottom:"1px solid #1A1A1A",
-        display:"flex", justifyContent:"space-between" }}>
+        display:"flex", justifyContent:"space-between", gap:12 }}>
         <div>
           <div style={{ fontFamily:F.sans, fontWeight:700,
             fontSize: mobile?15:16, color:"#F2F2F2", marginBottom:5 }}>
             Workday Enterprise
           </div>
-          <div style={{ fontFamily:F.mono, fontSize: mobile?8:9,
-            color:"#444", letterSpacing:"0.1em" }}>
+          <div style={{ fontFamily:F.mono, fontSize: mobile?9:10,
+            color:MICRO, letterSpacing:"0.1em" }}>
             NEGOTIATION · $148K ARR · DAY 91
           </div>
         </div>
-        <div style={{ fontFamily:F.mono, fontSize:9, color:"#333",
-          letterSpacing:"0.1em", lineHeight:1.5, textAlign:"right" }}>
+        <div style={{ fontFamily:F.mono, fontSize:9, color:MICRO,
+          letterSpacing:"0.1em", lineHeight:1.5, textAlign:"right", flexShrink:0 }}>
           Q2 CLOSE<br/>TARGET
         </div>
       </div>
 
-      <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr",
-        position:"relative" }}>
+      <div style={{ display:"grid",
+        gridTemplateColumns: mobile?"1fr":"1fr 1fr" }}>
         <div style={{ padding:`${mobile?16:20}px 14px`,
-          borderRight:"1px solid #1A1A1A",
-          opacity: revealed?0.22:1, transition:"opacity 0.9s ease" }}>
-          <div style={{ fontFamily:F.mono, fontSize:9, color:"#555",
+          borderRight: mobile?"none":"1px solid #1A1A1A",
+          borderBottom: mobile?"1px solid #1A1A1A":"none" }}>
+          <div style={{ fontFamily:F.mono, fontSize:9, color:MICRO,
             letterSpacing:"0.14em", marginBottom:14 }}>YOUR PICTURE</div>
           {["On track.", "Champion engaged.", "Closing Q2."].map(t => (
             <div key={t} style={{ fontFamily:F.sans, fontSize: mobile?13:14,
-              color:"#888", lineHeight:1.7, marginBottom:2 }}>{t}</div>
+              color:"#AAA", lineHeight:1.75, marginBottom:4 }}>{t}</div>
           ))}
         </div>
         <div style={{ padding:`${mobile?16:20}px 14px`,
-          background: revealed?"#180C05":"transparent",
-          opacity: revealed?1:0,
-          transform: revealed?"translateY(0)":"translateY(10px)",
-          transition:"all 0.75s ease" }}>
+          background:"#180C05",
+          borderLeft: mobile?`3px solid ${O}`:"none" }}>
           <div style={{ fontFamily:F.mono, fontSize:9, color:O,
-            letterSpacing:"0.14em", marginBottom:14 }}>SARA'S DEBRIEF</div>
-          {[["CHAMPION","Silent 12 days"],["BUDGET","Reopened"],["COMPETITOR","Active"]].map(([k,v]) => (
-            <div key={k} style={{ marginBottom:10 }}>
-              <div style={{ fontFamily:F.mono, fontSize:8, color:"#3D3D3D",
-                letterSpacing:"0.1em", marginBottom:2 }}>{k}</div>
-              <div style={{ fontFamily:F.sans, fontWeight:600,
-                fontSize: mobile?12:13, color:OL }}>{v}</div>
-            </div>
+            letterSpacing:"0.14em", marginBottom:14 }}>WHAT SARA SEES</div>
+          {[
+            "No direct CFO contact in 19 days.",
+            "Champion hasn't replied since pricing call.",
+            "Close date slipped twice.",
+          ].map(t => (
+            <div key={t} style={{ fontFamily:F.sans, fontSize: mobile?13:14,
+              color:"#CCC", lineHeight:1.75, marginBottom:4 }}>{t}</div>
           ))}
         </div>
-        {!revealed && (
-          <div style={{ position:"absolute", inset:0, display:"flex",
-            alignItems:"center", justifyContent:"center",
-            pointerEvents:"none", animation:"fadeUp 0.4s ease 1.5s both" }}>
-            <div style={{ background:"rgba(11,11,11,0.92)",
-              border:`1px solid ${O}55`, padding:"10px 18px",
-              display:"flex", alignItems:"center", gap:8 }}>
-              <span style={{ fontSize:14 }}>👆</span>
-              <span style={{ fontFamily:F.mono, fontSize:9,
-                color:O, letterSpacing:"0.14em" }}>TAP TO SEE WHAT SARA SEES</span>
-            </div>
-          </div>
-        )}
       </div>
 
-      <div style={{ padding:`${mobile?12:14}px 16px`,
-        background: alertVisible?"#160703":"#0D0D0D",
-        borderTop:"1px solid #1A1A1A",
-        opacity: alertVisible?1:0,
-        transform: alertVisible?"translateY(0)":"translateY(8px)",
-        transition:"all 0.65s ease" }}>
-        <div style={{ fontFamily:F.mono, fontSize:9, color:O,
-          letterSpacing:"0.16em", marginBottom:6 }}>⚠ SARA ALERT · ACT NOW</div>
-        <div style={{ fontFamily:F.sans, fontSize: mobile?13:13,
-          color:"#777", lineHeight:1.65 }}>
-          No champion contact in 12 days. Budget back under review.
-          Sara flagged this 9 days ago. You're just seeing it now.
-        </div>
-      </div>
-      <div style={{ padding:"9px 16px", background:"#0A0A0A" }}>
-        <span style={{ fontFamily:F.mono, fontSize:8,
-          color:"#252525", letterSpacing:"0.12em" }}>
+      <div style={{ padding:"10px 16px", background:"#0A0A0A",
+        borderTop:"1px solid #1A1A1A" }}>
+        <span style={{ fontFamily:F.mono, fontSize:9,
+          color:MICRO, letterSpacing:"0.12em", lineHeight:1.5 }}>
           SARA SURFACES THE GAP BETWEEN ASSUMED AND ACTUAL
         </span>
       </div>
@@ -271,7 +233,7 @@ function Field({ label, children }) {
   return (
     <div>
       <div style={{ fontFamily:"'DM Mono',monospace", fontSize:9,
-        color:"#555", letterSpacing:"0.14em", marginBottom:7 }}>
+        color:MICRO, letterSpacing:"0.14em", marginBottom:7 }}>
         {label}
       </div>
       {children}
@@ -356,38 +318,55 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
           />
           <button
             onClick={() => step1Valid && setStep(2)}
-            onMouseEnter={e => { if(step1Valid) e.currentTarget.style.background=OL; }}
-            onMouseLeave={e => { e.currentTarget.style.background=step1Valid?O:"#3A2010"; }}
-            style={{ background: step1Valid?O:"#3A2010",
-              color: step1Valid?"#000":"#665544",
-              border:"none", padding: mobile?"16px":"16px 28px",
-              fontFamily:F.sans, fontWeight:700, fontSize:15,
-              cursor: step1Valid?"pointer":"default",
-              transition:"all 0.15s", whiteSpace:"nowrap",
-              width: mobile?"100%":undefined,
-              animation: step1Valid?"orangeGlow 3s ease 2.5s infinite":"none" }}>
+            onMouseEnter={e => {
+              if (step1Valid) e.currentTarget.style.background = OL;
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = step1Valid ? O : "transparent";
+            }}
+            style={{
+              background: step1Valid ? O : "transparent",
+              color: step1Valid ? "#000" : O,
+              border: step1Valid ? "none" : `1px solid ${O}`,
+              padding: mobile ? "16px" : "16px 28px",
+              fontFamily: F.sans, fontWeight: 700, fontSize: 15,
+              cursor: step1Valid ? "pointer" : "default",
+              transition: "all 0.15s", whiteSpace: "nowrap",
+              width: mobile ? "100%" : undefined,
+              animation: step1Valid ? "orangeGlow 3s ease 2.5s infinite" : "none",
+            }}>
             Join Waitlist
           </button>
         </div>
-        {/* Counter row */}
-        <div style={{ display:"flex", alignItems:"center", gap:14, flexWrap:"wrap",
-          justifyContent: center&&!mobile?"center":undefined }}>
-          <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-            <div style={{ display:"flex", gap:3 }}>
-              {[0,1,2].map(i => (
-                <div key={i} style={{ width:6, height:6, borderRadius:"50%",
-                  background: i===0?O:"#2A2A2A",
-                  animation: i===0?"blink 1.8s ease infinite":"none" }}/>
-              ))}
+        <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
+          <div style={{ display:"flex", alignItems:"center", gap:14, flexWrap:"wrap",
+            justifyContent: center&&!mobile?"center":undefined }}>
+            <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+              <div style={{ display:"flex", gap:3 }}>
+                {[0,1,2].map(i => (
+                  <div key={i} style={{ width:6, height:6, borderRadius:"50%",
+                    background: i===0?O:"#2A2A2A",
+                    animation: i===0?"blink 1.8s ease infinite":"none" }}/>
+                ))}
+              </div>
+              <span style={{ fontFamily:F.mono, fontSize:10,
+                color:MICRO, letterSpacing:"0.12em" }}>
+                {SHOW_LIVE_COUNTER ? (
+                  <><LiveCounter target={liveCount}/> reps on the waitlist</>
+                ) : (
+                  "Founding cohort capped at 25 seats."
+                )}
+              </span>
             </div>
-            <span style={{ fontFamily:F.mono, fontSize:10,
-              color:"#666", letterSpacing:"0.12em" }}>
-              <LiveCounter target={liveCount}/> reps on the waitlist
+            <span style={{ fontFamily:F.mono, fontSize:9,
+              color:MICRO, letterSpacing:"0.12em" }}>
+              NO SPAM · NO CREDIT CARD
             </span>
           </div>
           <span style={{ fontFamily:F.mono, fontSize:9,
-            color:"#303030", letterSpacing:"0.12em" }}>
-            NO SPAM · NO CREDIT CARD
+            color:MICRO, letterSpacing:"0.12em",
+            textAlign: center&&!mobile?"center":undefined }}>
+            We review applications weekly. You'll hear from a human.
           </span>
         </div>
       </div>
@@ -420,10 +399,10 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
             <span style={{ color:"#888" }}>{email}</span>
             {" "}·{" "}
             <button onClick={() => setStep(1)}
-              style={{ background:"none", border:"none", color:"#555",
+              style={{ background:"none", border:"none", color:MICRO,
                 fontFamily:F.mono, fontSize:9, letterSpacing:"0.1em",
                 cursor:"pointer", textDecoration:"underline",
-                textDecorationColor:"#333" }}>
+                textDecorationColor:"#555" }}>
               change
             </button>
           </div>
@@ -494,10 +473,12 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
         onClick={submitAll}
         disabled={!step2Valid || sending}
         onMouseEnter={e => { if(step2Valid&&!sending) e.currentTarget.style.background=OL; }}
-        onMouseLeave={e => { e.currentTarget.style.background=step2Valid?O:"#3A2010"; }}
-        style={{ width:"100%", background: step2Valid?O:"#3A2010",
-          color: step2Valid?"#000":"#665544",
-          border:"none", padding:"16px",
+        onMouseLeave={e => { e.currentTarget.style.background=step2Valid?O:"transparent"; }}
+        style={{ width:"100%",
+          background: step2Valid ? O : "transparent",
+          color: step2Valid ? "#000" : O,
+          border: step2Valid ? "none" : `1px solid ${O}`,
+          padding:"16px",
           fontFamily:F.sans, fontWeight:700, fontSize:15,
           cursor: step2Valid&&!sending?"pointer":"default",
           transition:"all 0.15s",
@@ -506,8 +487,12 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
       </button>
 
       <div style={{ marginTop:12, fontFamily:F.mono, fontSize:9,
-        color:"#2A2A2A", letterSpacing:"0.12em", textAlign:"center" }}>
+        color:MICRO, letterSpacing:"0.12em", textAlign:"center" }}>
         WE REVIEW EVERY APPLICATION · HELPS US PRIORITIZE YOUR ACCESS
+      </div>
+      <div style={{ marginTop:8, fontFamily:F.mono, fontSize:9,
+        color:MICRO, letterSpacing:"0.12em", textAlign:"center" }}>
+        We review applications weekly. You'll hear from a human.
       </div>
     </div>
   );
@@ -707,7 +692,7 @@ function TrustPills({ center }) {
         <div key={l} style={{ display:"inline-flex", alignItems:"center", gap:6,
           background:"#111", border:"1px solid #222", padding:"6px 12px" }}>
           <span style={{ fontSize:11 }}>{i}</span>
-          <span style={{ fontFamily:F.mono, fontSize:8, color:"#444",
+          <span style={{ fontFamily:F.mono, fontSize:8, color:MICRO,
             letterSpacing:"0.14em" }}>{l}</span>
         </div>
       ))}
@@ -735,10 +720,9 @@ function LandingPage() {
   const m = w < 768;
 
   const [liveCount,    setLiveCount]    = useState(getLiveCount);
-  const [cardRevealed, setCardRevealed] = useState(false);
   const [successNum,   setSuccessNum]   = useState(null);
   const [wIdx,         setWIdx]         = useState(0);
-  const [openFaq,      setOpenFaq]      = useState(null);
+  const [openFaq,      setOpenFaq]      = useState(0);
 
   const HW = ["Clarity","That","Closes."];
   useEffect(() => {
@@ -821,13 +805,14 @@ function LandingPage() {
         <div style={{ display:"flex", alignItems:"center", gap: m?10:20 }}>
           {!m && (
             <span style={{ fontFamily:F.mono, fontSize:9,
-              color:"#333", letterSpacing:"0.18em" }}>getkeel.io</span>
+              color:MICRO, letterSpacing:"0.18em" }}>getkeel.io</span>
           )}
           <button
             onClick={() => document.getElementById("cta-email")?.focus()}
-            onMouseEnter={e => e.currentTarget.style.background=OL}
-            onMouseLeave={e => e.currentTarget.style.background=O}
-            style={{ background:O, color:"#000", border:"none",
+            onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,90,31,0.12)"; }}
+            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; }}
+            style={{ background:"transparent", color:O,
+              border:`1px solid ${O}`,
               padding: m?"10px 16px":"11px 22px", fontFamily:F.sans,
               fontWeight:700, fontSize:13, cursor:"pointer",
               transition:"all 0.15s", letterSpacing:"0.01em",
@@ -884,10 +869,10 @@ function LandingPage() {
             <div style={{ marginBottom: m?28:36,
               padding:"13px 18px", borderLeft:`2px solid #242424`,
               animation:"fadeUp 0.4s ease 1.0s both" }}>
-              <div style={{ fontFamily:F.mono, fontSize:9, color:"#444",
+              <div style={{ fontFamily:F.mono, fontSize:9, color:MICRO,
                 letterSpacing:"0.14em", marginBottom:6 }}>BUILT FOR</div>
               <div style={{ fontFamily:F.sans, fontSize: m?13:14,
-                color:"#555", lineHeight:1.7 }}>
+                color:MICRO, lineHeight:1.7 }}>
                 Mid-market B2B AEs carrying 8–20 active deals.
                 If you've ever confidently sandbagged a deal that was already dead,{" "}
                 <span style={{ color:"#AAA", fontWeight:600 }}>Sara is for you.</span>
@@ -900,14 +885,11 @@ function LandingPage() {
           </div>
 
           <div style={{ animation:"fadeUp 0.5s ease 0.8s both" }}>
-            <SaraDealCard mobile={m} revealed={cardRevealed}
-              onReveal={() => setCardRevealed(true)}/>
+            <SaraDealCard mobile={m}/>
             <div style={{ marginTop:10, fontFamily:F.mono,
-              fontSize: m?8:9, color:"#272727",
+              fontSize: m?8:9, color:MICRO,
               letterSpacing:"0.13em", textAlign:"right" }}>
-              {cardRevealed
-                ? "SARA SURFACED THIS BEFORE THE REP NOTICED"
-                : "TAP THE CARD TO SEE WHAT SARA SEES"}
+              THE GAP BETWEEN ASSUMED AND ACTUAL — VISIBLE ON EVERY DEAL
             </div>
           </div>
         </div>
@@ -919,18 +901,18 @@ function LandingPage() {
         padding: m?"52px 20px":"80px 48px" }}>
         <div style={{ maxWidth:"1160px", margin:"0 auto" }}>
           <div className={`si${painVis?" v":""}`}
-            style={{ fontFamily:F.mono, fontSize: m?9:10, color:"#555",
+            style={{ fontFamily:F.mono, fontSize: m?9:10, color:MICRO,
               letterSpacing:"0.22em", marginBottom: m?40:52 }}>
             THE PROBLEM WE'RE SOLVING
           </div>
           <div style={{ display:"flex", flexDirection: m?"column":"row", gap: m?0:3 }}>
             {[
-              { n:"12",  h:"Active deals per rep",
+              { n:"12",  h:"The typical AE carries 12 active deals",
                 b:"You have real context on maybe 4. The rest run on memory, optimism, and assumption.", d:0 },
-              { n:"3–4", h:"Deals lost per quarter to silent drift",
-                b:"Not to better competitors. Lost because nobody asked the right question at the right moment.", d:0.1 },
-              { n:"11",  h:"Days before the rep notices",
-                b:"By day 11 the deal has already shifted. Sara would have flagged it on day 2.", d:0.2 },
+              { n:"—", h:"Deals lost to silent drift — not competitors",
+                b:"Not because someone out-sold you. Lost because nobody asked the right question at the right moment.", d:0.1 },
+              { n:"11+", h:"Days before many reps notice drift",
+                b:"By then the deal has already shifted. Sara would have flagged it on day 2.", d:0.2 },
             ].map(({ n, h, b, d }) => (
               <div key={n} className={`sc${painVis?" v":""}`}
                 style={{ flex:1, padding: m?"24px 0":"32px 28px",
@@ -946,7 +928,7 @@ function LandingPage() {
                 <div style={{ fontFamily:F.sans, fontWeight:700,
                   fontSize:15, color:"#AAA", marginBottom:10 }}>{h}</div>
                 <div style={{ fontFamily:F.sans, fontSize:14,
-                  color:"#555", lineHeight:1.75 }}>{b}</div>
+                  color:MICRO, lineHeight:1.75 }}>{b}</div>
               </div>
             ))}
           </div>
@@ -957,7 +939,7 @@ function LandingPage() {
       <section ref={howRef} style={{ padding: m?"52px 20px":"80px 48px" }}>
         <div style={{ maxWidth:"1160px", margin:"0 auto" }}>
           <div className={`si${howVis?" v":""}`}
-            style={{ fontFamily:F.mono, fontSize: m?9:10, color:"#555",
+            style={{ fontFamily:F.mono, fontSize: m?9:10, color:MICRO,
               letterSpacing:"0.22em", marginBottom:12 }}>HOW SARA WORKS</div>
           <h2 className={`si${howVis?" v":""}`}
             style={{ fontFamily:F.cond, fontWeight:900, fontSize: m?40:54,
@@ -1009,7 +991,7 @@ function LandingPage() {
         padding: m?"52px 20px":"80px 48px" }}>
         <div style={{ maxWidth:"1160px", margin:"0 auto" }}>
           <div className={`si${saraVis?" v":""}`}
-            style={{ fontFamily:F.mono, fontSize: m?9:10, color:"#555",
+            style={{ fontFamily:F.mono, fontSize: m?9:10, color:MICRO,
               letterSpacing:"0.22em", marginBottom:12 }}>COMING SOON</div>
           <div style={{ display: m?"flex":"grid",
             flexDirection: m?"column":undefined,
@@ -1034,7 +1016,7 @@ function LandingPage() {
                   background:"#130A04", border:`1px solid ${O}33`,
                   padding:"10px 16px", transitionDelay:"0.22s" }}>
                 <div style={{ width:7, height:7, borderRadius:"50%", background:"#555" }}/>
-                <span style={{ fontFamily:F.mono, fontSize:9, color:"#555",
+                <span style={{ fontFamily:F.mono, fontSize:9, color:MICRO,
                   letterSpacing:"0.16em" }}>
                   VOICE DEBRIEFS · {BETA_OPENS.toUpperCase()} · FOUNDING ONLY
                 </span>
@@ -1043,16 +1025,22 @@ function LandingPage() {
             <div className={`si${saraVis?" v":""}`} style={{ transitionDelay:"0.2s" }}>
               <div style={{ background:"#0D0D0D", border:"1px solid #1E1E1E",
                 padding: m?"20px 18px":"28px 24px" }}>
-                <div style={{ fontFamily:F.mono, fontSize:9, color:"#333",
-                  letterSpacing:"0.16em", marginBottom:20 }}>
+                <div style={{ fontFamily:F.mono, fontSize:9, color:MICRO,
+                  letterSpacing:"0.16em", marginBottom:16 }}>
                   SARA · VOICE DEBRIEF · PREVIEW
                 </div>
+                <div style={{ fontFamily:F.sans, fontSize: m?16:18, color:"#CCC",
+                  fontStyle:"italic", lineHeight:1.65, marginBottom:16,
+                  borderLeft:`3px solid ${O}`, paddingLeft:16 }}>
+                  "You mentioned the CFO was supportive — when was the last
+                  time you heard that directly from her, not through your champion?"
+                </div>
                 <div style={{ display:"flex", gap:3, alignItems:"center",
-                  height:40, marginBottom:20 }}>
-                  {Array.from({ length: m?24:32 }, (_,i) => {
+                  height:22, marginBottom:12, opacity:0.55 }}>
+                  {Array.from({ length: m?20:28 }, (_,i) => {
                     const h = [0.4,0.7,1,0.6,0.9,0.5,0.8,0.3,0.9,0.6,
                                1,0.4,0.7,0.5,0.9,0.3,0.8,0.6,1,0.5,
-                               0.7,0.4,0.9,0.6,0.8,0.3,1,0.5,0.7,0.4,0.9,0.6][i%32];
+                               0.7,0.4,0.9,0.6,0.8,0.3,1,0.5][i%28];
                     return (
                       <div key={i} style={{ flex:1, background:"#252525",
                         height:`${h*100}%`, minWidth:2,
@@ -1060,12 +1048,7 @@ function LandingPage() {
                     );
                   })}
                 </div>
-                <div style={{ fontFamily:F.sans, fontSize: m?14:14, color:"#555",
-                  fontStyle:"italic", lineHeight:1.7, marginBottom:16 }}>
-                  "You mentioned the CFO was supportive — when was the last
-                  time you heard that directly from her, not through your champion?"
-                </div>
-                <div style={{ fontFamily:F.mono, fontSize:9, color:"#2A2A2A",
+                <div style={{ fontFamily:F.mono, fontSize:9, color:"#3D3D3D",
                   letterSpacing:"0.12em" }}>SARA · 00:47 OF 2:00</div>
               </div>
             </div>
@@ -1077,14 +1060,16 @@ function LandingPage() {
       <section ref={perksRef} style={{ padding: m?"52px 20px":"80px 48px" }}>
         <div style={{ maxWidth:"1160px", margin:"0 auto" }}>
           <div className={`si${perksVis?" v":""}`}
-            style={{ fontFamily:F.mono, fontSize: m?9:10, color:"#555",
+            style={{ fontFamily:F.mono, fontSize: m?9:10, color:MICRO,
               letterSpacing:"0.22em", marginBottom:12 }}>FOUNDING COHORT</div>
           <h2 className={`si${perksVis?" v":""}`}
             style={{ fontFamily:F.cond, fontWeight:900, fontSize: m?38:50,
               color:"#FFF", letterSpacing:"-0.01em", textTransform:"uppercase",
               marginBottom: m?12:16, transitionDelay:"0.07s" }}>
             You're not a beta tester.<br/>
-            <span style={{ color:O }}>You're a co-builder.</span>
+            <span style={{ borderBottom:`3px solid ${O}`, paddingBottom:4 }}>
+              You're a co-builder.
+            </span>
           </h2>
           <p className={`si${perksVis?" v":""}`}
             style={{ fontFamily:F.sans, fontSize: m?15:16, color:"#666",
@@ -1102,21 +1087,30 @@ function LandingPage() {
               { n:"02", h:"Free for life",
                 b:"Founding reps lock in permanent free access. No credit card, no trial, no bait and switch.", d:0.1 },
               { n:"03", h:"Rep-first. Always.",
-                b:"Sara reports to you, not your manager. Everything she surfaces goes to you first. Full stop.", d:0.2 },
-            ].map(({ n, h, b, d }) => (
+                b:"Sara reports to you, not your manager. Everything she surfaces goes to you first.",
+                bold:"Your manager never sees what Sara flags. Ever.", d:0.2 },
+            ].map(({ n, h, b, bold, d }) => (
               <div key={n} className={`sc${perksVis?" v":""}`}
                 style={{ padding: m?"20px 0 20px 20px":"32px 28px",
                   background: m?"transparent":BK2,
                   border: m?"none":"1px solid #1E1E1E",
                   borderLeft: m?`2px solid #252525`:undefined,
                   marginBottom: m?4:0, transitionDelay:`${d}s` }}>
-                <div style={{ fontFamily:F.mono, fontSize:10, color:"#444",
+                <div style={{ fontFamily:F.mono, fontSize:10, color:MICRO,
                   letterSpacing:"0.2em", marginBottom:16 }}>{n}</div>
                 <div style={{ fontFamily:F.cond, fontWeight:800,
                   fontSize: m?22:24, color:"#FFF", letterSpacing:"-0.01em",
                   textTransform:"uppercase", marginBottom:12 }}>{h}</div>
                 <div style={{ fontFamily:F.sans, fontSize:14,
-                  color:"#666", lineHeight:1.75 }}>{b}</div>
+                  color:"#666", lineHeight:1.75 }}>
+                  {b}
+                  {bold && (
+                    <>
+                      {" "}
+                      <span style={{ fontWeight:700, color:"#AAA" }}>{bold}</span>
+                    </>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -1129,7 +1123,7 @@ function LandingPage() {
         padding: m?"52px 20px":"80px 48px" }}>
         <div style={{ maxWidth:"680px", margin:"0 auto" }}>
           <div className={`si${faqVis?" v":""}`}
-            style={{ fontFamily:F.mono, fontSize: m?9:10, color:"#555",
+            style={{ fontFamily:F.mono, fontSize: m?9:10, color:MICRO,
               letterSpacing:"0.22em", marginBottom:12 }}>FAQ</div>
           <h2 className={`si${faqVis?" v":""}`}
             style={{ fontFamily:F.cond, fontWeight:900, fontSize: m?36:46,
@@ -1150,7 +1144,7 @@ function LandingPage() {
                   {f.q}
                 </span>
                 <span style={{ fontFamily:F.mono, fontSize:20,
-                  color: openFaq===i?O:"#333", flexShrink:0,
+                  color: openFaq===i?O:MICRO, flexShrink:0,
                   display:"inline-block",
                   transform: openFaq===i?"rotate(45deg)":"none",
                   transition:"all 0.22s" }}>+</span>
@@ -1159,7 +1153,7 @@ function LandingPage() {
                 maxHeight: openFaq===i?"400px":"0",
                 transition:"max-height 0.35s ease",
                 paddingBottom: openFaq===i?20:0 }}>
-                <div style={{ fontFamily:F.sans, fontSize: m?14:15, color:"#555",
+                <div style={{ fontFamily:F.sans, fontSize: m?14:15, color:MICRO,
                   lineHeight:1.75, paddingRight: m?0:40 }}>{f.a}</div>
               </div>
             </div>
@@ -1173,7 +1167,7 @@ function LandingPage() {
           textAlign: m?undefined:"center" }}>
         <div style={{ maxWidth: m?"100%":600, margin:"0 auto" }}>
           <div className={`si${ctaVis?" v":""}`}
-            style={{ fontFamily:F.mono, fontSize: m?9:10, color:"#444",
+            style={{ fontFamily:F.mono, fontSize: m?9:10, color:MICRO,
               letterSpacing:"0.22em", marginBottom:24 }}>
             THE DEAL YOU THINK YOU'RE WINNING
           </div>
