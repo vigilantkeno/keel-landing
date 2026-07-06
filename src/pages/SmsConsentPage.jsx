@@ -66,8 +66,8 @@ export default function SmsConsentPage() {
         </h1>
         <p style={{ fontFamily: F.sans, fontSize: mobile ? 14 : 15, color: MICRO,
           lineHeight: 1.75, marginBottom: 32 }}>
-          This is the SMS opt-in disclosure shown to Keel users during authenticated
-          onboarding before SMS messaging is enabled.
+          This public page is provided for 10DLC review. Actual SMS consent is collected
+          inside the authenticated Keel application before SMS messaging is enabled.
         </p>
 
         <div style={{ background: BK2, border: "1px solid #222",
@@ -106,12 +106,17 @@ export default function SmsConsentPage() {
                 accentColor: O, cursor: "not-allowed" }} />
             <span style={{ fontFamily: F.sans, fontSize: 14, color: "#AAA",
               lineHeight: 1.7 }}>
-              I agree to receive operational SMS messages from Keel. Message frequency
-              may vary. Message and data rates may apply. Reply STOP to opt out.
-              Reply HELP for help. Consent is not a condition of purchase. See our{" "}
-              <a href="https://getkeel.io/terms" style={{ color: O }}>Terms</a>
+              By checking this box and selecting Enable SMS, I agree to receive
+              operational SMS messages from Keel at the mobile number provided.
+              Message frequency may vary. Standard message and data rates may apply.
+              Reply STOP to opt out. Reply HELP for help. Consent is not a condition
+              of purchase. See our{" "}
+              <a href="https://www.getkeel.io/terms" style={{ color: O }}>Terms</a>
               {" "}and{" "}
-              <a href="https://getkeel.io/privacy" style={{ color: O }}>Privacy Policy</a>.
+              <a href="https://www.getkeel.io/privacy" style={{ color: O }}>Privacy Policy</a>.
+              {" "}Your SMS opt-in consent and phone number will not be sold, rented,
+              or shared with third parties or affiliates for their marketing or
+              promotional purposes.
             </span>
           </label>
 
