@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import TermsPage from "./pages/TermsPage";
 import PrivacyPage from "./pages/PrivacyPage";
+import SmsConsentPage from "./pages/SmsConsentPage";
 import SiteFooter from "./SiteFooter";
 
 /* ─── CONFIG ─────────────────────────────────────────────────────────────── */
@@ -1207,5 +1208,6 @@ export default function App() {
   const path = window.location.pathname.replace(/\/$/, "") || "/";
   if (path === "/terms") return <TermsPage />;
   if (path === "/privacy") return <PrivacyPage />;
+  if (path === "/sms-consent") return <SmsConsentPage />;
   return <LandingPage />;
 }
