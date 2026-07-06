@@ -102,10 +102,10 @@ export default function SmsConsentPage() {
           <label style={{ display: "flex", gap: 12, alignItems: "flex-start",
             marginBottom: 28, cursor: "default" }}>
             <input type="checkbox" readOnly disabled aria-readonly="true"
-              style={{ marginTop: 4, width: 16, height: 16, flexShrink: 0,
+              style={{ marginTop: 2, width: 14, height: 14, flexShrink: 0,
                 accentColor: O, cursor: "not-allowed" }} />
-            <span style={{ fontFamily: F.sans, fontSize: 14, color: "#AAA",
-              lineHeight: 1.7 }}>
+            <span style={{ fontFamily: F.sans, fontSize: 12, color: "#999",
+              lineHeight: 1.6 }}>
               By checking this box and selecting Enable SMS, I agree to receive
               operational SMS messages from Keel at the mobile number provided.
               Message frequency may vary. Standard message and data rates may apply.
