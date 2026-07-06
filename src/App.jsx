@@ -1,4 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import TermsPage from "./pages/TermsPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import SiteFooter from "./SiteFooter";
 
 /* ─── CONFIG ─────────────────────────────────────────────────────────────── */
 const FORMSPREE_URL = "https://formspree.io/f/xpqogzeb";
@@ -727,7 +730,7 @@ function Badge() {
 }
 
 /* ─── MAIN ───────────────────────────────────────────────────────────────── */
-export default function App() {
+function LandingPage() {
   const w = useW();
   const m = w < 768;
 
@@ -1201,24 +1204,14 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <div style={{ borderTop:"1px solid #1A1A1A",
-        padding: m?"20px":"22px 48px" }}>
-        <div style={{ display:"flex", justifyContent:"space-between",
-          alignItems:"center", flexWrap:"wrap", gap:12,
-          marginBottom:12, padding: m?"0 20px":undefined }}>
-          <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-            <Mark size={m?22:24}/>
-            <span style={{ fontFamily:F.sans, fontWeight:600,
-              fontSize: m?16:18, letterSpacing:"-0.025em", color:"#FFF" }}>keel</span>
-          </div>
-          <div style={{ fontFamily:F.mono, fontSize:9, color:"#2A2A2A",
-            letterSpacing:"0.14em" }}>© 2026 KEEL · GETKEEL.IO</div>
-        </div>
-        <div style={{ padding: m?"0 20px":undefined }}>
-          <TrustPills/>
-        </div>
-      </div>
+      <SiteFooter mobile={m}/>
     </div>
   );
+}
+
+export default function App() {
+  const path = window.location.pathname.replace(/\/$/, "") || "/";
+  if (path === "/terms") return <TermsPage />;
+  if (path === "/privacy") return <PrivacyPage />;
+  return <LandingPage />;
 }
