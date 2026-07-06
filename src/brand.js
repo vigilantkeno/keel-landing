@@ -1,3 +1,5 @@
+export const MICRO = "#8a8a8a"; // functional microlabels — WCAG AA on near-black
+
 export const O = "#FF5A1F";
 export const OL = "#FF7A3D";
 export const BK = "#0B0B0B";

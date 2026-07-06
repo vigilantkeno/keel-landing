@@ -1,5 +1,5 @@
 import Mark from "./Mark";
-import { F } from "./brand";
+import { F, MICRO } from "./brand";
 
 function TrustPills() {
   return (
@@ -8,7 +8,7 @@ function TrustPills() {
         <div key={l} style={{ display: "inline-flex", alignItems: "center", gap: 6,
           background: "#111", border: "1px solid #222", padding: "6px 12px" }}>
           <span style={{ fontSize: 11 }}>{i}</span>
-          <span style={{ fontFamily: F.mono, fontSize: 8, color: "#444",
+          <span style={{ fontFamily: F.mono, fontSize: 8, color: MICRO,
             letterSpacing: "0.14em" }}>{l}</span>
         </div>
       ))}
@@ -20,7 +20,7 @@ export default function SiteFooter({ mobile }) {
   const linkStyle = {
     fontFamily: F.mono,
     fontSize: 9,
-    color: "#555",
+    color: MICRO,
     letterSpacing: "0.12em",
     textDecoration: "none",
   };
@@ -38,18 +38,18 @@ export default function SiteFooter({ mobile }) {
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
           <a href="/terms" style={linkStyle}
             onMouseEnter={e => { e.currentTarget.style.color = "#888"; }}
-            onMouseLeave={e => { e.currentTarget.style.color = "#555"; }}>
+            onMouseLeave={e => { e.currentTarget.style.color = MICRO; }}>
             TERMS
           </a>
           <a href="/privacy" style={linkStyle}
             onMouseEnter={e => { e.currentTarget.style.color = "#888"; }}
-            onMouseLeave={e => { e.currentTarget.style.color = "#555"; }}>
+            onMouseLeave={e => { e.currentTarget.style.color = MICRO; }}>
             PRIVACY
           </a>
         </div>
       </div>
       <div style={{ padding: mobile ? "0 20px" : undefined, marginBottom: 12 }}>
-        <div style={{ fontFamily: F.mono, fontSize: 9, color: "#2A2A2A",
+        <div style={{ fontFamily: F.mono, fontSize: 9, color: MICRO,
           letterSpacing: "0.14em", lineHeight: 1.7 }}>
           © 2026 Plantly, LLC. Keel is operated by Plantly, LLC.
         </div>
