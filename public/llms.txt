@@ -6,7 +6,7 @@
 
 keel is an AI-powered deal-intelligence tool for quota-carrying B2B Account Executives. It connects to your calls, emails, and CRM, then runs a 2-minute Socratic debrief after every call asking the questions your brain skipped.
 
-Founded 2026. Beta opens August 2026.
+Founded 2026. Early access is limited and granted in waves as applications are reviewed.
 
 ## Key facts
 
