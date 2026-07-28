@@ -9,7 +9,6 @@ const FORMSPREE_URL = "https://formspree.io/f/xpqogzeb";
 const BASE_DATE     = new Date("2026-07-03T00:00:00"); // UPDATE: set to today when you deploy
 const BASE_COUNT    = 8;    // UPDATE: set to your real Formspree submission count
 const DAILY_RATE    = 0;    // UPDATE: set to ~0.5-1.0 once you see consistent daily signups
-const BETA_OPENS    = "August 2026";
 const SHARE_URL     = "https://getkeel.io";
 const SHOW_LIVE_COUNTER = false; // Re-enable when count exceeds 50
 
@@ -336,7 +335,7 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
               width: mobile ? "100%" : undefined,
               animation: step1Valid ? "orangeGlow 3s ease 2.5s infinite" : "none",
             }}>
-            Join Waitlist
+            Apply for Early Access
           </button>
         </div>
         <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
@@ -353,9 +352,9 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
               <span style={{ fontFamily:F.mono, fontSize:10,
                 color:MICRO, letterSpacing:"0.12em" }}>
                 {SHOW_LIVE_COUNTER ? (
-                  <><LiveCounter target={liveCount}/> reps on the waitlist</>
+                  <><LiveCounter target={liveCount}/> reps have applied</>
                 ) : (
-                  "Founding cohort capped at 25 seats."
+                  "Founding cohort seats are limited."
                 )}
               </span>
             </div>
@@ -502,9 +501,6 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
 /* ─── SUCCESS VIEW ───────────────────────────────────────────────────────── */
 function SuccessView({ number, mobile, onClose }) {
   const shareText = `Just applied for founding cohort access to @getkeel — AI deal intelligence built for reps, not managers. ${SHARE_URL}`;
-  const calTitle  = encodeURIComponent("Keel Beta Launch — Founding Access");
-  const calDate   = "20260818";
-  const calURL    = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&dates=${calDate}/${calDate}&details=${encodeURIComponent(`You applied for founding cohort access. ${SHARE_URL}`)}`;
 
   return (
     <div style={{ position:"fixed", inset:0, background:BK, zIndex:200,
@@ -544,8 +540,9 @@ function SuccessView({ number, mobile, onClose }) {
           </div>
           <div style={{ fontFamily:F.sans, fontSize: mobile?15:17,
             color:"#555", marginTop:14, lineHeight:1.65 }}>
-            Your application is #{number}. Beta opens{" "}
-            <span style={{ color:"#AAA", fontWeight:600 }}>{BETA_OPENS}</span>.
+            Your application is #{number}. Early access is granted{" "}
+            <span style={{ color:"#AAA", fontWeight:600 }}>in waves</span> as
+            applications are reviewed.
           </div>
         </div>
 
@@ -575,28 +572,6 @@ function SuccessView({ number, mobile, onClose }) {
             </div>
           ))}
         </div>
-
-        {/* Calendar */}
-        <a href={calURL} target="_blank" rel="noopener noreferrer"
-          style={{ display:"flex", alignItems:"center",
-            justifyContent:"space-between",
-            background:"#111", border:"1px solid #242424",
-            padding: mobile?"14px 16px":"16px 20px",
-            marginBottom:24, textDecoration:"none", transition:"border-color 0.15s" }}
-          onMouseEnter={e => e.currentTarget.style.borderColor="#3A3A3A"}
-          onMouseLeave={e => e.currentTarget.style.borderColor="#242424"}>
-          <div>
-            <div style={{ fontFamily:F.sans, fontWeight:600,
-              fontSize: mobile?14:15, color:"#CCC", marginBottom:3 }}>
-              📅 Save the beta launch date
-            </div>
-            <div style={{ fontFamily:F.mono, fontSize:8,
-              color:"#383838", letterSpacing:"0.1em" }}>
-              ADD TO GOOGLE CALENDAR · {BETA_OPENS.toUpperCase()}
-            </div>
-          </div>
-          <span style={{ fontFamily:F.mono, fontSize:16, color:"#333" }}>→</span>
-        </a>
 
         {/* Share */}
         <div style={{ background:BK2, border:"1px solid #1E1E1E",
@@ -685,22 +660,6 @@ function SocialBtn({ href, label, mobile }) {
   );
 }
 
-function TrustPills({ center }) {
-  return (
-    <div style={{ display:"flex", gap:8, flexWrap:"wrap",
-      justifyContent: center?"center":undefined }}>
-      {[{l:"ROAD TO SOC2",i:"🔐"},{l:"PRIVACY FIRST",i:"🛡"},{l:"NO DATA SOLD",i:"🚫"}].map(({ l, i }) => (
-        <div key={l} style={{ display:"inline-flex", alignItems:"center", gap:6,
-          background:"#111", border:"1px solid #222", padding:"6px 12px" }}>
-          <span style={{ fontSize:11 }}>{i}</span>
-          <span style={{ fontFamily:F.mono, fontSize:8, color:MICRO,
-            letterSpacing:"0.14em" }}>{l}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 function Badge() {
   return (
     <div style={{ display:"inline-flex", alignItems:"center", gap:10,
@@ -709,7 +668,7 @@ function Badge() {
         animation:"blink 1.8s ease infinite" }}/>
       <span style={{ fontFamily:F.mono, fontSize:10, color:O,
         letterSpacing:"0.18em" }}>
-        WAITLIST OPEN · BETA OPENS {BETA_OPENS.toUpperCase()}
+        EARLY ACCESS · APPLICATIONS OPEN
       </span>
     </div>
   );
@@ -818,7 +777,7 @@ function LandingPage() {
               fontWeight:700, fontSize:13, cursor:"pointer",
               transition:"all 0.15s", letterSpacing:"0.01em",
               whiteSpace:"nowrap" }}>
-            Join Waitlist
+            Apply for Early Access
           </button>
         </div>
       </nav>
@@ -1008,9 +967,9 @@ function LandingPage() {
               <p className={`si${saraVis?" v":""}`}
                 style={{ fontFamily:F.sans, fontSize: m?15:16, color:"#666",
                   lineHeight:1.75, marginBottom: m?24:32, transitionDelay:"0.14s" }}>
-                Starting {BETA_OPENS}, founding cohort reps can call Sara
-                directly after any call for a live voice debrief. Ask her
-                anything. She already knows the context.
+                Founding cohort reps can call Sara directly after any
+                call for a live voice debrief. Ask her anything. She
+                already knows the context.
               </p>
               <div className={`si${saraVis?" v":""}`}
                 style={{ display:"inline-flex", alignItems:"center", gap:10,
@@ -1019,7 +978,7 @@ function LandingPage() {
                 <div style={{ width:7, height:7, borderRadius:"50%", background:"#555" }}/>
                 <span style={{ fontFamily:F.mono, fontSize:9, color:MICRO,
                   letterSpacing:"0.16em" }}>
-                  VOICE DEBRIEFS · {BETA_OPENS.toUpperCase()} · FOUNDING ONLY
+                  VOICE DEBRIEFS · EARLY ACCESS · FOUNDING ONLY
                 </span>
               </div>
             </div>
@@ -1077,7 +1036,7 @@ function LandingPage() {
               lineHeight:1.75, maxWidth:540, marginBottom: m?40:56,
               transitionDelay:"0.14s" }}>
             A focused group of quota-carrying reps shaping Sara before
-            anyone else sees her. Beta opens {BETA_OPENS}.
+            anyone else sees her. Access is limited right now.
             Founding cohort gets access first.
           </p>
           <div style={{ display:"grid",
@@ -1183,18 +1142,13 @@ function LandingPage() {
             style={{ fontFamily:F.sans, fontSize: m?15:17, color:"#666",
               lineHeight:1.8, marginBottom: m?36:44,
               transitionDelay:"0.16s", textAlign: m?"left":"center" }}>
-            Beta opens {BETA_OPENS}. Founding access is free, permanent,
-            and limited. Applications are reviewed individually.
+            Access is limited right now. Founding access is free,
+            permanent, and limited. Applications are reviewed individually.
           </p>
           <div className={`si${ctaVis?" v":""}`}
             style={{ transitionDelay:"0.24s", textAlign: m?"left":undefined }}>
             <WaitlistForm mobile={m} center={!m}
               liveCount={liveCount} onSuccess={handleSuccess}/>
-          </div>
-          <div className={`si${ctaVis?" v":""}`}
-            style={{ display:"flex", justifyContent: m?undefined:"center",
-              marginTop:24, transitionDelay:"0.32s" }}>
-            <TrustPills center={!m}/>
           </div>
         </div>
       </section>

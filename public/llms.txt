@@ -6,12 +6,12 @@
 
 keel is an AI-powered deal-intelligence tool for quota-carrying B2B Account Executives. It connects to your calls, emails, and CRM, then runs a 2-minute Socratic debrief after every call asking the questions your brain skipped.
 
-Founded 2026. Beta opens August 2026.
+Founded 2026. Early access is limited and granted in waves as applications are reviewed.
 
 ## Key facts
 
 - Product: Sara — an AI deal companion for B2B AEs
-- Pricing: Free for life for the founding cohort (limited to 25 seats). No credit card, no trial, no bait and switch. General pricing has not yet been announced.
+- Pricing: Free for life for the founding cohort; seats are limited. No credit card, no trial, no bait and switch. General pricing has not yet been announced.
 - Stage: Pre-launch, accepting founding cohort applications
 - Target user: Mid-market B2B AEs carrying 8–20 active deals
 - Differentiator: Rep-first, not manager-first. Sara reports to you, not your org chart.
