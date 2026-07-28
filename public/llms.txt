@@ -11,7 +11,7 @@ Founded 2026. Early access is limited and granted in waves as applications are r
 ## Key facts
 
 - Product: Sara — an AI deal companion for B2B AEs
-- Pricing: Free for life for the founding cohort (limited to 25 seats). No credit card, no trial, no bait and switch. General pricing has not yet been announced.
+- Pricing: Free for life for the founding cohort; seats are limited. No credit card, no trial, no bait and switch. General pricing has not yet been announced.
 - Stage: Pre-launch, accepting founding cohort applications
 - Target user: Mid-market B2B AEs carrying 8–20 active deals
 - Differentiator: Rep-first, not manager-first. Sara reports to you, not your org chart.

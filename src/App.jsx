@@ -354,7 +354,7 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
                 {SHOW_LIVE_COUNTER ? (
                   <><LiveCounter target={liveCount}/> reps have applied</>
                 ) : (
-                  "Founding cohort capped at 25 seats."
+                  "Founding cohort seats are limited."
                 )}
               </span>
             </div>
@@ -657,22 +657,6 @@ function SocialBtn({ href, label, mobile }) {
       onMouseLeave={e => { e.currentTarget.style.borderColor="#2A2A2A"; e.currentTarget.style.color="#888"; }}>
       {label}
     </a>
-  );
-}
-
-function TrustPills({ center }) {
-  return (
-    <div style={{ display:"flex", gap:8, flexWrap:"wrap",
-      justifyContent: center?"center":undefined }}>
-      {[{l:"ROAD TO SOC2",i:"🔐"},{l:"PRIVACY FIRST",i:"🛡"},{l:"NO DATA SOLD",i:"🚫"}].map(({ l, i }) => (
-        <div key={l} style={{ display:"inline-flex", alignItems:"center", gap:6,
-          background:"#111", border:"1px solid #222", padding:"6px 12px" }}>
-          <span style={{ fontSize:11 }}>{i}</span>
-          <span style={{ fontFamily:F.mono, fontSize:8, color:MICRO,
-            letterSpacing:"0.14em" }}>{l}</span>
-        </div>
-      ))}
-    </div>
   );
 }
 
@@ -1165,11 +1149,6 @@ function LandingPage() {
             style={{ transitionDelay:"0.24s", textAlign: m?"left":undefined }}>
             <WaitlistForm mobile={m} center={!m}
               liveCount={liveCount} onSuccess={handleSuccess}/>
-          </div>
-          <div className={`si${ctaVis?" v":""}`}
-            style={{ display:"flex", justifyContent: m?undefined:"center",
-              marginTop:24, transitionDelay:"0.32s" }}>
-            <TrustPills center={!m}/>
           </div>
         </div>
       </section>
