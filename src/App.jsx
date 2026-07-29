@@ -6,15 +6,29 @@ import SiteFooter from "./SiteFooter";
 
 /* ─── CONFIG ─────────────────────────────────────────────────────────────── */
 const FORMSPREE_URL = "https://formspree.io/f/xpqogzeb";
-const BASE_DATE     = new Date("2026-07-03T00:00:00"); // UPDATE: set to today when you deploy
-const BASE_COUNT    = 8;    // UPDATE: set to your real Formspree submission count
-const DAILY_RATE    = 0;    // UPDATE: set to ~0.5-1.0 once you see consistent daily signups
+const COUNTER_API   = "https://api.counterapi.dev/v1/getkeel/founding";
+const COUNTER_SEED  = 10; // floor matching approximate Formspree total; next submit = seed+1
 const SHARE_URL     = "https://getkeel.io";
-const SHOW_LIVE_COUNTER = false; // Re-enable when count exceeds 50
+const SHOW_LIVE_COUNTER = false; // Re-enable when count exceeds 50; use GET COUNTER_API (not /up)
 
-function getLiveCount() {
-  const days = (Date.now() - BASE_DATE.getTime()) / 86400000;
-  return Math.floor(BASE_COUNT + days * DAILY_RATE);
+async function nextApplicationNumber() {
+  const up = async () => {
+    const res = await fetch(`${COUNTER_API}/up/`);
+    if (!res.ok) throw new Error("counter up failed");
+    const data = await res.json();
+    return data.count;
+  };
+
+  let count = await up();
+  // Bring a fresh/undersized counter up to the seed, then one more for this application
+  while (count < COUNTER_SEED) {
+    count = await up();
+  }
+  if (count === COUNTER_SEED) {
+    // Seed represents existing submissions; this applicant is next
+    count = await up();
+  }
+  return count;
 }
 
 /* ─── BRAND ──────────────────────────────────────────────────────────────── */
@@ -277,7 +291,7 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
     if (!step2Valid) return;
     setStatus("sending");
     try {
-      await fetch(FORMSPREE_URL, {
+      const res = await fetch(FORMSPREE_URL, {
         method:"POST",
         headers:{ "Content-Type":"application/json","Accept":"application/json" },
         body: JSON.stringify({
@@ -288,11 +302,18 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
           crm: fields.crm,
           source: "getkeel.io",
           cohort: "founding",
-          count: liveCount + 1,
         }),
       });
-    } catch {}
-    onSuccess && onSuccess(liveCount + 1);
+      if (!res.ok) throw new Error("formspree failed");
+
+      let number = null;
+      try {
+        number = await nextApplicationNumber();
+      } catch {}
+      onSuccess?.(number);
+    } catch {
+      setStatus("idle");
+    }
   };
 
   const sending = status === "sending";
@@ -501,6 +522,7 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
 /* ─── SUCCESS VIEW ───────────────────────────────────────────────────────── */
 function SuccessView({ number, mobile, onClose }) {
   const shareText = `Just applied for founding cohort access to @getkeel — AI deal intelligence built for reps, not managers. ${SHARE_URL}`;
+  const hasNumber = typeof number === "number" && number > 0;
 
   return (
     <div style={{ position:"fixed", inset:0, background:BK, zIndex:200,
@@ -518,7 +540,7 @@ function SuccessView({ number, mobile, onClose }) {
         </div>
         <button onClick={onClose}
           style={{ background:"none", border:"1px solid #222", color:"#555",
-            padding:"7px 14px", fontFamily:F.mono, fontSize:9,
+            padding:"7px 14px", fontFamily:F.mono, fontSize:11,
             letterSpacing:"0.12em", cursor:"pointer" }}>
           BACK TO SITE
         </button>
@@ -529,18 +551,28 @@ function SuccessView({ number, mobile, onClose }) {
 
         {/* Number hero */}
         <div style={{ textAlign:"center", marginBottom:40 }}>
-          <div style={{ fontFamily:F.mono, fontSize: mobile?9:10,
+          <div style={{ fontFamily:F.mono, fontSize: mobile?11:12,
             color:O, letterSpacing:"0.3em", marginBottom:16 }}>
             APPLICATION RECEIVED · FOUNDING COHORT
           </div>
-          <div style={{ fontFamily:F.cond, fontWeight:900,
-            fontSize: mobile?80:112, color:"#FFF",
-            letterSpacing:"-0.02em", lineHeight:0.88 }}>
-            #{number}
-          </div>
+          {hasNumber ? (
+            <div style={{ fontFamily:F.cond, fontWeight:900,
+              fontSize: mobile?80:112, color:"#FFF",
+              letterSpacing:"-0.02em", lineHeight:0.88 }}>
+              #{number}
+            </div>
+          ) : (
+            <div style={{ fontFamily:F.cond, fontWeight:900,
+              fontSize: mobile?42:56, color:"#FFF",
+              letterSpacing:"-0.02em", lineHeight:1.05 }}>
+              You&apos;re in the queue.
+            </div>
+          )}
           <div style={{ fontFamily:F.sans, fontSize: mobile?15:17,
-            color:"#555", marginTop:14, lineHeight:1.65 }}>
-            Your application is #{number}. Early access is granted{" "}
+            color:"#8A8A8A", marginTop:14, lineHeight:1.65 }}>
+            {hasNumber
+              ? <>Your application is #{number}. Early access is granted{" "}</>
+              : <>Your application is in. Early access is granted{" "}</>}
             <span style={{ color:"#AAA", fontWeight:600 }}>in waves</span> as
             applications are reviewed.
           </div>
@@ -549,7 +581,7 @@ function SuccessView({ number, mobile, onClose }) {
         {/* What happens now */}
         <div style={{ background:BK2, border:"1px solid #1E1E1E",
           padding: mobile?"18px":"22px 24px", marginBottom:24 }}>
-          <div style={{ fontFamily:F.mono, fontSize:9, color:O,
+          <div style={{ fontFamily:F.mono, fontSize:11, color:O,
             letterSpacing:"0.18em", marginBottom:16 }}>WHAT HAPPENS NOW</div>
           {[
             { t:"We review your application",
@@ -564,10 +596,10 @@ function SuccessView({ number, mobile, onClose }) {
               <div style={{ width:5, height:5, background:O,
                 marginTop:7, flexShrink:0 }}/>
               <div>
-                <div style={{ fontFamily:F.mono, fontSize:9,
-                  color:"#555", letterSpacing:"0.1em", marginBottom:3 }}>{t}</div>
-                <div style={{ fontFamily:F.sans, fontSize: mobile?13:14,
-                  color:"#666", lineHeight:1.65 }}>{v}</div>
+                <div style={{ fontFamily:F.mono, fontSize:12,
+                  color:"#AAA", letterSpacing:"0.1em", marginBottom:3 }}>{t}</div>
+                <div style={{ fontFamily:F.sans, fontSize: mobile?15:16,
+                  color:"#8A8A8A", lineHeight:1.65 }}>{v}</div>
               </div>
             </div>
           ))}
@@ -576,12 +608,12 @@ function SuccessView({ number, mobile, onClose }) {
         {/* Share */}
         <div style={{ background:BK2, border:"1px solid #1E1E1E",
           padding: mobile?"18px":"22px 24px", marginBottom:24 }}>
-          <div style={{ fontFamily:F.mono, fontSize:9, color:"#555",
+          <div style={{ fontFamily:F.mono, fontSize:11, color:"#999",
             letterSpacing:"0.18em", marginBottom:8 }}>
             KNOW A REP WHO NEEDS THIS?
           </div>
-          <div style={{ fontFamily:F.sans, fontSize: mobile?13:14,
-            color:"#555", lineHeight:1.65, marginBottom:16 }}>
+          <div style={{ fontFamily:F.sans, fontSize: mobile?15:16,
+            color:"#8A8A8A", lineHeight:1.65, marginBottom:16 }}>
             Referring a colleague who gets selected strengthens your
             position in the cohort. Send them the link.
           </div>
@@ -595,7 +627,7 @@ function SuccessView({ number, mobile, onClose }) {
         {/* Sara preview */}
         <div style={{ background:"#0D0D0D", border:`1px solid ${O}33`,
           padding: mobile?"16px":"20px 22px" }}>
-          <div style={{ fontFamily:F.mono, fontSize:9, color:O,
+          <div style={{ fontFamily:F.mono, fontSize:11, color:O,
             letterSpacing:"0.16em", marginBottom:12 }}>
             SARA WOULD HAVE ASKED YOUR LAST DEAL THIS
           </div>
@@ -604,15 +636,15 @@ function SuccessView({ number, mobile, onClose }) {
             `"Has the budget actually been approved, or are you assuming it has?"`,
             `"What would make them choose to do nothing at all?"`,
           ].map((q,i) => (
-            <div key={i} style={{ fontFamily:F.sans, fontSize: mobile?13:14,
-              color:"#555", fontStyle:"italic", lineHeight:1.7,
+            <div key={i} style={{ fontFamily:F.sans, fontSize: mobile?15:16,
+              color:"#999", fontStyle:"italic", lineHeight:1.7,
               borderLeft:`2px solid #252525`, paddingLeft:12,
               marginBottom: i<2?10:0 }}>
               {q}
             </div>
           ))}
-          <div style={{ marginTop:14, fontFamily:F.mono, fontSize:8,
-            color:"#2A2A2A", letterSpacing:"0.12em" }}>
+          <div style={{ marginTop:14, fontFamily:F.mono, fontSize:10,
+            color:"#555", letterSpacing:"0.12em" }}>
             SARA · SOCRATIC ANALYSIS & REMOTE ASSISTANT · GETKEEL.IO
           </div>
         </div>
@@ -633,7 +665,7 @@ function CopyButton({ text, label, mobile }) {
       border:`1px solid ${copied?"#2A5A2A":"#2A2A2A"}`,
       color: copied?"#4ADE80":"#888",
       padding: mobile?"12px 14px":"12px 18px",
-      fontFamily:F.mono, fontSize:10, letterSpacing:"0.12em",
+      fontFamily:F.mono, fontSize:12, letterSpacing:"0.12em",
       cursor:"pointer", transition:"all 0.2s",
       display:"flex", alignItems:"center", gap:8,
       width: mobile?"100%":undefined,
@@ -648,7 +680,7 @@ function SocialBtn({ href, label, mobile }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer"
       style={{ background:"#111", border:"1px solid #2A2A2A", color:"#888",
-        padding:"12px 18px", fontFamily:F.mono, fontSize:10,
+        padding:"12px 18px", fontFamily:F.mono, fontSize:12,
         letterSpacing:"0.12em", cursor:"pointer", textDecoration:"none",
         display:"flex", alignItems:"center", gap:8,
         justifyContent: mobile?"center":undefined,
@@ -679,8 +711,8 @@ function LandingPage() {
   const w = useW();
   const m = w < 768;
 
-  const [liveCount,    setLiveCount]    = useState(getLiveCount);
-  const [successNum,   setSuccessNum]   = useState(null);
+  const [liveCount,    setLiveCount]    = useState(COUNTER_SEED);
+  const [successNum,   setSuccessNum]   = useState(null); // number | true | null
   const [wIdx,         setWIdx]         = useState(0);
   const [openFaq,      setOpenFaq]      = useState(0);
 
@@ -694,8 +726,8 @@ function LandingPage() {
   }, [wIdx]);
 
   const handleSuccess = useCallback((num) => {
-    setLiveCount(num);
-    setSuccessNum(num);
+    if (typeof num === "number") setLiveCount(num);
+    setSuccessNum(typeof num === "number" ? num : true);
   }, []);
 
   const [painRef,  painVis]  = useVis();
@@ -723,8 +755,10 @@ function LandingPage() {
       fontFamily:F.sans, minHeight:"100vh",
       WebkitFontSmoothing:"antialiased" }}>
 
-      {successNum && (
-        <SuccessView number={successNum} mobile={m}
+      {successNum != null && (
+        <SuccessView
+          number={typeof successNum === "number" ? successNum : null}
+          mobile={m}
           onClose={() => setSuccessNum(null)}/>
       )}
 

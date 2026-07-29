@@ -4,13 +4,16 @@ Marketing waitlist for [getkeel.io](https://getkeel.io).
 
 ## Config
 
-Before deploying, update the three variables at the top of `src/App.jsx`:
+Application numbers come from CounterAPI after a successful Formspree submit.
+Seed / namespace live at the top of `src/App.jsx`:
 
 ```js
-const BASE_DATE  = new Date("2026-04-10T00:00:00"); // set to your deploy date
-const BASE_COUNT = 8;    // set to your real Formspree submission count
-const DAILY_RATE = 0;    // bump to 0.5–1.0 once you see consistent daily signups
+const COUNTER_API  = "https://api.counterapi.dev/v1/getkeel/founding";
+const COUNTER_SEED = 10; // floor for existing submissions; next applicant is seed+1
 ```
+
+Set `SHOW_LIVE_COUNTER = true` when you want the public “N reps have applied” line
+(use a GET on `COUNTER_API`, not `/up`).
 
 ## Local development
 
@@ -33,7 +36,8 @@ npm start
 - React 18
 - Create React App
 - Formspree (form submissions → `https://formspree.io/f/xpqogzeb`)
-- Vercel (hosting)
+- CounterAPI (application numbers)
+- Vercel (hosting + Web Analytics)
 
 ## Architecture
 
