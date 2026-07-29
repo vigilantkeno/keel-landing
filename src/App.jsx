@@ -153,12 +153,18 @@ function LiveCounter({ target, style = {} }) {
   );
 }
 
-/* ─── SARA DEAL CARD ─────────────────────────────────────────────────────── */
-function SaraDealCard({ mobile }) {
+/* ─── SARA PHONE PREVIEW ─────────────────────────────────────────────────── */
+function SaraPhonePreview({ mobile }) {
+  const bubbles = [
+    { who:"you", t:"Just left lunch with Dana Chen — VP Ops at Meridian. Interested in Q3 expansion. Card pic next." },
+    { who:"sara", t:"Got it. Saved Dana Chen · Meridian · VP Ops. What did she push back on?" },
+    { who:"you", t:"Budget timing. Said champion is hot but CFO hasn't seen numbers." },
+    { who:"sara", t:"When do you talk to the CFO directly — not through the champion?" },
+  ];
+
   return (
     <div style={{ background:"#0D0D0D", border:"1px solid #222",
       boxShadow:"0 32px 72px rgba(0,0,0,0.65)" }}>
-
       <div style={{ background:"#141414", borderBottom:"1px solid #222",
         padding:`${mobile?9:10}px 16px`,
         display:"flex", alignItems:"center", justifyContent:"space-between" }}>
@@ -166,67 +172,49 @@ function SaraDealCard({ mobile }) {
           <Mark size={12} variant="dim"/>
           <span style={{ fontFamily:F.mono, fontSize:9,
             color:MICRO, letterSpacing:"0.16em" }}>
-            SARA SESSION · DEAL DEBRIEF
+            SARA · TEXT
           </span>
         </div>
-        <div style={{ display:"flex", gap:4 }}>
-          {["#3A1F10","#3A3210","#0F2A1A"].map((c,i) =>
-            <div key={i} style={{ width:8, height:8, borderRadius:"50%", background:c }}/>)}
+        <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+          <div style={{ width:6, height:6, borderRadius:"50%", background:O,
+            animation:"blink 1.8s ease infinite" }}/>
+          <span style={{ fontFamily:F.mono, fontSize:9,
+            color:O, letterSpacing:"0.14em" }}>LIVE</span>
         </div>
       </div>
 
-      <div style={{ padding:`${mobile?14:18}px 16px 12px`,
-        borderBottom:"1px solid #1A1A1A",
-        display:"flex", justifyContent:"space-between", gap:12 }}>
-        <div>
-          <div style={{ fontFamily:F.sans, fontWeight:700,
-            fontSize: mobile?15:16, color:"#F2F2F2", marginBottom:5 }}>
-            Workday Enterprise
+      <div style={{ padding: mobile?"16px 14px":"20px 18px",
+        display:"flex", flexDirection:"column", gap:12 }}>
+        {bubbles.map((b,i) => (
+          <div key={i} style={{
+            alignSelf: b.who==="you"?"flex-end":"flex-start",
+            maxWidth:"88%",
+            background: b.who==="you"?"#1A120C":"#141414",
+            border: `1px solid ${b.who==="you"?`${O}44`:"#222"}`,
+            padding:"10px 12px" }}>
+            <div style={{ fontFamily:F.mono, fontSize:8,
+              color: b.who==="you"?O:MICRO,
+              letterSpacing:"0.14em", marginBottom:6 }}>
+              {b.who==="you"?"YOU":"SARA"}
+            </div>
+            <div style={{ fontFamily:F.sans, fontSize: mobile?13:14,
+              color: b.who==="you"?"#DDD":"#BBB", lineHeight:1.55 }}>
+              {b.t}
+            </div>
           </div>
-          <div style={{ fontFamily:F.mono, fontSize: mobile?9:10,
-            color:MICRO, letterSpacing:"0.1em" }}>
-            NEGOTIATION · $148K ARR · DAY 91
-          </div>
-        </div>
-        <div style={{ fontFamily:F.mono, fontSize:9, color:MICRO,
-          letterSpacing:"0.1em", lineHeight:1.5, textAlign:"right", flexShrink:0 }}>
-          Q2 CLOSE<br/>TARGET
-        </div>
+        ))}
       </div>
 
-      <div style={{ display:"grid",
-        gridTemplateColumns: mobile?"1fr":"1fr 1fr" }}>
-        <div style={{ padding:`${mobile?16:20}px 14px`,
-          borderRight: mobile?"none":"1px solid #1A1A1A",
-          borderBottom: mobile?"1px solid #1A1A1A":"none" }}>
-          <div style={{ fontFamily:F.mono, fontSize:9, color:MICRO,
-            letterSpacing:"0.14em", marginBottom:14 }}>YOUR PICTURE</div>
-          {["On track.", "Champion engaged.", "Closing Q2."].map(t => (
-            <div key={t} style={{ fontFamily:F.sans, fontSize: mobile?13:14,
-              color:"#AAA", lineHeight:1.75, marginBottom:4 }}>{t}</div>
-          ))}
-        </div>
-        <div style={{ padding:`${mobile?16:20}px 14px`,
-          background:"#180C05",
-          borderLeft: mobile?`3px solid ${O}`:"none" }}>
-          <div style={{ fontFamily:F.mono, fontSize:9, color:O,
-            letterSpacing:"0.14em", marginBottom:14 }}>WHAT SARA SEES</div>
-          {[
-            "No direct CFO contact in 19 days.",
-            "Champion hasn't replied since pricing call.",
-            "Close date slipped twice.",
-          ].map(t => (
-            <div key={t} style={{ fontFamily:F.sans, fontSize: mobile?13:14,
-              color:"#CCC", lineHeight:1.75, marginBottom:4 }}>{t}</div>
-          ))}
-        </div>
-      </div>
-
-      <div style={{ padding:"10px 16px", background:"#0A0A0A",
-        borderTop:"1px solid #1A1A1A" }}>
+      <div style={{ padding:"12px 16px", background:"#0A0A0A",
+        borderTop:"1px solid #1A1A1A",
+        display:"flex", justifyContent:"space-between", alignItems:"center", gap:12 }}>
         <span style={{ fontFamily:F.mono, fontSize:9,
-          color:MICRO, letterSpacing:"0.12em", lineHeight:1.5 }}>
-          SARA SURFACES THE GAP BETWEEN ASSUMED AND ACTUAL
+          color:MICRO, letterSpacing:"0.12em" }}>
+          OR CALL · DUMP THE DRIVE HOME
+        </span>
+        <span style={{ fontFamily:F.mono, fontSize:9,
+          color:O, letterSpacing:"0.12em" }}>
+          24/7
         </span>
       </div>
     </div>
@@ -375,7 +363,7 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
                 {SHOW_LIVE_COUNTER ? (
                   <><LiveCounter target={liveCount}/> reps have applied</>
                 ) : (
-                  "Founding cohort seats are limited."
+                  "Founders Club seats are limited."
                 )}
               </span>
             </div>
@@ -504,7 +492,7 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
           cursor: step2Valid&&!sending?"pointer":"default",
           transition:"all 0.15s",
           opacity: sending?0.6:1 }}>
-        {sending ? "Saving your spot…" : "Claim My Founding Access"}
+        {sending ? "Saving your spot…" : "Join Founders Club"}
       </button>
 
       <div style={{ marginTop:12, fontFamily:F.mono, fontSize:9,
@@ -521,7 +509,7 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
 
 /* ─── SUCCESS VIEW ───────────────────────────────────────────────────────── */
 function SuccessView({ number, mobile, onClose }) {
-  const shareText = `Just applied for founding cohort access to @getkeel — AI deal intelligence built for reps, not managers. ${SHARE_URL}`;
+  const shareText = `Just applied for early access to @getkeel — Sara, the 24/7 deal assistant for reps. ${SHARE_URL}`;
   const hasNumber = typeof number === "number" && number > 0;
 
   return (
@@ -553,7 +541,7 @@ function SuccessView({ number, mobile, onClose }) {
         <div style={{ textAlign:"center", marginBottom:40 }}>
           <div style={{ fontFamily:F.mono, fontSize: mobile?11:12,
             color:O, letterSpacing:"0.3em", marginBottom:16 }}>
-            APPLICATION RECEIVED · FOUNDING COHORT
+            APPLICATION RECEIVED · FOUNDERS CLUB
           </div>
           {hasNumber ? (
             <div style={{ fontFamily:F.cond, fontWeight:900,
@@ -587,9 +575,9 @@ function SuccessView({ number, mobile, onClose }) {
             { t:"We review your application",
               v:"Every application is reviewed by the founding team. We're looking for reps with real deal complexity, not just job titles." },
             { t:"We'll be in touch",
-              v:"If you're a fit for the founding cohort, we'll reach out to learn more about your deal motion before activating your access." },
-            { t:"Founding access is permanent",
-              v:"Founding access is free for life. No trials, no expiry, no bait and switch — ever." },
+              v:"If you're a fit for Founders Club, we'll reach out to learn more about your deal motion before activating your access." },
+            { t:"Founders Club access",
+              v:"You're in early. Free while we build with you — no credit card, no trial games." },
           ].map(({ t, v }) => (
             <div key={t} style={{ display:"flex", gap:14,
               marginBottom:14, alignItems:"flex-start" }}>
@@ -629,12 +617,12 @@ function SuccessView({ number, mobile, onClose }) {
           padding: mobile?"16px":"20px 22px" }}>
           <div style={{ fontFamily:F.mono, fontSize:11, color:O,
             letterSpacing:"0.16em", marginBottom:12 }}>
-            SARA WOULD HAVE ASKED YOUR LAST DEAL THIS
+            SARA WOULD ASK YOU THIS
           </div>
           {[
-            `"When did you last speak with your economic buyer — not your champion?"`,
-            `"Has the budget actually been approved, or are you assuming it has?"`,
-            `"What would make them choose to do nothing at all?"`,
+            `"Who else needs to buy this — and have you talked to them, or only your champion?"`,
+            `"What did they push back on that you smoothed over in your own head?"`,
+            `"If this slips another two weeks, what actually breaks?"`,
           ].map((q,i) => (
             <div key={i} style={{ fontFamily:F.sans, fontSize: mobile?15:16,
               color:"#999", fontStyle:"italic", lineHeight:1.7,
@@ -645,7 +633,7 @@ function SuccessView({ number, mobile, onClose }) {
           ))}
           <div style={{ marginTop:14, fontFamily:F.mono, fontSize:10,
             color:"#555", letterSpacing:"0.12em" }}>
-            SARA · SOCRATIC ANALYSIS & REMOTE ASSISTANT · GETKEEL.IO
+            SARA · 24/7 DEAL ASSISTANT · GETKEEL.IO
           </div>
         </div>
       </div>
@@ -731,23 +719,25 @@ function LandingPage() {
   }, []);
 
   const [painRef,  painVis]  = useVis();
+  const [momentsRef, momentsVis] = useVis();
   const [howRef,   howVis]   = useVis();
-  const [saraRef,  saraVis]  = useVis();
   const [perksRef, perksVis] = useVis();
   const [faqRef,   faqVis]   = useVis();
   const [ctaRef,   ctaVis]   = useVis(0.08);
 
   const FAQS = [
-    { q:"Will my manager see what Sara flags?",
-      a:"No. Sara reports to you, not your org chart. Everything she surfaces goes to you first — and only you, unless you choose to share it. We built Keel specifically because reps are exhausted by tools that help management at the rep's expense. That's not Sara." },
-    { q:"How long does the debrief actually take?",
-      a:"Two minutes. Sara asks three to four targeted questions right after your call — while the context is still fresh. No forms, no dashboards, no retrospective admin. You answer, she synthesizes, you move on. If it ever takes longer than two minutes, we've failed." },
-    { q:"My CRM is a mess. Does Keel still work?",
-      a:"Yes — and a messy CRM is exactly the environment Sara was designed for. She doesn't rely on your CRM being clean or current. She builds the picture from what you actually say in calls and debriefs, not from what's (or isn't) logged in Salesforce." },
+    { q:"Is Sara always on?",
+      a:"Once you're in — yes. Text or call anytime. Access itself is application-reviewed, not self-serve overnight. We activate you, then Sara's number is yours." },
+    { q:"Will my manager see what I tell Sara?",
+      a:"No. Sara reports to you. Nothing goes up the org chart unless you share it. We built Keel because reps are done with tools that help management at their expense." },
     { q:"How is this different from Gong or Chorus?",
-      a:"Gong and Chorus record and analyze calls for managers. Sara works for you. She doesn't score your performance or build reports for your VP — she asks the questions that surface what you're missing before it becomes a loss. Different tool, different master, different outcome." },
-    { q:"Do I need IT or my manager involved to sign up?",
-      a:"Not for the beta. Founding access is free, individual, and requires no organizational procurement. You sign up, we onboard you directly. If you want to bring your team in later, that's a conversation for after you've seen what Sara does for your own pipeline." },
+      a:"Gong owns the recorded call — for your manager. Sara owns what happens after you hang up — for you. Hallway. Dinner. Drive home. Different moment. Different master." },
+    { q:"Does she record my customer calls?",
+      a:"Never. No bot in the meeting. No phone on the table. You reach out after — by text or call — and dump what matters." },
+    { q:"Do I need a clean CRM?",
+      a:"No. She works from what you tell her, not what Salesforce forgot. Messy CRM is the normal environment — not a blocker." },
+    { q:"Do I need IT or my manager to sign up?",
+      a:"No. Early access is individual. You apply, we review, we onboard you directly. Bring your team later if you want — after you've felt what Sara does for your own book." },
   ];
 
   return (
@@ -850,15 +840,16 @@ function LandingPage() {
             </h1>
             <p style={{ fontFamily:F.sans, fontWeight:400,
               fontSize: m?16:18, lineHeight:1.75, color:"#777",
-              marginBottom: m?16:20, maxWidth:440,
+              marginBottom: m?16:20, maxWidth:460,
               animation:"fadeUp 0.4s ease 0.95s both" }}>
               Meet{" "}
               <span style={{ color:"#FFF", fontWeight:600 }}>Sara</span>
-              {" "}— your AI deal companion who surfaces the gap between
-              what you <span style={{ color:"#FFF", fontWeight:600 }}>think</span>
-              {" "}is true and what{" "}
-              <span style={{ color:"#FFF", fontWeight:600 }}>actually</span>
-              {" "}is, before it costs you the deal.
+              {" "}— your{" "}
+              <span style={{ color:"#FFF", fontWeight:600 }}>24/7 deal assistant</span>.
+              {" "}Text her from a conference lunch. Call her on the drive home.
+              She helps you think the deal through and remembers what you ask
+              her to — without recording the customer, and without reporting
+              to your manager.
             </p>
             <div style={{ marginBottom: m?28:36,
               padding:"13px 18px", borderLeft:`2px solid #242424`,
@@ -867,9 +858,8 @@ function LandingPage() {
                 letterSpacing:"0.14em", marginBottom:6 }}>BUILT FOR</div>
               <div style={{ fontFamily:F.sans, fontSize: m?13:14,
                 color:MICRO, lineHeight:1.7 }}>
-                Mid-market B2B AEs carrying 8–20 active deals.
-                If you've ever confidently sandbagged a deal that was already dead,{" "}
-                <span style={{ color:"#AAA", fontWeight:600 }}>Sara is for you.</span>
+                Mid-market B2B AEs with 8–20 live deals — and a pipeline that
+                moves in hallways, dinners, and car rides, not just CRM fields.
               </div>
             </div>
             <div style={{ animation:"fadeUp 0.4s ease 1.12s both" }}>
@@ -879,11 +869,11 @@ function LandingPage() {
           </div>
 
           <div style={{ animation:"fadeUp 0.5s ease 0.8s both" }}>
-            <SaraDealCard mobile={m}/>
+            <SaraPhonePreview mobile={m}/>
             <div style={{ marginTop:10, fontFamily:F.mono,
               fontSize: m?8:9, color:MICRO,
               letterSpacing:"0.13em", textAlign:"right" }}>
-              THE GAP BETWEEN ASSUMED AND ACTUAL — VISIBLE ON EVERY DEAL
+              ONE NUMBER · TEXT OR CALL · ALWAYS YOURS
             </div>
           </div>
         </div>
@@ -896,17 +886,24 @@ function LandingPage() {
         <div style={{ maxWidth:"1160px", margin:"0 auto" }}>
           <div className={`si${painVis?" v":""}`}
             style={{ fontFamily:F.mono, fontSize: m?9:10, color:MICRO,
-              letterSpacing:"0.22em", marginBottom: m?40:52 }}>
-            THE PROBLEM WE'RE SOLVING
+              letterSpacing:"0.22em", marginBottom:12 }}>
+            THE REAL GAP
           </div>
+          <h2 className={`si${painVis?" v":""}`}
+            style={{ fontFamily:F.cond, fontWeight:900, fontSize: m?36:48,
+              color:"#FFF", letterSpacing:"-0.01em", textTransform:"uppercase",
+              marginBottom: m?36:48, transitionDelay:"0.08s", maxWidth:720 }}>
+            Your best deal moments<br/>
+            <span style={{ color:O }}>leave no recording.</span>
+          </h2>
           <div style={{ display:"flex", flexDirection: m?"column":"row", gap: m?0:3 }}>
             {[
-              { n:"12",  h:"The typical AE carries 12 active deals",
-                b:"You have real context on maybe 4. The rest run on memory, optimism, and assumption.", d:0 },
-              { n:"—", h:"Deals lost to silent drift — not competitors",
-                b:"Not because someone out-sold you. Lost because nobody asked the right question at the right moment.", d:0.1 },
-              { n:"11+", h:"Days before many reps notice drift",
-                b:"By then the deal has already shifted. Sara would have flagged it on day 2.", d:0.2 },
+              { n:"01",  h:"Hallway truth",
+                b:"The useful stuff happens off the call. Dinner. Parking lot. Two minutes after you hang up.", d:0 },
+              { n:"02", h:"Detail dies fast",
+                b:"By the time you're at a laptop, half of it is gone. The CRM gets leftovers.", d:0.1 },
+              { n:"03", h:"No bot can go there",
+                b:"Recording isn't an option. Those moments produce zero help — unless you have someone to tell.", d:0.2 },
             ].map(({ n, h, b, d }) => (
               <div key={n} className={`sc${painVis?" v":""}`}
                 style={{ flex:1, padding: m?"24px 0":"32px 28px",
@@ -916,9 +913,8 @@ function LandingPage() {
                   borderBottom: m?"1px solid #1E1E1E":"none",
                   paddingBottom: m?24:undefined,
                   transitionDelay:`${d}s` }}>
-                <div style={{ fontFamily:F.cond, fontWeight:900,
-                  fontSize: m?56:68, color:"#FFF", letterSpacing:"-0.02em",
-                  lineHeight:1, marginBottom:10 }}>{n}</div>
+                <div style={{ fontFamily:F.mono, fontSize:10, color:O,
+                  letterSpacing:"0.2em", marginBottom:16 }}>{n}</div>
                 <div style={{ fontFamily:F.sans, fontWeight:700,
                   fontSize:15, color:"#AAA", marginBottom:10 }}>{h}</div>
                 <div style={{ fontFamily:F.sans, fontSize:14,
@@ -929,38 +925,39 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* ── HOW SARA WORKS ── */}
-      <section ref={howRef} style={{ padding: m?"52px 20px":"80px 48px" }}>
+      {/* ── MOMENTS ── */}
+      <section ref={momentsRef} style={{ padding: m?"52px 20px":"80px 48px" }}>
         <div style={{ maxWidth:"1160px", margin:"0 auto" }}>
-          <div className={`si${howVis?" v":""}`}
+          <div className={`si${momentsVis?" v":""}`}
             style={{ fontFamily:F.mono, fontSize: m?9:10, color:MICRO,
-              letterSpacing:"0.22em", marginBottom:12 }}>HOW SARA WORKS</div>
-          <h2 className={`si${howVis?" v":""}`}
-            style={{ fontFamily:F.cond, fontWeight:900, fontSize: m?40:54,
+              letterSpacing:"0.22em", marginBottom:12 }}>
+            WHERE DEALS ACTUALLY MOVE
+          </div>
+          <h2 className={`si${momentsVis?" v":""}`}
+            style={{ fontFamily:F.cond, fontWeight:900, fontSize: m?38:52,
               color:"#FFF", letterSpacing:"-0.01em", textTransform:"uppercase",
               marginBottom: m?16:20, transitionDelay:"0.08s" }}>
-            She doesn't monitor you.<br/>
-            <span style={{ color:O }}>She thinks with you.</span>
+            She&apos;s there when<br/>
+            <span style={{ color:O }}>the CRM isn&apos;t.</span>
           </h2>
-          <p className={`si${howVis?" v":""}`}
+          <p className={`si${momentsVis?" v":""}`}
             style={{ fontFamily:F.sans, fontSize: m?15:17, color:"#666",
               lineHeight:1.75, maxWidth:540, marginBottom: m?36:52,
               transitionDelay:"0.14s" }}>
-            Sara runs a 2-minute Socratic debrief after every call —
-            asking the questions your brain skipped, surfacing what
-            you already know but haven't said out loud.
+            Text or call Sara the second a deal moment shows up in life —
+            not when you finally get back to a laptop.
           </p>
           <div style={{ display:"grid",
             gridTemplateColumns: m?"1fr":"repeat(3,1fr)", gap: m?0:3 }}>
             {[
-              { n:"01", h:"Sara listens",
-                b:"Connects to calls, emails, and CRM. No new tabs. No manual entry. She reads what you don't have time to track.", d:0 },
-              { n:"02", h:"Sara asks",
-                b:"2-minute Socratic debrief after every call. She exposes the gap between assumed and actual — in your own words.", d:0.1 },
-              { n:"03", h:"Sara tells you first",
-                b:"Not your manager. Not after forecast. You, first. She flags drift before it becomes a loss you can't recover.", d:0.2 },
+              { n:"01", h:"Conference lunch",
+                b:"New contact. Real signal. Text Sara the name, company, and what they said — before it dies in Notes.", d:0 },
+              { n:"02", h:"Sideline spark",
+                b:"Kids' game. Airport. Hallway. A conversation opens a thread. Text Sara while it's still sharp.", d:0.1 },
+              { n:"03", h:"Drive home",
+                b:"Long ride after the client meeting. Call Sara. Dump it. She asks what you skipped — hands-free.", d:0.2 },
             ].map(({ n, h, b, d }) => (
-              <div key={n} className={`sc${howVis?" v":""}`}
+              <div key={n} className={`sc${momentsVis?" v":""}`}
                 style={{ padding: m?"20px 0 20px 20px":"32px 28px",
                   background: m?"transparent":BK2,
                   border: m?"none":"1px solid #1E1E1E",
@@ -979,110 +976,88 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* ── TALK TO SARA ── */}
-      <section ref={saraRef} style={{ background:BK2,
+      {/* ── HOW SARA WORKS ── */}
+      <section ref={howRef} style={{ background:BK2,
         borderTop:"1px solid #1A1A1A", borderBottom:"1px solid #1A1A1A",
         padding: m?"52px 20px":"80px 48px" }}>
         <div style={{ maxWidth:"1160px", margin:"0 auto" }}>
-          <div className={`si${saraVis?" v":""}`}
+          <div className={`si${howVis?" v":""}`}
             style={{ fontFamily:F.mono, fontSize: m?9:10, color:MICRO,
-              letterSpacing:"0.22em", marginBottom:12 }}>COMING SOON</div>
-          <div style={{ display: m?"flex":"grid",
-            flexDirection: m?"column":undefined,
-            gridTemplateColumns: m?undefined:"1fr 1fr",
-            gap: m?32:64, alignItems:"center" }}>
-            <div>
-              <h2 className={`si${saraVis?" v":""}`}
-                style={{ fontFamily:F.cond, fontWeight:900, fontSize: m?38:52,
-                  color:"#FFF", letterSpacing:"-0.01em", textTransform:"uppercase",
-                  marginBottom: m?16:20, transitionDelay:"0.07s" }}>
-                Talk to Sara<br/><span style={{ color:O }}>directly.</span>
-              </h2>
-              <p className={`si${saraVis?" v":""}`}
-                style={{ fontFamily:F.sans, fontSize: m?15:16, color:"#666",
-                  lineHeight:1.75, marginBottom: m?24:32, transitionDelay:"0.14s" }}>
-                Founding cohort reps can call Sara directly after any
-                call for a live voice debrief. Ask her anything. She
-                already knows the context.
-              </p>
-              <div className={`si${saraVis?" v":""}`}
-                style={{ display:"inline-flex", alignItems:"center", gap:10,
-                  background:"#130A04", border:`1px solid ${O}33`,
-                  padding:"10px 16px", transitionDelay:"0.22s" }}>
-                <div style={{ width:7, height:7, borderRadius:"50%", background:"#555" }}/>
-                <span style={{ fontFamily:F.mono, fontSize:9, color:MICRO,
-                  letterSpacing:"0.16em" }}>
-                  VOICE DEBRIEFS · EARLY ACCESS · FOUNDING ONLY
-                </span>
+              letterSpacing:"0.22em", marginBottom:12 }}>HOW SARA WORKS</div>
+          <h2 className={`si${howVis?" v":""}`}
+            style={{ fontFamily:F.cond, fontWeight:900, fontSize: m?40:54,
+              color:"#FFF", letterSpacing:"-0.01em", textTransform:"uppercase",
+              marginBottom: m?16:20, transitionDelay:"0.08s" }}>
+            She doesn&apos;t monitor you.<br/>
+            <span style={{ color:O }}>She thinks with you.</span>
+          </h2>
+          <p className={`si${howVis?" v":""}`}
+            style={{ fontFamily:F.sans, fontSize: m?15:17, color:"#666",
+              lineHeight:1.75, maxWidth:540, marginBottom: m?36:52,
+              transitionDelay:"0.14s" }}>
+            No app install. No meeting bot. A number you already know how to use.
+          </p>
+          <div style={{ display:"grid",
+            gridTemplateColumns: m?"1fr":"repeat(3,1fr)", gap: m?0:3 }}>
+            {[
+              { n:"01", h:"Reach her",
+                b:"Text or call the moment it happens — lunch, sideline, drive home. You bring the context.", d:0 },
+              { n:"02", h:"She works it",
+                b:"Asks what you skipped. Saves what you tell her to keep. Surfaces the gap between assumed and actual.", d:0.1 },
+              { n:"03", h:"Stays yours",
+                b:"No manager feed. No customer recording. Just you and Sara — on your phone, on your terms.", d:0.2 },
+            ].map(({ n, h, b, d }) => (
+              <div key={n} className={`sc${howVis?" v":""}`}
+                style={{ padding: m?"20px 0 20px 20px":"32px 28px",
+                  background: m?"transparent":"#0D0D0D",
+                  border: m?"none":"1px solid #1E1E1E",
+                  borderLeft: m?`2px solid ${O}`:undefined,
+                  marginBottom: m?4:0, transitionDelay:`${d}s` }}>
+                <div style={{ fontFamily:F.mono, fontSize:10, color:O,
+                  letterSpacing:"0.2em", marginBottom:16 }}>{n}</div>
+                <div style={{ fontFamily:F.cond, fontWeight:800,
+                  fontSize: m?22:24, color:"#FFF", letterSpacing:"-0.01em",
+                  textTransform:"uppercase", marginBottom:12 }}>{h}</div>
+                <div style={{ fontFamily:F.sans, fontSize:14,
+                  color:"#666", lineHeight:1.75 }}>{b}</div>
               </div>
-            </div>
-            <div className={`si${saraVis?" v":""}`} style={{ transitionDelay:"0.2s" }}>
-              <div style={{ background:"#0D0D0D", border:"1px solid #1E1E1E",
-                padding: m?"20px 18px":"28px 24px" }}>
-                <div style={{ fontFamily:F.mono, fontSize:9, color:MICRO,
-                  letterSpacing:"0.16em", marginBottom:16 }}>
-                  SARA · VOICE DEBRIEF · PREVIEW
-                </div>
-                <div style={{ fontFamily:F.sans, fontSize: m?16:18, color:"#CCC",
-                  fontStyle:"italic", lineHeight:1.65, marginBottom:16,
-                  borderLeft:`3px solid ${O}`, paddingLeft:16 }}>
-                  "You mentioned the CFO was supportive — when was the last
-                  time you heard that directly from her, not through your champion?"
-                </div>
-                <div style={{ display:"flex", gap:3, alignItems:"center",
-                  height:22, marginBottom:12, opacity:0.55 }}>
-                  {Array.from({ length: m?20:28 }, (_,i) => {
-                    const h = [0.4,0.7,1,0.6,0.9,0.5,0.8,0.3,0.9,0.6,
-                               1,0.4,0.7,0.5,0.9,0.3,0.8,0.6,1,0.5,
-                               0.7,0.4,0.9,0.6,0.8,0.3,1,0.5][i%28];
-                    return (
-                      <div key={i} style={{ flex:1, background:"#252525",
-                        height:`${h*100}%`, minWidth:2,
-                        animation:`wave ${1.2+(i%4)*0.3}s ease-in-out ${i*0.05}s infinite` }}/>
-                    );
-                  })}
-                </div>
-                <div style={{ fontFamily:F.mono, fontSize:9, color:"#3D3D3D",
-                  letterSpacing:"0.12em" }}>SARA · 00:47 OF 2:00</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── FOUNDING COHORT ── */}
+      {/* ── FOUNDERS CLUB ── */}
       <section ref={perksRef} style={{ padding: m?"52px 20px":"80px 48px" }}>
         <div style={{ maxWidth:"1160px", margin:"0 auto" }}>
           <div className={`si${perksVis?" v":""}`}
             style={{ fontFamily:F.mono, fontSize: m?9:10, color:MICRO,
-              letterSpacing:"0.22em", marginBottom:12 }}>FOUNDING COHORT</div>
+              letterSpacing:"0.22em", marginBottom:12 }}>FOUNDERS CLUB</div>
           <h2 className={`si${perksVis?" v":""}`}
             style={{ fontFamily:F.cond, fontWeight:900, fontSize: m?38:50,
               color:"#FFF", letterSpacing:"-0.01em", textTransform:"uppercase",
               marginBottom: m?12:16, transitionDelay:"0.07s" }}>
-            You're not a beta tester.<br/>
+            You&apos;re not a beta tester.<br/>
             <span style={{ borderBottom:`3px solid ${O}`, paddingBottom:4 }}>
-              You're a co-builder.
+              You&apos;re a co-builder.
             </span>
           </h2>
           <p className={`si${perksVis?" v":""}`}
             style={{ fontFamily:F.sans, fontSize: m?15:16, color:"#666",
               lineHeight:1.75, maxWidth:540, marginBottom: m?40:56,
               transitionDelay:"0.14s" }}>
-            A focused group of quota-carrying reps shaping Sara before
-            anyone else sees her. Access is limited right now.
-            Founding cohort gets access first.
+            A tight group of quota-carrying reps shaping Sara before anyone
+            else gets her number. Access is limited. Founders Club goes first.
           </p>
           <div style={{ display:"grid",
             gridTemplateColumns: m?"1fr":"repeat(3,1fr)", gap: m?0:3 }}>
             {[
               { n:"01", h:"Shape Sara",
-                b:"Direct line to the founding team. Your feedback determines what Sara learns to ask next.", d:0 },
-              { n:"02", h:"Free for life",
-                b:"Founding reps lock in permanent free access. No credit card, no trial, no bait and switch.", d:0.1 },
+                b:"Direct line to the founding team. Your feedback decides what she learns to ask next.", d:0 },
+              { n:"02", h:"Founders Club perks",
+                b:"Free while we build with you. No credit card. No trial clock. Early access that actually means early.", d:0.1 },
               { n:"03", h:"Rep-first. Always.",
-                b:"Sara reports to you, not your manager. Everything she surfaces goes to you first.",
-                bold:"Your manager never sees what Sara flags. Ever.", d:0.2 },
+                b:"Sara reports to you, not your manager. Everything stays with you first.",
+                bold:"Your manager never sees what you tell Sara. Ever.", d:0.2 },
             ].map(({ n, h, b, bold, d }) => (
               <div key={n} className={`sc${perksVis?" v":""}`}
                 style={{ padding: m?"20px 0 20px 20px":"32px 28px",
@@ -1163,21 +1138,21 @@ function LandingPage() {
           <div className={`si${ctaVis?" v":""}`}
             style={{ fontFamily:F.mono, fontSize: m?9:10, color:MICRO,
               letterSpacing:"0.22em", marginBottom:24 }}>
-            THE DEAL YOU THINK YOU'RE WINNING
+            THE MOMENT YOU&apos;D FORGET BY FRIDAY
           </div>
           <h2 className={`si${ctaVis?" v":""}`}
             style={{ fontFamily:F.cond, fontWeight:900, fontSize: m?56:72,
               color:"#FFF", textTransform:"uppercase", letterSpacing:"-0.01em",
               lineHeight:0.91, marginBottom:24, transitionDelay:"0.08s" }}>
-            Know before<br/>
-            <span style={{ color:O }}>it's too late.</span>
+            Don&apos;t carry it<br/>
+            <span style={{ color:O }}>alone.</span>
           </h2>
           <p className={`si${ctaVis?" v":""}`}
             style={{ fontFamily:F.sans, fontSize: m?15:17, color:"#666",
               lineHeight:1.8, marginBottom: m?36:44,
               transitionDelay:"0.16s", textAlign: m?"left":"center" }}>
-            Access is limited right now. Founding access is free,
-            permanent, and limited. Applications are reviewed individually.
+            Limited early access. Apply now. We review every application —
+            then you get Sara&apos;s number.
           </p>
           <div className={`si${ctaVis?" v":""}`}
             style={{ transitionDelay:"0.24s", textAlign: m?"left":undefined }}>
