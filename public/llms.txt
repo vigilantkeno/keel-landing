@@ -1,51 +1,52 @@
 # keel
 
-> AI deal intelligence for B2B sales reps. Sara is your AI deal companion who surfaces the gap between what you think is happening and what actually is — before it costs you the deal.
+> Sara is your 24/7 deal assistant for B2B sales reps. Text or call her when deal context shows up in life — conference lunch, hallway, drive home. Private to you. No customer recording. No manager feed.
 
 ## What this is
 
-keel is an AI-powered deal-intelligence tool for quota-carrying B2B Account Executives. It connects to your calls, emails, and CRM, then runs a 2-minute Socratic debrief after every call asking the questions your brain skipped.
+keel gives quota-carrying B2B Account Executives a phone number for Sara. Text or call after the moments no meeting bot can join. She asks what you skipped, saves what you tell her to keep, and stays yours.
 
 Founded 2026. Early access is limited and granted in waves as applications are reviewed.
 
 ## Key facts
 
-- Product: Sara — an AI deal companion for B2B AEs
-- Pricing: Free for life for the founding cohort; seats are limited. No credit card, no trial, no bait and switch. General pricing has not yet been announced.
-- Stage: Pre-launch, accepting founding cohort applications
-- Target user: Mid-market B2B AEs carrying 8–20 active deals
-- Differentiator: Rep-first, not manager-first. Sara reports to you, not your org chart.
+- Product: Sara — 24/7 deal assistant for B2B AEs
+- Pricing: Founders Club — free while we build with you; seats limited; no credit card. General pricing has not yet been announced.
+- Stage: Early access / Founders Club applications open
+- Target user: Mid-market B2B AEs with 8–20 live deals whose pipeline moves off-CRM
+- Differentiator: Rep-first. Unrecordable moments. Text or call — not a CRM connector or meeting bot.
 
 ## How Sara works
 
-1. Sara listens — connects to calls, emails, and CRM
-2. Sara asks — runs a 2-minute Socratic debrief after every call
-3. Sara tells you first — flags drift before it costs you the deal
+1. Reach her — text or call the moment it happens
+2. She works it — asks what you skipped; saves what you tell her to keep
+3. Stays yours — no manager feed; no customer recording
 
 ## Use cases
 
-- Catching silent deal drift before quarter-end surprises
-- Spotting a champion who's gone quiet before the deal collapses
-- Getting an objective read on budget re-opens and competitor activity
-- 2-minute post-call debrief without filling out CRM fields
+- Conference lunch: text name, company, what they said
+- Sideline / hallway / airport: catch a spark before it fades
+- Drive home after a client meeting: call Sara and dump the context hands-free
+- Think through champion vs economic buyer gaps without a manager dashboard
 
 ## Differentiators vs competitors
 
-- vs Gong / Chorus: Sara works for the rep, not the manager. No performance scoring, no manager reports.
-- vs Conversation Intelligence tools: Sara asks Socratic questions, doesn't just transcribe.
-- vs CRM hygiene tools: Works even when your CRM is a mess. Builds the picture from what you say.
+- vs Gong / Chorus: Gong owns the recorded call for managers. Sara owns what happens after you hang up — for you.
+- vs Conversation Intelligence: No bot in the meeting. You reach out.
+- vs CRM hygiene tools: Works from what you tell her, not what Salesforce forgot.
 
 ## Common questions
 
-- Will my manager see what Sara flags? — No. Sara reports to you first.
-- How long is the debrief? — Two minutes. Three to four targeted questions.
-- Does Sara work with a messy CRM? — Yes. That's the environment she was designed for.
-- Do I need IT/manager approval to sign up? — No. Individual sign-up, no procurement.
+- Is Sara always on? — Once you're in, yes. Access is application-reviewed.
+- Will my manager see what I tell Sara? — No. Sara reports to you.
+- Does she record my customer calls? — Never.
+- Do I need a clean CRM? — No.
+- Do I need IT/manager approval? — No. Individual early access.
 
 ## Links
 
 - Main site: https://getkeel.io
-- Founding cohort waitlist: https://getkeel.io/#waitlist
+- Founders Club waitlist: https://getkeel.io/#waitlist
 - Contact: hello@getkeel.io
 - Twitter / X: https://x.com/getkeel
 - LinkedIn: https://www.linkedin.com/company/getkeel
