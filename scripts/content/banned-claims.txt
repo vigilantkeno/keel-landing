@@ -1,0 +1,52 @@
+# Banned claims — mechanical checklist for scripts/content/check-claims.mjs
+#
+# These describe things Keel does NOT do. A draft containing one is factually
+# wrong, not merely off-brand. Prompt instructions ask a model to avoid these;
+# THIS FILE is what actually enforces it, because prompts drift between model
+# versions and greps do not.
+#
+# Format: one case-insensitive regex per line. Blank lines and # comments are
+# ignored. Keep patterns narrow enough to avoid false positives on legitimate
+# contrast copy ("Gong records the call — Sara does not").
+#
+# When adding a claim here, also add it to content/keywords/seeds.md so the
+# human-facing brief and the machine check stay in agreement.
+
+# ── CRM integration (Keel has none) ────────────────────────────────────────
+\bCRM (integration|sync|connector|integration)\b
+\b(syncs?|connects?|integrates?) (directly )?(with|to) (your )?(CRM|Salesforce|HubSpot)\b
+\bSalesforce (integration|connector|sync)\b
+\bHubSpot (integration|connector|sync)\b
+\bauto(matically)?[- ]?(logs?|updates?|writes?) to (your )?CRM\b
+
+# ── Call recording / meeting bots (Sara never joins or records) ────────────
+\bSara (records?|will record|joins?|will join)\b
+\brecords? (your |the )?(customer |sales |client )?(calls?|meetings?|conversations?)\b
+\b(meeting|note ?taking) bot\b
+\bjoins? (your |the )?(call|meeting|zoom|teams)\b
+\btranscrib(es?|ing) (your |the )?(customer|client|sales) (call|conversation)\b
+
+# ── Manager surveillance (Sara reports to the rep only) ────────────────────
+\bmanager dashboard\b
+\bteam (feed|dashboard|visibility|leaderboard)\b
+\b(pipeline|deal) visibility for (managers?|leadership|the team)\b
+\bshares? (with|to) (your )?manager\b
+\bmanagers? can see\b
+
+# ── Pricing (Founders Club is free WHILE WE BUILD; GA pricing unannounced) ─
+\bfree forever\b
+\bpermanently free\b
+\bfree tier\b
+\b(costs?|pricing starts at|priced at) \$[0-9]
+\bper[- ]seat pricing\b
+
+# ── Certifications & availability (we say "road to SOC 2") ─────────────────
+\bSOC ?2 (certified|compliant)\b
+\b(HIPAA|ISO ?27001|GDPR) (certified|compliant)\b
+\bgenerally available\b
+\bout of beta\b
+
+# ── Unpublished metrics (no invented stats) ────────────────────────────────
+\b[0-9,]+\+? (customers|users|reps|companies|teams) (use|trust|rely)
+\bwin rates? (increased?|improved?|up) by [0-9]
+\b[0-9]{1,3}% (more|higher|increase|improvement) in (revenue|win|close|quota)

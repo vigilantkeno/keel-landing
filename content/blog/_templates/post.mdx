@@ -1,0 +1,35 @@
+---
+# ── Identity ──────────────────────────────────────────────────────────────
+title: ""
+description: ""            # 1 sentence, <=155 chars — becomes meta description
+slug: ""                   # kebab-case, must be unique
+date: "YYYY-MM-DD"
+author: ""
+
+# ── Search intent ─────────────────────────────────────────────────────────
+targetKeyword: ""          # exactly one
+secondaryKeywords: []
+intent: ""                 # informational | comparison | commercial
+
+# ── Topical authority ─────────────────────────────────────────────────────
+cluster: ""                # must exist in content/keywords/clusters.json
+pillar: false              # at most one published pillar per cluster
+
+# ── FAQ (feeds FAQPage JSON-LD; omit the key entirely if none) ────────────
+faq: []
+#  - question: ""
+#    answer: ""
+
+# ── Publish gate ──────────────────────────────────────────────────────────
+status: "draft"            # brief | draft | review | published
+claimsReviewed: false      # CI FAILS if status=published while this is false
+---
+
+Answer-first lead: define the thing and answer the query in the first ~100
+words, before any narrative. AI overviews and featured snippets extract from
+here, and a rep skimming on a phone decides here whether to keep reading.
+
+## First real heading
+
+Body. Rep-first voice. Concrete over clever. No invented statistics, no
+claims from scripts/content/banned-claims.txt.

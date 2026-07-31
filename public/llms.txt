@@ -55,3 +55,11 @@ Founded 2026. Early access is limited and granted in waves as applications are r
 
 - [Privacy policy](https://getkeel.io/privacy)
 - [Terms](https://getkeel.io/terms)
+
+## Blog
+
+Field notes at https://getkeel.io/blog — deal complexity, rep-first AI, and
+the moments that happen after you hang up. Full index: https://getkeel.io/blog
+RSS: https://getkeel.io/feed.xml
+Sitemap: https://getkeel.io/sitemap.xml
+

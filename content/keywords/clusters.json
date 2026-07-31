@@ -1,0 +1,33 @@
+{
+  "$comment": "Pillar \u2192 supporting map. One pillar page per cluster; supporting posts link up to the pillar and across to siblings.",
+  "clusters": [
+    {
+      "id": "unrecordable-moments",
+      "pillar": "what-call-recording-cant-capture",
+      "supporting": [],
+      "intent": "informational",
+      "description": "Deal context that happens where no meeting bot can follow."
+    },
+    {
+      "id": "rep-first-ai",
+      "pillar": null,
+      "supporting": [],
+      "intent": "comparison",
+      "description": "Who your sales AI actually works for \u2014 rep or manager."
+    },
+    {
+      "id": "deal-memory-drift",
+      "pillar": null,
+      "supporting": [],
+      "intent": "informational",
+      "description": "Champions going quiet, buyers never engaged, context lost between calls."
+    },
+    {
+      "id": "early-access",
+      "pillar": null,
+      "supporting": [],
+      "intent": "commercial",
+      "description": "Founders Club, onboarding, what early access actually means."
+    }
+  ]
+}

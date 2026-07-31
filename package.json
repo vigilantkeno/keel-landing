@@ -4,15 +4,20 @@
   "private": true,
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
+    "gray-matter": "^4.0.3",
     "next": "14.2.35",
+    "next-mdx-remote": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run content:check && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "content:validate": "node scripts/content/validate.mjs",
+    "content:claims": "node scripts/content/check-claims.mjs",
+    "content:check": "npm run content:validate && npm run content:claims"
   },
   "eslintConfig": {
     "extends": [
