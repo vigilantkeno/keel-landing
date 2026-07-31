@@ -1,12 +1,17 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import Mark from "./Mark";
 import SiteFooter from "./SiteFooter";
 import { BK, F, GLOBAL_STYLE, O } from "./brand";
 
 function useMobile() {
-  const [mobile, setMobile] = useState(window.innerWidth < 768);
+  // Initialised to a constant, not window: this renders on the server too.
+  // The real width is read in the effect, same pattern App.jsx already uses.
+  const [mobile, setMobile] = useState(false);
   useEffect(() => {
     const fn = () => setMobile(window.innerWidth < 768);
+    fn();
     window.addEventListener("resize", fn);
     return () => window.removeEventListener("resize", fn);
   }, []);
@@ -32,9 +37,6 @@ function P({ children }) {
 export default function LegalShell({ title, children }) {
   const mobile = useMobile();
 
-  useEffect(() => {
-    document.title = `${title} — keel`;
-  }, [title]);
 
   return (
     <div style={{ background: BK, color: "#F5F5F5", fontFamily: F.sans,

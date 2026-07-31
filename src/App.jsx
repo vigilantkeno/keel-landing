@@ -1,7 +1,6 @@
+"use client";
+
 import { useState, useEffect, useRef, useCallback } from "react";
-import TermsPage from "./pages/TermsPage";
-import PrivacyPage from "./pages/PrivacyPage";
-import SmsConsentPage from "./pages/SmsConsentPage";
 import SiteFooter from "./SiteFooter";
 
 /* ─── CONFIG ─────────────────────────────────────────────────────────────── */
@@ -607,7 +606,7 @@ function SuccessView({ number, mobile, onClose }) {
           </div>
           <div style={{ display:"flex", flexDirection: mobile?"column":"row", gap:8 }}>
             <CopyButton text={SHARE_URL} label="COPY LINK" mobile={mobile}/>
-            <SocialBtn href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`} label="𝕏 SHARE"/>
+            <SocialBtn href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`} label="𝕏 SHARE" mobile={mobile}/>
             <SocialBtn href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SHARE_URL)}`} label="in SHARE" mobile={mobile}/>
           </div>
         </div>
@@ -695,7 +694,7 @@ function Badge() {
 }
 
 /* ─── MAIN ───────────────────────────────────────────────────────────────── */
-function LandingPage() {
+export default function LandingPage() {
   const w = useW();
   const m = w < 768;
 
@@ -1165,12 +1164,4 @@ function LandingPage() {
       <SiteFooter mobile={m}/>
     </div>
   );
-}
-
-export default function App() {
-  const path = window.location.pathname.replace(/\/$/, "") || "/";
-  if (path === "/terms") return <TermsPage />;
-  if (path === "/privacy") return <PrivacyPage />;
-  if (path === "/sms-consent") return <SmsConsentPage />;
-  return <LandingPage />;
 }
