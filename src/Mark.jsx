@@ -1,5 +1,7 @@
 "use client";
 
+import { useId } from "react";
+
 const MP = [
   `M231.823730,630.155273 C229.436981,629.663818 228.952454,627.732056 228.075119,626.181152
    C203.553680,582.833374 179.057968,539.471069 154.537582,496.122681
@@ -20,10 +22,13 @@ const MP = [
    C307.290192,503.267456 304.071716,505.391327 302.681885,508.620178 Z`,
 ];
 
-let _gn = 0;
-
 export default function Mark({ size = 36, variant = "grad" }) {
-  const id = `mg${++_gn}`;
+  // useId is SSR-safe: the server and the client derive the same value, so
+  // hydration matches. The previous module-level counter incremented
+  // independently on each side — and persisted across renders in the server
+  // process — so server HTML shipped ids like mg3 while the client generated
+  // mg1, producing React hydration errors #418/#423/#425 on every page.
+  const id = `mg${useId().replace(/:/g, "")}`;
   const fill = variant === "dim" ? "#2A2A2A"
     : variant === "white" ? "#FFF"
     : `url(#${id})`;

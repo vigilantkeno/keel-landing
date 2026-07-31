@@ -38,6 +38,11 @@ export default function SiteFooter({ mobile }) {
             fontSize: mobile ? 16 : 18, letterSpacing: "-0.025em", color: "#FFF" }}>keel</span>
         </a>
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+          <a href="/blog" style={linkStyle}
+            onMouseEnter={e => { e.currentTarget.style.color = "#888"; }}
+            onMouseLeave={e => { e.currentTarget.style.color = MICRO; }}>
+            BLOG
+          </a>
           <a href="/terms" style={linkStyle}
             onMouseEnter={e => { e.currentTarget.style.color = "#888"; }}
             onMouseLeave={e => { e.currentTarget.style.color = MICRO; }}>
@@ -53,7 +58,7 @@ export default function SiteFooter({ mobile }) {
       <div style={{ padding: mobile ? "0 20px" : undefined, marginBottom: 12 }}>
         <div style={{ fontFamily: F.mono, fontSize: 9, color: MICRO,
           letterSpacing: "0.14em", lineHeight: 1.7 }}>
-          © 2026 Plantly, LLC. Keel is operated by Plantly, LLC.
+          © 2026 Keel
         </div>
       </div>
       <div style={{ padding: mobile ? "0 20px" : undefined }}>

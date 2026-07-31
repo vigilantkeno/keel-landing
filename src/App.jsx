@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import SiteFooter from "./SiteFooter";
+import Mark from "./Mark";
+import { O, OL, BK, BK2, MICRO, F } from "./brand";
 
 /* ─── CONFIG ─────────────────────────────────────────────────────────────── */
 const FORMSPREE_URL = "https://formspree.io/f/xpqogzeb";
@@ -31,58 +33,17 @@ async function nextApplicationNumber() {
 }
 
 /* ─── BRAND ──────────────────────────────────────────────────────────────── */
-const O   = "#FF5A1F";
-const OL  = "#FF7A3D";
-const BK  = "#0B0B0B";
-const BK2 = "#0F0F0F";
-const MICRO = "#8a8a8a"; // functional microlabels — WCAG AA on near-black
-
-const F = {
-  sans: "'Plus Jakarta Sans',sans-serif",
-  mono: "'DM Mono',monospace",
-  cond: "'Barlow Condensed',sans-serif",
-};
+// Imported, not redeclared: this file previously kept a byte-identical copy of
+// the brand tokens, which silently bypassed brand.js. That mattered the moment
+// F moved to next/font CSS variables — the landing page kept requesting
+// 'Barlow Condensed' by its original name, which next/font no longer registers,
+// so the hero fell back to a system font and reflowed.
 
 /* ─── LOGO ───────────────────────────────────────────────────────────────── */
-const MP = [
-  `M231.823730,630.155273 C229.436981,629.663818 228.952454,627.732056 228.075119,626.181152
-   C203.553680,582.833374 179.057968,539.471069 154.537582,496.122681
-   C138.711945,468.145325 122.853897,440.186310 107.011559,412.218353
-   C106.359482,411.067169 105.533882,409.953430 106.170036,408.364899
-   C107.570267,406.915070 109.577454,407.365204 111.257660,407.439606
-   C126.588425,408.118408 141.900848,407.122009 157.221542,407.092712
-   C158.721283,407.089844 160.222397,407.146484 161.720581,407.100739
-   C168.360764,406.897888 172.464340,409.117310 176.122253,415.678436
-   C199.474731,457.565582 222.693161,499.536896 247.005463,540.885010
-   C252.744690,550.645813 258.067474,560.650940 263.634338,570.514038
-   C264.861023,572.687317 265.298828,574.557739 263.863586,576.987427
-   C254.037567,593.622314 244.373291,610.352661 234.616287,627.028564
-   C233.961884,628.146973 232.975098,629.070923 231.823730,630.155273 Z`,
-  `M302.681885,508.620178 C293.969940,523.546936 285.450745,538.162476 276.114349,554.179993
-   C265.543518,535.485168 255.599564,517.899109 245.073486,499.283508
-   C266.412018,499.283508 286.370880,499.283508 306.507935,499.283508
-   C307.290192,503.267456 304.071716,505.391327 302.681885,508.620178 Z`,
-];
-
-let _gn = 0;
-function Mark({ size = 36, variant = "grad" }) {
-  const id = `mg${++_gn}`;
-  const fill = variant === "dim"   ? "#2A2A2A"
-             : variant === "white" ? "#FFF"
-             : `url(#${id})`;
-  return (
-    <svg viewBox="98 400 218 238" width={size} height={size}
-      style={{ display:"block", flexShrink:0 }}>
-      <defs>
-        <linearGradient id={id} x1="1" y1="0" x2="0" y2="1">
-          <stop offset="0%"   stopColor={OL}/>
-          <stop offset="100%" stopColor="#CC3300"/>
-        </linearGradient>
-      </defs>
-      {MP.map((d,i) => <path key={i} fill={fill} d={d}/>)}
-    </svg>
-  );
-}
+// Mark and its path data live in ./Mark — this file previously carried a
+// byte-identical duplicate whose module-level id counter incremented
+// separately on server and client, producing mismatched SVG gradient ids and
+// React hydration errors (#418/#423/#425) on every page load.
 
 /* ─── HOOKS ──────────────────────────────────────────────────────────────── */
 function useW() {
@@ -740,7 +701,10 @@ export default function LandingPage() {
   ];
 
   return (
-    <div style={{ background:BK, color:"#F5F5F5",
+    // <main> not <div>: Lighthouse flagged the landing page as having no main
+    // landmark, which screen-reader users rely on to skip to content. The
+    // legal pages already use <main>; this brings the landing page in line.
+    <main style={{ background:BK, color:"#F5F5F5",
       fontFamily:F.sans, minHeight:"100vh",
       WebkitFontSmoothing:"antialiased" }}>
 
@@ -752,7 +716,6 @@ export default function LandingPage() {
       )}
 
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
         * { box-sizing:border-box; margin:0; padding:0; }
         @keyframes fadeUp    { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
         @keyframes slideIn   { from{opacity:0;transform:translateX(-10px)} to{opacity:1;transform:translateX(0)} }
@@ -786,10 +749,6 @@ export default function LandingPage() {
             letterSpacing:"-0.025em", color:"#FFF" }}>keel</span>
         </div>
         <div style={{ display:"flex", alignItems:"center", gap: m?10:20 }}>
-          {!m && (
-            <span style={{ fontFamily:F.mono, fontSize:9,
-              color:MICRO, letterSpacing:"0.18em" }}>getkeel.io</span>
-          )}
           <button
             onClick={() => document.getElementById("cta-email")?.focus()}
             onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,90,31,0.12)"; }}
@@ -1162,6 +1121,6 @@ export default function LandingPage() {
       </section>
 
       <SiteFooter mobile={m}/>
-    </div>
+    </main>
   );
 }
