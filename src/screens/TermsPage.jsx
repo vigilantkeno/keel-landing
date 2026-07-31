@@ -1,3 +1,5 @@
+"use client";
+
 import LegalShell, { Section, P } from "../LegalShell";
 
 export default function TermsPage() {

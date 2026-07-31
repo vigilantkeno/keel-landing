@@ -1,3 +1,5 @@
+"use client";
+
 import Mark from "./Mark";
 import { F, MICRO } from "./brand";
 
