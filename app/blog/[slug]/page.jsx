@@ -16,14 +16,17 @@ export function generateMetadata({ params }) {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
   const url = `https://getkeel.io/blog/${post.slug}`;
+  // metaTitle (optional frontmatter): SERP titles want <60 chars; H1s can run
+  // longer. When present it is used verbatim for <title>/OG/Twitter.
+  const metaTitle = post.metaTitle ?? `${post.title} — keel`;
   return {
-    title: `${post.title} — keel`,
+    title: metaTitle,
     description: post.description,
     keywords: [post.targetKeyword, ...(post.secondaryKeywords ?? [])],
     authors: [{ name: post.author }],
     alternates: { canonical: url },
     openGraph: {
-      title: post.title,
+      title: post.metaTitle ?? post.title,
       description: post.description,
       url,
       type: 'article',
@@ -32,7 +35,7 @@ export function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: post.metaTitle ?? post.title,
       description: post.description,
     },
   };
@@ -54,7 +57,9 @@ export default function BlogPost({ params }) {
       description: post.description,
       datePublished: new Date(post.date).toISOString(),
       dateModified: new Date(post.updated ?? post.date).toISOString(),
-      author: { '@type': 'Person', name: post.author },
+      author: /team/i.test(post.author)
+        ? { '@type': 'Organization', name: 'Keel', url: 'https://getkeel.io' }
+        : { '@type': 'Person', name: post.author },
       publisher: { '@id': 'https://getkeel.io/#organization' },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       url,
