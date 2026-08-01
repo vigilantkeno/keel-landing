@@ -59,7 +59,7 @@ export default function BlogPost({ params }) {
       dateModified: new Date(post.updated ?? post.date).toISOString(),
       author: /team/i.test(post.author)
         ? { '@type': 'Organization', name: 'Keel', url: 'https://getkeel.io' }
-        : { '@type': 'Person', name: post.author },
+        : { '@type': 'Person', name: post.author, url: 'https://getkeel.io' },
       publisher: { '@id': 'https://getkeel.io/#organization' },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       url,
