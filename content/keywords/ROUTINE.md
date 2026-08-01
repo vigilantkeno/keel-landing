@@ -63,7 +63,11 @@ any external knowledge base, project context, or connector.
      THIS run, supporting the exact claim cited. If a source cannot be
      verified, rewrite to not need it. Never cite from memory; never
      invent statistics. If a claim has no verifiable source, it does
-     not ship.
+     not ship. Scheduled runs have NO web access (egress-blocked,
+     confirmed 2026-08-01): headless articles therefore carry zero
+     external citations — written as argument/positioning pieces that
+     need none — and say so in the PR. `HOLD-WEB:` queue rows are
+     skipped entirely, never failed, never written citation-free.
    - Cluster: use an existing cluster from `clusters.json`, or add a
      new cluster entry in the same commit (respect the
      one-pillar-per-cluster rule).

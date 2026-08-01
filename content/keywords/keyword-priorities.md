@@ -8,9 +8,17 @@ The **backlog** below it is reference material and is NEVER selectable.
 ## Selection rule (routine) — zero judgment
 
 Take the top 2 queue rows whose Target keyword does not appear in
-`used-keywords.md` (case-insensitive, any status). That's the entire
-selection step — no near-duplicate analysis, no table walking, no
-subagents. Each row already lists the secondaries to fold into the
+`used-keywords.md` (case-insensitive, any status), skipping rows whose
+Target is prefixed `HOLD-WEB:`. That's the entire selection step — no
+near-duplicate analysis, no table walking, no subagents.
+
+`HOLD-WEB:` rows are competitor/brand articles whose claims about
+third-party products require fetching those vendors' live pages —
+impossible in scheduled runs, whose egress policy blocks all web
+access (confirmed 2026-08-01). They are written only in supervised
+sessions with web access, then ledgered normally. The routine skips
+them silently; it must never select them, never mark them FAILED, and
+never write them citation-free. Each row already lists the secondaries to fold into the
 article and the exact `cluster` id for frontmatter (ids marked (new)
 get their `clusters.json` entry in the same commit; "pillar: yes" rows
 set `pillar: true`). Ledger the target AND its listed secondaries on
@@ -34,11 +42,11 @@ priority, adjusted so each cluster's pillar ships before its spokes
 | 1 | Gong alternative without recording | 83.25 | surveillance-backlash | no | Gong alternative privacy focused |
 | 2 | AI sales tool that doesn't report to manager | 83.25 | surveillance-backlash | no | AI sales tool no boss visibility; rep privacy AI sales tool |
 | 3 | customer ghosted | 84.50 | deal-memory-drift | yes | customer went dark; customer stopped responding; customer won't respond; customer ignoring me |
-| 4 | AI note taker alternative for sales | 81.75 | note-taker-alternatives (new) | yes | AI note taker for sales rep; AI meeting notes for sales rep; AI meeting summary for sales; AI notetaker for sales without recording |
-| 5 | Fathom alternative for sales | 84.50 | note-taker-alternatives (new) | no | Fathom vs Sara; Fathom for sales rep; Fathom privacy |
-| 6 | Otter alternative for sales | 84.50 | note-taker-alternatives (new) | no | Otter for sales rep |
-| 7 | Read AI alternative for sales | 84.50 | note-taker-alternatives (new) | no | Read AI vs Sara; Read AI for sales rep; Read AI privacy |
-| 8 | Fireflies alternative for sales | 84.50 | note-taker-alternatives (new) | no | — |
+| 4 | HOLD-WEB: AI note taker alternative for sales | 81.75 | note-taker-alternatives (new) | yes | AI note taker for sales rep; AI meeting notes for sales rep; AI meeting summary for sales; AI notetaker for sales without recording |
+| 5 | HOLD-WEB: Fathom alternative for sales | 84.50 | note-taker-alternatives (new) | no | Fathom vs Sara; Fathom for sales rep; Fathom privacy |
+| 6 | HOLD-WEB: Otter alternative for sales | 84.50 | note-taker-alternatives (new) | no | Otter for sales rep |
+| 7 | HOLD-WEB: Read AI alternative for sales | 84.50 | note-taker-alternatives (new) | no | Read AI vs Sara; Read AI for sales rep; Read AI privacy |
+| 8 | HOLD-WEB: Fireflies alternative for sales | 84.50 | note-taker-alternatives (new) | no | — |
 | 9 | AI for sales rep with ADHD | 81.75 | ae-personas (new) | yes | AI for ADHD sales; sales rep ADHD tool; focus tool for sales |
 | 10 | founder to first AE | 81.75 | founder-led-sales (new) | yes | founder first sales hire; founder to AE transition; hiring first AE |
 | 11 | second brain for sales rep | 79.25 | second-brain (new) | yes | AI second brain for sales; second brain for AE; second brain for sales; AI as second brain for sales |
@@ -48,24 +56,25 @@ priority, adjusted so each cluster's pillar ships before its spokes
 | 15 | AI for financial services B2B sales | 79.25 | regulated-industries | no | — |
 | 16 | AI for in-person sales conversations | 79.25 | field-sales-ai | no | — |
 | 17 | AI for sales reps that thinks with you | 79.25 | byoai-shadow-ai (new) | no | AI thinking partner for sales rep |
-| 18 | best AI for sales rep without manager | 76.50 | competitor-comparisons (new) | yes | best AI for sales rep privacy; best AI for sales rep no recording; Gong for individual contributor |
+| 18 | HOLD-WEB: best AI for sales rep without manager | 76.50 | competitor-comparisons (new) | yes | best AI for sales rep privacy; best AI for sales rep no recording; Gong for individual contributor |
 | 19 | solo B2B sales | 76.50 | founder-led-sales (new) | no | one person sales team; solo enterprise sales; solo sales motion |
 | 20 | AI for sales rep introverts | 76.50 | ae-personas (new) | no | AI for introverted sales; sales tools for introverts; introvert-friendly sales AI; Gong for introverts |
 | 21 | lost deal analysis | 76.50 | lost-deal-postmortem (new) | yes | post-mortem on a lost deal; why did we lose this deal; lost deal review; deal autopsy |
 | 22 | AI for relationship selling | 75.25 | field-sales-ai | no | AI for relationship sellers |
 | 23 | AI for new sales rep | 73.25 | ae-personas (new) | no | AI for new sales hire; new AE ramp; first 90 days AE; sales rep first 90 days |
 | 24 | personal CRM for sales rep | 73.25 | second-brain (new) | no | personal CRM for one person; solo CRM for sales |
-| 25 | Hedy review | 73.25 | competitor-comparisons (new) | no | Hedy alternative; Hedy vs Sara; Hedy pricing |
-| 26 | Closius review | 73.25 | competitor-comparisons (new) | no | Closius vs Sara; Closius alternative; Closius pricing |
+| 25 | HOLD-WEB: Hedy review | 73.25 | competitor-comparisons (new) | no | Hedy alternative; Hedy vs Sara; Hedy pricing |
+| 26 | HOLD-WEB: Closius review | 73.25 | competitor-comparisons (new) | no | Closius vs Sara; Closius alternative; Closius pricing |
 | 27 | deal reflection framework | 72.25 | deal-reflection (new) | yes | how to think about a deal; deal stress test questions; deal walk through AI; AE self-deal review |
 | 28 | rep quitting over AI monitoring | 72.25 | rep-burnout (new) | yes | sales rep burnout AI monitoring; sales rep burnout from monitoring |
 | 29 | BYOAI sales | 68.50 | byoai-shadow-ai (new) | yes | BYOAI sales rep; shadow AI in sales; reps using personal AI; AI tool my manager can't see; shadow AI |
 | 30 | drive home from sales meeting | 68.25 | drive-home-debrief (new) | yes | parking lot debrief sales; drive-home debrief method; in-the-car debrief |
 
-Competitor/brand rows (4–8, 18, 25, 26): every claim about a
-third-party product must be verifiable from that vendor's own live
-pages fetched during the run; prefer linking their pricing page over
-quoting numbers. Unverifiable claim = don't make it.
+Competitor/brand rows (4–8, 18, 25, 26 — all `HOLD-WEB:`): every claim
+about a third-party product must be verifiable from that vendor's own
+live pages fetched during the run; prefer linking their pricing page
+over quoting numbers. Unverifiable claim = don't make it. These ship
+only from supervised sessions with web access.
 
 ## Cluster mapping reference (backlog table number → repo cluster id)
 
@@ -130,7 +139,7 @@ intent × 0.20 + fit × 0.25 + conversion × 0.20.
 | 24 | v3 | no recording AI sales tool | 1 | Secondary | Cluster | commercial | low | easy | 4 | 4 | 76.75 | Privacy-first framing. |
 | 25 | v3 | AI sales tool no boss visibility | 7 | Secondary | Comparison | commercial | very low | easy | 5 | 4 | 76.75 | Direct positioning. |
 | 26 | v3 | rep privacy AI sales tool | 7 | Secondary | Comparison | commercial | very low | easy | 5 | 4 | 76.75 | Direct positioning. |
-| 27 | v3 | best AI for sales rep without manager | 12 | Pillar | Comparison | commercial | very low | easy | 5 | 4 | 76.50 | Bottom-of-funnel. |
+| 27 | v3 | HOLD-WEB: best AI for sales rep without manager | 12 | Pillar | Comparison | commercial | very low | easy | 5 | 4 | 76.50 | Bottom-of-funnel. |
 | 28 | v3 | AI for industrial sales | 3 | Secondary | Vertical | commercial | low | moderate | 5 | 4 | 75.50 | Lower volume than med device. |
 | 29 | v3 | AI for relationship selling | 3 | Pillar | Vertical | commercial | very low | easy | 5 | 3 | 75.25 | Perfect language match. |
 | 30 | v3 | deal review without manager | 6 | Secondary | Cluster | informational | low | easy | 5 | 4 | 74.75 | Direct pain-point. |
@@ -213,11 +222,11 @@ intent × 0.20 + fit × 0.25 + conversion × 0.20.
 | 107 | v3 | AI voicemail detection | 11 | Secondary | Scenario | commercial | low | easy | 3 | 2 | 58.50 | Tool-specific. |
 | 108 | v3 | phone sales follow up | 11 | Secondary | Scenario | commercial | very low | easy | 4 | 3 | 64.50 | Direct match. |
 | 109 | v3 | after hours sales follow up | 11 | Secondary | Scenario | commercial | very low | easy | 4 | 3 | 64.50 | Direct match. |
-| 110 | v3 | Hedy review | 12 | Support-1 | Comparison | commercial | very low | easy | 5 | 4 | 73.25 | Direct review-intent. |
+| 110 | v3 | HOLD-WEB: Hedy review | 12 | Support-1 | Comparison | commercial | very low | easy | 5 | 4 | 73.25 | Direct review-intent. |
 | 111 | v3 | Hedy alternative | 12 | Secondary | Comparison | commercial | very low | easy | 5 | 4 | 73.25 | Direct match. |
 | 112 | v3 | Hedy vs Sara | 12 | Secondary | Comparison | commercial | very low | easy | 5 | 4 | 73.25 | Direct comparison. |
 | 113 | v3 | Hedy pricing | 12 | Secondary | Comparison | commercial | very low | easy | 4 | 3 | 64.50 | Direct match. |
-| 114 | v3 | Closius review | 12 | Support-2 | Comparison | commercial | very low | easy | 5 | 4 | 73.25 | Direct review-intent. |
+| 114 | v3 | HOLD-WEB: Closius review | 12 | Support-2 | Comparison | commercial | very low | easy | 5 | 4 | 73.25 | Direct review-intent. |
 | 115 | v3 | Closius vs Sara | 12 | Secondary | Comparison | commercial | very low | easy | 5 | 4 | 73.25 | Direct comparison. |
 | 116 | v3 | Closius alternative | 12 | Secondary | Comparison | commercial | very low | easy | 5 | 4 | 73.25 | Direct match. |
 | 117 | v3 | Closius pricing | 12 | Secondary | Comparison | commercial | very low | easy | 4 | 3 | 64.50 | Direct match. |
@@ -364,11 +373,11 @@ intent × 0.20 + fit × 0.25 + conversion × 0.20.
 | 258 | v4 | solo outbound | 20 | Secondary | Persona | commercial | very low | easy | 4 | 3 | 66.75 | Niche |
 | 259 | v4 | solo inbound | 20 | Secondary | Persona | commercial | very low | easy | 4 | 3 | 66.75 | Niche |
 | 260 | v4 | solo sales motion | 20 | Secondary | Persona | commercial | very low | easy | 4 | 3 | 66.75 | Niche |
-| 261 | v4 | AI note taker alternative for sales | 21 | Pillar | Comparison | commercial | low | easy | 5 | 5 | 81.75 | Gold Mine #6 |
-| 262 | v4 | Fathom alternative for sales | 21 | Support-1 | Comparison | commercial | very low | easy | 5 | 5 | 84.50 | Direct match |
-| 263 | v4 | Otter alternative for sales | 21 | Secondary | Comparison | commercial | very low | easy | 5 | 5 | 84.50 | Direct match |
-| 264 | v4 | Read AI alternative for sales | 21 | Support-2 | Comparison | commercial | very low | easy | 5 | 5 | 84.50 | Direct match |
-| 265 | v4 | Fireflies alternative for sales | 21 | Secondary | Comparison | commercial | very low | easy | 5 | 5 | 84.50 | Direct match |
+| 261 | v4 | HOLD-WEB: AI note taker alternative for sales | 21 | Pillar | Comparison | commercial | low | easy | 5 | 5 | 81.75 | Gold Mine #6 |
+| 262 | v4 | HOLD-WEB: Fathom alternative for sales | 21 | Support-1 | Comparison | commercial | very low | easy | 5 | 5 | 84.50 | Direct match |
+| 263 | v4 | HOLD-WEB: Otter alternative for sales | 21 | Secondary | Comparison | commercial | very low | easy | 5 | 5 | 84.50 | Direct match |
+| 264 | v4 | HOLD-WEB: Read AI alternative for sales | 21 | Support-2 | Comparison | commercial | very low | easy | 5 | 5 | 84.50 | Direct match |
+| 265 | v4 | HOLD-WEB: Fireflies alternative for sales | 21 | Secondary | Comparison | commercial | very low | easy | 5 | 5 | 84.50 | Direct match |
 | 266 | v4 | AI note taker for sales rep | 21 | Secondary | Comparison | commercial | low | easy | 5 | 4 | 73.25 | Direct match |
 | 267 | v4 | Fathom vs Sara | 21 | Secondary | Comparison | commercial | very low | easy | 5 | 5 | 84.50 | Direct match |
 | 268 | v4 | Read AI vs Sara | 21 | Secondary | Comparison | commercial | very low | easy | 5 | 5 | 84.50 | Direct match |
