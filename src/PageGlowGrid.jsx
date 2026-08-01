@@ -33,9 +33,12 @@ export default function PageGlowGrid() {
     return () => window.removeEventListener("mousemove", onMove);
   }, []);
 
-  return (
-    <div className="kg-container" aria-hidden="true">
-      <style>{`
+  // Injected via dangerouslySetInnerHTML, NOT as a JSX child. As a child,
+  // the server escapes the quotes in `syntax: "<color>"` to &quot;, while the
+  // client reads the unescaped text — a hydration mismatch that made React
+  // throw out the server HTML and re-render the whole document (blank flash,
+  // then a late recovery, with cursor tracking dead until it finished).
+  const css = `
         @property --kg-glow-color {
           syntax: "<color>";
           inherits: false;
@@ -72,7 +75,11 @@ export default function PageGlowGrid() {
         @media (prefers-reduced-motion: reduce) {
           .kg-glow { animation: none; }
         }
-      `}</style>
+      `;
+
+  return (
+    <div className="kg-container" aria-hidden="true">
+      <style dangerouslySetInnerHTML={{ __html: css }} />
       <div ref={glowRef} className="kg-glow" />
     </div>
   );
