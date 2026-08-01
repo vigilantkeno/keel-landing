@@ -79,9 +79,13 @@ any external knowledge base, project context, or connector.
    to make an article pass, and never pull a replacement keyword for a
    failed one.
 5. Update `used-keywords.md`: one row per processed keyword, PUBLISHED
-   or FAILED, in the same commit as the articles.
-6. Commit everything (articles, used-keywords.md, clusters.json if
-   touched) as one commit on branch `claude/articles-<YYYY-MM-DD>`.
+   or FAILED, in the same commit as the articles. APPEND each published
+   slug to the END of `date-ledger.json` — append order is the /blog
+   page's newest-first tiebreaker for same-date posts, so ordering is
+   part of publishing, not optional bookkeeping.
+6. Commit everything (articles, used-keywords.md, date-ledger.json,
+   clusters.json if touched) as one commit on branch
+   `claude/articles-<YYYY-MM-DD>`.
    **Never push to main. Never merge.** Open a PR to main whose
    description lists: keywords processed, slugs, verification results
    (including every external URL fetched and its status), any FAILED
