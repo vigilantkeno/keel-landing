@@ -48,3 +48,5 @@ post that covers it).
 | 2026-08-01 | Gong for individual contributor | — | gong-alternative-for-individual-sales-reps | CONSOLIDATED |
 | 2026-08-01 | customer ghosted | customer went dark; customer stopped responding; customer won't respond; customer ignoring me; deal went dark; what to do when deal goes quiet | customer-ghosted | PUBLISHED |
 | 2026-08-01 | AI for sales rep with ADHD | AI for ADHD sales; sales rep ADHD tool; focus tool for sales | ai-for-sales-rep-with-adhd | PUBLISHED |
+| 2026-08-01 | founder to first AE | founder first sales hire; founder to AE transition; hiring first AE | founder-to-first-ae | PUBLISHED |
+| 2026-08-01 | second brain for sales rep | AI second brain for sales; second brain for AE; second brain for sales; AI as second brain for sales | second-brain-for-sales-rep | PUBLISHED |

@@ -66,6 +66,20 @@
       "supporting": [],
       "intent": "commercial",
       "description": "Specific AE personas \u2014 ADHD, introverts, new hires, reps who hate cold calling \u2014 where generic sales AI misses persona-specific friction."
+    },
+    {
+      "id": "founder-led-sales",
+      "pillar": "founder-to-first-ae",
+      "supporting": [],
+      "intent": "commercial",
+      "description": "Founders selling solo and the transition to a first sales hire \u2014 the judgment that has to transfer, not just the process."
+    },
+    {
+      "id": "second-brain",
+      "pillar": "second-brain-for-sales-rep",
+      "supporting": [],
+      "intent": "commercial",
+      "description": "Personal knowledge management and second-brain systems, rebuilt for the pace and rhythm of a sales rep's day."
     }
   ]
 }
