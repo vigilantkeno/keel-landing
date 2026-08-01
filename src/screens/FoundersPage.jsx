@@ -61,8 +61,13 @@ export default function FoundersPage() {
           <span style={{ fontFamily: F.sans, fontWeight: 600, fontSize: mobile ? 19 : 21,
             letterSpacing: "-0.025em", color: "#FFF" }}>keel</span>
         </a>
-        <a href="/" style={{ fontFamily: F.mono, fontSize: 9, color: MICRO,
-          letterSpacing: "0.18em", textDecoration: "none" }}>BACK TO SITE</a>
+        <div style={{ display: "flex", alignItems: "center", gap: mobile ? 14 : 20 }}>
+          <a href="/" style={{ fontFamily: F.mono, fontSize: 9, color: MICRO,
+            letterSpacing: "0.18em", textDecoration: "none" }}>BACK TO SITE</a>
+          <a href="#apply" style={{ fontFamily: F.mono, fontSize: 9, color: O,
+            letterSpacing: "0.18em", textDecoration: "none",
+            border: `1px solid ${O}55`, padding: "7px 12px" }}>APPLY</a>
+        </div>
       </nav>
 
       <div style={{ position: "relative", maxWidth: 720, margin: "0 auto",
@@ -95,23 +100,31 @@ export default function FoundersPage() {
             letterSpacing: "0.22em", marginTop: 10, marginBottom: mobile ? 28 : 36 }}>
             KEEP IT SIMPLE, SARA
           </div>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center",
+          <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "center",
             gap: mobile ? 32 : 56, marginBottom: mobile ? 24 : 32 }}>
             {/* Phone — a rep calls Sara. Hand-drawn, not from an icon set.
                 Sized up ~1.35x vs chat: the handset glyph only fills about
                 half its own viewBox, so an identical width/height renders
                 visibly smaller than the chat glyph despite the same box. */}
-            <svg width={mobile ? 54 : 75} height={mobile ? 54 : 75} viewBox="0 0 48 48" fill="none"
-              aria-hidden="true">
-              <path d="M15 8c2 0 4 4 4 6s-2 3-2 4c1 3 4 6 7 7 1 0 2-2 4-2s6 2 6 4-3 5-5 5c-8 0-19-11-19-19 0-2 3-5 5-5Z"
-                stroke={O} strokeWidth="2" strokeLinejoin="round" />
-            </svg>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
+              <svg width={mobile ? 54 : 75} height={mobile ? 54 : 75} viewBox="0 0 48 48" fill="none"
+                aria-hidden="true">
+                <path d="M15 8c2 0 4 4 4 6s-2 3-2 4c1 3 4 6 7 7 1 0 2-2 4-2s6 2 6 4-3 5-5 5c-8 0-19-11-19-19 0-2 3-5 5-5Z"
+                  stroke={O} strokeWidth="2" strokeLinejoin="round" />
+              </svg>
+              <div style={{ fontFamily: F.mono, fontSize: mobile ? 9 : 10, color: MICRO,
+                letterSpacing: "0.18em" }}>CALL HER</div>
+            </div>
             {/* Chat — a rep texts Sara. */}
-            <svg width={mobile ? 40 : 56} height={mobile ? 40 : 56} viewBox="0 0 48 48" fill="none"
-              aria-hidden="true">
-              <rect x="6" y="8" width="36" height="24" rx="4" stroke={O} strokeWidth="2" />
-              <path d="M14 32v8l10-8" stroke={O} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
-            </svg>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
+              <svg width={mobile ? 40 : 56} height={mobile ? 40 : 56} viewBox="0 0 48 48" fill="none"
+                aria-hidden="true">
+                <rect x="6" y="8" width="36" height="24" rx="4" stroke={O} strokeWidth="2" />
+                <path d="M14 32v8l10-8" stroke={O} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+              </svg>
+              <div style={{ fontFamily: F.mono, fontSize: mobile ? 9 : 10, color: MICRO,
+                letterSpacing: "0.18em" }}>TEXT HER</div>
+            </div>
           </div>
           <p style={{ fontFamily: F.sans, fontSize: mobile ? 15 : 17, lineHeight: 1.7,
             color: "#8A8A8A", maxWidth: 480, margin: "0 auto" }}>
@@ -126,7 +139,7 @@ export default function FoundersPage() {
         padding: mobile ? "8px 20px 40px" : "16px 48px 56px" }}>
         <h2 style={{ fontFamily: F.cond, fontWeight: 800, fontSize: mobile ? 20 : 24, color: "#FFF",
           letterSpacing: "-0.01em", textTransform: "uppercase", marginBottom: 14 }}>
-          Why it's invite-only, honestly
+          Why you have to apply, honestly
         </h2>
         <p style={{ fontFamily: F.sans, fontSize: mobile ? 14 : 16, lineHeight: 1.8, color: "#888",
           marginBottom: 0 }}>
@@ -134,7 +147,7 @@ export default function FoundersPage() {
           us actually reads it. Every early conversation shapes what Sara asks
           next. Flood that with a thousand strangers and it stops working for
           anyone. So: reviewed applications, no self-serve signup, and a founder
-          who'll be in the room while you're in the room.
+          on the line while Sara learns your deals.
         </p>
       </div>
 
@@ -169,8 +182,8 @@ export default function FoundersPage() {
         </div>
       </div>
 
-      <div style={{ position: "relative", maxWidth: 720, margin: "0 auto",
-        padding: mobile ? "40px 20px 56px" : "56px 48px 80px" }}>
+      <div id="apply" style={{ position: "relative", maxWidth: 720, margin: "0 auto",
+        padding: mobile ? "40px 20px 56px" : "56px 48px 80px", scrollMarginTop: 24 }}>
         <div style={{ fontFamily: F.mono, fontSize: mobile ? 9 : 10, color: O,
           letterSpacing: "0.22em", marginBottom: 12 }}>APPLY</div>
         <h2 style={{ fontFamily: F.cond, fontWeight: 900, fontSize: mobile ? 28 : 36, color: "#FFF",
