@@ -1,37 +1,73 @@
 # Keyword priorities
 
-The ranked queue the article-production routine draws from — 288
-keywords across 22 clusters, sorted by composite priority (highest
-first). The routine CONSUMES from this file and never edits it. Humans
-add or re-rank rows after validating demand, per contract §0.
+Two sections. The **curated queue** is the only selectable list — every
+editorial decision (priority order, consolidation, cluster mapping,
+pillar sequencing) is already made, so runtime selection is mechanical.
+The **backlog** below it is reference material and is NEVER selectable.
 
-Priority = volume × 0.10 + KD inverse × 0.25 + intent × 0.20 +
-fit × 0.25 + conversion × 0.20 (0–100).
+## Selection rule (routine) — zero judgment
 
-## Selection rules (routine)
+Take the top 2 queue rows whose Target keyword does not appear in
+`used-keywords.md` (case-insensitive, any status). That's the entire
+selection step — no near-duplicate analysis, no table walking, no
+subagents. Each row already lists the secondaries to fold into the
+article and the exact `cluster` id for frontmatter (ids marked (new)
+get their `clusters.json` entry in the same commit; "pillar: yes" rows
+set `pillar: true`). Ledger the target AND its listed secondaries on
+one row when done.
 
-1. Walk the table top-down. Skip any keyword that appears in
-   `used-keywords.md` — as a target keyword OR a consolidated
-   secondary, in ANY status.
-2. **Anti-cannibalization:** if a keyword is a near-duplicate phrasing
-   of intent already covered by a published post (same cluster, same
-   buyer question — e.g. yet another "Gong alternative …" variant),
-   do NOT write a new article. Record it in `used-keywords.md` as
-   `CONSOLIDATED` into the existing slug, and (only when natural) add
-   the phrasing to that post's `secondaryKeywords` in a follow-up.
-   One strong page beats four thin competing ones.
-3. When a selected keyword has same-intent siblings further down the
-   table, fold them into the new article as `secondaryKeywords` and
-   ledger them as consolidated secondaries on the same row.
-4. Rows whose Notes say "Skip primary" / "Crowded" are secondaries
-   only — never select them as a target keyword.
+Queue empty (or fewer than 2 unused rows): process what exists, then
+stop and report "queue needs curation" — a clean outcome, not an
+error. Humans (or a supervised Claude session, not this routine)
+refill the queue from the backlog.
 
-## Cluster mapping (table number → repo cluster id)
+Why the queue is not in raw table order: the backlog's v4 rows were
+appended after v3 and never re-sorted — e.g. "customer ghosted" (84.50,
+the #2 keyword overall) sits at raw rank 229. The queue uses true
+priority, adjusted so each cluster's pillar ships before its spokes
+(spokes need a pillar to link up to, per clusters.json rules).
 
-`cluster` in post frontmatter must be a kebab-case id from
-`clusters.json`. Existing ids map as follows; clusters marked (new)
-don't exist yet — the routine adds the entry to `clusters.json` in the
-same commit as that cluster's first article, per ROUTINE.md.
+## Curated queue (selectable — top to bottom)
+
+| # | Target keyword | Pri | Cluster id | Pillar | Secondaries (ledger with target) |
+|---|---|---|---|---|---|
+| 1 | Gong alternative without recording | 83.25 | surveillance-backlash | no | Gong alternative privacy focused |
+| 2 | AI sales tool that doesn't report to manager | 83.25 | surveillance-backlash | no | AI sales tool no boss visibility; rep privacy AI sales tool |
+| 3 | customer ghosted | 84.50 | deal-memory-drift | yes | customer went dark; customer stopped responding; customer won't respond; customer ignoring me |
+| 4 | AI note taker alternative for sales | 81.75 | note-taker-alternatives (new) | yes | AI note taker for sales rep; AI meeting notes for sales rep; AI meeting summary for sales; AI notetaker for sales without recording |
+| 5 | Fathom alternative for sales | 84.50 | note-taker-alternatives (new) | no | Fathom vs Sara; Fathom for sales rep; Fathom privacy |
+| 6 | Otter alternative for sales | 84.50 | note-taker-alternatives (new) | no | Otter for sales rep |
+| 7 | Read AI alternative for sales | 84.50 | note-taker-alternatives (new) | no | Read AI vs Sara; Read AI for sales rep; Read AI privacy |
+| 8 | Fireflies alternative for sales | 84.50 | note-taker-alternatives (new) | no | — |
+| 9 | AI for sales rep with ADHD | 81.75 | ae-personas (new) | yes | AI for ADHD sales; sales rep ADHD tool; focus tool for sales |
+| 10 | founder to first AE | 81.75 | founder-led-sales (new) | yes | founder first sales hire; founder to AE transition; hiring first AE |
+| 11 | second brain for sales rep | 79.25 | second-brain (new) | yes | AI second brain for sales; second brain for AE; second brain for sales; AI as second brain for sales |
+| 12 | AI for in-between moments | 79.25 | in-between-moments (new) | yes | AI for unscripted moments; AI for unscheduled moments; AI for between meetings |
+| 13 | AI for medical device sales | 79.50 | field-sales-ai | no | — |
+| 14 | AI for pharmaceutical sales reps | 79.25 | regulated-industries | no | — |
+| 15 | AI for financial services B2B sales | 79.25 | regulated-industries | no | — |
+| 16 | AI for in-person sales conversations | 79.25 | field-sales-ai | no | — |
+| 17 | AI for sales reps that thinks with you | 79.25 | byoai-shadow-ai (new) | no | AI thinking partner for sales rep |
+| 18 | best AI for sales rep without manager | 76.50 | competitor-comparisons (new) | yes | best AI for sales rep privacy; best AI for sales rep no recording; Gong for individual contributor |
+| 19 | solo B2B sales | 76.50 | founder-led-sales (new) | no | one person sales team; solo enterprise sales; solo sales motion |
+| 20 | AI for sales rep introverts | 76.50 | ae-personas (new) | no | AI for introverted sales; sales tools for introverts; introvert-friendly sales AI; Gong for introverts |
+| 21 | lost deal analysis | 76.50 | lost-deal-postmortem (new) | yes | post-mortem on a lost deal; why did we lose this deal; lost deal review; deal autopsy |
+| 22 | AI for relationship selling | 75.25 | field-sales-ai | no | AI for relationship sellers |
+| 23 | AI for new sales rep | 73.25 | ae-personas (new) | no | AI for new sales hire; new AE ramp; first 90 days AE; sales rep first 90 days |
+| 24 | personal CRM for sales rep | 73.25 | second-brain (new) | no | personal CRM for one person; solo CRM for sales |
+| 25 | Hedy review | 73.25 | competitor-comparisons (new) | no | Hedy alternative; Hedy vs Sara; Hedy pricing |
+| 26 | Closius review | 73.25 | competitor-comparisons (new) | no | Closius vs Sara; Closius alternative; Closius pricing |
+| 27 | deal reflection framework | 72.25 | deal-reflection (new) | yes | how to think about a deal; deal stress test questions; deal walk through AI; AE self-deal review |
+| 28 | rep quitting over AI monitoring | 72.25 | rep-burnout (new) | yes | sales rep burnout AI monitoring; sales rep burnout from monitoring |
+| 29 | BYOAI sales | 68.50 | byoai-shadow-ai (new) | yes | BYOAI sales rep; shadow AI in sales; reps using personal AI; AI tool my manager can't see; shadow AI |
+| 30 | drive home from sales meeting | 68.25 | drive-home-debrief (new) | yes | parking lot debrief sales; drive-home debrief method; in-the-car debrief |
+
+Competitor/brand rows (4–8, 18, 25, 26): every claim about a
+third-party product must be verifiable from that vendor's own live
+pages fetched during the run; prefer linking their pricing page over
+quoting numbers. Unverifiable claim = don't make it.
+
+## Cluster mapping reference (backlog table number → repo cluster id)
 
 | # | Table cluster | Repo cluster id |
 |---|---|---|
@@ -42,7 +78,7 @@ same commit as that cluster's first article, per ROUTINE.md.
 | 5 | Drive-Home Debrief | drive-home-debrief (new) |
 | 6 | Deal Reflection for AE Pain | deal-reflection (new) |
 | 7 | Fear / Monitoring / Surveillance | surveillance-backlash |
-| 8 | BYOAI / Shadow AI | byoai-shadow-ai (new; note: shadow-it-sales-reps + private-sales-ai already published/held under surveillance-backlash) |
+| 8 | BYOAI / Shadow AI | byoai-shadow-ai (new) |
 | 9 | Trust-Based Sales | trust-based-sales (new) |
 | 10 | Conference / Trade Show | conference-follow-up (new) |
 | 11 | Phone / Voicemail | phone-voicemail (new) |
@@ -58,15 +94,13 @@ same commit as that cluster's first article, per ROUTINE.md.
 | 21 | AI Note Taker Alternative | note-taker-alternatives (new) |
 | 22 | Lost Deal / Post-Mortem | lost-deal-postmortem (new) |
 
-## Competitor-comparison caution (clusters 12 and 21)
+## Backlog — NOT selectable (raw source table, reference only)
 
-"X vs Sara" / "X alternative" articles make factual claims about
-third-party products. Every claim about a competitor must be verifiable
-from that vendor's own live pages fetched during the run, and pricing
-claims date fast — prefer linking to the vendor's pricing page over
-quoting numbers. If a claim can't be verified this run, don't make it.
+Rows here become selectable only by being promoted into the curated
+queue above, with consolidation and cluster mapping decided at
+promotion time. Priority scores: volume × 0.10 + KD inverse × 0.25 +
+intent × 0.20 + fit × 0.25 + conversion × 0.20.
 
-## The full sorted table (1–288, highest priority first)
 
 | Rank | Source | Keyword | Cluster | Role | Type | Intent | Volume | KD | Fit | Conv | Priority | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|---|
