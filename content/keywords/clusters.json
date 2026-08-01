@@ -80,6 +80,13 @@
       "supporting": [],
       "intent": "commercial",
       "description": "Personal knowledge management and second-brain systems, rebuilt for the pace and rhythm of a sales rep's day."
+    },
+    {
+      "id": "in-between-moments",
+      "pillar": "ai-for-in-between-moments",
+      "supporting": [],
+      "intent": "commercial",
+      "description": "Deal-relevant conversations that happen off the calendar — hallway asides, parking lot debriefs, the minutes before and after a scheduled meeting."
     }
   ]
 }
