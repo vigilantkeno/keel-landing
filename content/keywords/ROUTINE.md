@@ -40,15 +40,17 @@ any external knowledge base, project context, or connector.
 1. `npm install`, then `npm run content:check` on the CLEAN repo first.
    If it fails before you have changed anything, stop and report —
    never build on a broken base.
-2. Select the top 2 keywords per the "Selection rules" section at the
-   top of `keyword-priorities.md` — skip anything in `used-keywords.md`
-   (target OR secondary, any status), skip "Skip primary" rows, and
-   apply the anti-cannibalization rule: a near-duplicate of an existing
-   post's intent gets a `CONSOLIDATED` ledger row pointing at that
-   slug, never a new article. Consolidations don't count toward the 2.
-   Fewer than 2 selectable: process what exists and flag it. Zero:
-   stop and report "no unprocessed keywords" — a clean outcome, not an
-   error.
+2. Select the top 2 rows of the CURATED QUEUE in
+   `keyword-priorities.md` whose Target keyword is not in
+   `used-keywords.md` (case-insensitive, any status). That is the
+   whole selection step: the queue is pre-curated, so there is no
+   near-duplicate analysis, no backlog walking, and no subagent for
+   selection — if selection feels like it needs judgment, stop and
+   report instead. Each queue row supplies the article's
+   `secondaryKeywords` and `cluster` id verbatim. The backlog section
+   is never selectable. Fewer than 2 unused rows: process what exists
+   and flag it. Zero: stop and report "queue needs curation" — a
+   clean outcome, not an error.
 3. For each keyword, write one article as a post directory
    (`content/blog/posts/2026-<slug>/index.mdx`) per the contract:
    - `author: "Sara"` — exactly. Never any variant, regardless of what
@@ -61,7 +63,11 @@ any external knowledge base, project context, or connector.
      THIS run, supporting the exact claim cited. If a source cannot be
      verified, rewrite to not need it. Never cite from memory; never
      invent statistics. If a claim has no verifiable source, it does
-     not ship.
+     not ship. Scheduled runs have NO web access (egress-blocked,
+     confirmed 2026-08-01): headless articles therefore carry zero
+     external citations — written as argument/positioning pieces that
+     need none — and say so in the PR. `HOLD-WEB:` queue rows are
+     skipped entirely, never failed, never written citation-free.
    - Cluster: use an existing cluster from `clusters.json`, or add a
      new cluster entry in the same commit (respect the
      one-pillar-per-cluster rule).
