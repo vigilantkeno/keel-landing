@@ -11,7 +11,9 @@ change.
 Statuses: `PUBLISHED` (live on production), `DRAFT` (post exists,
 `status: "draft"`, visible on previews only), `FAILED` (attempted,
 did not pass gates; keyword is spent — do not retry without a human
-decision).
+decision), `CONSOLIDATED` (near-duplicate intent of an existing post;
+no separate article will ever be written — the slug column names the
+post that covers it).
 
 | Date | Target keyword | Consolidated secondaries | Slug | Status |
 |---|---|---|---|---|
@@ -28,3 +30,8 @@ decision).
 | 2026-08-01 | shadow IT for sales reps | shadow AI sales team; personal AI tools for sales reps; unsanctioned AI tools sales | shadow-it-sales-reps | PUBLISHED |
 | 2026-08-01 | Gong alternative no manager | AI sales tool no manager dashboard | gong-alternative-no-manager | PUBLISHED |
 | 2026-08-01 | sales AI for regulated industries | sales AI no recording HIPAA; sales AI without call recording; no recording sales AI | sales-ai-for-regulated-industries | PUBLISHED |
+| 2026-08-01 | Gong alternative for individual contributor | — | gong-alternative-for-individual-sales-reps | CONSOLIDATED |
+| 2026-08-01 | Gong alternative for rep not manager | — | gong-alternative-no-manager | CONSOLIDATED |
+| 2026-08-01 | Gong alternative no manager visibility | — | gong-alternative-no-manager | CONSOLIDATED |
+| 2026-08-01 | Gong alternative for one person no manager | — | gong-alternative-no-manager | CONSOLIDATED |
+| 2026-08-01 | Gong alternative for sales rep not manager | — | gong-alternative-no-manager | CONSOLIDATED |

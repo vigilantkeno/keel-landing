@@ -40,10 +40,15 @@ any external knowledge base, project context, or connector.
 1. `npm install`, then `npm run content:check` on the CLEAN repo first.
    If it fails before you have changed anything, stop and report —
    never build on a broken base.
-2. Select the top 2 keywords from `keyword-priorities.md` that do not
-   appear in `used-keywords.md` in any status. Fewer than 2 left:
-   process what exists and flag it. Zero left: stop and report "no
-   unprocessed keywords" — that is a clean outcome, not an error.
+2. Select the top 2 keywords per the "Selection rules" section at the
+   top of `keyword-priorities.md` — skip anything in `used-keywords.md`
+   (target OR secondary, any status), skip "Skip primary" rows, and
+   apply the anti-cannibalization rule: a near-duplicate of an existing
+   post's intent gets a `CONSOLIDATED` ledger row pointing at that
+   slug, never a new article. Consolidations don't count toward the 2.
+   Fewer than 2 selectable: process what exists and flag it. Zero:
+   stop and report "no unprocessed keywords" — a clean outcome, not an
+   error.
 3. For each keyword, write one article as a post directory
    (`content/blog/posts/2026-<slug>/index.mdx`) per the contract:
    - `author: "Sara"` — exactly. Never any variant, regardless of what
