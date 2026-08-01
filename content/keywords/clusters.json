@@ -10,8 +10,11 @@
     },
     {
       "id": "rep-first-ai",
-      "pillar": "gong-alternative-for-individual-sales-reps",
-      "supporting": [],
+      "pillar": "rep-first-ai-sales",
+      "supporting": [
+        "gong-alternative-for-individual-sales-reps",
+        "gong-alternative-solo-rep"
+      ],
       "intent": "comparison",
       "description": "Who your sales AI actually works for \u2014 rep or manager."
     },
