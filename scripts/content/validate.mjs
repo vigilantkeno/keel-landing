@@ -30,6 +30,27 @@ for (const p of posts) {
   }
 }
 
+// Internal links must resolve. Both founder article packages so far arrived
+// with links to slugs that do not exist (and to /founders, which has no route
+// yet) — a 404 in a published post is worse than a build failure here.
+// Checks /blog/<slug> against the actual post set and any other site-internal
+// path (including absolute getkeel.io URLs) against the routes we serve.
+const SITE_ROUTES = new Set(['/', '/blog', '/terms', '/privacy', '/sms-consent', '/feed.xml', '/sitemap.xml']);
+const knownSlugs = new Set(posts.map((p) => p.slug).filter(Boolean));
+for (const p of posts) {
+  const body = p.content ?? '';
+  for (const m of body.matchAll(/\]\((\/[^)\s#?]*|https?:\/\/(?:www\.)?getkeel\.io[^)\s#?]*)/g)) {
+    let l = m[1].replace(/^https?:\/\/(?:www\.)?getkeel\.io/, '');
+    l = (l.replace(/\/+$/, '') || '/');
+    if (l.startsWith('/blog/')) {
+      const slug = l.slice('/blog/'.length);
+      if (!knownSlugs.has(slug)) errors.push(`${p.dir}: links to /blog/${slug} — no post with that slug exists`);
+    } else if (!SITE_ROUTES.has(l)) {
+      errors.push(`${p.dir}: links to ${l} — not a route this site serves`);
+    }
+  }
+}
+
 // Slug uniqueness — two posts on one URL silently shadows one.
 const seen = new Map();
 for (const p of posts) {
