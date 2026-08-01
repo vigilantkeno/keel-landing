@@ -46,7 +46,9 @@
       "supporting": [
         "gong-scorecards",
         "two-party-consent-states-sales-calls",
-        "shadow-it-sales-reps"
+        "shadow-it-sales-reps",
+        "gong-alternative-without-recording",
+        "ai-sales-tool-no-manager-reporting"
       ],
       "intent": "informational",
       "description": "The rep-side cost of call recording and scoring \u2014 anxiety, legal exposure, scorecard distortion, and the private alternative."
