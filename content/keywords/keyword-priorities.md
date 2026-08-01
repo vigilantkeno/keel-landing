@@ -41,7 +41,7 @@ priority, adjusted so each cluster's pillar ships before its spokes
 |---|---|---|---|---|---|
 | 1 | Gong alternative without recording | 83.25 | surveillance-backlash | no | Gong alternative privacy focused |
 | 2 | AI sales tool that doesn't report to manager | 83.25 | surveillance-backlash | no | AI sales tool no boss visibility; rep privacy AI sales tool |
-| 3 | customer ghosted | 84.50 | deal-memory-drift | yes | customer went dark; customer stopped responding; customer won't respond; customer ignoring me |
+| 3 | customer ghosted | 84.50 | deal-memory-drift | yes | customer went dark; customer stopped responding; customer won't respond; customer ignoring me; deal went dark; what to do when deal goes quiet |
 | 4 | HOLD-WEB: AI note taker alternative for sales | 81.75 | note-taker-alternatives (new) | yes | AI note taker for sales rep; AI meeting notes for sales rep; AI meeting summary for sales; AI notetaker for sales without recording |
 | 5 | HOLD-WEB: Fathom alternative for sales | 84.50 | note-taker-alternatives (new) | no | Fathom vs Sara; Fathom for sales rep; Fathom privacy |
 | 6 | HOLD-WEB: Otter alternative for sales | 84.50 | note-taker-alternatives (new) | no | Otter for sales rep |
@@ -55,7 +55,7 @@ priority, adjusted so each cluster's pillar ships before its spokes
 | 14 | AI for pharmaceutical sales reps | 79.25 | regulated-industries | no | — |
 | 15 | AI for financial services B2B sales | 79.25 | regulated-industries | no | — |
 | 16 | AI for in-person sales conversations | 79.25 | field-sales-ai | no | — |
-| 17 | AI for sales reps that thinks with you | 79.25 | byoai-shadow-ai (new) | no | AI thinking partner for sales rep |
+| 17 | AI for sales reps that thinks with you | 79.25 | byoai-shadow-ai (new) | no | AI thinking partner for sales rep; thinking partner for sales; AI thinking partner for work |
 | 18 | HOLD-WEB: best AI for sales rep without manager | 76.50 | competitor-comparisons (new) | yes | best AI for sales rep privacy; best AI for sales rep no recording; Gong for individual contributor |
 | 19 | solo B2B sales | 76.50 | founder-led-sales (new) | no | one person sales team; solo enterprise sales; solo sales motion |
 | 20 | AI for sales rep introverts | 76.50 | ae-personas (new) | no | AI for introverted sales; sales tools for introverts; introvert-friendly sales AI; Gong for introverts |
@@ -69,6 +69,35 @@ priority, adjusted so each cluster's pillar ships before its spokes
 | 28 | rep quitting over AI monitoring | 72.25 | rep-burnout (new) | yes | sales rep burnout AI monitoring; sales rep burnout from monitoring |
 | 29 | BYOAI sales | 68.50 | byoai-shadow-ai (new) | yes | BYOAI sales rep; shadow AI in sales; reps using personal AI; AI tool my manager can't see; shadow AI |
 | 30 | drive home from sales meeting | 68.25 | drive-home-debrief (new) | yes | parking lot debrief sales; drive-home debrief method; in-the-car debrief |
+| 31 | AI for hallway conversations | 76.50 | in-between-moments (new) | no | AI for informal conversations; AI for coffee chat; AI for lunch meeting; AI for casual conversations; AI for off-the-cuff conversations |
+| 32 | founder-led sales tools | 76.50 | founder-led-sales (new) | no | founder sales tools; founder doing it all |
+| 33 | AI for industrial sales | 75.50 | field-sales-ai | no | AI for B2B field sales; AI for off-the-grid sales |
+| 34 | deal review without manager | 74.75 | deal-reflection (new) | no | pipeline review without manager; before the deal review what to think about; deal health check AE |
+| 35 | sales rep privacy concerns | 74.75 | surveillance-backlash | no | off the record sales conversation; honest sales conversations |
+| 36 | customer said call back next quarter | 73.25 | deal-memory-drift | no | customer said no budget; customer said they're interested; customer said call me back |
+| 37 | champion stopped responding | 73.25 | deal-memory-drift | no | champion changed roles; champion got fired |
+| 38 | AI for sales rep who hates cold calling | 73.25 | ae-personas (new) | no | AI for warm outreach; sales rep relationship focus |
+| 39 | AI for struggling sales rep | 73.25 | ae-personas (new) | no | — |
+| 40 | what to do after a sales meeting in person | 70.75 | drive-home-debrief (new) | no | field sales reflection after a meeting; 5 minute sales debrief |
+| 41 | after the call AI for sales | 70.75 | unrecordable-moments | no | — |
+| 42 | privacy-first AI for sales | 70.25 | regulated-industries | no | AI sales tool compliance |
+| 43 | phone sales AI no recording | 68.50 | phone-voicemail (new) | yes | phone prospecting without recording; AI for phone sales rep; phone sales follow up |
+| 44 | voicemail follow up AI | 68.50 | phone-voicemail (new) | no | missed call AI follow up; after hours sales follow up |
+| 45 | how to reflect on a sales call | 68.25 | drive-home-debrief (new) | no | sales meeting reflection questions; post-meeting reflection sales rep; self-debrief sales call; sales rep reflection method |
+| 46 | how to wake up a deal | 68.25 | deal-memory-drift | no | how to revive dead deal; customer went cold; customer stopped opening emails |
+| 47 | trust based selling | 64.50 | trust-based-sales (new) | yes | high trust sales; trust based sales culture; high trust sales culture; trust based sales process |
+| 48 | sales rep autonomy | 68.25 | trust-based-sales (new) | no | sales rep autonomy vs control; sales rep autonomy AI; sales rep empowerment |
+| 49 | alternative to call recording | 68.25 | byoai-shadow-ai (new) | no | no recording sales tool; AI for sales reps without recording; I hate call recording |
+| 50 | Gong criticism | 68.25 | surveillance-backlash | no | Gong backlash; Gong reps hate; Gong invasive; Gong bad for sales culture; Gong scorecard complaint |
+| 51 | how to bounce back from a loss | 68.25 | lost-deal-postmortem (new) | no | after losing a deal; sales rep after a loss; deal loss recovery; sales loss reflection; deal loss reflection; lost deal framework |
+| 52 | pre-meeting reflection | 68.25 | pre-meeting-reflection (new) | yes | pre-call thinking; thinking through a deal; deal strategy before call; mental rehearsal sales; sales call preparation; deal preparation |
+| 53 | note-taking for sales reps | 66.75 | second-brain (new) | no | note-taking system for sales; personal sales notes; sales rep PKM; personal knowledge management sales |
+| 54 | founder sales 0 to 1 | 66.75 | founder-led-sales (new) | no | first 10 customers founder; solo SaaS sales |
+| 55 | personal AI vs enterprise AI | 65.50 | byoai-shadow-ai (new) | no | personal AI for work; personal sales AI not visible to company |
+| 56 | customer AI trust | 65.50 | customer-ai-trust (new) | yes | customer trust AI; building customer trust sales; customer asks is this recorded; customer consent recording; customer recorded call |
+| 57 | conference follow up AI | 64.50 | conference-follow-up (new) | yes | trade show follow up AI; post conference follow up; conference lead follow up; conference networking follow up; AI for trade show leads; personal AI for trade show; trade show lead management |
+| 58 | how to assess a deal honestly | 63.25 | deal-reflection (new) | no | MEDDPICC after the call |
+| 59 | why sales reps quit | 58.50 | rep-burnout (new) | no | sales rep burnout; sustainable sales career; sales career longevity |
 
 Competitor/brand rows (4–8, 18, 25, 26 — all `HOLD-WEB:`): every claim
 about a third-party product must be verifiable from that vendor's own

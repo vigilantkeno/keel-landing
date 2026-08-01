@@ -37,3 +37,12 @@ post that covers it).
 | 2026-08-01 | Gong alternative for sales rep not manager | — | gong-alternative-no-manager | CONSOLIDATED |
 | 2026-08-01 | Gong alternative without recording | Gong alternative privacy focused | gong-alternative-without-recording | PUBLISHED |
 | 2026-08-01 | AI sales tool that doesn't report to manager | AI sales tool no boss visibility; rep privacy AI sales tool | ai-sales-tool-no-manager-reporting | PUBLISHED |
+| 2026-08-01 | how to deal with Gong anxiety | — | gong-anxiety | CONSOLIDATED |
+| 2026-08-01 | unrecordable sales conversations | — | what-call-recording-cant-capture | CONSOLIDATED |
+| 2026-08-01 | rep-first sales AI | — | rep-first-ai-sales | CONSOLIDATED |
+| 2026-08-01 | no recording AI sales tool | — | sales-ai-for-regulated-industries | CONSOLIDATED |
+| 2026-08-01 | private AI for sales rep | — | rep-first-ai-sales | CONSOLIDATED |
+| 2026-08-01 | call recording legal by state | — | two-party-consent-states-sales-calls | CONSOLIDATED |
+| 2026-08-01 | stealth sales AI | stealth AI for sales reps | shadow-it-sales-reps | CONSOLIDATED |
+| 2026-08-01 | AI sales tool for one person | — | gong-alternative-solo-rep | CONSOLIDATED |
+| 2026-08-01 | Gong for individual contributor | — | gong-alternative-for-individual-sales-reps | CONSOLIDATED |
