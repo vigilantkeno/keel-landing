@@ -24,8 +24,9 @@ export default function BlogIndex() {
       lead="Deal complexity, rep-first AI, and the moments that happen after you hang up."
       meta={`${posts.length} POST${posts.length === 1 ? '' : 'S'} · GETKEEL.IO`}
     >
-      <PostList posts={posts.map(({ slug, title, description, date, cluster, pillar }) => ({
+      <PostList posts={posts.map(({ slug, title, description, date, cluster, pillar, status, claimsReviewed }) => ({
         slug, title, description, date, cluster, pillar,
+        isDraft: status !== 'published' || claimsReviewed !== true,
       }))} />
     </BlogShell>
   );

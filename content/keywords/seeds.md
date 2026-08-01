@@ -26,6 +26,16 @@ after you hang up — for the rep.
 3. Deal memory and drift (champion goes quiet, buyer never engaged)
 4. Founders Club / early access and trust
 
+## Publishing policy (founder, 2026-07-31)
+
+Posts are written publish-ready and **the pull request review is the human
+review** — merging publishes. `status: draft` remains available for genuinely
+unfinished work: drafts render on Vercel preview deployments (so they can be
+read on a real URL) but are filtered out of production, the sitemap and RSS.
+
+The mechanical gates are unchanged and still fail the build: banned claims,
+required frontmatter, unique slugs, declared clusters.
+
 ## BANNED CLAIMS — enforced by scripts/content/check-claims.mjs
 
 These describe things Keel does NOT do. A draft containing them is wrong,

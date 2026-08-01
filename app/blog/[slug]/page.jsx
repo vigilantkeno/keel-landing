@@ -76,7 +76,13 @@ export default function BlogPost({ params }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <BlogShell
-        eyebrow={post.pillar ? 'PILLAR' : 'FIELD NOTES'}
+        eyebrow={
+          post.status !== 'published' || post.claimsReviewed !== true
+            ? 'DRAFT — NOT PUBLISHED'
+            : post.pillar
+              ? 'PILLAR'
+              : 'FIELD NOTES'
+        }
         title={post.title}
         lead={post.description}
         meta={`${String(post.date).slice(0, 10).toUpperCase()} · ${post.author.toUpperCase()} · GETKEEL.IO`}
