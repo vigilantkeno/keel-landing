@@ -5,6 +5,7 @@ import Mark from "../Mark";
 import SiteFooter from "../SiteFooter";
 import { O, BK, BK2, MICRO, F } from "../brand";
 import { WaitlistForm, SuccessView, COUNTER_SEED } from "../App";
+import HeroGlowGrid from "../HeroGlowGrid";
 
 // Same local pattern as BlogShell.jsx / LegalShell.jsx — init to a constant
 // (not window) so this still renders on the server.
@@ -56,23 +57,64 @@ export default function FoundersPage() {
           letterSpacing: "0.18em", textDecoration: "none" }}>BACK TO SITE</a>
       </nav>
 
-      <div style={{ maxWidth: 720, margin: "0 auto", padding: mobile ? "48px 20px 32px" : "72px 48px 40px" }}>
-        <div style={{ fontFamily: F.mono, fontSize: mobile ? 9 : 10, color: O,
-          letterSpacing: "0.22em", marginBottom: 16 }}>FOUNDERS CLUB · INVITE-REVIEWED</div>
-        <h1 style={{ fontFamily: F.cond, fontWeight: 900, fontSize: mobile ? 38 : 64,
-          lineHeight: 0.96, letterSpacing: "-0.01em", textTransform: "uppercase", color: "#FFF",
-          marginBottom: 24 }}>
-          We're not looking for users.<br />
-          <span style={{ borderBottom: `3px solid ${O}`, paddingBottom: 4 }}>
-            We want co-signers.
-          </span>
-        </h1>
-        <p style={{ fontFamily: F.sans, fontSize: mobile ? 15 : 18, lineHeight: 1.75, color: "#8A8A8A",
-          maxWidth: 560, marginBottom: 8 }}>
-          Sara doesn't have a manual yet — she has the reps who are teaching her
-          what to ask next. That's what Founders Club actually is. Not a beta.
-          A small group deciding what this becomes before anyone else gets a vote.
-        </p>
+      <div style={{ position: "relative", overflow: "hidden" }}>
+        {/* Triangle-tessellation texture with an ambient/cursor-tracked
+            glow behind the headline — see HeroGlowGrid for the full
+            treatment. Replaces the earlier flat radial spotlight. */}
+        <HeroGlowGrid />
+        <div style={{ position: "relative", maxWidth: 720, margin: "0 auto",
+          padding: mobile ? "48px 20px 32px" : "72px 48px 40px" }}>
+          <div style={{ fontFamily: F.mono, fontSize: mobile ? 9 : 10, color: O,
+            letterSpacing: "0.22em", marginBottom: 16 }}>FOUNDERS CLUB · INVITE-REVIEWED</div>
+          <h1 style={{ fontFamily: F.cond, fontWeight: 900, fontSize: mobile ? 38 : 64,
+            lineHeight: 0.96, letterSpacing: "-0.01em", textTransform: "uppercase", color: "#FFF",
+            marginBottom: 24 }}>
+            We're not looking for users.<br />
+            We want{" "}
+            <span style={{ borderBottom: `3px solid ${O}`, paddingBottom: 4 }}>
+              accomplices.
+            </span>
+          </h1>
+          <p style={{ fontFamily: F.sans, fontSize: mobile ? 15 : 18, lineHeight: 1.75, color: "#8A8A8A",
+            maxWidth: 560, marginBottom: 8 }}>
+            Sara doesn't have a manual yet — she has the reps who are teaching her
+            what to ask next. That's what Founders Club actually is. Not a beta.
+            A small group deciding what this becomes before anyone else gets a vote.
+          </p>
+        </div>
+      </div>
+
+      <div style={{ borderTop: "1px solid #1A1A1A", padding: mobile ? "40px 20px" : "56px 48px",
+        textAlign: "center" }}>
+        <div style={{ maxWidth: 560, margin: "0 auto" }}>
+          <div style={{ fontFamily: F.cond, fontWeight: 900, fontSize: mobile ? 42 : 58,
+            color: "#FFF", letterSpacing: "0.02em", lineHeight: 1 }}>KISS</div>
+          <div style={{ fontFamily: F.mono, fontSize: mobile ? 9 : 10, color: MICRO,
+            letterSpacing: "0.22em", marginTop: 10, marginBottom: mobile ? 28 : 36 }}>
+            KEEP IT SIMPLE, STUPID
+          </div>
+          <div style={{ display: "flex", justifyContent: "center",
+            gap: mobile ? 32 : 56, marginBottom: mobile ? 24 : 32 }}>
+            {/* Phone — a rep calls Sara. Hand-drawn, not from an icon set. */}
+            <svg width={mobile ? 40 : 56} height={mobile ? 40 : 56} viewBox="0 0 48 48" fill="none"
+              aria-hidden="true">
+              <path d="M15 8c2 0 4 4 4 6s-2 3-2 4c1 3 4 6 7 7 1 0 2-2 4-2s6 2 6 4-3 5-5 5c-8 0-19-11-19-19 0-2 3-5 5-5Z"
+                stroke={O} strokeWidth="2" strokeLinejoin="round" />
+            </svg>
+            {/* Chat — a rep texts Sara. */}
+            <svg width={mobile ? 40 : 56} height={mobile ? 40 : 56} viewBox="0 0 48 48" fill="none"
+              aria-hidden="true">
+              <rect x="6" y="8" width="36" height="24" rx="4" stroke={O} strokeWidth="2" />
+              <path d="M14 32v8l10-8" stroke={O} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+            </svg>
+          </div>
+          <p style={{ fontFamily: F.sans, fontSize: mobile ? 15 : 17, lineHeight: 1.7,
+            color: "#8A8A8A", maxWidth: 480, margin: "0 auto" }}>
+            Sara isn't an app. No dashboard to log into, no project to manage,
+            nothing to install. You call her, or you text her. That's the
+            whole interface — because that's the whole point.
+          </p>
+        </div>
       </div>
 
       <div style={{ maxWidth: 720, margin: "0 auto", padding: mobile ? "8px 20px 40px" : "16px 48px 56px" }}>
