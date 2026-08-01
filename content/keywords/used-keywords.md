@@ -35,3 +35,5 @@ post that covers it).
 | 2026-08-01 | Gong alternative no manager visibility | — | gong-alternative-no-manager | CONSOLIDATED |
 | 2026-08-01 | Gong alternative for one person no manager | — | gong-alternative-no-manager | CONSOLIDATED |
 | 2026-08-01 | Gong alternative for sales rep not manager | — | gong-alternative-no-manager | CONSOLIDATED |
+| 2026-08-01 | Gong alternative without recording | Gong alternative privacy focused | gong-alternative-without-recording | PUBLISHED |
+| 2026-08-01 | AI sales tool that doesn't report to manager | AI sales tool no boss visibility; rep privacy AI sales tool | ai-sales-tool-no-manager-reporting | PUBLISHED |
