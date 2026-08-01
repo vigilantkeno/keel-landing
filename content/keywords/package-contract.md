@@ -41,6 +41,10 @@ the committed snapshot.
 | `/blog/gong-alternative-for-individual-sales-reps` | Gong Alternative for Individual Sales Reps: What to Use When Nobody's Buying You Software |
 | `/blog/how-to-follow-up-without-being-annoying` | How to Follow Up Without Being Annoying |
 | `/blog/what-call-recording-cant-capture` | What Call Recording Can't Capture (pillar) |
+| `/blog/gong-scorecards` | Gong Scorecards Are Killing Your Reps' Best Conversations |
+| `/blog/two-party-consent-states-sales-calls` | The 12 States Where Your Sales Rep Can't Legally Record a Call Without Telling You |
+| `/blog/gong-anxiety` | Gong Anxiety Is Real. Here's What It Costs Your Reps. (pillar) |
+| `/blog/in-person-sales-meeting-ai` | In-Person Sales Meeting AI: What Actually Works When There's No Screen Between You (pillar) |
 <!-- ALLOWLIST:END -->
 
 Rules:
