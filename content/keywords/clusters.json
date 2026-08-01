@@ -10,7 +10,7 @@
     },
     {
       "id": "rep-first-ai",
-      "pillar": null,
+      "pillar": "gong-alternative-for-individual-sales-reps",
       "supporting": [],
       "intent": "comparison",
       "description": "Who your sales AI actually works for \u2014 rep or manager."
