@@ -20,6 +20,10 @@ export default function PostList({ posts }) {
             <span style={{ fontFamily: F.mono, fontSize: 9, color: MICRO, letterSpacing: '0.14em' }}>
               {String(p.date).slice(0, 10).toUpperCase()}
             </span>
+            {p.isDraft && (
+              <span style={{ fontFamily: F.mono, fontSize: 8, color: '#000', background: '#e8b30c',
+                letterSpacing: '0.14em', padding: '2px 7px' }}>DRAFT</span>
+            )}
             {p.pillar && (
               <span style={{ fontFamily: F.mono, fontSize: 8, color: O, letterSpacing: '0.14em',
                 border: `1px solid ${O}44`, padding: '2px 7px' }}>PILLAR</span>

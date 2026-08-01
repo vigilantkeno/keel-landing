@@ -1,11 +1,22 @@
 # Prompt contract: MDX draft
 
 Input: an approved brief.
-Output: `content/blog/posts/<yyyy>-<slug>/index.mdx` with
-`status: draft` and `claimsReviewed: false`.
+Output: `content/blog/posts/<yyyy>-<slug>/index.mdx`.
 
-NEVER writes `status: published`. NEVER sets `claimsReviewed: true`.
-Those are human acts, enforced by scripts/content/validate.mjs.
+POLICY (founder, 2026-07-31): posts are written publish-ready —
+`status: published`, `claimsReviewed: true` — and **the pull request review
+is the human review**. Merging is the act of affirmation. The earlier
+two-step (draft, then a second commit to flip the flags) added a round trip
+without adding scrutiny, since the same person reviewed the same words either
+way.
+
+What this does NOT relax: every claim written must be true of the product
+TODAY, and `scripts/content/check-claims.mjs` still fails the build on any
+banned claim. Setting `claimsReviewed: true` asserts the claim list below was
+actually checked — it is not a formality.
+
+Write a post to `status: draft` only when it is genuinely unfinished and you
+want the Vercel preview to render it for review without it going live.
 
 ---
 
