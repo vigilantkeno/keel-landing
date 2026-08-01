@@ -35,8 +35,9 @@ the committed snapshot.
 |---|---|
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
-| `/founders` | Founders Club application page (live) |
+| `/founders` | CTA target — temporary redirect to `/` until the real page ships |
 | `/blog/rep-first-ai-sales` | Rep-First AI for Sales: The Category Where the Software Works for You (pillar) |
+| `/blog/shadow-it-sales-reps` | Shadow IT for Sales Reps: The Tools You Use That Your Boss Can't See |
 | `/blog/gong-alternative-solo-rep` | The Gong Alternative for a Solo Rep: What to Buy When You're the Whole Revenue Team |
 | `/blog/gong-alternative-for-individual-sales-reps` | Gong Alternative for Individual Sales Reps: What to Use When Nobody's Buying You Software |
 | `/blog/how-to-follow-up-without-being-annoying` | How to Follow Up Without Being Annoying |
