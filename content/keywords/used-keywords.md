@@ -46,3 +46,5 @@ post that covers it).
 | 2026-08-01 | stealth sales AI | stealth AI for sales reps | shadow-it-sales-reps | CONSOLIDATED |
 | 2026-08-01 | AI sales tool for one person | — | gong-alternative-solo-rep | CONSOLIDATED |
 | 2026-08-01 | Gong for individual contributor | — | gong-alternative-for-individual-sales-reps | CONSOLIDATED |
+| 2026-08-01 | customer ghosted | customer went dark; customer stopped responding; customer won't respond; customer ignoring me; deal went dark; what to do when deal goes quiet | customer-ghosted | PUBLISHED |
+| 2026-08-01 | AI for sales rep with ADHD | AI for ADHD sales; sales rep ADHD tool; focus tool for sales | ai-for-sales-rep-with-adhd | PUBLISHED |
