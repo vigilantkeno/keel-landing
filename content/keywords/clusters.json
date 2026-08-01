@@ -31,6 +31,23 @@
       "supporting": [],
       "intent": "commercial",
       "description": "Founders Club, onboarding, what early access actually means."
+    },
+    {
+      "id": "field-sales-ai",
+      "pillar": "in-person-sales-meeting-ai",
+      "supporting": [],
+      "intent": "informational",
+      "description": "AI for in-person, field-heavy selling where no screen or recording device is present."
+    },
+    {
+      "id": "surveillance-backlash",
+      "pillar": "gong-anxiety",
+      "supporting": [
+        "two-party-consent-states-sales-calls",
+        "gong-scorecards"
+      ],
+      "intent": "informational",
+      "description": "The rep-side cost of call recording and scoring \u2014 anxiety, legal exposure, scorecard distortion, and the private alternative."
     }
   ]
 }

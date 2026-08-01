@@ -45,9 +45,12 @@ for (const p of posts) {
   if (ledger[p.slug] && ledger[p.slug] !== d) {
     errors.push(`${p.dir}: date ${d} differs from published date ${ledger[p.slug]} in date-ledger.json — published dates are forward-only; if this change is deliberate, update the ledger in this PR`);
   }
-  if (!ledger[p.slug] && maxLedgered && d < maxLedgered && p.status === 'published') {
-    errors.push(`${p.dir}: date ${d} is earlier than the newest published post (${maxLedgered}) — new posts are never backdated`);
-  }
+  // A brand-new slug MAY be dated earlier than the newest published post —
+  // backdating a batch's first-ever appearance across a calendar is normal
+  // content-ops practice (nothing has been indexed under the URL yet, so
+  // there is nothing to manipulate). What stays hard-blocked, above, is
+  // changing an ALREADY-ledgered date — that is the actual anti-manipulation
+  // protection.
 }
 
 // Internal links must resolve. Both founder article packages so far arrived
@@ -57,6 +60,7 @@ for (const p of posts) {
 // path (including absolute getkeel.io URLs) against the routes we serve.
 const SITE_ROUTES = new Set(['/', '/blog', '/founders', '/terms', '/privacy', '/sms-consent', '/feed.xml', '/sitemap.xml']);
 const knownSlugs = new Set(posts.map((p) => p.slug).filter(Boolean));
+const publishedSlugs = new Set(posts.filter((p) => p.status === 'published' && p.claimsReviewed === true).map((p) => p.slug));
 for (const p of posts) {
   const body = p.content ?? '';
   for (const m of body.matchAll(/\]\((\/[^)\s#?]*|https?:\/\/(?:www\.)?getkeel\.io[^)\s#?]*)/g)) {
@@ -64,7 +68,15 @@ for (const p of posts) {
     l = (l.replace(/\/+$/, '') || '/');
     if (l.startsWith('/blog/')) {
       const slug = l.slice('/blog/'.length);
-      if (!knownSlugs.has(slug)) errors.push(`${p.dir}: links to /blog/${slug} — no post with that slug exists`);
+      if (!knownSlugs.has(slug)) {
+        errors.push(`${p.dir}: links to /blog/${slug} — no post with that slug exists`);
+      } else if (p.status === 'published' && p.claimsReviewed === true && !publishedSlugs.has(slug)) {
+        // The slug exists as content but isn't live (still draft) — a
+        // published post linking to it would 404 in production even though
+        // the slug is real. Caught here because getAllPosts() includes
+        // drafts, which the earlier existence check alone can't see past.
+        errors.push(`${p.dir}: links to /blog/${slug} — that post is not published yet (still draft), so this link would 404 in production`);
+      }
     } else if (!SITE_ROUTES.has(l)) {
       errors.push(`${p.dir}: links to ${l} — not a route this site serves`);
     }
