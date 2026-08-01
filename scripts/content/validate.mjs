@@ -93,7 +93,12 @@ for (const p of posts) {
 
 // No orphan published posts: topical authority depends on internal linking,
 // so a published non-pillar post needs at least one sibling in its cluster.
-const published = getPublishedPosts();
+// NOT getPublishedPosts() for this count: that function is environment-aware
+// (renders drafts everywhere except VERCEL_ENV=production, by design, so PR
+// previews can show them) — using it here made this summary line silently
+// report "0 drafts" whenever the gate ran locally, exactly the run where a
+// human is most likely to be checking whether a draft is actually held back.
+const published = posts.filter((p) => p.status === 'published' && p.claimsReviewed === true);
 for (const p of published) {
   if (p.pillar === true) continue;
   const siblings = published.filter((o) => o.slug !== p.slug && o.cluster === p.cluster);
