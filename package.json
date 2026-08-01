@@ -17,7 +17,8 @@
     "lint": "next lint",
     "content:validate": "node scripts/content/validate.mjs",
     "content:claims": "node scripts/content/check-claims.mjs",
-    "content:check": "npm run content:validate && npm run content:claims"
+    "content:check": "npm run content:validate && npm run content:claims",
+    "content:contract": "node scripts/content/contract.mjs"
   },
   "eslintConfig": {
     "extends": [

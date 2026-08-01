@@ -30,12 +30,32 @@ for (const p of posts) {
   }
 }
 
+// Forward-only dates (package contract §6). content/keywords/date-ledger.json
+// records every published slug's date at publish time. A ledgered slug whose
+// frontmatter date differs fails the build — re-dating published content is
+// visible and deliberate (update the ledger in the same PR) or it does not
+// happen. New slugs may not be dated earlier than the newest ledgered date.
+import { existsSync as _ex } from 'node:fs';
+const LEDGER_PATH = join(process.cwd(), 'content', 'keywords', 'date-ledger.json');
+const ledger = _ex(LEDGER_PATH) ? JSON.parse(readFileSync(LEDGER_PATH, 'utf8')) : {};
+const maxLedgered = Object.values(ledger).sort().at(-1) ?? null;
+for (const p of posts) {
+  if (!p.slug || !p.date) continue;
+  const d = String(p.date).slice(0, 10);
+  if (ledger[p.slug] && ledger[p.slug] !== d) {
+    errors.push(`${p.dir}: date ${d} differs from published date ${ledger[p.slug]} in date-ledger.json — published dates are forward-only; if this change is deliberate, update the ledger in this PR`);
+  }
+  if (!ledger[p.slug] && maxLedgered && d < maxLedgered && p.status === 'published') {
+    errors.push(`${p.dir}: date ${d} is earlier than the newest published post (${maxLedgered}) — new posts are never backdated`);
+  }
+}
+
 // Internal links must resolve. Both founder article packages so far arrived
 // with links to slugs that do not exist (and to /founders, which has no route
 // yet) — a 404 in a published post is worse than a build failure here.
 // Checks /blog/<slug> against the actual post set and any other site-internal
 // path (including absolute getkeel.io URLs) against the routes we serve.
-const SITE_ROUTES = new Set(['/', '/blog', '/terms', '/privacy', '/sms-consent', '/feed.xml', '/sitemap.xml']);
+const SITE_ROUTES = new Set(['/', '/blog', '/founders', '/terms', '/privacy', '/sms-consent', '/feed.xml', '/sitemap.xml']);
 const knownSlugs = new Set(posts.map((p) => p.slug).filter(Boolean));
 for (const p of posts) {
   const body = p.content ?? '';
