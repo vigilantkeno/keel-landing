@@ -20,7 +20,7 @@ function useMobile() {
   return mobile;
 }
 
-export default function BlogShell({ eyebrow = "BLOG", title, lead, meta, children }) {
+export default function BlogShell({ eyebrow = "BLOG", title, lead, meta, crumbs, children }) {
   const mobile = useMobile();
 
   return (
@@ -42,6 +42,19 @@ export default function BlogShell({ eyebrow = "BLOG", title, lead, meta, childre
 
       <main style={{ maxWidth: 720, margin: "0 auto",
         padding: mobile ? "40px 20px 56px" : "56px 48px 72px" }}>
+        {crumbs?.length > 0 && (
+          <nav aria-label="Breadcrumb" style={{ marginBottom: 20 }}>
+            {crumbs.map((c, i) => (
+              <span key={i} style={{ fontFamily: F.mono, fontSize: 9,
+                color: MICRO, letterSpacing: "0.12em" }}>
+                {i > 0 && <span style={{ margin: "0 8px", color: "#333" }}>/</span>}
+                {c.href
+                  ? <a href={c.href} style={{ color: MICRO, textDecoration: "none" }}>{c.label}</a>
+                  : <span style={{ color: "#666" }}>{c.label}</span>}
+              </span>
+            ))}
+          </nav>
+        )}
         <div style={{ fontFamily: F.mono, fontSize: 10, color: O,
           letterSpacing: "0.22em", marginBottom: 12 }}>{eyebrow}</div>
         <h1 style={{ fontFamily: F.cond, fontWeight: 900, fontSize: mobile ? 36 : 44,

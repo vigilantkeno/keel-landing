@@ -60,6 +60,14 @@ export default function BlogPost({ params }) {
       url,
     },
   ];
+  graph.push({
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://getkeel.io/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://getkeel.io/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: url },
+    ],
+  });
   if (post.faq?.length) {
     graph.push({
       '@type': 'FAQPage',
@@ -76,6 +84,11 @@ export default function BlogPost({ params }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <BlogShell
+        crumbs={[
+          { label: 'HOME', href: '/' },
+          { label: 'BLOG', href: '/blog' },
+          { label: post.title.toUpperCase().slice(0, 40) + (post.title.length > 40 ? '…' : '') },
+        ]}
         eyebrow={
           post.status !== 'published' || post.claimsReviewed !== true
             ? 'DRAFT — NOT PUBLISHED'
