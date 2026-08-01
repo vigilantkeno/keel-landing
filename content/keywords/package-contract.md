@@ -36,6 +36,7 @@ the committed snapshot.
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
 | `/founders` | CTA target — temporary redirect to `/` until the real page ships |
+| `/blog/gong-alternative-no-manager` | The Gong Alternative for Reps Whose Manager Already Has Gong |
 | `/blog/rep-first-ai-sales` | Rep-First AI for Sales: The Category Where the Software Works for You (pillar) |
 | `/blog/shadow-it-sales-reps` | Shadow IT for Sales Reps: The Tools You Use That Your Boss Can't See |
 | `/blog/gong-alternative-solo-rep` | The Gong Alternative for a Solo Rep: What to Buy When You're the Whole Revenue Team |
