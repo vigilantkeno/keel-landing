@@ -1,4 +1,6 @@
-export const MICRO = "#8a8a8a"; // functional microlabels — WCAG AA on near-black
+// Functional microlabels. These render at 8–9px mono with wide tracking, so
+// they run one step lighter than plain-AA gray: 7.0:1 on #0B0B0B.
+export const MICRO = "#9a9a9a";
 
 export const O = "#FF5A1F";
 export const OL = "#FF7A3D";

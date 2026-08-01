@@ -10,6 +10,7 @@ const FORMSPREE_URL = "https://formspree.io/f/xpqogzeb";
 const COUNTER_API   = "https://api.counterapi.dev/v1/getkeel/founding";
 export const COUNTER_SEED  = 10; // floor matching approximate Formspree total; next submit = seed+1
 const SHARE_URL     = "https://getkeel.io";
+const SHARE_FOUNDERS_URL = "https://getkeel.io/founders";
 const SHOW_LIVE_COUNTER = false; // Re-enable when count exceeds 50; use GET COUNTER_API (not /up)
 
 async function nextApplicationNumber() {
@@ -304,7 +305,7 @@ export function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
               width: mobile ? "100%" : undefined,
               animation: step1Valid ? "orangeGlow 3s ease 2.5s infinite" : "none",
             }}>
-            Apply for Early Access
+            Apply to Founders Club
           </button>
         </div>
         <div style={{ display:"flex", flexDirection:"column", gap:8 }}>
@@ -323,7 +324,7 @@ export function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
                 {SHOW_LIVE_COUNTER ? (
                   <><LiveCounter target={liveCount}/> reps have applied</>
                 ) : (
-                  "Founders Club seats are limited."
+                  "We onboard a few reps at a time."
                 )}
               </span>
             </div>
@@ -335,7 +336,8 @@ export function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
           <span style={{ fontFamily:F.mono, fontSize:9,
             color:MICRO, letterSpacing:"0.12em",
             textAlign: center&&!mobile?"center":undefined }}>
-            We review applications weekly. You'll hear from a human.
+            Drop your email and we&apos;ll send the real application.
+            Reviewed weekly. You&apos;ll hear from a human.
           </span>
         </div>
       </div>
@@ -469,7 +471,10 @@ export function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
 
 /* ─── SUCCESS VIEW ───────────────────────────────────────────────────────── */
 export function SuccessView({ number, mobile, onClose }) {
-  const shareText = `Just applied for early access to @getkeel — Sara, the 24/7 deal assistant for reps. ${SHARE_URL}`;
+  // One message, written to be forwarded as-is. Everything below (native
+  // share sheet, SMS, copy, X) sends these exact words — nobody should have
+  // to compose anything to pass this on.
+  const shareText = `Just applied to keel's Founders Club — Sara is a 24/7 deal assistant you call or text. No dashboard, no note-taking. Thought of you: ${SHARE_FOUNDERS_URL}`;
   const hasNumber = typeof number === "number" && number > 0;
 
   return (
@@ -561,14 +566,24 @@ export function SuccessView({ number, mobile, onClose }) {
             KNOW A REP WHO NEEDS THIS?
           </div>
           <div style={{ fontFamily:F.sans, fontSize: mobile?15:16,
-            color:"#8A8A8A", lineHeight:1.65, marginBottom:16 }}>
+            color:"#8A8A8A", lineHeight:1.65, marginBottom:14 }}>
             Referring a colleague who gets selected strengthens your
-            position in the cohort. Send them the link.
+            position in the cohort. The message is already written:
           </div>
-          <div style={{ display:"flex", flexDirection: mobile?"column":"row", gap:8 }}>
-            <CopyButton text={SHARE_URL} label="COPY LINK" mobile={mobile}/>
+          <div style={{ background:"#0B0B0B", border:"1px solid #222",
+            padding: mobile?"12px 14px":"14px 16px", marginBottom:14,
+            fontFamily:F.sans, fontSize: mobile?14:15, color:"#9A9A9A",
+            lineHeight:1.6 }}>
+            {shareText}
+          </div>
+          <div style={{ display:"flex", flexDirection: mobile?"column":"row",
+            gap:8, flexWrap:"wrap" }}>
+            <NativeShareBtn text={shareText} mobile={mobile}/>
+            <SocialBtn href={`sms:?&body=${encodeURIComponent(shareText)}`}
+              label="TEXT IT" mobile={mobile} newTab={false}/>
+            <CopyButton text={shareText} label="COPY MESSAGE" mobile={mobile}/>
             <SocialBtn href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`} label="𝕏 SHARE" mobile={mobile}/>
-            <SocialBtn href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SHARE_URL)}`} label="in SHARE" mobile={mobile}/>
+            <SocialBtn href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SHARE_FOUNDERS_URL)}`} label="in SHARE" mobile={mobile}/>
           </div>
         </div>
 
@@ -624,9 +639,32 @@ function CopyButton({ text, label, mobile }) {
   );
 }
 
-function SocialBtn({ href, label, mobile }) {
+// Native share sheet — the one-tap path on a phone. Rendered only when the
+// browser actually has it, so desktop falls straight through to TEXT IT /
+// COPY MESSAGE instead of showing a dead button.
+function NativeShareBtn({ text, mobile }) {
+  const [can, setCan] = useState(false);
+  useEffect(() => { setCan(typeof navigator !== "undefined" && !!navigator.share); }, []);
+  if (!can) return null;
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer"
+    <button onClick={() => { navigator.share({ text }).catch(() => {}); }}
+      style={{ background:O, border:"none", color:"#000",
+        padding: mobile?"12px 14px":"12px 18px",
+        fontFamily:F.mono, fontSize:12, letterSpacing:"0.12em",
+        fontWeight:700, cursor:"pointer",
+        display:"flex", alignItems:"center", gap:8,
+        width: mobile?"100%":undefined,
+        justifyContent: mobile?"center":undefined }}>
+      SHARE IT
+    </button>
+  );
+}
+
+function SocialBtn({ href, label, mobile, newTab = true }) {
+  return (
+    <a href={href}
+      target={newTab ? "_blank" : undefined}
+      rel={newTab ? "noopener noreferrer" : undefined}
       style={{ background:"#111", border:"1px solid #2A2A2A", color:"#888",
         padding:"12px 18px", fontFamily:F.mono, fontSize:12,
         letterSpacing:"0.12em", cursor:"pointer", textDecoration:"none",
