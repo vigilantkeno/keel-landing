@@ -57,7 +57,11 @@ export default function BlogPost({ params }) {
       description: post.description,
       datePublished: new Date(post.date).toISOString(),
       dateModified: new Date(post.updated ?? post.date).toISOString(),
-      author: /team/i.test(post.author)
+      // Sara is an AI and is never presented as a human author. The
+      // accountable schema.org author is the Keel Organization; "Sara" is the
+      // displayed voice (byline policy, contract §4 v1.2 — "Sara K." style
+      // human-disguise bylines were explicitly rejected 2026-08-01).
+      author: /^sara$/i.test(post.author) || /team/i.test(post.author)
         ? { '@type': 'Organization', name: 'Keel', url: 'https://getkeel.io' }
         : { '@type': 'Person', name: post.author, url: 'https://getkeel.io' },
       publisher: { '@id': 'https://getkeel.io/#organization' },
@@ -103,7 +107,7 @@ export default function BlogPost({ params }) {
         }
         title={post.title}
         lead={post.description}
-        meta={`${String(post.date).slice(0, 10).toUpperCase()} · ${post.author.toUpperCase()} · GETKEEL.IO`}
+        meta={`${String(post.date).slice(0, 10).toUpperCase()} · ${/^sara$/i.test(post.author) ? "SARA — KEEL'S AI DEAL ASSISTANT" : post.author.toUpperCase()} · GETKEEL.IO`}
       >
         <MDXRemote source={post.content} components={mdxComponents} />
         <RelatedPosts

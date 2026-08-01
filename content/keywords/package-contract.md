@@ -1,4 +1,4 @@
-# Keel Package Contract — v1.1 (2026-08-01)
+# Keel Package Contract — v1.2 (2026-08-01)
 
 **What this is.** The one file that travels with every article-package
 request. A package produced under this contract imports with zero
@@ -70,7 +70,7 @@ metaTitle: ""              # optional; ≤60 chars; omit → "<title> — keel"
 description: ""            # ≤155 chars
 slug: ""                   # lowercase-hyphens; must NOT already exist
 date: "2026-08-XX"         # calendar-slot date, forward-only (§6)
-author: ""                 # "Keno Vigil" | "Keel Team" per §4
+author: "Sara"             # always — displayed "Sara — Keel's AI deal assistant" (§4)
 targetKeyword: ""          # exactly one; demand-validated per §0
 secondaryKeywords: []
 intent: ""                 # informational | comparison | commercial
@@ -105,14 +105,39 @@ frontmatter; a hand-written block can only agree or introduce a bug.
 - 1–2 external links per article. Authoritative, non-competitor, never
   Reddit.
 
-## 4. Byline policy (decision 2026-08-01)
+## 4. Byline policy (decision 2026-08-01, revised same day)
 
-- **Pillar articles → `author: "Keno Vigil"`** (emitted as a Person entity).
-- **Comparison / alternative pieces → `author: "Keel Team"`** (emitted as
-  the Keel Organization entity).
-- Enforcement is frontmatter-only — the repo derives the JSON-LD entity from
-  the `author` field. No package ships a byline requiring a downstream
-  judgment call.
+- **Every post → `author: "Sara"`.** Displayed on the page as
+  **"Sara — Keel's AI deal assistant"** — openly AI, always. The product
+  writes its own field notes; that is the brand play, and it only works
+  because it is honest.
+- JSON-LD emits the **Keel Organization** as the accountable author — an AI
+  is never presented as a schema.org Person.
+- **Never a human-disguised persona.** "Sara K."-style bylines (human-format
+  name for an AI author) were considered and rejected: fabricated human
+  authors are an E-E-A-T liability and the opposite of Keel's disclosure
+  posture.
+
+## 4a. Voice: how Keel writes (added v1.2 — founder feedback: no fluff)
+
+Write like a top rep talking to another rep after quota — direct, specific,
+slightly wry, zero fluff.
+
+- Short declarative sentences. Verbs carry them. Adjectives are on probation.
+- Cut every hedge: *perhaps, arguably, often, in many cases, it could be
+  said.* If it's true, say it. If you're not sure, cut the sentence.
+- Say the uncomfortable thing plainly: "Your champion is being polite, not
+  honest." That sentence earns more trust than three paragraphs of empathy.
+- Concrete over abstract, always: the 9pm pricing email, the parking lot in
+  Columbus, the CFO who went quiet — never "key stakeholders" or "critical
+  touchpoints."
+- Confidence is short sentences plus specifics. It is never exclamation
+  points, superlatives, or telling the reader something "is powerful."
+- One-sentence paragraphs are allowed. Use them like a closer uses silence.
+- Second person by default. "You" carries quota.
+- No throat-clearing openers, no summary endings, no cheerleading anywhere.
+
+The §7 style bans are the floor. This section is the target.
 
 ## 5. One CTA
 
@@ -175,13 +200,18 @@ sections.
 | Frontmatter | Valid YAML; field names match §2 exactly; slug not already taken |
 | Numbers | Every numeric claim has a live link, or was cut |
 | CTA | Exactly one, in body, targets `/founders`; author note carries no link |
-| Byline | Matches §4 for the article type |
+| Byline | `author: "Sara"` (§4) |
+| Voice | Reads per §4a — a senior AE would nod, not wince |
 | Dates | Calendar-slot date; never earlier than the newest published piece |
 | Claims/phrases | Zero hits on §7 (machine list + style bans), scripted scan |
 
 ---
 
 **Changelog**
+- v1.2 (2026-08-01): byline policy revised — all posts author as Sara,
+  openly AI ("Sara K." human-disguise explicitly rejected); §4a voice spec
+  added (founder feedback: prose was bland; salespeople want straight and
+  confident).
 - v1.1 (2026-08-01): corrected §2 to the real schema (was `pubDate`/
   `seoTitle`/`draft` — `draft:true` contradicted the publish-ready policy);
   packages no longer ship JSON-LD; §1 table script-generated with markers;
