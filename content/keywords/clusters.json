@@ -21,7 +21,7 @@
     },
     {
       "id": "deal-memory-drift",
-      "pillar": null,
+      "pillar": "customer-ghosted",
       "supporting": [],
       "intent": "informational",
       "description": "Champions going quiet, buyers never engaged, context lost between calls."
@@ -59,6 +59,13 @@
       "supporting": [],
       "intent": "informational",
       "description": "Med device, pharma, financial services, healthcare IT \u2014 why not recording is the actual requirement, not a preference."
+    },
+    {
+      "id": "ae-personas",
+      "pillar": "ai-for-sales-rep-with-adhd",
+      "supporting": [],
+      "intent": "commercial",
+      "description": "Specific AE personas \u2014 ADHD, introverts, new hires, reps who hate cold calling \u2014 where generic sales AI misses persona-specific friction."
     }
   ]
 }
