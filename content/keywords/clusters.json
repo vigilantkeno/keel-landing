@@ -13,7 +13,8 @@
       "pillar": "rep-first-ai-sales",
       "supporting": [
         "gong-alternative-for-individual-sales-reps",
-        "gong-alternative-solo-rep"
+        "gong-alternative-solo-rep",
+        "gong-alternative-no-manager"
       ],
       "intent": "comparison",
       "description": "Who your sales AI actually works for \u2014 rep or manager."
@@ -49,6 +50,13 @@
       ],
       "intent": "informational",
       "description": "The rep-side cost of call recording and scoring \u2014 anxiety, legal exposure, scorecard distortion, and the private alternative."
+    },
+    {
+      "id": "regulated-industries",
+      "pillar": "sales-ai-for-regulated-industries",
+      "supporting": [],
+      "intent": "informational",
+      "description": "Med device, pharma, financial services, healthcare IT \u2014 why not recording is the actual requirement, not a preference."
     }
   ]
 }
