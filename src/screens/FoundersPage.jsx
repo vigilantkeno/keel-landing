@@ -68,7 +68,7 @@ export default function FoundersPage() {
       <div style={{ position: "relative", maxWidth: 720, margin: "0 auto",
         padding: mobile ? "48px 20px 32px" : "72px 48px 40px" }}>
         <div style={{ fontFamily: F.mono, fontSize: mobile ? 9 : 10, color: O,
-          letterSpacing: "0.22em", marginBottom: 16 }}>FOUNDERS CLUB · INVITE-REVIEWED</div>
+          letterSpacing: "0.22em", marginBottom: 16 }}>FOUNDERS CLUB · EVERY APPLICATION READ BY A HUMAN</div>
         <h1 style={{ fontFamily: F.cond, fontWeight: 900, fontSize: mobile ? 38 : 64,
           lineHeight: 0.96, letterSpacing: "-0.01em", textTransform: "uppercase", color: "#FFF",
           marginBottom: 24 }}>
@@ -80,8 +80,8 @@ export default function FoundersPage() {
         </h1>
         <p style={{ fontFamily: F.sans, fontSize: mobile ? 15 : 18, lineHeight: 1.75, color: "#8A8A8A",
           maxWidth: 560, marginBottom: 8 }}>
-          Sara doesn't have a manual yet — she has the reps who are teaching her
-          what to ask next. That's what Founders Club actually is. Not a beta.
+          Sara doesn't have a manual yet — she has the reps teaching her
+          what to ask next. That's what Founders Club is. Not a beta.
           A small group deciding what this becomes before anyone else gets a vote.
         </p>
       </div>
