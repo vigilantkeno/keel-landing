@@ -35,7 +35,7 @@ the committed snapshot.
 |---|---|
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
-| `/founders` | CTA target — temporary redirect to `/` until the real page ships |
+| `/founders` | Founders Club application page (live) |
 | `/blog/rep-first-ai-sales` | Rep-First AI for Sales: The Category Where the Software Works for You (pillar) |
 | `/blog/gong-alternative-solo-rep` | The Gong Alternative for a Solo Rep: What to Buy When You're the Whole Revenue Team |
 | `/blog/gong-alternative-for-individual-sales-reps` | Gong Alternative for Individual Sales Reps: What to Use When Nobody's Buying You Software |
@@ -146,8 +146,8 @@ The §7 style bans are the floor. This section is the target.
 ## 5. One CTA
 
 Exactly one CTA in the article body, near the end, soft, phrased in terms of
-the article's core argument. Target: `/founders` (relative path; it
-redirects to `/` until the real page ships — decision 2026-08-01).
+the article's core argument. Target: `/founders` — a real application
+page as of 2026-08-01, not a redirect.
 
 The author-note line at the foot of the article is descriptive furniture —
 **no apply link in it** (founder feedback 2026-08-01). Never a CTA in FAQ

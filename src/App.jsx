@@ -8,7 +8,7 @@ import { O, OL, BK, BK2, MICRO, F } from "./brand";
 /* ─── CONFIG ─────────────────────────────────────────────────────────────── */
 const FORMSPREE_URL = "https://formspree.io/f/xpqogzeb";
 const COUNTER_API   = "https://api.counterapi.dev/v1/getkeel/founding";
-const COUNTER_SEED  = 10; // floor matching approximate Formspree total; next submit = seed+1
+export const COUNTER_SEED  = 10; // floor matching approximate Formspree total; next submit = seed+1
 const SHARE_URL     = "https://getkeel.io";
 const SHOW_LIVE_COUNTER = false; // Re-enable when count exceeds 50; use GET COUNTER_API (not /up)
 
@@ -222,7 +222,7 @@ function Select({ value, onChange, children, ...rest }) {
    Step 1 — email (fast, low friction)
    Step 2 — qualifying info (company, role, deal load, CRM)
 ──────────────────────────────────────────────────────────────────────────────── */
-function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
+export function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
   const [step,   setStep]   = useState(1);
   const [email,  setEmail]  = useState("");
   const [fields, setFields] = useState({
@@ -468,7 +468,7 @@ function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
 }
 
 /* ─── SUCCESS VIEW ───────────────────────────────────────────────────────── */
-function SuccessView({ number, mobile, onClose }) {
+export function SuccessView({ number, mobile, onClose }) {
   const shareText = `Just applied for early access to @getkeel — Sara, the 24/7 deal assistant for reps. ${SHARE_URL}`;
   const hasNumber = typeof number === "number" && number > 0;
 
