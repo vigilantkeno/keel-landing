@@ -63,14 +63,18 @@
     {
       "id": "ae-personas",
       "pillar": "ai-for-sales-rep-with-adhd",
-      "supporting": [],
+      "supporting": [
+        "ai-for-sales-rep-introverts"
+      ],
       "intent": "commercial",
       "description": "Specific AE personas \u2014 ADHD, introverts, new hires, reps who hate cold calling \u2014 where generic sales AI misses persona-specific friction."
     },
     {
       "id": "founder-led-sales",
       "pillar": "founder-to-first-ae",
-      "supporting": [],
+      "supporting": [
+        "solo-b2b-sales"
+      ],
       "intent": "commercial",
       "description": "Founders selling solo and the transition to a first sales hire \u2014 the judgment that has to transfer, not just the process."
     },
