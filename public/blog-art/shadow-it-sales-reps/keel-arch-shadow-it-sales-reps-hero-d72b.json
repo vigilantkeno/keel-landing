@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "shadow-it-sales-reps",
+  "sourceCandidate": "shadow-it-sales-reps-1-d72b.png",
+  "normalizedAt": "2026-08-02T13:46:50.457Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A monumental dark corporate wall of identical panels rising past the top of the frame, at its base one small warmly bone-lit alcove holding a compact desk, a single thin ember-orange cable line running from the alcove around the wall's edge and out of frame instead of into the wall's official conduit grid, low straight-on viewpoint, one dominant hard light inside the alcove with a faint cool fill on the wall, no figures, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A monumental dark corporate wall of identical panels rising past the top of the frame, at its base one small warmly bone-lit alcove holding a compact desk, a single thin ember-orange cable line running from the alcove around the wall's edge and out of frame instead of into the wall's official conduit grid, low straight-on viewpoint, one dominant hard light inside the alcove with a faint cool fill on the wall, no figures"
+}

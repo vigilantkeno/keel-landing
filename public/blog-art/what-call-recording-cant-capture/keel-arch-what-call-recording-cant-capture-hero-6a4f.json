@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "what-call-recording-cant-capture",
+  "sourceCandidate": "what-call-recording-cant-capture-2-6a4f.png",
+  "normalizedAt": "2026-08-02T13:46:51.006Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "An empty glass-walled meeting room in the middle distance rendered cold and dark with its chairs neatly abandoned, in the near foreground a concrete ledge outside the room where a single phone lies face-up with its screen glowing ember-orange, three-quarter viewpoint from outside the room, one dominant cool institutional light on the glass with the phone's warm glow spilling onto the ledge, wide bone plane on the corridor floor, no figures, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "An empty glass-walled meeting room in the middle distance rendered cold and dark with its chairs neatly abandoned, in the near foreground a concrete ledge outside the room where a single phone lies face-up with its screen glowing ember-orange, three-quarter viewpoint from outside the room, one dominant cool institutional light on the glass with the phone's warm glow spilling onto the ledge, wide bone plane on the corridor floor, no figures"
+}

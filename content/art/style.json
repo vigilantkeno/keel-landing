@@ -1,58 +1,204 @@
 {
-  "$comment": "Machine-readable half of STYLE_SPEC.md. The art tooling reads THIS file. styleSuffix and negativePrompt are byte-exact and version-locked: changing either means minting a new version id, never editing v1 in place — same discipline as the copy prompt registry.",
+  "$comment": "Machine-readable half of STYLE_SPEC.md. The art tooling reads THIS file. styleSuffix and negativePrompt are byte-exact and version-locked: changing either means minting a new version id, never editing v1 in place \u2014 same discipline as the copy prompt registry.",
   "version": "keel_illustration_v1",
   "source": {
     "designProject": "be57945a-5c23-418b-9426-120fbb6af3af",
     "designPath": "templates/illustration-system/IllustrationSystem.dc.html",
     "note": "Design project is canonical for design decisions; this file is canonical for generation. Change the design doc first, then port."
   },
-
   "palette": {
-    "ink":        { "hex": "#0B0B0B", "role": "ground",                     "coverage": [0.55, 0.70] },
-    "bone":       { "hex": "#EDE7DC", "role": "lit plane, paper, screen",   "coverage": [0.15, 0.30] },
-    "ember":      { "hex": "#FF5A1F", "role": "the signature accent",       "coverage": [0.03, 0.08] },
-    "periwinkle": { "hex": "#6E86D6", "role": "second voice: sky, tabs, data", "coverage": [0.0, 0.05] },
-    "graphite":   { "hex": "#3A3A3A", "role": "mid-tone separation, concrete", "coverage": null }
+    "ink": {
+      "hex": "#0B0B0B",
+      "role": "ground",
+      "coverage": [
+        0.55,
+        0.7
+      ]
+    },
+    "bone": {
+      "hex": "#EDE7DC",
+      "role": "lit plane, paper, screen",
+      "coverage": [
+        0.15,
+        0.3
+      ]
+    },
+    "ember": {
+      "hex": "#FF5A1F",
+      "role": "the signature accent",
+      "coverage": [
+        0.03,
+        0.08
+      ]
+    },
+    "periwinkle": {
+      "hex": "#6E86D6",
+      "role": "second voice: sky, tabs, data",
+      "coverage": [
+        0.0,
+        0.05
+      ]
+    },
+    "graphite": {
+      "hex": "#3A3A3A",
+      "role": "mid-tone separation, concrete",
+      "coverage": null
+    }
   },
   "paletteRules": {
     "maxAccents": 2,
-    "accentPrecedence": ["ember", "periwinkle"],
+    "accentPrecedence": [
+      "ember",
+      "periwinkle"
+    ],
     "safeFallback": "greyscale plus one accent",
     "emberMatchesBrandToken": "src/brand.js O",
     "emberDeviationNote": "Design doc originally specified #F4531B; founder ratified #FF5A1F on 2026-08-01 so UI and illustration share one orange. Design doc updated to match."
   },
-
   "families": {
-    "arch":  { "label": "Architecture & space",     "reference": ["reference/arch-atrium.webp", "reference/arch-skyscrapers.webp"], "useFor": ["product architecture", "company strategy", "onboarding & migration", "trust and governance", "no obvious object"] },
-    "obj":   { "label": "Tactile business objects", "reference": ["reference/obj-folders.webp"],                                     "useFor": ["memory & account context", "privacy and retention", "workflow and admin", "record-keeping", "feature explainers"] },
-    "human": { "label": "Human corporate scenes",   "reference": ["reference/human-presentation-room.webp"],                         "useFor": ["sales culture & coaching", "management and pipeline reviews", "rep behavior", "customer stories", "hiring"] },
-    "abs":   { "label": "Abstract systems",         "reference": ["reference/abs-data-streams.webp"],                                "useFor": ["AI behavior & model reasoning", "integrations and routing", "benchmarks", "section dividers and card art"] }
+    "arch": {
+      "label": "Architecture & space",
+      "reference": [
+        "reference/arch-atrium.webp",
+        "reference/arch-skyscrapers.webp"
+      ],
+      "useFor": [
+        "product architecture",
+        "company strategy",
+        "onboarding & migration",
+        "trust and governance",
+        "no obvious object"
+      ]
+    },
+    "obj": {
+      "label": "Tactile business objects",
+      "reference": [
+        "reference/obj-folders.webp"
+      ],
+      "useFor": [
+        "memory & account context",
+        "privacy and retention",
+        "workflow and admin",
+        "record-keeping",
+        "feature explainers"
+      ]
+    },
+    "human": {
+      "label": "Human corporate scenes",
+      "reference": [
+        "reference/human-presentation-room.webp"
+      ],
+      "useFor": [
+        "sales culture & coaching",
+        "management and pipeline reviews",
+        "rep behavior",
+        "customer stories",
+        "hiring"
+      ]
+    },
+    "abs": {
+      "label": "Abstract systems",
+      "reference": [
+        "reference/abs-data-streams.webp"
+      ],
+      "useFor": [
+        "AI behavior & model reasoning",
+        "integrations and routing",
+        "benchmarks",
+        "section dividers and card art"
+      ]
+    }
   },
   "referenceImages": {
-    "$comment": "Canonical visual definition of the system, imported from the design export by scripts/art/import-reference.mjs. Paths are relative to content/art/. Pass the matching family reference to any provider that supports image conditioning or style reference — it is a stronger consistency lever than prompt text alone.",
+    "$comment": "Canonical visual definition of the system, imported from the design export by scripts/art/import-reference.mjs. Paths are relative to content/art/. Pass the matching family reference to any provider that supports image conditioning or style reference \u2014 it is a stronger consistency lever than prompt text alone.",
     "apertureDevice": "reference/aperture-desk.webp",
     "width": 1280,
     "note": "Reference/conditioning size, not a shipping asset."
   },
   "mixPresets": {
-    "balanced":         { "arch": 0.50, "obj": 0.25, "human": 0.15, "abs": 0.10 },
-    "architecture-led": { "arch": 0.65, "obj": 0.20, "human": 0.10, "abs": 0.05 },
-    "product-led":      { "arch": 0.35, "obj": 0.40, "human": 0.10, "abs": 0.15 }
+    "balanced": {
+      "arch": 0.5,
+      "obj": 0.25,
+      "human": 0.15,
+      "abs": 0.1
+    },
+    "architecture-led": {
+      "arch": 0.65,
+      "obj": 0.2,
+      "human": 0.1,
+      "abs": 0.05
+    },
+    "product-led": {
+      "arch": 0.35,
+      "obj": 0.4,
+      "human": 0.1,
+      "abs": 0.15
+    }
   },
   "defaultMixPreset": "balanced",
   "classifierFallbackFamily": "arch",
-
-  "promptSlots": ["subject", "spaceMaterial", "viewpoint", "light", "emberAperture", "negativeSpace"],
+  "promptSlots": [
+    "subject",
+    "spaceMaterial",
+    "viewpoint",
+    "light",
+    "emberAperture",
+    "negativeSpace"
+  ],
   "styleSuffix": "modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
   "negativePrompt": "photograph, stock photo, 3D render, glossy, bokeh, lens flare, neon glow, purple gradient, starfield, nebula, robot, brain, circuit board, smiling person, face, handshake, isometric, cartoon character, cluttered, watermark, text, UI screenshot, rainbow palette",
-
   "placements": {
-    "hero":         { "width": 2400, "height": 1350, "ratio": "16:9",  "preferredFamily": "arch",           "derived": false, "notes": "Keep the left third clear for the headline overlay." },
-    "sectionBreak": { "width": 1600, "height": 900,  "ratio": "16:9",  "preferredFamily": ["obj", "abs"],   "derived": false, "notes": "One per ~800 words. Never two adjacent from one family." },
-    "card":         { "width": 1200, "height": 800,  "ratio": "3:2",   "preferredFamily": "obj",            "derived": "hero", "notes": "Must survive a 320px crop — one clear shape, one ember event." },
-    "band":         { "width": 2880, "height": 1000, "ratio": "2.88:1","preferredFamily": "arch",           "derived": "hero", "notes": "Generate 16:9 and crop; never stretch or outpaint faces." },
-    "og":           { "width": 1200, "height": 630,  "ratio": "1.91:1","preferredFamily": null,             "derived": "hero", "notes": "Derived crop of the hero — same image, never a new generation." },
-    "spot":         { "width": 800,  "height": 800,  "ratio": "1:1",   "preferredFamily": "abs",            "derived": false, "notes": "Motif only — dot grid, flow, single tab. No scenes." }
+    "hero": {
+      "width": 2400,
+      "height": 1350,
+      "ratio": "16:9",
+      "preferredFamily": "arch",
+      "derived": false,
+      "notes": "Keep the left third clear for the headline overlay."
+    },
+    "sectionBreak": {
+      "width": 1600,
+      "height": 900,
+      "ratio": "16:9",
+      "preferredFamily": [
+        "obj",
+        "abs"
+      ],
+      "derived": false,
+      "notes": "One per ~800 words. Never two adjacent from one family."
+    },
+    "card": {
+      "width": 1200,
+      "height": 800,
+      "ratio": "3:2",
+      "preferredFamily": "obj",
+      "derived": "hero",
+      "notes": "Must survive a 320px crop \u2014 one clear shape, one ember event."
+    },
+    "band": {
+      "width": 2880,
+      "height": 1000,
+      "ratio": "2.88:1",
+      "preferredFamily": "arch",
+      "derived": "hero",
+      "notes": "Generate 16:9 and crop; never stretch or outpaint faces."
+    },
+    "og": {
+      "width": 1200,
+      "height": 630,
+      "ratio": "1.91:1",
+      "preferredFamily": null,
+      "derived": "hero",
+      "notes": "Derived crop of the hero \u2014 same image, never a new generation."
+    },
+    "spot": {
+      "width": 800,
+      "height": 800,
+      "ratio": "1:1",
+      "preferredFamily": "abs",
+      "derived": false,
+      "notes": "Motif only \u2014 dot grid, flow, single tab. No scenes."
+    }
   },
   "export": {
     "format": "webp",
@@ -60,28 +206,29 @@
     "keepPngMaster": true,
     "qualityFloorNote": "Deep blacks band badly below q80."
   },
-
   "normalize": {
-    "$comment": "Step 4 of the workflow and the real consistency engine — corrects provider drift mechanically rather than relying on prompt obedience.",
+    "$comment": "Step 4 of the workflow and the real consistency engine \u2014 corrects provider drift mechanically rather than relying on prompt obedience.",
     "blackPoint": "#0B0B0B",
     "emberHueTarget": "#FF5A1F",
     "grainOpacity": 0.02
   },
-
   "generation": {
     "candidatesPerImage": 2,
     "keep": 1,
     "selector": "human",
     "logRejectReasons": true,
-    "$comment": "Founder revised 4->2 candidates per image on 2026-08-01 after the bake-off showed a high on-system hit rate; design doc §10 still says 4 — sync pending."
+    "$comment": "Founder revised 4->2 candidates per image on 2026-08-01 after the bake-off showed a high on-system hit rate. Design doc synced 2026-08-02 (v1.1)."
   },
-
   "naming": {
     "pattern": "keel-{family}-{slug}-{placement}-{seed}.webp",
-    "familyValues": ["arch", "obj", "human", "abs"],
+    "familyValues": [
+      "arch",
+      "obj",
+      "human",
+      "abs"
+    ],
     "example": "keel-obj-account-memory-hero-8842.webp"
   },
-
   "shipChecklist": [
     "Exactly one ember aperture, off-centre.",
     "Black point genuinely near-black, not charcoal.",
@@ -91,5 +238,68 @@
     "Doesn't repeat the previous three images on the page.",
     "Prompt + seed logged.",
     "Alt text written (accessibility + SEO; not optional)."
-  ]
+  ],
+  "contractVersion": "1.1",
+  "v11": {
+    "$comment": "v1.1 confidence amendments (founder-approved 2026-08-02). Enforced by scripts/art/lint-briefs.mjs before any generation.",
+    "heroMix": {
+      "objectStillLife": 0.4,
+      "archNoHuman": 0.25,
+      "pairedHuman": 0.2,
+      "uprightSolo": 0.15,
+      "note": "Hero placement only; site-wide family mix in \"mixPresets\" governs lower-stakes placements."
+    },
+    "apertureQuotasPer20": {
+      "door": 5,
+      "tab": 4,
+      "dot": 4,
+      "line": 4,
+      "panel": 3
+    },
+    "apertureRules": [
+      "no same subtype on consecutive published posts",
+      "ember-as-distant-destination capped at 1-in-5; default is possession/control"
+    ],
+    "compositionSignatures": [
+      "path_to_threshold",
+      "macro_object",
+      "isolated_spotlight",
+      "split_boundary",
+      "convergence_diagram",
+      "window_observation",
+      "monumental_vertical",
+      "table_conversation",
+      "indexed_stack"
+    ],
+    "signatureRules": [
+      "no signature reuse within the previous 4 published images",
+      "path_to_threshold with a lone silhouette capped at 1-in-5 overall"
+    ],
+    "figureRules": [
+      "prefer pairs/small groups at eye level",
+      "solo figures upright, frontal, or mid-action only \u2014 never only distant walking-away",
+      "silhouette/no-faces rules unchanged"
+    ],
+    "light": "one dominant hard-edged source + optional quiet cool ambient fill",
+    "luminanceFloor": {
+      "bonePlaneCoverage": [
+        0.12,
+        0.3
+      ],
+      "maxUndifferentiatedDark": 0.75,
+      "grayscaleLegibleAt": 320
+    },
+    "briefFields": [
+      "slug",
+      "family",
+      "alt",
+      "slots",
+      "conceptualTension",
+      "apertureType",
+      "compositionSignature",
+      "orangeRole",
+      "literalnessRisk",
+      "thumbnailRisk"
+    ]
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "human",
+  "slug": "rep-first-ai-sales",
+  "sourceCandidate": "rep-first-ai-sales-1-067c.png",
+  "normalizedAt": "2026-08-02T13:46:48.913Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A featureless silhouetted rep seated upright at a generous desk facing the viewer at eye level, mid-action marking a page in a spread of bone documents, one ember-orange tabbed page directly under their hand, a wide bone wall plane behind them covering a quarter of the frame, one dominant hard key light from the right with a quiet cool ambient fill, composed with confident negative space on the left, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A featureless silhouetted rep seated upright at a generous desk facing the viewer at eye level, mid-action marking a page in a spread of bone documents, one ember-orange tabbed page directly under their hand, a wide bone wall plane behind them covering a quarter of the frame, one dominant hard key light from the right with a quiet cool ambient fill, composed with confident negative space on the left"
+}

@@ -4,7 +4,7 @@
 //   node scripts/art/apply-winners.mjs <briefs.json> <winners.json>
 // winners.json: { "<slug>": "<candidate-file.png>", ... }
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, rmSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 const briefs = JSON.parse(readFileSync(process.argv[2], 'utf8'));
@@ -29,8 +29,7 @@ for (const b of briefs) {
   if (!dir) { console.error(`no post found for slug ${b.slug}`); process.exit(1); }
 
   const file = join(postsDir, dir, 'index.mdx');
-  const src = readFileSync(file, 'utf8');
-  if (/^heroImage:/m.test(src)) { console.log(`skip frontmatter ${b.slug}: heroImage already set`); continue; }
+  let src = readFileSync(file, 'utf8');
   const heroPath = `/blog-art/${b.slug}/keel-${b.family}-${b.slug}-hero-${id}.webp`;
   const block = [
     `artFamily: ${yq(b.family)}`,
@@ -38,7 +37,18 @@ for (const b of briefs) {
     `heroImage: ${yq(heroPath)}`,
     `heroAlt: ${yq(b.alt)}`,
   ].join('\n');
-  // insert after the `pillar:` line — present on every post
+  if (/^heroImage:/m.test(src)) {
+    // replacement: strip the existing art block, delete superseded assets
+    // (normalize has already written the new ones for this id)
+    const pubDir = join(process.cwd(), 'public', 'blog-art', b.slug);
+    if (existsSync(pubDir)) {
+      for (const f of readdirSync(pubDir)) {
+        if (!f.includes(`-${id}.`)) rmSync(join(pubDir, f));
+      }
+    }
+    src = src.replace(/^artFamily: .*\n(artBrief: .*\n)?heroImage: .*\nheroAlt: .*\n/m, '');
+    console.log(`replacing existing art: ${b.slug}`);
+  }
   const next = src.replace(/^(pillar: (?:true|false))$/m, `$1\n${block}`);
   if (next === src) { console.error(`could not find pillar line in ${file}`); process.exit(1); }
   writeFileSync(file, next);
