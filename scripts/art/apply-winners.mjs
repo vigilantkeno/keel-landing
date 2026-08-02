@@ -31,8 +31,20 @@ for (const b of briefs) {
   const file = join(postsDir, dir, 'index.mdx');
   let src = readFileSync(file, 'utf8');
   const heroPath = `/blog-art/${b.slug}/keel-${b.family}-${b.slug}-hero-${id}.webp`;
+  // routine-authored posts already carry the router record — only the
+  // heroImage line is missing; insert it before heroAlt and stop.
+  if (/^artFamily:/m.test(src) && !/^heroImage:/m.test(src)) {
+    const next = src.replace(/^(heroAlt: )/m, `heroImage: ${yq(heroPath)}\n$1`);
+    if (next === src) { console.error(`no heroAlt line in ${file}`); process.exit(1); }
+    writeFileSync(file, next);
+    console.log(`heroImage inserted: ${b.slug} -> ${heroPath}`);
+    continue;
+  }
   const block = [
     `artFamily: ${yq(b.family)}`,
+    ...(b.apertureType ? [`artAperture: ${yq(b.apertureType)}`] : []),
+    ...(b.compositionSignature ? [`artSignature: ${yq(b.compositionSignature)}`] : []),
+    ...(b.orangeRole ? [`artOrangeRole: ${yq(b.orangeRole)}`] : []),
     `artBrief: ${yq(b.slots)}`,
     `heroImage: ${yq(heroPath)}`,
     `heroAlt: ${yq(b.alt)}`,

@@ -71,6 +71,25 @@ any external knowledge base, project context, or connector.
    - Cluster: use an existing cluster from `clusters.json`, or add a
      new cluster entry in the same commit (respect the
      one-pillar-per-cluster rule).
+   - ART BRIEF (text only — scheduled runs can NEVER generate images):
+     while you still hold the article's full context, write the
+     illustration router record into frontmatter per
+     `content/art/STYLE_SPEC.md` (contract v1.1):
+       `artFamily` (arch|obj|human|abs — respect the hero mix: 40%
+       object still-life, 25% architecture no-human, 20% pairs, 15%
+       upright/mid-action solo), `artAperture` (door|tab|dot|line|
+       panel), `artSignature` (one of the nine composition signatures),
+       `artOrangeRole` (possession|destination — default possession;
+       destination is capped 1-in-5), `artTension` (one sentence: the
+       article's conceptual tension), `artBrief` (the six-slot scene,
+       figures tiny/distant or upright/mid-action, never a lone
+       walking-away silhouette unless quota allows), `artLiteralness`
+       and `artThumbnail` (low|medium — if honestly "high", re-concept),
+       and `heroAlt`.
+     CHECK VARIETY FIRST: read `artSignature`/`artAperture` from the 4
+     most recently published posts and pick values that don't repeat
+     them (no same signature within 4, no same aperture twice running).
+     Do NOT write `heroImage` — that is set by the supervised art pass.
 4. Gate each article: `npm run content:check`, then
    `VERCEL_ENV=production npm run build`. On failure: fix and re-run
    the FULL gate. Max 3 attempts per article; after the 3rd failure
@@ -91,7 +110,26 @@ any external knowledge base, project context, or connector.
    (including every external URL fetched and its status), any FAILED
    keywords with the failing gate output, and unprocessed keywords
    remaining. A human merges.
-7. Post the same summary as the run's final report, with the PR link.
+7. Post the same summary as the run's final report, with the PR link,
+   including the declared art briefs (family/aperture/signature) so the
+   variety check is reviewable at a glance.
+
+## Morning art pass (supervised — NOT part of the scheduled run)
+
+Images are generated only in supervised sessions (network + human
+pick). After merging the day's article PR:
+
+    node scripts/art/pending.mjs          # collects briefs from posts
+                                          # missing heroImage; lints
+                                          # against recent publishes
+    node scripts/art/batch-generate.mjs content/art/briefs/pending.json
+    node scripts/art/review-strips.mjs  content/art/briefs/pending.json
+    # human picks -> winners json, then:
+    node scripts/art/apply-winners.mjs content/art/briefs/pending.json \
+      content/art/briefs/winners-pending.json
+
+Gates, build, PR as usual. ~2 minutes of generation and one pick per
+article.
 
 ## Hard rules
 

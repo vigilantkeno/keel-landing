@@ -17,6 +17,8 @@ import { readFileSync } from 'node:fs';
 import { loadStyle } from './lib/style.mjs';
 
 const briefs = JSON.parse(readFileSync(process.argv[2], 'utf8'));
+const ctxIdx = process.argv.indexOf('--context');
+const context = ctxIdx > -1 ? JSON.parse(readFileSync(process.argv[ctxIdx + 1], 'utf8')) : [];
 const v11 = loadStyle().v11;
 const errs = [], warns = [];
 
@@ -34,12 +36,14 @@ briefs.forEach((b, i) => {
   for (const f of ['literalnessRisk', 'thumbnailRisk']) {
     if (b[f] === 'high') errs.push(`${w}: ${f} is "high" — re-concept before generating`);
   }
-  if (i > 0 && briefs[i - 1].apertureType === b.apertureType) {
-    errs.push(`${w}: same aperture subtype "${b.apertureType}" as previous brief — vary it`);
+  // history = recently published art (via --context) + earlier briefs in file
+  const history = [...context, ...briefs.slice(0, i)];
+  const prev = history.at(-1);
+  if (prev && prev.apertureType === b.apertureType) {
+    errs.push(`${w}: same aperture subtype "${b.apertureType}" as the previous published/queued image — vary it`);
   }
-  const window4 = briefs.slice(Math.max(0, i - 4), i);
-  if (window4.some((p) => p.compositionSignature === b.compositionSignature)) {
-    errs.push(`${w}: compositionSignature "${b.compositionSignature}" reused within a 4-brief window`);
+  if (history.slice(-4).some((p) => p.compositionSignature === b.compositionSignature)) {
+    errs.push(`${w}: compositionSignature "${b.compositionSignature}" reused within the last 4 published/queued images`);
   }
 });
 
