@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "slug": "ai-for-in-person-sales-conversations",
+    "apertureType": "tab",
+    "compositionSignature": "macro_object"
+  },
+  {
+    "slug": "ai-for-sales-reps-that-thinks-with-you",
+    "apertureType": "dot",
+    "compositionSignature": "isolated_spotlight"
+  }
+]
