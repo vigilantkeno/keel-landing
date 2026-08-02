@@ -100,5 +100,5 @@ jobs:
             HERO=$(ls public/blog-art/$d/*-hero-*.webp | head -1)
             BODY="$BODY**$d**\n![$d](https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${BRANCH}/${HERO})\n\n"
           done
-          BODY="$BODY_Both candidates + review strip retained as workflow artifact \`art-candidates-${GITHUB_SHA}\` (90 days)._"
+          BODY="${BODY}_Both candidates + review strip retained as workflow artifact art-candidates-${GITHUB_SHA} (90 days)._"
           printf "%b" "$BODY" | gh pr comment "$PR" --body-file -
