@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "human",
+  "slug": "lost-deal-analysis",
+  "sourceCandidate": "lost-deal-analysis-1-a87e.png",
+  "normalizedAt": "2026-08-02T16:20:11.487Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Two silhouetted figures seated at a long dark conference table, a scatter of loose notes and one closed manila folder between them, seen from the corridor through a glass wall, straight-on elevation, hard late-afternoon light spilling across the table from one side, a single ember-orange tab standing proud of the closed folder, wide dark margin filling the right third of the frame, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Two silhouetted figures seated at a long dark conference table, a scatter of loose notes and one closed manila folder between them, seen from the corridor through a glass wall, straight-on elevation, hard late-afternoon light spilling across the table from one side, a single ember-orange tab standing proud of the closed folder, wide dark margin filling the right third of the frame"
+}
