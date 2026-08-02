@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "human",
+  "slug": "ai-for-sales-rep-introverts",
+  "sourceCandidate": "ai-for-sales-rep-introverts-1-f6dd.png",
+  "normalizedAt": "2026-08-02T15:11:34.927Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single silhouetted figure standing at a tall glass partition inside an open office, back three-quarter to camera, one hand resting on a raised bone-white panel set into the glass with a small ember-orange indicator lit beneath their palm, straight-on elevation, hard raking light separating the lit partition from the dim open floor beyond, wide dark margin to the right, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single silhouetted figure standing at a tall glass partition inside an open office, back three-quarter to camera, one hand resting on a raised bone-white panel set into the glass with a small ember-orange indicator lit beneath their palm, straight-on elevation, hard raking light separating the lit partition from the dim open floor beyond, wide dark margin to the right"
+}
