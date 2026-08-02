@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "abs",
+  "slug": "how-to-follow-up-without-being-annoying",
+  "sourceCandidate": "how-to-follow-up-without-being-annoying-2-0337.png",
+  "normalizedAt": "2026-08-02T12:48:48.690Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A vertical stack of many thin bone horizontal lines each stopping short of an ordered dot grid on the right, their ends fading, one single ember-orange line among them reaching all the way to touch one dot, flat elevation, black field, hairline weights, generous empty margins, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A vertical stack of many thin bone horizontal lines each stopping short of an ordered dot grid on the right, their ends fading, one single ember-orange line among them reaching all the way to touch one dot, flat elevation, black field, hairline weights, generous empty margins"
+}

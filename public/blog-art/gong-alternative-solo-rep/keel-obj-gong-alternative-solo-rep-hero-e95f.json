@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "gong-alternative-solo-rep",
+  "sourceCandidate": "gong-alternative-solo-rep-2-e95f.png",
+  "normalizedAt": "2026-08-02T12:48:42.219Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "One small desk at night holding a closed laptop and a single bone notebook, macro three-quarter still-life crop running out of frame, one hard side light from the left, a single ember-orange page-marker ribbon trailing from the notebook and catching the light, faint white dot-matrix embossed on the desk surface, upper right of the frame deep black and empty, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "One small desk at night holding a closed laptop and a single bone notebook, macro three-quarter still-life crop running out of frame, one hard side light from the left, a single ember-orange page-marker ribbon trailing from the notebook and catching the light, faint white dot-matrix embossed on the desk surface, upper right of the frame deep black and empty"
+}

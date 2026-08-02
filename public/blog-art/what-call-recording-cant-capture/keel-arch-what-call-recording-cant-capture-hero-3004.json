@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "what-call-recording-cant-capture",
+  "sourceCandidate": "what-call-recording-cant-capture-1-3004.png",
+  "normalizedAt": "2026-08-02T12:48:48.206Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single parked car alone on an empty concrete parking deck at dusk, seen from a distance in straight-on elevation, massive dark ceiling planes and one bone strip of sky at the deck edge, hard low dusk light, the car's interior glowing ember-orange as the only lit thing, wide near-black emptiness on the right two-thirds, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single parked car alone on an empty concrete parking deck at dusk, seen from a distance in straight-on elevation, massive dark ceiling planes and one bone strip of sky at the deck edge, hard low dusk light, the car's interior glowing ember-orange as the only lit thing, wide near-black emptiness on the right two-thirds"
+}

@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "gong-scorecards",
+  "sourceCandidate": "gong-scorecards-1-0b47.png",
+  "normalizedAt": "2026-08-02T12:48:44.206Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A neat stack of bone paper scorecards on a black desk, macro three-quarter crop running out of frame, hard side light from the left, ruled hairline rows on the top card with one single ember-orange struck-through line, a faint white dot-matrix embossed beside the stack, right third of the frame black and empty, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A neat stack of bone paper scorecards on a black desk, macro three-quarter crop running out of frame, hard side light from the left, ruled hairline rows on the top card with one single ember-orange struck-through line, a faint white dot-matrix embossed beside the stack, right third of the frame black and empty"
+}

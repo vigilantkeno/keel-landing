@@ -1,0 +1,128 @@
+[
+  {
+    "slug": "rep-first-ai-sales",
+    "family": "human",
+    "alt": "A lone silhouetted sales rep at a small lit desk in a dark office, far from a wall of empty glass offices, with a single glowing orange phone screen on the desk.",
+    "slots": "A tiny silhouetted rep seated at one small bone-lit desk in a vast dark office, a towering wall of empty glass manager offices far behind, straight-on elevation from a distance, one hard shaft of raking light on the desk, a single small ember-orange phone screen glowing on the desktop, the entire upper half of the frame in near-black"
+  },
+  {
+    "slug": "gong-alternative-for-individual-sales-reps",
+    "family": "arch",
+    "alt": "A vast dark corporate lobby with a grand staircase, and one small orange side door lit at ground level.",
+    "slots": "A monumental dark corporate lobby with a wide grand staircase rising into shadow, one tiny silhouetted figure at ground level walking away from the staircase, low straight-on viewpoint, dusk light grazing the marble planes, a small ember-orange side door standing open at the far right edge spilling light, left third of the frame near-black and empty"
+  },
+  {
+    "slug": "gong-alternative-solo-rep",
+    "family": "obj",
+    "alt": "A single desk at night with a closed laptop and a notebook, one glowing orange page-marker ribbon standing out in the dark.",
+    "slots": "One small desk at night holding a closed laptop and a single bone notebook, macro three-quarter still-life crop running out of frame, one hard side light from the left, a single ember-orange page-marker ribbon trailing from the notebook and catching the light, faint white dot-matrix embossed on the desk surface, upper right of the frame deep black and empty"
+  },
+  {
+    "slug": "gong-alternative-without-recording",
+    "family": "obj",
+    "alt": "An unplugged desk microphone lying on a dark surface with its cable coiled beside it, the cable tip glowing orange.",
+    "slots": "A studio desk microphone lying flat and unplugged on a black surface, its cable loosely coiled beside it, macro straight-on still-life crop, one hard raking light from the right casting a long crisp shadow, the unplugged cable connector tip glowing ember-orange as the only saturated element, left half of the frame in deep black emptiness"
+  },
+  {
+    "slug": "ai-sales-tool-no-manager-reporting",
+    "family": "arch",
+    "alt": "A dark open office beneath a row of elevated glass manager offices, with a small orange stairwell door lit at floor level.",
+    "slots": "A row of dark empty glass manager offices elevated on a mezzanine above a shadowed open office floor, one tiny silhouetted figure below walking away from the mezzanine, low-angle viewpoint looking up, cold dusk light on the glass planes, a small ember-orange stairwell door at floor level spilling a thin wedge of light, right third of the frame in near-black"
+  },
+  {
+    "slug": "gong-anxiety",
+    "family": "human",
+    "alt": "A tiny silhouetted rep stands in a huge dark room beneath a single harsh cone of light, watched by a distant wall of glass.",
+    "slots": "One tiny silhouetted rep standing alone on a vast dark floor under a single hard bone-white cone of overhead light, a distant wall of dark observation glass behind, straight-on elevation from far away, everything outside the light cone falling to near-black, a single small ember-orange indicator dot glowing high on the observation wall, generous empty darkness on the left"
+  },
+  {
+    "slug": "gong-scorecards",
+    "family": "obj",
+    "alt": "A stack of paper scorecards on a dark desk, the top one carrying a single struck-through orange line.",
+    "slots": "A neat stack of bone paper scorecards on a black desk, macro three-quarter crop running out of frame, hard side light from the left, ruled hairline rows on the top card with one single ember-orange struck-through line, a faint white dot-matrix embossed beside the stack, right third of the frame black and empty"
+  },
+  {
+    "slug": "two-party-consent-states-sales-calls",
+    "family": "obj",
+    "alt": "Two vintage telephone handsets facing each other across a dark table, joined by a thin line with a single glowing orange dot at its midpoint.",
+    "slots": "Two black telephone handsets lying on a dark table facing each other from opposite edges, a single thin bone line running between them, flat straight-on elevation, hard even raking light, one small ember-orange dot glowing at the exact midpoint of the line, wide black emptiness above and below"
+  },
+  {
+    "slug": "shadow-it-sales-reps",
+    "family": "obj",
+    "alt": "A phone lying face-down on a dark desk beside a glowing corporate monitor, a thin sliver of orange light escaping from under the phone.",
+    "slots": "A smartphone lying face-down on a dark desk in the foreground while a cold bone-lit corporate monitor glows further back, macro three-quarter still-life crop, hard light from the monitor side, a thin ember-orange sliver of light escaping from beneath the face-down phone, lower left of the frame in deep black emptiness"
+  },
+  {
+    "slug": "customer-ghosted",
+    "family": "arch",
+    "alt": "An empty dark corridor with one open orange doorway spilling light onto the floor, and nobody in sight.",
+    "slots": "A long empty corridor of dark concrete receding to a far wall, completely unpeopled, straight-on one-point perspective, dim dusk with one hard shaft of light, a single ember-orange doorway standing open at the far end spilling light across the empty floor toward the viewer, the outer edges of the frame falling to near-black"
+  },
+  {
+    "slug": "ai-for-sales-rep-with-adhd",
+    "family": "abs",
+    "alt": "Dozens of scattered thin lines converging through a small aperture into one straight glowing orange line.",
+    "slots": "Dozens of thin bone lines entering from the left at scattered chaotic angles, converging through one small aperture at center and exiting right as a single perfectly straight ember-orange line, flat elevation with no perspective, black field, hairline weights throughout, wide empty margins top and bottom"
+  },
+  {
+    "slug": "founder-to-first-ae",
+    "family": "human",
+    "alt": "Two silhouetted figures at a small table in a dark room, one standing and one seated, passing a single orange folder between them.",
+    "slots": "Two silhouetted figures at a small table in a dark room, one standing and one seated across from each other, a single ember-orange folder on the table between them, seen from outside through a doorway at a distance, the room's bone wall the only lit plane, hard single-direction light, the surrounding frame in deep black"
+  },
+  {
+    "slug": "second-brain-for-sales-rep",
+    "family": "obj",
+    "alt": "A wooden card-catalog cabinet in the dark with one drawer ajar, its label tab glowing orange.",
+    "slots": "A tall card-catalog cabinet of small drawers photographed in darkness, macro three-quarter crop running out of frame, one hard raking light from the upper left, a single drawer standing slightly ajar with its label tab glowing ember-orange, faint white dot-matrix embossed on one drawer face, left third of the frame black and empty"
+  },
+  {
+    "slug": "in-person-sales-meeting-ai",
+    "family": "arch",
+    "alt": "Two tiny silhouetted figures walking together across a vast dark atrium toward a glowing orange exit.",
+    "slots": "Two tiny silhouetted figures walking side by side across a vast empty atrium floor, monumental dark walls and one bone-lit plane, high distant viewpoint, late-afternoon raking light casting long crisp shadows, a small ember-orange exit doorway ahead of them spilling light, upper left of the frame in deep black"
+  },
+  {
+    "slug": "what-call-recording-cant-capture",
+    "family": "arch",
+    "alt": "A single car parked alone on a dark parking deck at dusk, its interior glowing warm orange.",
+    "slots": "A single parked car alone on an empty concrete parking deck at dusk, seen from a distance in straight-on elevation, massive dark ceiling planes and one bone strip of sky at the deck edge, hard low dusk light, the car's interior glowing ember-orange as the only lit thing, wide near-black emptiness on the right two-thirds"
+  },
+  {
+    "slug": "how-to-follow-up-without-being-annoying",
+    "family": "abs",
+    "alt": "A column of faded thin lines stopping short of a dot grid, with one single orange line reaching a dot.",
+    "slots": "A vertical stack of many thin bone horizontal lines each stopping short of an ordered dot grid on the right, their ends fading, one single ember-orange line among them reaching all the way to touch one dot, flat elevation, black field, hairline weights, generous empty margins"
+  },
+  {
+    "slug": "sales-ai-for-regulated-industries",
+    "family": "arch",
+    "alt": "A long clinical corridor with pale walls and one glowing orange door at the far end, a tiny figure walking toward it.",
+    "slots": "A long clinical corridor with bone walls and a dark polished floor, one tiny silhouetted figure with a badge lanyard walking away toward the far end, straight-on one-point perspective, cool even institutional light broken by one hard shaft, a single ember-orange door at the corridor's end spilling light, upper third of the frame falling to near-black"
+  },
+  {
+    "slug": "ai-for-medical-device-sales",
+    "family": "obj",
+    "alt": "A stainless instrument tray in a dark room holding neutral cases, one small case tagged with a glowing orange label.",
+    "slots": "A stainless steel instrument tray on a stand in a dark clinical room holding a row of neutral equipment cases, macro three-quarter still-life crop, one hard raking light from the left, a single small case tagged with an ember-orange label as the only saturated element, right third of the frame in deep black emptiness"
+  },
+  {
+    "slug": "ai-for-pharmaceutical-sales-reps",
+    "family": "human",
+    "alt": "A tiny silhouetted rep seated alone in a dark clinic waiting room, a single orange door glowing beside the reception desk.",
+    "slots": "A tiny silhouetted rep with a slim case seated alone on a bench in a dark clinic waiting room, the bone reception wall the only lit plane, straight-on elevation from across the room, hard late light through one window, a single ember-orange consulting-room door glowing beside the reception desk, left half of the frame in near-black"
+  },
+  {
+    "slug": "ai-for-financial-services-b2b-sales",
+    "family": "arch",
+    "alt": "A monumental dark bank lobby with marble columns, a tiny figure crossing toward one elevator glowing orange.",
+    "slots": "A monumental bank tower lobby with dark marble columns and one bone-lit stone plane, a tiny silhouetted figure crossing the polished floor, low-angle viewpoint looking up, hard late-afternoon light grazing the stone, a single elevator doorway glowing ember-orange at the far wall, upper right of the frame in deep black"
+  },
+  {
+    "slug": "ai-for-in-between-moments",
+    "family": "arch",
+    "alt": "A dark stairwell landing between floors, a tiny silhouetted figure paused mid-flight beside a thin orange light strip.",
+    "slots": "A concrete stairwell landing between two floors, one tiny silhouetted figure paused mid-flight looking at a phone, strong single diagonal composition, one hard shaft of light from a high window, a thin ember-orange light strip running along the stair edge as the only saturated element, the floors above and below falling to near-black"
+  }
+]
