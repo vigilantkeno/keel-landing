@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "rep-first-ai-sales",
+    "family": "human",
+    "conceptualTension": "the AI answers to the rep, not the org chart — the rep is the center of power in the frame",
+    "apertureType": "tab",
+    "compositionSignature": "table_conversation",
+    "orangeRole": "possession",
+    "literalnessRisk": "low",
+    "thumbnailRisk": "low",
+    "alt": "A sales rep seated upright at a desk, working over documents, one ember-orange tabbed page under their hand — the only color in a calm dark room.",
+    "slots": "A featureless silhouetted rep seated upright at a generous desk facing the viewer at eye level, mid-action marking a page in a spread of bone documents, one ember-orange tabbed page directly under their hand, a wide bone wall plane behind them covering a quarter of the frame, one dominant hard key light from the right with a quiet cool ambient fill, composed with confident negative space on the left"
+  },
+  {
+    "slug": "two-party-consent-states-sales-calls",
+    "family": "abs",
+    "conceptualTension": "a conversation is only lawful when both sides align — the connection exists at exactly one agreed point",
+    "apertureType": "line",
+    "compositionSignature": "convergence_diagram",
+    "orangeRole": "possession",
+    "literalnessRisk": "low",
+    "thumbnailRisk": "low",
+    "alt": "Two fields of thin lines approaching from left and right across a divided black field, joined by a single ember line only where they align.",
+    "slots": "Two ordered fields of thin bone lines entering from the left and right halves of a divided black field and stopping at a central vertical gap, one single ember-orange line bridging the gap at the one point where lines from both sides align, flat elevation with no perspective, hairline weights, a faint cool fill lifting the two halves just off pure black, wide empty margins"
+  },
+  {
+    "slug": "ai-sales-tool-no-manager-reporting",
+    "family": "arch",
+    "conceptualTension": "the reporting layer sits above, dark and idle — the rep's own workspace below is the only thing alive",
+    "apertureType": "dot",
+    "compositionSignature": "split_boundary",
+    "orangeRole": "possession",
+    "literalnessRisk": "low",
+    "thumbnailRisk": "medium",
+    "alt": "A building cross-section: a dark idle mezzanine of glass offices above, and below a small bright workspace with one ember desk lamp glowing.",
+    "slots": "A clean architectural cross-section split horizontally, above a long dark mezzanine of empty glass manager offices reading as one idle mass, below a compact bone-lit workspace with a desk where a single ember-orange desk lamp dot glows over papers, straight-on elevation, one dominant raking light in the lower half with a cool ambient fill above, no figures anywhere, generous margins left and right"
+  },
+  {
+    "slug": "shadow-it-sales-reps",
+    "family": "arch",
+    "conceptualTension": "the sanctioned route is monumental and dark; the rep's own path is small, warm, and routes around it",
+    "apertureType": "line",
+    "compositionSignature": "monumental_vertical",
+    "orangeRole": "possession",
+    "literalnessRisk": "low",
+    "thumbnailRisk": "low",
+    "alt": "A small warmly lit alcove at the base of a monumental dark corporate wall, with a thin ember cable path routing around the wall's edge.",
+    "slots": "A monumental dark corporate wall of identical panels rising past the top of the frame, at its base one small warmly bone-lit alcove holding a compact desk, a single thin ember-orange cable line running from the alcove around the wall's edge and out of frame instead of into the wall's official conduit grid, low straight-on viewpoint, one dominant hard light inside the alcove with a faint cool fill on the wall, no figures"
+  },
+  {
+    "slug": "what-call-recording-cant-capture",
+    "family": "arch",
+    "conceptualTension": "the recorded room is empty and cold — the real conversation left with the rep, glowing in their pocket",
+    "apertureType": "panel",
+    "compositionSignature": "window_observation",
+    "orangeRole": "possession",
+    "literalnessRisk": "medium",
+    "thumbnailRisk": "low",
+    "alt": "An empty glass meeting room seen cold in the background while a phone on a ledge outside it glows warm ember-orange.",
+    "slots": "An empty glass-walled meeting room in the middle distance rendered cold and dark with its chairs neatly abandoned, in the near foreground a concrete ledge outside the room where a single phone lies face-up with its screen glowing ember-orange, three-quarter viewpoint from outside the room, one dominant cool institutional light on the glass with the phone's warm glow spilling onto the ledge, wide bone plane on the corridor floor, no figures"
+  }
+]

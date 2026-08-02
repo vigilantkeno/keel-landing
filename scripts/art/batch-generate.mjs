@@ -17,6 +17,13 @@ const briefsPath = process.argv[2];
 if (!briefsPath) { console.error('usage: node scripts/art/batch-generate.mjs <briefs.json>'); process.exit(1); }
 const briefs = JSON.parse(readFileSync(briefsPath, 'utf8'));
 const style = loadStyle();
+
+// contract v1.1: refuse unlinted briefs — the concept router is a gate,
+// not a suggestion.
+if (style.v11) {
+  const { execFileSync } = await import('node:child_process');
+  execFileSync('node', ['scripts/art/lint-briefs.mjs', briefsPath], { stdio: 'inherit' });
+}
 const N = style.generation?.candidatesPerImage ?? 2;
 const outRoot = join(process.cwd(), 'content', 'art', 'candidates');
 

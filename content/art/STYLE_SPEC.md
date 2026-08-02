@@ -1,4 +1,14 @@
-# Keel Illustration System — v1.0
+# Keel Illustration System — v1.1
+
+> **v1.1 (2026-08-02, founder-approved).** The first production batch
+> converged on "small silhouette walks toward a distant orange door" —
+> every image on-system, the grid reading as film-noir surveillance.
+> The convergence traced back to this contract itself ("uncanny",
+> "observed", tiny silhouettes) plus selection bias faithfully applying
+> it. v1.1 amends for confidence: agency stance, orange-as-possession,
+> composition-signature variety, aperture quotas, a stricter
+> hero-placement mix, figure posture rules, a light-fill allowance, and
+> a thumbnail luminance floor. v1.0 stands except where amended.
 
 Every image on getkeel.io is generated inside this system: dark,
 architectural, editorial, quietly uncanny. No stock photography, ever.
@@ -50,6 +60,12 @@ with the refinement and restraint of Batch 2.
 6. **Print texture, digital geometry.** Fine paper grain and screen-print
    flatness over gloss, bloom, or 3D render sheen. Editorial poster, not
    product shot.
+7. **Confident, not surveilled** *(v1.1)*. The subject has agency. Ember
+   marks **possession or control** — a held folder, an active screen, a
+   lit tab under the rep's hand — at least as often as it marks a
+   destination. "Slightly uncanny" stays; "watched", "escaping", and
+   "searching" go. If a frame would caption naturally as a detective
+   still, re-concept it.
 
 ## Palette and target coverage
 
@@ -69,6 +85,13 @@ colors in a frame is off-system.
 
 Mix ratios are targets across the whole site, not rules for a single
 page — but if a quarter's images run 60% abstract, the system has drifted.
+
+**Hero-placement mix** *(v1.1, founder-ratified)*: heroes are what people
+see repeated in a grid, so they carry a stricter cap than the site-wide
+spread below: **40% object still-life (no human) · 25% architecture
+(no human) · 20% paired/group human scenes · 15% upright/mid-action solo
+figures**. The site-wide family mix (50/25/15/10) remains the aspiration
+for lower-stakes placements (inline images, spots, dividers).
 
 ### Architecture & space — 50% (balanced preset)
 The backbone. Atria, corridors, thresholds, stairwells, empty lobbies. A
@@ -116,6 +139,14 @@ of thumbnails.
 - Place it off-centre, at a third, never touching the frame edge on more
   than one side.
 
+**Aperture-subtype quotas** *(v1.1)* — the aperture rule was being
+satisfied while the vocabulary collapsed to "door". Per 20 images (scale
+proportionally, rolling across publish order): door/threshold ≤5 ·
+tab/indexed edge ≤4 · dot/node ≤4 · line/strike ≤4 · lit panel/window
+≤3. Never the same subtype on two consecutive published posts. Ember as
+a distant destination is capped at 1-in-5; the rest of the time it is
+something the subject owns, holds, or operates.
+
 ## Composition rules
 
 - **Negative space is a feature.** 30–40% of the frame effectively empty,
@@ -135,6 +166,26 @@ of thumbnails.
   features.
 - **Crop tighter than feels safe.** Let subjects run out of frame. A
   fragment of an atrium is more ownable than a complete, centered building.
+- **Composition signatures** *(v1.1)*. Every image declares one:
+  `path_to_threshold` · `macro_object` · `isolated_spotlight` ·
+  `split_boundary` · `convergence_diagram` · `window_observation` ·
+  `monumental_vertical` · `table_conversation` · `indexed_stack`.
+  No signature repeats within the previous 4 published images —
+  different scenes with the same signature are the same thumbnail.
+  `path_to_threshold` + lone silhouette (the noir move) is additionally
+  capped at 1-in-5 overall.
+- **Figure posture** *(v1.1)*. When humans appear, prefer pairs or small
+  groups at eye level (collaborative, warm). Solo figures must be
+  upright, frontal or mid-action — writing, presenting, closing a laptop
+  — never only a distant walking-away silhouette. Silhouette/no-faces
+  rules unchanged.
+- **Light fill** *(v1.1)*. One *dominant* hard-edged source, plus an
+  optional quiet cool ambient fill so scenes are not 90% black with one
+  spotlight. The interrogation-room look is off-system.
+- **Thumbnail luminance floor** *(v1.1)*. A bone plane occupies 12–30%
+  of the frame; reject any frame where >75% collapses into
+  undifferentiated dark; the concept must survive grayscale at 320px.
+  Black grounds the image — it must never erase the idea.
 
 ## Do / don't
 

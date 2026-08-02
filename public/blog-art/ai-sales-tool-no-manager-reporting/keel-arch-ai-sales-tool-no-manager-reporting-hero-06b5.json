@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "ai-sales-tool-no-manager-reporting",
+  "sourceCandidate": "ai-sales-tool-no-manager-reporting-1-06b5.png",
+  "normalizedAt": "2026-08-02T13:46:49.934Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A clean architectural cross-section split horizontally, above a long dark mezzanine of empty glass manager offices reading as one idle mass, below a compact bone-lit workspace with a desk where a single ember-orange desk lamp dot glows over papers, straight-on elevation, one dominant raking light in the lower half with a cool ambient fill above, no figures anywhere, generous margins left and right, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A clean architectural cross-section split horizontally, above a long dark mezzanine of empty glass manager offices reading as one idle mass, below a compact bone-lit workspace with a desk where a single ember-orange desk lamp dot glows over papers, straight-on elevation, one dominant raking light in the lower half with a cool ambient fill above, no figures anywhere, generous margins left and right"
+}
