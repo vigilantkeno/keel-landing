@@ -1,0 +1,104 @@
+# Attach illustration-system heroes to the daily article PR.
+#
+# Scheduled cloud runs are egress-blocked and cannot call the image API;
+# GitHub runners can. This workflow fires when the routine pushes a
+# claude/** branch, finds posts whose frontmatter declares an art brief
+# but no heroImage, generates 2 candidates each, applies candidate 1,
+# and commits heroes + og/card crops back to the same branch — so the
+# founder reviews ONE PR containing articles and images together.
+#
+# The human pick becomes veto-by-exception: both candidates are posted
+# to the PR as a comment; replying `/art swap <slug>` (art-swap.yml)
+# re-applies candidate 2. Spend is bounded by the pending count
+# (2 posts/day × 2 candidates ≈ $0.25) plus batch-generate's own
+# --max-images guard.
+name: art
+on:
+  push:
+    branches: ['claude/**']
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: art-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  heroes:
+    runs-on: ubuntu-latest
+    # our own art commit re-triggers push; pending will be empty, but skip
+    # the checkout/npm cost outright
+    if: "!startsWith(github.event.head_commit.message, 'art:')"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: Collect pending briefs
+        id: pending
+        run: |
+          node scripts/art/pending.mjs | tee pending.log
+          if [ -f content/art/briefs/pending.json ] && ! grep -q "no pending art" pending.log; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate candidates
+        if: steps.pending.outputs.found == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node scripts/art/batch-generate.mjs content/art/briefs/pending.json
+
+      - name: Apply candidate 1 + build review strip
+        if: steps.pending.outputs.found == 'true'
+        run: |
+          node scripts/art/auto-winners.mjs content/art/briefs/pending.json content/art/briefs/winners-pending.json
+          node scripts/art/apply-winners.mjs content/art/briefs/pending.json content/art/briefs/winners-pending.json
+          node scripts/art/review-strips.mjs content/art/briefs/pending.json
+
+      - name: Gates
+        if: steps.pending.outputs.found == 'true'
+        run: npm run content:check
+
+      - name: Keep candidates for swap (90-day artifact)
+        if: steps.pending.outputs.found == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: art-candidates-${{ github.sha }}
+          path: |
+            content/art/candidates/**/*.png
+            content/art/candidates/review-strip-*.webp
+            content/art/briefs/pending.json
+          retention-days: 90
+
+      - name: Commit heroes to the PR branch
+        if: steps.pending.outputs.found == 'true'
+        run: |
+          git config user.name "keel-art-bot"
+          git config user.email "art-bot@getkeel.io"
+          git add public/blog-art content/blog/posts content/art/briefs/winners-pending.json
+          git commit -m "art: heroes for the pending posts (candidate 1 auto-applied; /art swap <slug> for candidate 2)"
+          git push
+
+      - name: Comment on the PR
+        if: steps.pending.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR=$(gh pr list --head "${GITHUB_REF_NAME}" --json number --jq '.[0].number' || true)
+          if [ -z "$PR" ]; then echo "no PR yet — comment will be skipped"; exit 0; fi
+          BRANCH="${GITHUB_REF_NAME}"
+          BODY="## Heroes attached\n\nCandidate **1** auto-applied for each post below. To use candidate 2 instead, comment \`/art swap <slug>\`.\n\n"
+          for d in $(node -e "console.log(Object.keys(require('./content/art/briefs/winners-pending.json')).join(' '))"); do
+            HERO=$(ls public/blog-art/$d/*-hero-*.webp | head -1)
+            BODY="$BODY**$d**\n![$d](https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${BRANCH}/${HERO})\n\n"
+          done
+          BODY="$BODY_Both candidates + review strip retained as workflow artifact \`art-candidates-${GITHUB_SHA}\` (90 days)._"
+          printf "%b" "$BODY" | gh pr comment "$PR" --body-file -

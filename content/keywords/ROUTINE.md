@@ -71,6 +71,13 @@ any external knowledge base, project context, or connector.
    - Cluster: use an existing cluster from `clusters.json`, or add a
      new cluster entry in the same commit (respect the
      one-pillar-per-cluster rule).
+   - MOBILE RHYTHM (contract §4b, gate-enforced): default paragraph is
+     1-2 sentences; 3 is the ceiling; never 4+ sentences or 90+ words.
+     Post-level: mean <=2.2 sentences/paragraph, at least ~15%
+     single-sentence paragraphs (about one per section), load-bearing
+     word first in every paragraph, never three consecutive paragraphs
+     of the same length. The rhythm gate FAILS the build otherwise —
+     split paragraphs, don't argue with the gate.
    - ART BRIEF (text only — scheduled runs can NEVER generate images):
      while you still hold the article's full context, write the
      illustration router record into frontmatter per
@@ -114,10 +121,19 @@ any external knowledge base, project context, or connector.
    including the declared art briefs (family/aperture/signature) so the
    variety check is reviewable at a glance.
 
-## Morning art pass (supervised — NOT part of the scheduled run)
+## Art in CI (default) and the manual pass (fallback)
 
-Images are generated only in supervised sessions (network + human
-pick). After merging the day's article PR:
+Since 2026-08-02, `.github/workflows/art.yml` attaches heroes to the
+routine's PR automatically: on push to a `claude/**` branch it finds
+posts with an art brief and no heroImage, generates 2 candidates,
+applies candidate 1, commits to the SAME branch, and comments on the PR
+with the applied heroes. Both candidates are retained as a 90-day
+workflow artifact; comment `/art swap <slug>` on the PR to switch a
+post to candidate 2 (zero regeneration). The founder reviews ONE PR:
+articles + images.
+
+The manual pass below remains the fallback (CI outage, ad-hoc briefs,
+local iteration):
 
     node scripts/art/pending.mjs          # collects briefs from posts
                                           # missing heroImage; lints

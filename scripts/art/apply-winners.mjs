@@ -31,15 +31,29 @@ for (const b of briefs) {
   const file = join(postsDir, dir, 'index.mdx');
   let src = readFileSync(file, 'utf8');
   const heroPath = `/blog-art/${b.slug}/keel-${b.family}-${b.slug}-hero-${id}.webp`;
-  // routine-authored posts already carry the router record — only the
-  // heroImage line is missing; insert it before heroAlt and stop.
-  if (/^artFamily:/m.test(src) && !/^heroImage:/m.test(src)) {
+  const purge = () => {
+    const pubDir = join(process.cwd(), 'public', 'blog-art', b.slug);
+    if (!existsSync(pubDir)) return;
+    for (const f of readdirSync(pubDir)) if (!f.includes(`-${id}.`)) rmSync(join(pubDir, f));
+  };
+  if (/^heroImage:/m.test(src)) {
+    // swap/replace: point the heroImage line at the new asset, purge the
+    // superseded files; every other frontmatter line stays as-is.
+    purge();
+    writeFileSync(file, src.replace(/^heroImage: .*$/m, `heroImage: ${yq(heroPath)}`));
+    console.log(`heroImage swapped: ${b.slug} -> ${heroPath}`);
+    continue;
+  }
+  if (/^artFamily:/m.test(src)) {
+    // routine-authored post, first application: router record already
+    // present — only the heroImage line is missing.
     const next = src.replace(/^(heroAlt: )/m, `heroImage: ${yq(heroPath)}\n$1`);
     if (next === src) { console.error(`no heroAlt line in ${file}`); process.exit(1); }
     writeFileSync(file, next);
     console.log(`heroImage inserted: ${b.slug} -> ${heroPath}`);
     continue;
   }
+  // legacy briefs-mode: no art frontmatter at all — write the full block.
   const block = [
     `artFamily: ${yq(b.family)}`,
     ...(b.apertureType ? [`artAperture: ${yq(b.apertureType)}`] : []),
@@ -49,18 +63,6 @@ for (const b of briefs) {
     `heroImage: ${yq(heroPath)}`,
     `heroAlt: ${yq(b.alt)}`,
   ].join('\n');
-  if (/^heroImage:/m.test(src)) {
-    // replacement: strip the existing art block, delete superseded assets
-    // (normalize has already written the new ones for this id)
-    const pubDir = join(process.cwd(), 'public', 'blog-art', b.slug);
-    if (existsSync(pubDir)) {
-      for (const f of readdirSync(pubDir)) {
-        if (!f.includes(`-${id}.`)) rmSync(join(pubDir, f));
-      }
-    }
-    src = src.replace(/^artFamily: .*\n(artBrief: .*\n)?heroImage: .*\nheroAlt: .*\n/m, '');
-    console.log(`replacing existing art: ${b.slug}`);
-  }
   const next = src.replace(/^(pillar: (?:true|false))$/m, `$1\n${block}`);
   if (next === src) { console.error(`could not find pillar line in ${file}`); process.exit(1); }
   writeFileSync(file, next);
