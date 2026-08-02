@@ -36,7 +36,9 @@
     {
       "id": "field-sales-ai",
       "pillar": "in-person-sales-meeting-ai",
-      "supporting": [],
+      "supporting": [
+        "ai-for-relationship-selling"
+      ],
       "intent": "informational",
       "description": "AI for in-person, field-heavy selling where no screen or recording device is present."
     },
@@ -100,6 +102,13 @@
       ],
       "intent": "commercial",
       "description": "Reps bringing their own AI tools to work instead of the sanctioned surveillance stack — the thinking-partner category the official tools were never built to serve."
+    },
+    {
+      "id": "lost-deal-postmortem",
+      "pillar": "lost-deal-analysis",
+      "supporting": [],
+      "intent": "commercial",
+      "description": "Structured after-the-fact review of a deal that closed lost — separating the reason a rep logs from what actually happened."
     }
   ]
 }

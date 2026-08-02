@@ -58,3 +58,5 @@ post that covers it).
 | 2026-08-02 | AI for sales reps that thinks with you | AI thinking partner for sales rep; thinking partner for sales; AI thinking partner for work | ai-for-sales-reps-that-thinks-with-you | PUBLISHED |
 | 2026-08-02 | solo B2B sales | one person sales team; solo enterprise sales; solo sales motion | solo-b2b-sales | PUBLISHED |
 | 2026-08-02 | AI for sales rep introverts | AI for introverted sales; sales tools for introverts; introvert-friendly sales AI; Gong for introverts | ai-for-sales-rep-introverts | PUBLISHED |
+| 2026-08-02 | lost deal analysis | post-mortem on a lost deal; why did we lose this deal; lost deal review; deal autopsy | lost-deal-analysis | PUBLISHED |
+| 2026-08-02 | AI for relationship selling | AI for relationship sellers | ai-for-relationship-selling | PUBLISHED |
