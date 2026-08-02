@@ -52,3 +52,5 @@ post that covers it).
 | 2026-08-01 | second brain for sales rep | AI second brain for sales; second brain for AE; second brain for sales; AI as second brain for sales | second-brain-for-sales-rep | PUBLISHED |
 | 2026-08-01 | AI for in-between moments | AI for unscripted moments; AI for unscheduled moments; AI for between meetings | ai-for-in-between-moments | PUBLISHED |
 | 2026-08-01 | AI for medical device sales | — | ai-for-medical-device-sales | PUBLISHED |
+| 2026-08-01 | AI for pharmaceutical sales reps | — | ai-for-pharmaceutical-sales-reps | PUBLISHED |
+| 2026-08-01 | AI for financial services B2B sales | — | ai-for-financial-services-b2b-sales | PUBLISHED |
