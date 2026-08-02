@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "gong-alternative-no-manager",
+  "sourceCandidate": "gong-alternative-no-manager-1-5000.png",
+  "normalizedAt": "2026-08-02T05:06:33.541Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A tiny silhouetted figure walking away between rows of identical empty desks on a vast dark open-plan office floor, deep perspective toward the far wall, straight-on slightly elevated viewpoint, dim dusk with one hard shaft of late raking light, a single ember-orange office doorway ajar at the far end spilling light across the floor, left third of the frame in near-black emptiness, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A tiny silhouetted figure walking away between rows of identical empty desks on a vast dark open-plan office floor, deep perspective toward the far wall, straight-on slightly elevated viewpoint, dim dusk with one hard shaft of late raking light, a single ember-orange office doorway ajar at the far end spilling light across the floor, left third of the frame in near-black emptiness"
+}
