@@ -54,3 +54,5 @@ post that covers it).
 | 2026-08-01 | AI for medical device sales | — | ai-for-medical-device-sales | PUBLISHED |
 | 2026-08-01 | AI for pharmaceutical sales reps | — | ai-for-pharmaceutical-sales-reps | PUBLISHED |
 | 2026-08-01 | AI for financial services B2B sales | — | ai-for-financial-services-b2b-sales | PUBLISHED |
+| 2026-08-02 | AI for in-person sales conversations | — | ai-for-in-person-sales-conversations | PUBLISHED |
+| 2026-08-02 | AI for sales reps that thinks with you | AI thinking partner for sales rep; thinking partner for sales; AI thinking partner for work | ai-for-sales-reps-that-thinks-with-you | PUBLISHED |

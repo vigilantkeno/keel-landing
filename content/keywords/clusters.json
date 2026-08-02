@@ -87,6 +87,15 @@
       "supporting": [],
       "intent": "commercial",
       "description": "Deal-relevant conversations that happen off the calendar — hallway asides, parking lot debriefs, the minutes before and after a scheduled meeting."
+    },
+    {
+      "id": "byoai-shadow-ai",
+      "pillar": null,
+      "supporting": [
+        "ai-for-sales-reps-that-thinks-with-you"
+      ],
+      "intent": "commercial",
+      "description": "Reps bringing their own AI tools to work instead of the sanctioned surveillance stack — the thinking-partner category the official tools were never built to serve."
     }
   ]
 }

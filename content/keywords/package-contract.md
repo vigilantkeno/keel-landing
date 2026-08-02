@@ -36,6 +36,8 @@ the committed snapshot.
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
 | `/founders` | CTA target — temporary redirect to `/` until the real page ships |
+| `/blog/ai-for-sales-reps-that-thinks-with-you` | AI for Sales Reps That Thinks With You, Not About You |
+| `/blog/ai-for-in-person-sales-conversations` | AI for In-Person Sales Conversations: The Moments the Meeting Doesn't Cover |
 | `/blog/ai-for-financial-services-b2b-sales` | AI for Financial Services B2B Sales: Selling to a Buyer Who Won't Let You Record the Call |
 | `/blog/ai-for-pharmaceutical-sales-reps` | AI for Pharmaceutical Sales Reps: Built for the Five Minutes You Get With a Prescriber |
 | `/blog/ai-for-medical-device-sales` | AI for Medical Device Sales: What Works When You Can't Record Inside the OR |
