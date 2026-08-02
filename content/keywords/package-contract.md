@@ -36,10 +36,18 @@ the committed snapshot.
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
 | `/founders` | CTA target — temporary redirect to `/` until the real page ships |
+| `/blog/ai-for-medical-device-sales` | AI for Medical Device Sales: What Works When You Can't Record Inside the OR |
+| `/blog/ai-for-in-between-moments` | AI for In-Between Moments: What Happens Between the Meetings on Your Calendar (pillar) |
+| `/blog/second-brain-for-sales-rep` | A Second Brain for Sales Reps: Why the Generic Version Never Sticks (pillar) |
+| `/blog/founder-to-first-ae` | Founder to First AE: How to Hand Off Sales Without Losing What Made It Work (pillar) |
+| `/blog/ai-for-sales-rep-with-adhd` | AI for the Sales Rep With ADHD: Built for How You Actually Work (pillar) |
+| `/blog/customer-ghosted` | Customer Ghosted You? Here's What Actually Happened (pillar) |
+| `/blog/ai-sales-tool-no-manager-reporting` | How to Tell If an AI Sales Tool Actually Reports to Your Manager |
+| `/blog/gong-alternative-without-recording` | The Gong Alternative That Doesn't Record Anything |
 | `/blog/gong-alternative-no-manager` | The Gong Alternative for Reps Whose Manager Already Has Gong |
-| `/blog/rep-first-ai-sales` | Rep-First AI for Sales: The Category Where the Software Works for You (pillar) |
 | `/blog/sales-ai-for-regulated-industries` | Sales AI for Regulated Industries: The Case for Not Recording At All (pillar) |
 | `/blog/shadow-it-sales-reps` | Shadow IT for Sales Reps: The Tools You Use That Your Boss Can't See |
+| `/blog/rep-first-ai-sales` | Rep-First AI for Sales: The Category Where the Software Works for You (pillar) |
 | `/blog/gong-alternative-solo-rep` | The Gong Alternative for a Solo Rep: What to Buy When You're the Whole Revenue Team |
 | `/blog/gong-alternative-for-individual-sales-reps` | Gong Alternative for Individual Sales Reps: What to Use When Nobody's Buying You Software |
 | `/blog/how-to-follow-up-without-being-annoying` | How to Follow Up Without Being Annoying |
