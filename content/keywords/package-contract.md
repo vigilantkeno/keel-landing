@@ -36,6 +36,10 @@ the committed snapshot.
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
 | `/founders` | CTA target — temporary redirect to `/` until the real page ships |
+| `/blog/ai-for-relationship-selling` | AI for Relationship Selling: Built for the Deal That Takes a Year, Not One Call |
+| `/blog/lost-deal-analysis` | Lost Deal Analysis: What Actually Killed the Deal, Not What You Told Your Manager (pillar) |
+| `/blog/ai-for-sales-rep-introverts` | AI for the Introverted Sales Rep: Built for How You Actually Recharge |
+| `/blog/solo-b2b-sales` | Solo B2B Sales: Running the Whole Motion With No One Behind You |
 | `/blog/ai-for-sales-reps-that-thinks-with-you` | AI for Sales Reps That Thinks With You, Not About You |
 | `/blog/ai-for-in-person-sales-conversations` | AI for In-Person Sales Conversations: The Moments the Meeting Doesn't Cover |
 | `/blog/ai-for-financial-services-b2b-sales` | AI for Financial Services B2B Sales: Selling to a Buyer Who Won't Let You Record the Call |
