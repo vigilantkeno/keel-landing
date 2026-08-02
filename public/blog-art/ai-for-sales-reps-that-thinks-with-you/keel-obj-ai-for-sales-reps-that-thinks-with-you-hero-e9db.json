@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "ai-for-sales-reps-that-thinks-with-you",
+  "sourceCandidate": "ai-for-sales-reps-that-thinks-with-you-2-e9db.png",
+  "normalizedAt": "2026-08-02T14:39:33.793Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Two matching chairs angled side by side facing the same direction in one warm pool of light, a small shared side table between them holding a single ember-orange reading lamp glowing as a dot of light over an open bone notebook, straight-on elevation, one dominant warm key with a quiet cool ambient fill, the rest of the room falling to near-black, generous dark margins left and right, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Two matching chairs angled side by side facing the same direction in one warm pool of light, a small shared side table between them holding a single ember-orange reading lamp glowing as a dot of light over an open bone notebook, straight-on elevation, one dominant warm key with a quiet cool ambient fill, the rest of the room falling to near-black, generous dark margins left and right"
+}

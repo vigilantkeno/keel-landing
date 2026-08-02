@@ -107,6 +107,13 @@ Packages do **not** ship JSON-LD. The repo generates Article + FAQPage +
 BreadcrumbList schema (including the byline entity and dates) from this
 frontmatter; a hand-written block can only agree or introduce a bug.
 
+**Art fields (optional, v1.2+):** packages MAY include the illustration
+router record (`artFamily`, `artAperture`, `artSignature`,
+`artOrangeRole`, `artTension`, `artBrief`, `artLiteralness`,
+`artThumbnail`, `heroAlt`) per `content/art/STYLE_SPEC.md` v1.1. Never
+`heroImage` — images are generated and selected in supervised sessions
+only. Omitted = briefs are authored at import time.
+
 ## 3. Citations and numbers
 
 - Every external URL must be **fetched and verified live (HTTP 200) at

@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "ai-for-in-person-sales-conversations",
+    "family": "obj",
+    "alt": "A cafe table after a meeting: two espresso cups, a napkin with a sketched diagram, and an orange-tabbed pocket notebook catching the light.",
+    "slots": "A small round cafe table just after a meeting has ended, two espresso cups and a bone napkin bearing a faint hairline diagram, one ember-orange tabbed pocket notebook lying squarely in the light at the table edge, macro three-quarter still-life crop running out of frame, one dominant hard afternoon light from the left with a quiet cool fill, deep black cafe interior falling away behind, left third open and dark",
+    "conceptualTension": "the deal advances at a cafe table where no meeting tool exists — the record is whatever the rep carries out",
+    "apertureType": "tab",
+    "compositionSignature": "macro_object",
+    "orangeRole": "possession",
+    "literalnessRisk": "low",
+    "thumbnailRisk": "low"
+  },
+  {
+    "slug": "ai-for-sales-reps-that-thinks-with-you",
+    "family": "obj",
+    "alt": "Two chairs side by side facing the same direction in a pool of light, sharing a small table with a glowing orange reading lamp.",
+    "slots": "Two matching chairs angled side by side facing the same direction in one warm pool of light, a small shared side table between them holding a single ember-orange reading lamp glowing as a dot of light over an open bone notebook, straight-on elevation, one dominant warm key with a quiet cool ambient fill, the rest of the room falling to near-black, generous dark margins left and right",
+    "conceptualTension": "thinking WITH is side by side, not across a desk — the tool sits on the rep's side of the table",
+    "apertureType": "dot",
+    "compositionSignature": "isolated_spotlight",
+    "orangeRole": "possession",
+    "literalnessRisk": "low",
+    "thumbnailRisk": "low"
+  }
+]

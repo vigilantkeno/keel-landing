@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "ai-for-in-person-sales-conversations",
+  "sourceCandidate": "ai-for-in-person-sales-conversations-2-a458.png",
+  "normalizedAt": "2026-08-02T14:39:33.155Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A small round cafe table just after a meeting has ended, two espresso cups and a bone napkin bearing a faint hairline diagram, one ember-orange tabbed pocket notebook lying squarely in the light at the table edge, macro three-quarter still-life crop running out of frame, one dominant hard afternoon light from the left with a quiet cool fill, deep black cafe interior falling away behind, left third open and dark, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A small round cafe table just after a meeting has ended, two espresso cups and a bone napkin bearing a faint hairline diagram, one ember-orange tabbed pocket notebook lying squarely in the light at the table edge, macro three-quarter still-life crop running out of frame, one dominant hard afternoon light from the left with a quiet cool fill, deep black cafe interior falling away behind, left third open and dark"
+}
