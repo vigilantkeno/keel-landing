@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "ai-for-financial-services-b2b-sales",
+  "sourceCandidate": "ai-for-financial-services-b2b-sales-1-ac77.png",
+  "normalizedAt": "2026-08-02T12:48:50.887Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A monumental bank tower lobby with dark marble columns and one bone-lit stone plane, a tiny silhouetted figure crossing the polished floor, low-angle viewpoint looking up, hard late-afternoon light grazing the stone, a single elevator doorway glowing ember-orange at the far wall, upper right of the frame in deep black, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A monumental bank tower lobby with dark marble columns and one bone-lit stone plane, a tiny silhouetted figure crossing the polished floor, low-angle viewpoint looking up, hard late-afternoon light grazing the stone, a single elevator doorway glowing ember-orange at the far wall, upper right of the frame in deep black"
+}

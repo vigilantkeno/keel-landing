@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "in-person-sales-meeting-ai",
+  "sourceCandidate": "in-person-sales-meeting-ai-1-783f.png",
+  "normalizedAt": "2026-08-02T12:48:47.755Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Two tiny silhouetted figures walking side by side across a vast empty atrium floor, monumental dark walls and one bone-lit plane, high distant viewpoint, late-afternoon raking light casting long crisp shadows, a small ember-orange exit doorway ahead of them spilling light, upper left of the frame in deep black, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Two tiny silhouetted figures walking side by side across a vast empty atrium floor, monumental dark walls and one bone-lit plane, high distant viewpoint, late-afternoon raking light casting long crisp shadows, a small ember-orange exit doorway ahead of them spilling light, upper left of the frame in deep black"
+}

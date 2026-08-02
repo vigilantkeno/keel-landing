@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "sales-ai-for-regulated-industries",
+  "sourceCandidate": "sales-ai-for-regulated-industries-2-9ad2.png",
+  "normalizedAt": "2026-08-02T12:48:49.350Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A long clinical corridor with bone walls and a dark polished floor, one tiny silhouetted figure with a badge lanyard walking away toward the far end, straight-on one-point perspective, cool even institutional light broken by one hard shaft, a single ember-orange door at the corridor's end spilling light, upper third of the frame falling to near-black, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A long clinical corridor with bone walls and a dark polished floor, one tiny silhouetted figure with a badge lanyard walking away toward the far end, straight-on one-point perspective, cool even institutional light broken by one hard shaft, a single ember-orange door at the corridor's end spilling light, upper third of the frame falling to near-black"
+}

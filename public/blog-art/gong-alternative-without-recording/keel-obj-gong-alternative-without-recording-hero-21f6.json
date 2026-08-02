@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "gong-alternative-without-recording",
+  "sourceCandidate": "gong-alternative-without-recording-1-21f6.png",
+  "normalizedAt": "2026-08-02T12:48:42.767Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A studio desk microphone lying flat and unplugged on a black surface, its cable loosely coiled beside it, macro straight-on still-life crop, one hard raking light from the right casting a long crisp shadow, the unplugged cable connector tip glowing ember-orange as the only saturated element, left half of the frame in deep black emptiness, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A studio desk microphone lying flat and unplugged on a black surface, its cable loosely coiled beside it, macro straight-on still-life crop, one hard raking light from the right casting a long crisp shadow, the unplugged cable connector tip glowing ember-orange as the only saturated element, left half of the frame in deep black emptiness"
+}

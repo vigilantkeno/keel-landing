@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "two-party-consent-states-sales-calls",
+  "sourceCandidate": "two-party-consent-states-sales-calls-2-60af.png",
+  "normalizedAt": "2026-08-02T12:48:44.698Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Two black telephone handsets lying on a dark table facing each other from opposite edges, a single thin bone line running between them, flat straight-on elevation, hard even raking light, one small ember-orange dot glowing at the exact midpoint of the line, wide black emptiness above and below, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Two black telephone handsets lying on a dark table facing each other from opposite edges, a single thin bone line running between them, flat straight-on elevation, hard even raking light, one small ember-orange dot glowing at the exact midpoint of the line, wide black emptiness above and below"
+}

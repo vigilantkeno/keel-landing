@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "customer-ghosted",
+  "sourceCandidate": "customer-ghosted-1-541f.png",
+  "normalizedAt": "2026-08-02T12:48:45.737Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A long empty corridor of dark concrete receding to a far wall, completely unpeopled, straight-on one-point perspective, dim dusk with one hard shaft of light, a single ember-orange doorway standing open at the far end spilling light across the empty floor toward the viewer, the outer edges of the frame falling to near-black, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A long empty corridor of dark concrete receding to a far wall, completely unpeopled, straight-on one-point perspective, dim dusk with one hard shaft of light, a single ember-orange doorway standing open at the far end spilling light across the empty floor toward the viewer, the outer edges of the frame falling to near-black"
+}
