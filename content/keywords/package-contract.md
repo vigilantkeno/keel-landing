@@ -1,4 +1,4 @@
-# Keel Package Contract — v1.2 (2026-08-01)
+# Keel Package Contract — v1.3 (2026-08-02)
 
 **What this is.** The one file that travels with every article-package
 request. A package produced under this contract imports with zero
@@ -164,6 +164,29 @@ slightly wry, zero fluff.
 - No throat-clearing openers, no summary endings, no cheerleading anywhere.
 
 The §7 style bans are the floor. This section is the target.
+
+## 4b. Mobile rhythm (v1.3 — founder decision 2026-08-02, gate-enforced)
+
+The corpus drifted to a uniform three-sentence paragraph — a 6–9 line
+wall on a phone. Basis: NN/g F-pattern scanning research, ~26s median
+article attention, 30–50 characters per mobile line.
+
+- **Default paragraph: 1–2 sentences.** Three is the ceiling for a
+  normal paragraph. Four means split it. Nothing ever reaches five.
+- **Hard caps (build-failing for posts dated after 2026-08-02):** no
+  paragraph over 4 sentences or 90 words; post mean ≤2.5 sentences/
+  paragraph; ≤45% of paragraphs at 3+ sentences.
+- **Targets (warned):** mean ≤2.2 · ≥3-sentence share ≤35% · median
+  ≤42 words · single-sentence paragraphs ≥15% of the post.
+- **One idea per paragraph, load-bearing word first** — scanners only
+  reliably read line-beginnings.
+- **Vary the cadence.** Never three consecutive paragraphs of the same
+  length. Single-sentence paragraphs are a required rhythm element —
+  roughly one per section — not a garnish.
+- What we did NOT adopt: Axios-style bolded "Why it matters:" labels.
+  Their paragraph discipline, not their costume.
+
+Enforced by `scripts/content/check-rhythm.mjs` in `content:check`.
 
 ## 5. One CTA
 

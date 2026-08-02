@@ -1,0 +1,68 @@
+# `/art swap <slug>` on an article PR: replace the auto-applied candidate 1
+# with candidate 2 for that slug. Candidates are pulled from the art
+# workflow's artifact (90-day retention), so nothing regenerates and the
+# swap costs $0. Restricted to users with write access.
+name: art-swap
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
+jobs:
+  swap:
+    if: >
+      github.event.issue.pull_request &&
+      startsWith(github.event.comment.body, '/art swap ') &&
+      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve PR branch and slug
+        id: ctx
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SLUG=$(echo "${{ github.event.comment.body }}" | awk '{print $3}')
+          BRANCH=$(gh pr view ${{ github.event.issue.number }} --repo ${{ github.repository }} --json headRefName --jq .headRefName)
+          echo "slug=$SLUG" >> "$GITHUB_OUTPUT"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.ctx.outputs.branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: Fetch candidates from the art run
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          RUN=$(gh run list --workflow art.yml --branch "${{ steps.ctx.outputs.branch }}" --status success --json databaseId --jq '.[0].databaseId')
+          gh run download "$RUN" --dir art-restore
+          mkdir -p content/art/candidates content/art/briefs
+          cp -r art-restore/*/content/art/candidates/. content/art/candidates/ 2>/dev/null || cp -r art-restore/content/art/candidates/. content/art/candidates/
+          find art-restore -name pending.json -exec cp {} content/art/briefs/pending.json \;
+
+      - name: Swap to candidate 2
+        run: |
+          node scripts/art/auto-winners.mjs content/art/briefs/pending.json content/art/briefs/winners-pending.json --pick 2 --slug "${{ steps.ctx.outputs.slug }}"
+          node scripts/art/apply-winners.mjs content/art/briefs/pending.json content/art/briefs/winners-pending.json
+          npm run content:check
+
+      - name: Commit and confirm
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "keel-art-bot"
+          git config user.email "art-bot@getkeel.io"
+          git add public/blog-art content/blog/posts content/art/briefs/winners-pending.json
+          git commit -m "art: swap ${{ steps.ctx.outputs.slug }} to candidate 2"
+          git push
+          gh pr comment ${{ github.event.issue.number }} --repo ${{ github.repository }} \
+            --body "Swapped **${{ steps.ctx.outputs.slug }}** to candidate 2. New hero is on the branch; Vercel preview will refresh."
