@@ -20,7 +20,7 @@ function useMobile() {
   return mobile;
 }
 
-export default function BlogShell({ eyebrow = "BLOG", title, lead, meta, crumbs, children }) {
+export default function BlogShell({ eyebrow = "BLOG", title, lead, meta, crumbs, wide = false, children }) {
   const mobile = useMobile();
 
   return (
@@ -40,7 +40,7 @@ export default function BlogShell({ eyebrow = "BLOG", title, lead, meta, crumbs,
           letterSpacing: "0.18em", textDecoration: "none" }}>BLOG</a>
       </nav>
 
-      <main style={{ maxWidth: 720, margin: "0 auto",
+      <main style={{ maxWidth: wide ? 1160 : 720, margin: "0 auto",
         padding: mobile ? "40px 20px 56px" : "56px 48px 72px" }}>
         {crumbs?.length > 0 && (
           <nav aria-label="Breadcrumb" style={{ marginBottom: 20 }}>
