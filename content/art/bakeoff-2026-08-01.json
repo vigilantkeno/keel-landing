@@ -1,0 +1,24 @@
+{
+  "$comment": "Provider bake-off selection record (STYLE_SPEC workflow step 3: rejects logged with reasons). Candidates themselves are gitignored; hashes identify them in the run logs.",
+  "date": "2026-08-01",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "corpus": "the four worked examples from STYLE_SPEC.md",
+  "imagesGenerated": 14,
+  "outputImageTokens": 21952,
+  "approxCost": "~$0.90 total (~$0.06/image, medium 1536x1024) — dashboard is authoritative",
+  "verdict": "gpt-image-1 medium selected: 14/14 candidates on-system (palette, grain, single aperture, hard light). Flux comparison deferred — no key; adapter seam ready if drift ever appears.",
+  "founderPicks": {
+    "arch": { "candidate": "cd9a", "note": "probe image; figure larger than spec's 12% — slot-writing lesson, not a suffix defect" },
+    "obj": { "candidate": "e053", "note": "best folder fan; only candidate keeping the dot-matrix emboss" },
+    "human": { "candidate": "0940", "note": "strongest mullions, ember square off-centre" },
+    "abs": { "candidate": "2fad", "note": "most faithful to the brief; e0e9 noted as the more striking break-from-brief alternative" }
+  },
+  "rejectLessons": [
+    "Figures render 30-45% of frame height unless the brief says 'tiny/distant' explicitly — spec wants <=12%; fix belongs in slot wording.",
+    "Periwinkle over-delivers in human/abs families (global casts beyond the <=5% budget); constrain in slots or accept normalize-stage correction.",
+    "Candidate gong-alternative-no-manager-2-c135 rejected for a global periwinkle cast plus a faint sky-glow gradient (don't-list item)."
+  ],
+  "generationPolicy": "candidatesPerImage revised 4 -> 2 by founder after this bake-off (high hit rate makes 4 wasteful)."
+}

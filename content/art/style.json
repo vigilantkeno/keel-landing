@@ -69,10 +69,11 @@
   },
 
   "generation": {
-    "candidatesPerImage": 4,
+    "candidatesPerImage": 2,
     "keep": 1,
     "selector": "human",
-    "logRejectReasons": true
+    "logRejectReasons": true,
+    "$comment": "Founder revised 4->2 candidates per image on 2026-08-01 after the bake-off showed a high on-system hit rate; design doc §10 still says 4 — sync pending."
   },
 
   "naming": {

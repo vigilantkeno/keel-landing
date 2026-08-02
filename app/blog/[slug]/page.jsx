@@ -19,6 +19,12 @@ export function generateMetadata({ params }) {
   // metaTitle (optional frontmatter): SERP titles want <60 chars; H1s can run
   // longer. When present it is used verbatim for <title>/OG/Twitter.
   const metaTitle = post.metaTitle ?? `${post.title} — keel`;
+  // When a post has illustration-system art, its OG image is the derived og
+  // crop of the hero (STYLE_SPEC: "same image, not a new generation") —
+  // explicit metadata images take precedence over the generated text card.
+  const ogImage = post.heroImage
+    ? `https://getkeel.io${post.heroImage.replace('-hero-', '-og-')}`
+    : null;
   return {
     title: metaTitle,
     description: post.description,
@@ -32,11 +38,13 @@ export function generateMetadata({ params }) {
       type: 'article',
       publishedTime: new Date(post.date).toISOString(),
       authors: [post.author],
+      ...(ogImage ? { images: [{ url: ogImage, width: 1200, height: 630, alt: post.heroAlt ?? post.title }] } : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title: post.metaTitle ?? post.title,
       description: post.description,
+      ...(ogImage ? { images: [ogImage] } : {}),
     },
   };
 }
@@ -67,6 +75,7 @@ export default function BlogPost({ params }) {
       publisher: { '@id': 'https://getkeel.io/#organization' },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       url,
+      ...(post.heroImage ? { image: `https://getkeel.io${post.heroImage}` } : {}),
     },
   ];
   graph.push({
@@ -109,6 +118,21 @@ export default function BlogPost({ params }) {
         lead={post.description}
         meta={`${String(post.date).slice(0, 10).toUpperCase()} · ${/^sara$/i.test(post.author) ? "SARA — KEEL'S AI DEAL ASSISTANT" : post.author.toUpperCase()} · GETKEEL.IO`}
       >
+        {post.heroImage && (
+          /* Illustration-system hero (STYLE_SPEC placement "Article hero").
+             Plain <img>: the asset is a pre-sized single WebP, statically
+             served — next/image would add a runtime optimizer for no gain. */
+          <img
+            src={post.heroImage}
+            alt={post.heroAlt ?? ''}
+            width={2400}
+            height={1350}
+            style={{
+              display: 'block', width: '100%', height: 'auto',
+              border: '1px solid #1A1A1A', marginBottom: 36,
+            }}
+          />
+        )}
         <MDXRemote source={post.content} components={mdxComponents} />
         <RelatedPosts
           posts={related.map(({ slug, title, description }) => ({ slug, title, description }))}
