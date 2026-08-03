@@ -1,0 +1,4 @@
+{
+  "$comment": "Social publication ledger — see SOCIAL.md. Append-only; analytics fields fill post-publication.",
+  "campaigns": {}
+}

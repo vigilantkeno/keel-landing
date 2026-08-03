@@ -61,46 +61,36 @@ async function renderSvg(svg, out) {
 }
 
 // ---- layout: truth (1080x1920 reel) ------------------------------------
+// Motion is rhetorical, not animated: hard cuts and holds, no fades.
+// black -> line1 -> hold -> line2 -> hold -> ember rule -> mark. The
+// pause is part of the argument (founder-approved judgment-gate note).
 async function truth(spec, outDir) {
   const W = 1080, H = 1920, X = 96;
   const l1 = wrap(spec.line1, 16), l2 = wrap(spec.line2, 16);
   const SIZE = 118;
   const block = l1.length * SIZE * 1.04 + 40 + l2.length * SIZE * 1.04;
   const y0 = (H - block) / 2 + SIZE * 0.8;
-  const frame = (o1, o2) => `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
+  const yRule = y0 + block + 10;
+  const frame = (s1, s2, sRule, sEnd) => `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
     <rect width="${W}" height="${H}" fill="${INK}"/>
-    ${headline(l1, { x: X, y: y0, size: SIZE, opacity: o1 })}
-    ${headline(l2, { x: X, y: y0 + l1.length * SIZE * 1.04 + 40, size: SIZE, fill: EMBER, opacity: o2 })}
-    ${seriesTag(X, H - 140, spec.series ?? 'Sales truths')}
-    ${markSvg(W - 150, H - 190, 70)}
-    ${microTag(X, H - 90, 'getkeel.io')}
+    ${s1 ? headline(l1, { x: X, y: y0, size: SIZE }) : ''}
+    ${s2 ? headline(l2, { x: X, y: y0 + l1.length * SIZE * 1.04 + 40, size: SIZE, fill: EMBER }) : ''}
+    ${sRule ? `<rect x="${X}" y="${yRule}" width="150" height="6" fill="${EMBER}"/>` : ''}
+    ${sEnd ? markSvg(W - 150, H - 190, 70) + microTag(X, H - 90, spec.url ?? 'getkeel.io') : ''}
   </svg>`;
-  // 24 frames @ 8fps = 3s: line1 fades in over 4, holds; line2 fades in over 4 starting f8; hold
+  // 32 frames @ 8fps = 4s. Beats: black 0-3, line1 @4, line2 @13, rule @21, end @25.
   const framesDir = join(outDir, 'frames');
   mkdirSync(framesDir, { recursive: true });
-  for (let f = 0; f < 24; f++) {
-    const o1 = Math.min(1, f / 4);
-    const o2 = Math.max(0, Math.min(1, (f - 8) / 4));
-    await renderSvg(frame(o1, o2), join(framesDir, `f${String(f).padStart(2, '0')}.png`));
+  for (let f = 0; f < 32; f++) {
+    await renderSvg(frame(f >= 4, f >= 13, f >= 21, f >= 25), join(framesDir, `f${String(f).padStart(2, '0')}.png`));
   }
   const mp4 = join(outDir, `${spec.id}.mp4`);
   try {
     execFileSync('ffmpeg', ['-y', '-framerate', '8', '-i', join(framesDir, 'f%02d.png'),
       '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-r', '30', mp4], { stdio: 'pipe' });
-  } catch { console.warn('ffmpeg unavailable — frames only'); }
-  // animated webp preview (small) for chat/PR review
-  const preview = join(outDir, `${spec.id}-preview.webp`);
-  const frames = [];
-  for (let f = 0; f < 24; f++) frames.push(await sharp(join(framesDir, `f${String(f).padStart(2, '0')}.png`)).resize(360).toBuffer());
-  await sharp(frames[0], { animated: false }); // noop guard
-  // join frames via sharp animated webp
-  const joined = await sharp(Buffer.concat(await Promise.all(frames.map(async (b) => await sharp(b).raw().toBuffer()))), {
-    raw: { width: 360, height: 640, channels: 3, pages: 24 } }).webp({ quality: 70, loop: 0, delay: 125 }).toFile(preview).catch(() => null);
-  if (!joined) {
-    // fallback: static preview of final frame
-    await sharp(join(framesDir, 'f23.png')).resize(540).webp({ quality: 80 }).toFile(preview);
-  }
-  console.log(`truth: ${spec.id} -> mp4 + preview`);
+  } catch { console.warn('ffmpeg unavailable - frames only'); }
+  await sharp(join(framesDir, 'f31.png')).resize(540).webp({ quality: 80 }).toFile(join(outDir, `${spec.id}-final-frame.webp`));
+  console.log(`truth: ${spec.id} -> mp4 (rhetorical beats) + final frame`);
 }
 
 // ---- layout: quote (1080x1350) -----------------------------------------
@@ -115,7 +105,7 @@ async function quote(spec, outDir) {
   const svg = `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
     <rect width="${W}" height="${H}" fill="${INK}"/>
     <image href="${artB64}" x="0" y="0" width="${W}" height="${imgH}"/>
-    <rect x="0" y="${imgH}" width="${W}" height="4" fill="${EMBER}"/>
+    <rect x="0" y="${imgH}" width="${Math.round(W * 0.8)}" height="4" fill="${EMBER}"/>
     ${seriesTag(X, imgH + 70, spec.series ?? 'Nobody writes this down')}
     ${headline(lines, { x: X, y: yQ + SIZE, size: SIZE })}
     ${microTag(X, H - 100, spec.attribution ?? '')}
@@ -155,7 +145,7 @@ async function carousel(spec, outDir) {
       const y0 = (H - lines.length * SIZE * 1.04) / 2 + SIZE * 0.6;
       body = headline(lines, { x: X, y: y0, size: SIZE }) +
         markSvg(X, y0 + lines.length * SIZE * 1.04 + 60, 90) +
-        `<text x="${X + 110}" y="${y0 + lines.length * SIZE * 1.04 + 125}" font-family="${MONO}" font-size="30" letter-spacing="4" fill="${MICRO}">GETKEEL.IO</text>`;
+        `<text x="${X + 110}" y="${y0 + lines.length * SIZE * 1.04 + 125}" font-family="${MONO}" font-size="30" letter-spacing="4" fill="${MICRO}">${esc((spec.url ?? "getkeel.io").toUpperCase())}</text>`;
     }
     const svg = `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
       <rect width="${W}" height="${H}" fill="${INK}"/>

@@ -9,11 +9,11 @@
   "slides": [
     {
       "type": "hook",
-      "text": "The deal review is a performance."
+      "text": "Nobody diagnoses anything in front of a scorecard."
     },
     {
       "type": "claim",
-      "text": "Pipeline meetings score confidence. Nobody diagnoses anything in front of a scorecard."
+      "text": "Pipeline meetings score confidence. The deal review is a performance."
     },
     {
       "type": "claim",
@@ -26,7 +26,8 @@
     },
     {
       "type": "close",
-      "text": "Seven questions to run before your next pipeline meeting \u2014 on the blog."
+      "text": "Read the full essay."
     }
-  ]
+  ],
+  "url": "getkeel.io/blog/deal-reflection-framework"
 }

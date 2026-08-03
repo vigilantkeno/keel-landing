@@ -1,0 +1,9 @@
+{
+  "concept": "Recording captured every word. It missed the decision.",
+  "type": "aphorism",
+  "status": "candidate",
+  "introducedIn": "social sample truth-unrecorded-decision (derived from the-unrecordable-moment)",
+  "canonicalExplanation": "Transcripts are complete and insufficient: the words are all there, and the moment the deal actually turned is not.",
+  "reuseWhen": ["call recording critiques", "unrecordable moments", "social brand statements"],
+  "avoidWhen": ["implying recording tools have no legitimate uses"]
+}
