@@ -53,7 +53,12 @@ function FeaturedTile({ p }) {
         background: BK, border: `1px solid ${BORDER}`, textDecoration: 'none',
         marginBottom: 28 }}>
       {p.hero && (
-        <img src={p.hero} alt={p.alt ?? ''} width={2400} height={1350}
+        /* The featured tile uses the hero, not the card: its column runs to
+           roughly half the 1160px shell, wider than any grid tile. It is also
+           the LCP element on /blog, so it stays eager while everything below
+           it lazies. */
+        <img src={p.hero} alt={p.alt ?? ''} width={1440} height={810}
+          fetchPriority="high" decoding="async"
           style={{ display: 'block', width: '100%', height: '100%',
             objectFit: 'cover', aspectRatio: '16 / 9' }} />
       )}
@@ -87,7 +92,12 @@ function PostTile({ p }) {
       style={{ background: BK, textDecoration: 'none', display: 'flex',
         flexDirection: 'column' }}>
       {p.card && (
-        <img src={p.card} alt={p.alt ?? ''} width={1200} height={800}
+        /* Lazy: the index carries a tile per published post, and eager-loading
+           every card pulled the whole set down before anything below the fold
+           was worth having. aspectRatio already reserves the box, so deferring
+           these costs no layout stability. */
+        <img src={p.card} alt={p.alt ?? ''} width={800} height={533}
+          loading="lazy" decoding="async"
           style={{ display: 'block', width: '100%', height: 'auto',
             aspectRatio: '3 / 2', objectFit: 'cover' }} />
       )}

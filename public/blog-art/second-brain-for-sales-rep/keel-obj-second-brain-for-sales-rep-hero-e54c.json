@@ -14,5 +14,21 @@
   "model": "gpt-image-1",
   "quality": "medium",
   "prompt": "A tall card-catalog cabinet of small drawers photographed in darkness, macro three-quarter crop running out of frame, one hard raking light from the upper left, a single drawer standing slightly ajar with its label tab glowing ember-orange, faint white dot-matrix embossed on one drawer face, left third of the frame black and empty, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
-  "slots": "A tall card-catalog cabinet of small drawers photographed in darkness, macro three-quarter crop running out of frame, one hard raking light from the upper left, a single drawer standing slightly ajar with its label tab glowing ember-orange, faint white dot-matrix embossed on one drawer face, left third of the frame black and empty"
+  "slots": "A tall card-catalog cabinet of small drawers photographed in darkness, macro three-quarter crop running out of frame, one hard raking light from the upper left, a single drawer standing slightly ajar with its label tab glowing ember-orange, faint white dot-matrix embossed on one drawer face, left third of the frame black and empty",
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "resizedAt": "2026-08-03T15:19:12.835Z",
+  "resizeNote": "Backfilled to contract sizes by scripts/art/resize-shipped.mjs — re-encoded from the shipped WebP (masters are gitignored), grain not re-applied."
 }

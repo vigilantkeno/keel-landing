@@ -14,5 +14,21 @@
   "model": "gpt-image-1",
   "quality": "medium",
   "prompt": "A tall atrium lobby with a mezzanine walkway cutting across the upper frame, a single suited figure crossing far below dwarfed by the columns, low-angle viewpoint looking straight up, hard late-afternoon light raking down one wall, a tall ember-orange doorway glowing at the base of the atrium where the walkway ends, upper third of the frame receding into near-black, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
-  "slots": "A tall atrium lobby with a mezzanine walkway cutting across the upper frame, a single suited figure crossing far below dwarfed by the columns, low-angle viewpoint looking straight up, hard late-afternoon light raking down one wall, a tall ember-orange doorway glowing at the base of the atrium where the walkway ends, upper third of the frame receding into near-black"
+  "slots": "A tall atrium lobby with a mezzanine walkway cutting across the upper frame, a single suited figure crossing far below dwarfed by the columns, low-angle viewpoint looking straight up, hard late-afternoon light raking down one wall, a tall ember-orange doorway glowing at the base of the atrium where the walkway ends, upper third of the frame receding into near-black",
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "resizedAt": "2026-08-03T15:19:09.995Z",
+  "resizeNote": "Backfilled to contract sizes by scripts/art/resize-shipped.mjs — re-encoded from the shipped WebP (masters are gitignored), grain not re-applied."
 }

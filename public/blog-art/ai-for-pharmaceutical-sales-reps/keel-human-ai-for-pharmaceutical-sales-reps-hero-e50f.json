@@ -14,5 +14,21 @@
   "model": "gpt-image-1",
   "quality": "medium",
   "prompt": "A tiny silhouetted rep with a slim case seated alone on a bench in a dark clinic waiting room, the bone reception wall the only lit plane, straight-on elevation from across the room, hard late light through one window, a single ember-orange consulting-room door glowing beside the reception desk, left half of the frame in near-black, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
-  "slots": "A tiny silhouetted rep with a slim case seated alone on a bench in a dark clinic waiting room, the bone reception wall the only lit plane, straight-on elevation from across the room, hard late light through one window, a single ember-orange consulting-room door glowing beside the reception desk, left half of the frame in near-black"
+  "slots": "A tiny silhouetted rep with a slim case seated alone on a bench in a dark clinic waiting room, the bone reception wall the only lit plane, straight-on elevation from across the room, hard late light through one window, a single ember-orange consulting-room door glowing beside the reception desk, left half of the frame in near-black",
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "resizedAt": "2026-08-03T15:19:09.800Z",
+  "resizeNote": "Backfilled to contract sizes by scripts/art/resize-shipped.mjs — re-encoded from the shipped WebP (masters are gitignored), grain not re-applied."
 }
