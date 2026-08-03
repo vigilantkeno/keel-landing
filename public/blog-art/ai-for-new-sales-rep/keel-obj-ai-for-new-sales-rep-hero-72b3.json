@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "ai-for-new-sales-rep",
+  "sourceCandidate": "ai-for-new-sales-rep-1-72b3.png",
+  "normalizedAt": "2026-08-03T08:21:04.768Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single bone-white index card lit alone in a long stack of otherwise dark, identical cards, macro three-quarter crop running out of frame, hard raking light from the upper right, one small ember-orange dot glowing at the card's corner marking it as the newest entry, faint white dot-matrix embossed on the cards behind it, left half of the frame receding into near-black, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single bone-white index card lit alone in a long stack of otherwise dark, identical cards, macro three-quarter crop running out of frame, hard raking light from the upper right, one small ember-orange dot glowing at the card's corner marking it as the newest entry, faint white dot-matrix embossed on the cards behind it, left half of the frame receding into near-black"
+}
