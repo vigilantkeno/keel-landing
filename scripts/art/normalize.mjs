@@ -2,14 +2,25 @@
 // STYLE_SPEC workflow step 4 — the consistency engine. Takes one human-
 // selected candidate and produces the shipping assets:
 //
-//   - crop to 16:9 and upscale to the hero master size (2400x1350)
+//   - crop to 16:9 at the provider's native resolution (no upscale)
 //   - black point mapped to true #0B0B0B (provider blacks drift charcoal)
 //   - ember band hue-snapped to exactly #FF5A1F
-//   - 2% film grain
-//   - derived crops: og 1200x630, card 1200x800 (never new generations)
-//   - WebP q82 committed; PNG master kept locally (gitignored — a 2400px
-//     PNG is ~5MB and would put the repo on a ~300MB/year diet)
+//   - resize to each shipping size, THEN grain (see below)
+//   - hero 1440x810, card 800x533, og 1200x630 (never new generations)
+//   - WebP q82 committed; PNG master kept locally (gitignored)
 //   - provenance sidecar JSON (style version, model, prompt, source file)
+//
+// Two corrections landed here on 2026-08-02, both from measuring rather than
+// reasoning (see content/art/style.json .master and .normalize):
+//
+//   1. NO UPSCALE. gpt-image-1 medium emits 1536x1024; this script used to
+//      upscale the 16:9 crop to 2400x1350 and ship that. Everything past
+//      1536 was interpolated — 74% of hero bytes for detail the generator
+//      never produced. Sizes now come from the contract and derive DOWN.
+//   2. GRAIN AFTER RESIZE. Grain used to be baked at master resolution, so
+//      every derivative averaged it away; the 2% spec arrived closer to 1%
+//      on the assets people actually see. Each output now gets its own grain
+//      pass at its own resolution, which is the only way 2% means 2%.
 //
 //   node scripts/art/normalize.mjs --in <candidate.png> --slug <slug> --family <arch|obj|human|abs>
 import sharp from 'sharp';
@@ -35,18 +46,25 @@ const EMBER = { h: 15.8, s: 0.88 }; // #FF5A1F in HSV
 const GRAIN = style.normalize?.grainOpacity ?? 0.02;
 
 const id = basename(input, '.png').split('-').pop();
-const HERO_W = 2400, HERO_H = 1350;
 
-// --- load, crop to 16:9, upscale to master size -------------------------
+// Master = the provider's own resolution after the 16:9 crop. Never larger:
+// upscaling here is how the old 2400px hero happened.
+const MASTER_W = style.master?.width ?? 1536;
+const MASTER_H = style.master?.height ?? 864;
+
+// --- load, crop to 16:9, fit to master (downscale only) -----------------
+// withoutEnlargement means a smaller-than-expected candidate stays its own
+// size rather than being inflated, so read the real dimensions back out of
+// the resize instead of assuming them.
 const src = sharp(input);
 const meta = await src.metadata();
 const cropH = Math.round((meta.width * 9) / 16);
-const base = await src
+const { data: base, info: baseInfo } = await src
   .extract({ left: 0, top: Math.max(0, Math.round((meta.height - cropH) / 2)), width: meta.width, height: Math.min(cropH, meta.height) })
-  .resize(HERO_W, HERO_H, { kernel: 'lanczos3' })
+  .resize(MASTER_W, MASTER_H, { kernel: 'lanczos3', withoutEnlargement: true, fit: 'cover' })
   .removeAlpha()
   .raw()
-  .toBuffer();
+  .toBuffer({ resolveWithObject: true });
 
 // --- single raw pass: black point + ember snap + grain ------------------
 // black point: find the darkest luminance, then linearly map [min..255]
@@ -75,15 +93,33 @@ for (let i = 0; i < base.length; i += 3) {
     }
   }
 
-  // 2% grain
-  const n = (Math.random() - 0.5) * 2 * GRAIN * 255;
-  base[i] = Math.max(0, Math.min(255, r + n));
-  base[i + 1] = Math.max(0, Math.min(255, g + n));
-  base[i + 2] = Math.max(0, Math.min(255, bl + n));
+  // NOTE: grain is deliberately NOT applied here — see grainAt() below.
+  base[i] = Math.max(0, Math.min(255, r));
+  base[i + 1] = Math.max(0, Math.min(255, g));
+  base[i + 2] = Math.max(0, Math.min(255, bl));
+}
+
+/**
+ * Resize the corrected master to a shipping size, then lay grain on at THAT
+ * resolution. Order matters: grain applied before a downscale is partly
+ * averaged out by the resampler, which is how a 2% spec was arriving at
+ * roughly 1% on every shipped asset.
+ */
+async function shipBuffer(width, height) {
+  const { data, info } = await sharp(base, { raw: { width: baseInfo.width, height: baseInfo.height, channels: 3 } })
+    .resize(width, height, { kernel: 'lanczos3', fit: 'cover' })
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  for (let i = 0; i < data.length; i += 3) {
+    const n = (Math.random() - 0.5) * 2 * GRAIN * 255;
+    data[i] = Math.max(0, Math.min(255, data[i] + n));
+    data[i + 1] = Math.max(0, Math.min(255, data[i + 1] + n));
+    data[i + 2] = Math.max(0, Math.min(255, data[i + 2] + n));
+  }
+  return sharp(data, { raw: { width: info.width, height: info.height, channels: 3 } });
 }
 
 // --- outputs ------------------------------------------------------------
-const master = sharp(base, { raw: { width: HERO_W, height: HERO_H, channels: 3 } });
 const pubDir = join(process.cwd(), 'public', 'blog-art', slug);
 const masterDir = join(process.cwd(), 'content', 'art', 'masters', slug);
 mkdirSync(pubDir, { recursive: true });
@@ -92,12 +128,23 @@ mkdirSync(masterDir, { recursive: true });
 const nameFor = (placement) => `keel-${family}-${slug}-${placement}-${id}`;
 const q = style.export?.quality ?? 82;
 
-await master.clone().png().toFile(join(masterDir, `${nameFor('hero')}.png`));
-const outHero = await master.clone().webp({ quality: q }).toFile(join(pubDir, `${nameFor('hero')}.webp`));
-// og 1200x630: resize to width, center-crop height
-const outOg = await master.clone().resize(1200, 630, { fit: 'cover' }).webp({ quality: q }).toFile(join(pubDir, `${nameFor('og')}.webp`));
-// card 1200x800 (3:2)
-const outCard = await master.clone().resize(1200, 800, { fit: 'cover' }).webp({ quality: q }).toFile(join(pubDir, `${nameFor('card')}.webp`));
+// Shipping sizes come from the contract, never from literals here.
+const P = style.placements;
+const hero = P.hero, card = P.card, og = P.og;
+
+// PNG master: corrected but grain-free, at provider-native resolution. It is
+// the regeneration source, so it stays the one artifact without grain baked
+// in — any future placement re-derives from it and gets grain at its own size.
+await sharp(base, { raw: { width: baseInfo.width, height: baseInfo.height, channels: 3 } })
+  .png()
+  .toFile(join(masterDir, `${nameFor('hero')}.png`));
+
+const outHero = await (await shipBuffer(hero.width, hero.height))
+  .webp({ quality: q, effort: 6 }).toFile(join(pubDir, `${nameFor('hero')}.webp`));
+const outOg = await (await shipBuffer(og.width, og.height))
+  .webp({ quality: q, effort: 6 }).toFile(join(pubDir, `${nameFor('og')}.webp`));
+const outCard = await (await shipBuffer(card.width, card.height))
+  .webp({ quality: q, effort: 6 }).toFile(join(pubDir, `${nameFor('card')}.webp`));
 
 // --- provenance ---------------------------------------------------------
 // pull the most recent run log from the candidate dir, if present
@@ -114,9 +161,12 @@ writeFileSync(join(pubDir, `${nameFor('hero')}.json`), JSON.stringify({
   slug,
   sourceCandidate: basename(input),
   normalizedAt: new Date().toISOString(),
+  master: { width: baseInfo.width, height: baseInfo.height },
+  shipped: { hero: [hero.width, hero.height], card: [card.width, card.height], og: [og.width, og.height] },
   blackPoint: { measuredMin: Math.round(minLum), mappedTo: target },
   emberTarget: '#FF5A1F',
   grain: GRAIN,
+  grainAppliedAt: 'ship',
   provider: run?.provider ?? null,
   model: run?.model ?? null,
   quality: run?.quality ?? null,
@@ -124,6 +174,7 @@ writeFileSync(join(pubDir, `${nameFor('hero')}.json`), JSON.stringify({
   slots: run?.slots ?? null,
 }, null, 2) + '\n');
 
-console.log(`hero  ${Math.round(outHero.size / 1024)}KB  public/blog-art/${slug}/${nameFor('hero')}.webp`);
+console.log(`master ${baseInfo.width}x${baseInfo.height} (no upscale)`);
+console.log(`hero  ${hero.width}x${hero.height} ${Math.round(outHero.size / 1024)}KB  public/blog-art/${slug}/${nameFor('hero')}.webp`);
 console.log(`og    ${Math.round(outOg.size / 1024)}KB  card ${Math.round(outCard.size / 1024)}KB  + provenance json + PNG master (local only)`);
-console.log(`blackpoint: min ${Math.round(minLum)} -> ${target}`);
+console.log(`blackpoint: min ${Math.round(minLum)} -> ${target}   grain ${GRAIN} applied per shipping size`);

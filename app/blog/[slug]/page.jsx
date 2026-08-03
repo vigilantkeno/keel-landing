@@ -125,8 +125,13 @@ export default function BlogPost({ params }) {
           <img
             src={post.heroImage}
             alt={post.heroAlt ?? ''}
-            width={2400}
-            height={1350}
+            width={1440}
+            height={810}
+            /* The hero is the LCP element on every article — above the fold
+               and the largest paint. Declare it rather than letting the
+               preload scanner discover it at its leisure. */
+            fetchPriority="high"
+            decoding="async"
             style={{
               display: 'block', width: '100%', height: 'auto',
               border: '1px solid #1A1A1A', marginBottom: 36,

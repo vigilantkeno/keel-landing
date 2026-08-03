@@ -14,5 +14,21 @@
   "model": "gpt-image-1",
   "quality": "medium",
   "prompt": "Two silhouetted figures at a small table in a dark room, one standing and one seated across from each other, a single ember-orange folder on the table between them, seen from outside through a doorway at a distance, the room's bone wall the only lit plane, hard single-direction light, the surrounding frame in deep black, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
-  "slots": "Two silhouetted figures at a small table in a dark room, one standing and one seated across from each other, a single ember-orange folder on the table between them, seen from outside through a doorway at a distance, the room's bone wall the only lit plane, hard single-direction light, the surrounding frame in deep black"
+  "slots": "Two silhouetted figures at a small table in a dark room, one standing and one seated across from each other, a single ember-orange folder on the table between them, seen from outside through a doorway at a distance, the room's bone wall the only lit plane, hard single-direction light, the surrounding frame in deep black",
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "resizedAt": "2026-08-03T15:19:10.905Z",
+  "resizeNote": "Backfilled to contract sizes by scripts/art/resize-shipped.mjs — re-encoded from the shipped WebP (masters are gitignored), grain not re-applied."
 }

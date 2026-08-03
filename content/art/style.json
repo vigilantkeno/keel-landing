@@ -147,14 +147,22 @@
   ],
   "styleSuffix": "modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
   "negativePrompt": "photograph, stock photo, 3D render, glossy, bokeh, lens flare, neon glow, purple gradient, starfield, nebula, robot, brain, circuit board, smiling person, face, handshake, isometric, cartoon character, cluttered, watermark, text, UI screenshot, rainbow palette",
+  "master": {
+    "width": 1536,
+    "height": 864,
+    "ratio": "16:9",
+    "$comment": "Provider-native resolution after the 16:9 crop (gpt-image-1 medium emits 1536x1024). Normalize does NOT upscale past this. The previous 2400x1350 master invented 56% more width than the generator ever produced — it cost bytes and bought no detail. Every shipping size derives DOWN from here. If a placement ever genuinely needs more than 1536px, regenerate at a larger provider size; never upscale.",
+    "shipRule": "Ship at 2x the largest CSS render width, capped at the master width. This is the doc's own rule (§09) — it was simply not being applied."
+  },
   "placements": {
     "hero": {
-      "width": 2400,
-      "height": 1350,
+      "width": 1440,
+      "height": 810,
       "ratio": "16:9",
+      "renderWidth": 720,
       "preferredFamily": "arch",
       "derived": false,
-      "notes": "Keep the left third clear for the headline overlay."
+      "notes": "Ships at 2x the 720px article column. Was 2400 (3.3x the render width, and a 56% upscale past the master) — that mismatch was where the page weight went."
     },
     "sectionBreak": {
       "width": 1600,
@@ -168,12 +176,13 @@
       "notes": "One per ~800 words. Never two adjacent from one family."
     },
     "card": {
-      "width": 1200,
-      "height": 800,
+      "width": 800,
+      "height": 533,
       "ratio": "3:2",
+      "renderWidth": 380,
       "preferredFamily": "obj",
       "derived": "hero",
-      "notes": "Must survive a 320px crop \u2014 one clear shape, one ember event."
+      "notes": "Must survive a 320px crop \u2014 one clear shape, one ember event. Ships at ~2x the widest grid tile (auto-fit minmax(300px) inside the 1160px blog shell tops out near 380px). Was 1200."
     },
     "band": {
       "width": 2880,
@@ -189,7 +198,7 @@
       "ratio": "1.91:1",
       "preferredFamily": null,
       "derived": "hero",
-      "notes": "Derived crop of the hero \u2014 same image, never a new generation."
+      "notes": "Derived crop of the hero \u2014 same image, never a new generation. 1200x630 is a fixed platform spec (not a CSS render width), so it is deliberately NOT reduced with the others."
     },
     "spot": {
       "width": 800,
@@ -210,7 +219,9 @@
     "$comment": "Step 4 of the workflow and the real consistency engine \u2014 corrects provider drift mechanically rather than relying on prompt obedience.",
     "blackPoint": "#0B0B0B",
     "emberHueTarget": "#FF5A1F",
-    "grainOpacity": 0.02
+    "grainOpacity": 0.02,
+    "grainAppliedAt": "ship",
+    "grainOrderNote": "Grain is applied per shipping size AFTER the resize. Applied at master resolution it averages down in every derivative, so a 2% spec landed nearer 1% on the assets people actually see \u2014 the one visual property that got quieter the further you moved from the master."
   },
   "generation": {
     "candidatesPerImage": 2,

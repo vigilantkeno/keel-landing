@@ -14,5 +14,21 @@
   "model": "gpt-image-1",
   "quality": "medium",
   "prompt": "A squared stack of five identical bone folders on a black desk, a single thin ember-orange line struck across the spine of the top folder, low raking light from the left, macro three-quarter crop tight to the stack running out of frame on three sides, deep black surrounding the stack, right third of the frame empty, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
-  "slots": "A squared stack of five identical bone folders on a black desk, a single thin ember-orange line struck across the spine of the top folder, low raking light from the left, macro three-quarter crop tight to the stack running out of frame on three sides, deep black surrounding the stack, right third of the frame empty"
+  "slots": "A squared stack of five identical bone folders on a black desk, a single thin ember-orange line struck across the spine of the top folder, low raking light from the left, macro three-quarter crop tight to the stack running out of frame on three sides, deep black surrounding the stack, right third of the frame empty",
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "resizedAt": "2026-08-03T15:19:13.095Z",
+  "resizeNote": "Backfilled to contract sizes by scripts/art/resize-shipped.mjs — re-encoded from the shipped WebP (masters are gitignored), grain not re-applied."
 }

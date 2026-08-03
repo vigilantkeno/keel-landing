@@ -14,5 +14,21 @@
   "model": "gpt-image-1",
   "quality": "medium",
   "prompt": "A small round cafe table just after a meeting has ended, two espresso cups and a bone napkin bearing a faint hairline diagram, one ember-orange tabbed pocket notebook lying squarely in the light at the table edge, macro three-quarter still-life crop running out of frame, one dominant hard afternoon light from the left with a quiet cool fill, deep black cafe interior falling away behind, left third open and dark, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
-  "slots": "A small round cafe table just after a meeting has ended, two espresso cups and a bone napkin bearing a faint hairline diagram, one ember-orange tabbed pocket notebook lying squarely in the light at the table edge, macro three-quarter still-life crop running out of frame, one dominant hard afternoon light from the left with a quiet cool fill, deep black cafe interior falling away behind, left third open and dark"
+  "slots": "A small round cafe table just after a meeting has ended, two espresso cups and a bone napkin bearing a faint hairline diagram, one ember-orange tabbed pocket notebook lying squarely in the light at the table edge, macro three-quarter still-life crop running out of frame, one dominant hard afternoon light from the left with a quiet cool fill, deep black cafe interior falling away behind, left third open and dark",
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "resizedAt": "2026-08-03T15:19:09.436Z",
+  "resizeNote": "Backfilled to contract sizes by scripts/art/resize-shipped.mjs — re-encoded from the shipped WebP (masters are gitignored), grain not re-applied."
 }
