@@ -17,7 +17,11 @@ const pick = pickIdx > -1 ? parseInt(process.argv[pickIdx + 1], 10) : 1;
 const slugIdx = process.argv.indexOf('--slug');
 const only = slugIdx > -1 ? process.argv[slugIdx + 1] : null;
 
-const winners = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')) : {};
+// Full mode starts a FRESH map — merging with the committed file made the
+// PR comment list every historical post (found on the 2026-08-03 run).
+// Swap mode (--slug) merges, so a single-slug swap preserves the day's
+// other winners.
+const winners = only && existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')) : {};
 for (const b of briefs) {
   if (only && b.slug !== only) continue;
   const dir = join('content', 'art', 'candidates', b.slug);
