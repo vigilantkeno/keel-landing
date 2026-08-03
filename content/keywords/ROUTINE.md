@@ -163,6 +163,46 @@ local iteration):
 Gates, build, PR as usual. ~2 minutes of generation and one pick per
 article.
 
+## Morning citation pass (supervised — NEVER the scheduled run)
+
+The scheduled run is egress-blocked, so it cannot fetch, so it cannot
+verify, so it writes citation-free (step 3 above). That is the correct
+behaviour for it and it is not going to change. The consequence is that
+contract §3 — 1-2 verified external sources per article, no numeric
+claim without a live link — can only ever be satisfied by a session
+that HAS web access. That session is this one.
+
+Run it on the same PR you are already reviewing for articles and art:
+
+    npm run content:cite            # verifies every external URL is
+                                    # live, and prints the debt worklist
+    npm run content:cite -- --debt  # worklist only, no network
+    npm run content:cite -- --slug <slug>   # one post
+
+Then, for one or two posts from the top of the worklist:
+
+1. Find a source that supports a claim the article ALREADY makes. Never
+   bolt a statistic onto a paragraph to give it somewhere to put a link
+   — that inverts the job and reads like it.
+2. Fetch the URL yourself this session. §3 stable-host rules apply:
+   PubMed/PMC over journal platforms, publisher landing pages over PDF
+   deep links, no .edu faculty pages, never a competitor, never Reddit.
+3. Add the link inline where the claim sits. Re-run
+   `npm run content:cite` — the URL must come back OK.
+4. If no honest source exists, the claim is rewritten so it needs none.
+   It is never softened into vagueness to survive.
+
+Two posts per pass clears the backlog in a couple of weeks without
+turning the morning into a research shift. Argument and positioning
+pieces legitimately carry no sources — the worklist is a queue, not a
+list of defects, and "leave this one alone" is a valid outcome.
+
+`npm run content:citations` (no network, part of `content:check`) is the
+gate: it fails the build on a figure presented as external evidence with
+no link beside it. Illustrative numbers inside narrative — "talk ratio
+was 68%", "the 60% you happen to remember" — are deliberately NOT
+flagged. Posts dated on or before 2026-08-03 are grandfathered.
+
 ## Hard rules
 
 - No push to main, ever. The PR is the product of this routine.

@@ -137,6 +137,29 @@ only. Omitted = briefs are authored at import time.
 - 1–2 external links per article. Authoritative, non-competitor, never
   Reddit.
 
+**Machine enforcement (v1.4, 2026-08-03).** This section was honour-system
+until now, which is why 22 of 30 published posts carry no external source.
+Two pieces, deliberately split by whether they need network:
+
+- `npm run content:citations` — in `content:check`, no network, build-
+  failing. Flags a figure wearing the costume of external evidence (a
+  statistic attributed to research, a survey, or a population — "40% of
+  enterprises") sitting in a paragraph with no external link. It does NOT
+  flag illustrative numbers inside narrative; failing those would teach
+  the writer to strip specifics, which is precisely what §4a is trying to
+  build. Posts dated on or before 2026-08-03 are grandfathered, same
+  mechanism as §4b.
+- `npm run content:cite` — supervised only, needs network, never in the
+  scheduled run. Re-verifies every external URL live (the §3 promise that
+  "the publisher re-verifies regardless" — now actually performed) and
+  prints the citation-debt worklist. A 403 reports as BLOCKED rather than
+  DEAD: several sources named above are live but refuse automated fetch,
+  and conflating the two would train everyone to ignore the output.
+
+The scheduled run is egress-blocked and therefore structurally cannot
+satisfy this section. Citations are added in the supervised morning pass
+(`content/keywords/ROUTINE.md`), on the same PR already under review.
+
 ## 4. Byline policy (decision 2026-08-01, revised same day)
 
 - **Every post → `author: "Sara"`.** Displayed on the page as
@@ -283,8 +306,10 @@ sections.
 4. **External links** with verification column (§3)
 5. **Social atoms** (LinkedIn, X thread, Reddit-safe — used manually after
    publish; URLs must use the §2 slug)
-6. **Image suggestion** + alt text (not currently actioned — no image
-   pipeline; OG images are generated from frontmatter)
+6. **Art brief** + `heroAlt` per §2 — the illustration router record. (This
+   line said "not currently actioned — no image pipeline" until 2026-08-03;
+   the pipeline shipped 2026-08-02 and attaches heroes in CI. Never
+   `heroImage`.)
 7. **Verification checklist** (§9)
 8. **Log entry** (generator-internal — `used-keywords.md` lives with the
    generator, not in this repo)
@@ -298,6 +323,7 @@ sections.
 | External links | Every URL fetched 200 this session, honestly logged (§3) |
 | Frontmatter | Valid YAML; field names match §2 exactly; slug not already taken |
 | Numbers | Every numeric claim has a live link, or was cut |
+| Citations gate | `npm run content:citations` clean — no evidence-shaped figure without a link beside it (§3) |
 | CTA | Exactly one, in body, targets `/founders`; author note carries no link |
 | Byline | `author: "Sara"` (§4) |
 | Voice | Reads per §4a — a senior AE would nod, not wince |
@@ -307,6 +333,13 @@ sections.
 ---
 
 **Changelog**
+- v1.4 (2026-08-03): §3 machine-enforced — `content:citations` gate (no
+  network, in `content:check`, grandfathered on/before 2026-08-03) plus
+  `content:cite` supervised verifier and debt worklist. Citations are now
+  an explicit step of the supervised morning pass, since the scheduled run
+  is egress-blocked and structurally cannot verify a source. §8.6 corrected
+  (claimed there was no image pipeline; there has been one since
+  2026-08-02).
 - v1.2 (2026-08-01): byline policy revised — all posts author as Sara,
   openly AI ("Sara K." human-disguise explicitly rejected); §4a voice spec
   added (founder feedback: prose was bland; salespeople want straight and
