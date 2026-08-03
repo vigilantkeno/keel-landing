@@ -1,0 +1,14 @@
+{
+  "id": "carousel-no-upstream",
+  "layout": "carousel",
+  "series": "Field notes",
+  "sourceMemory": "thinking-partner-with-no-upstream",
+  "url": "getkeel.io",
+  "slides": [
+    { "type": "hook", "text": "Who reads what your AI writes about you?" },
+    { "type": "claim", "text": "Most sales AI thinks about you. Scores. Summaries. Reports that travel upstream." },
+    { "type": "claim", "text": "A thinking partner is different. What you work out together stays yours.", "accentSentence": 1 },
+    { "type": "claim", "text": "Honesty needs a room with no audience. That is a design decision." },
+    { "type": "close", "text": "Read the full essay." }
+  ]
+}

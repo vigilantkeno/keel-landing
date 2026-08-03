@@ -1,0 +1,14 @@
+{
+  "keyword": "private sales ai",
+  "slug": "private-sales-ai",
+  "legacyBackfill": true,
+  "tier": "coverage",
+  "archetype": "story-driven",
+  "uniqueAngle": {
+    "existingConsensus": "Sales tooling is company infrastructure; personal tooling is a quirk.",
+    "keelClaim": "The most honest deal processing happens in private \u2014 reps have always kept a real version somewhere the company can't read.",
+    "supportingReason": "The gap between the official record and the honest one is where private tools live."
+  },
+  "beliefShift": null,
+  "originalAsset": null
+}

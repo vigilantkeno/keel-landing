@@ -37,6 +37,30 @@ Every published asset gets a record in `content/social/manifest.json`:
 source claim id, series, format, platform, caption variant, publish
 state, post id/url, and analytics fields (saves/shares/comments/
 clicks/profile visits + a qualitative note) — empty at creation,
-filled as data arrives. Publisher for the seed test: Meta Business
-Suite, manual, after PR merge. Blotato deferred until sustained
-multi-platform cadence.
+filled as data arrives. Publisher for the seed test: Blotato
+(connected: IG @getkeel.io; FB pending Page subaccount link), per-batch
+founder-approved, after PR merge. Fallback: Meta Business Suite manual
+(required for IG feed carousels if Blotato's IG connection stays
+story/reel-only).
+
+## Seed library (14-day Meta seed, state at PR time)
+
+Rendered specs (all from ACCEPTED memory records unless noted):
+
+| # | spec | layout | source claim |
+|---|------|--------|--------------|
+| 1 | truth-unrecorded-decision | truth | aphorism (CANDIDATE - publish blocked until founder flip) |
+| 2 | truth-reflection-work | truth | "The reflection is the work." (accepted) |
+| 3 | truth-the-tape | truth | the-tape (ratified) |
+| 4 | truth-nobody-writes | truth | "Nobody writes this down." (accepted) |
+| 5 | nwtd-shadow-map | quote | shadow-it-as-a-map (ratified) |
+| 6 | nwtd-unrecordable | quote | the-unrecordable-moment (ratified) |
+| 7 | nwtd-the-tape | quote | the-tape (ratified) |
+| 8 | carousel-deal-review | carousel | deal-reflection-framework essay thesis |
+| 9 | carousel-no-upstream | carousel | thinking-partner-with-no-upstream (ratified) |
+| 10 | (founder voice note) | native | founder-recorded, never machine-drafted |
+| 11-12 | open | - | reserved for claims ratified after this PR (position records are candidates) |
+
+Captions for all rendered specs: `captions/samples.md` (IG + FB pairs,
+banned-claims-clean). Spec #1 renders but must not publish before its
+aphorism's status flip.

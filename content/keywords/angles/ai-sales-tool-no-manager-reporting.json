@@ -1,0 +1,14 @@
+{
+  "keyword": "ai sales tool no manager reporting",
+  "slug": "ai-sales-tool-no-manager-reporting",
+  "legacyBackfill": true,
+  "tier": "coverage",
+  "archetype": "practical-guide",
+  "uniqueAngle": {
+    "existingConsensus": "'For reps' marketing means the tool serves reps.",
+    "keelClaim": "Most rep-facing tools ship a dormant manager tier because the manager signs the check \u2014 the honest default assumption is that it reports upward until proven otherwise.",
+    "supportingReason": "Product design follows the buyer; three direct questions expose who the output really reaches."
+  },
+  "beliefShift": null,
+  "originalAsset": "three vendor questions"
+}

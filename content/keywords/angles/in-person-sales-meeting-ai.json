@@ -1,0 +1,14 @@
+{
+  "keyword": "in person sales meeting ai",
+  "slug": "in-person-sales-meeting-ai",
+  "legacyBackfill": true,
+  "tier": "coverage",
+  "archetype": "problem-deep-dive",
+  "uniqueAngle": {
+    "existingConsensus": "AI sales tools serve the scheduled video-call motion: bot joins, transcript appears.",
+    "keelClaim": "Field selling is structurally invisible to the meeting-bot stack \u2014 the highest-value conversations happen where no bot can join.",
+    "supportingReason": "A tool built for calendar invites cannot follow a rep into a lunch, a site visit, or a car."
+  },
+  "beliefShift": null,
+  "originalAsset": null
+}

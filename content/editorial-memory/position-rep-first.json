@@ -1,0 +1,9 @@
+{
+  "concept": "Sales AI should answer to the rep",
+  "type": "position",
+  "status": "candidate",
+  "introducedIn": "rep-first-ai-sales",
+  "canonicalExplanation": "Keel believes sales AI should work for the individual rep — private by default, no manager view, no admin seat. The rep owns the data and the output. This is a design position, not a feature toggle: a dormant manager tier is still a manager tier.",
+  "reuseWhen": ["positioning", "rep-first arguments", "product philosophy", "comparisons"],
+  "avoidWhen": ["implying team visibility is never legitimate — Gong is good at the job it was built for"]
+}

@@ -1,0 +1,14 @@
+{
+  "keyword": "personal crm for sales rep",
+  "slug": "personal-crm-for-sales-rep",
+  "legacyBackfill": true,
+  "tier": "coverage",
+  "archetype": "comparison",
+  "uniqueAngle": {
+    "existingConsensus": "The company CRM is the rep's system of record.",
+    "keelClaim": "The company CRM is the company's system of record \u2014 reps have always run a private layer for what actually matters, and it deserves better than a notes app.",
+    "supportingReason": "The CRM records what the org needs reported; the rep needs what the org never asks for."
+  },
+  "beliefShift": null,
+  "originalAsset": null
+}

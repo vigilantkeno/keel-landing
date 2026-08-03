@@ -1,0 +1,14 @@
+{
+  "keyword": "two party consent states sales calls",
+  "slug": "two-party-consent-states-sales-calls",
+  "legacyBackfill": true,
+  "tier": "coverage",
+  "archetype": "practical-guide",
+  "uniqueAngle": {
+    "existingConsensus": "Recording sales calls is a workflow default; consent is a checkbox detail.",
+    "keelClaim": "In a dozen-plus states consent is the law, not a preference \u2014 recording without it converts routine selling into legal exposure.",
+    "supportingReason": "All-party consent statutes make the recording itself the liability, independent of intent."
+  },
+  "beliefShift": null,
+  "originalAsset": "state-by-state consent framing"
+}
