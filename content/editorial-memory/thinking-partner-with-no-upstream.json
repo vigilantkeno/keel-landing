@@ -1,0 +1,9 @@
+{
+  "concept": "a thinking partner with no upstream",
+  "status": "accepted",
+  "ratified": "2026-08-03 — founder-approved editorial-ambition package; concept pre-existed in the corpus",
+  "introducedIn": "gong-alternative-no-manager",
+  "canonicalExplanation": "What a rep actually wants is somewhere to process a deal honestly — the way they already do in the parking lot — except with something that talks back and remembers. The defining property is architectural: no manager view, no admin seat, nothing that surfaces to anyone upstream.",
+  "reuseWhen": ["rep-first positioning", "manager dashboard critiques", "honest deal assessment", "private AI"],
+  "avoidWhen": ["team-tooling contexts where shared visibility is the legitimate goal"]
+}

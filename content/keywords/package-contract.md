@@ -1,4 +1,4 @@
-# Keel Package Contract — v1.3 (2026-08-02)
+# Keel Package Contract — v1.4 (2026-08-03)
 
 **What this is.** The one file that travels with every article-package
 request. A package produced under this contract imports with zero
@@ -170,6 +170,50 @@ slightly wry, zero fluff.
 - No throat-clearing openers, no summary endings, no cheerleading anywhere.
 
 The §7 style bans are the floor. This section is the target.
+
+## 4c. Editorial ambition (v1.4 — founder-approved 2026-08-03)
+
+Consistency is the floor; this section is the ceiling. Every article
+carries a positioned thesis; ambition scales by tier instead of taxing
+every long-tail post equally.
+
+**Tiers (mechanical definitions — quality judgments stay in review):**
+
+| Tier | Runtime | Required angle fields | Expected output |
+|---|---|---|---|
+| `coverage` | Headless permitted | uniqueAngle, archetype (originalAsset/beliefShift nullable) | Best clear answer to a narrow query |
+| `reference` | Supervised only | + non-null beliefShift, non-null originalAsset, live-verified sourcing | Reusable resource worth citing |
+| `flagship` | Supervised only | Reference fields + deliberate concept development + founder review | Canonical Keel argument |
+
+**The angle record** (`content/keywords/angles/<keyword>.json`, linted
+by `lint-angles.mjs`): `uniqueAngle` is a structured triplet —
+`existingConsensus` / `keelClaim` / `supportingReason` — so every
+article is positioned against a named consensus and is falsifiable by
+construction. `keelClaim` must stand without the product ("because of
+our product" is not an angle). `originalAsset` and `beliefShift` keys
+must be PRESENT: `null` means the curator decided none is needed
+(coverage only); a missing key means someone forgot.
+
+**Archetypes** (declared per article, recorded in frontmatter
+`archetype`): story-driven · practical-guide · contrarian-essay ·
+framework-driven · comparison · problem-deep-dive. Default rule: no
+archetype repeats within the 4 most recent published posts — house
+voice is the palette, archetypes are the compositions. Escape hatch:
+`archetypeOverrideReason` in the angle record when the keyword's
+intent genuinely demands a repeat (e.g. consecutive comparison
+keywords); the reason travels to the PR description for review.
+
+**Extractable blocks (nudge, not gate):** where natural, include a
+concise definition, a summary/takeaway block, or a comparison table —
+they make articles quotable by humans and extractable by AI systems.
+
+**Editorial memory** (`content/editorial-memory/*.json`): the
+publication's institutional knowledge. Writers (human or routine) MUST
+consult accepted records — reuse `canonicalExplanation` phrasing for
+established concepts, respect `avoidWhen` — and MAY propose new
+concepts as `status: candidate` records in the same PR. Only the
+founder flips a record to `status: accepted` (with a `ratified`
+provenance line). Merge alone never ratifies a concept.
 
 ## 4b. Mobile rhythm (v1.3 — founder decision 2026-08-02, gate-enforced)
 

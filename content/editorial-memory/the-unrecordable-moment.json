@@ -1,0 +1,9 @@
+{
+  "concept": "the unrecordable moment",
+  "status": "accepted",
+  "ratified": "2026-08-03 — founder-approved editorial-ambition package; concept pre-existed in the corpus",
+  "introducedIn": "what-call-recording-cant-capture",
+  "canonicalExplanation": "The highest-signal parts of a B2B deal — the lunch, the hallway conversation, the drive home — happen where no meeting bot can follow. They are not unrecorded by accident; they are unrecordable by nature, and that is where the deal actually moves.",
+  "reuseWhen": ["field sales", "call recording limitations", "in-person selling", "deal context loss"],
+  "avoidWhen": ["articles about ordinary meeting transcription mechanics"]
+}

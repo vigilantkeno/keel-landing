@@ -17,9 +17,10 @@
     "lint": "next lint",
     "content:validate": "node scripts/content/validate.mjs",
     "content:claims": "node scripts/content/check-claims.mjs",
-    "content:check": "npm run content:validate && npm run content:claims && npm run content:rhythm",
+    "content:check": "npm run content:validate && npm run content:claims && npm run content:rhythm && npm run content:angles",
     "content:contract": "node scripts/content/contract.mjs",
-    "content:rhythm": "node scripts/content/check-rhythm.mjs"
+    "content:rhythm": "node scripts/content/check-rhythm.mjs",
+    "content:angles": "node scripts/content/lint-angles.mjs"
   },
   "eslintConfig": {
     "extends": [

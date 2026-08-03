@@ -1,0 +1,9 @@
+{
+  "concept": "the tape",
+  "status": "accepted",
+  "ratified": "2026-08-03 — founder-approved editorial-ambition package; concept pre-existed in the corpus",
+  "introducedIn": "gong-alternative-without-recording",
+  "canonicalExplanation": "A recording is not a feature — it is an artifact. The tape exists on a server the rep doesn't control, can be replayed, subpoenaed, or discovered, and outlives the conversation it captured. Swapping vendors doesn't remove the tape; only not making one does.",
+  "reuseWhen": ["recording risk", "legal exposure", "vendor comparisons", "privacy positioning"],
+  "avoidWhen": ["contexts where recording is genuinely required by the customer's compliance regime"]
+}

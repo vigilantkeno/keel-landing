@@ -1,0 +1,12 @@
+{
+  "keyword": "BYOAI sales",
+  "tier": "coverage",
+  "archetype": "problem-deep-dive",
+  "uniqueAngle": {
+    "existingConsensus": "AI adoption in sales is a top-down rollout: the company evaluates, procures, and deploys one tool for everyone.",
+    "keelClaim": "AI is entering sales floors bottom-up — reps are bringing their own AI the way developers brought their own devices, and policy is lagging the behavior by years.",
+    "supportingReason": "Adoption follows individual utility, not procurement cycles. When a twenty-dollar personal tool outperforms the sanctioned stack for a rep's own quota, the rep adopts first and asks never."
+  },
+  "beliefShift": null,
+  "originalAsset": null
+}
