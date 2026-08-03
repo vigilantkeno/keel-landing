@@ -1,0 +1,8 @@
+{
+  "id": "truth-unrecorded-decision",
+  "layout": "truth",
+  "series": "Sales truths",
+  "line1": "Recording captured every word.",
+  "line2": "It missed the decision.",
+  "source": { "type": "memory", "id": "the-unrecordable-moment" }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "carousel-deal-review",
+  "layout": "carousel",
+  "series": "Field notes",
+  "source": {
+    "type": "angle",
+    "id": "deal-reflection-framework"
+  },
+  "slides": [
+    {
+      "type": "hook",
+      "text": "The deal review is a performance."
+    },
+    {
+      "type": "claim",
+      "text": "Pipeline meetings score confidence. Nobody diagnoses anything in front of a scorecard."
+    },
+    {
+      "type": "claim",
+      "text": "The real review happens earlier. Alone. Before anyone asks."
+    },
+    {
+      "type": "claim",
+      "text": "The meeting is the performance. The reflection is the work.",
+      "accentSentence": 1
+    },
+    {
+      "type": "close",
+      "text": "Seven questions to run before your next pipeline meeting \u2014 on the blog."
+    }
+  ]
+}
