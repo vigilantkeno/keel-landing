@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "rep-quitting-over-ai-monitoring",
+  "sourceCandidate": "rep-quitting-over-ai-monitoring-1-39b1.png",
+  "normalizedAt": "2026-08-03T15:56:59.834Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "An office corridor at dusk seen through a glass partition, one workstation lit while the rest of the floor sits dark, a closed laptop and an access badge on the desk, straight-on elevation from the corridor looking in, hard late light from a window off to one side, a single ember-orange indicator dot glowing on the closed laptop's edge, wide dark margin along the left third for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "An office corridor at dusk seen through a glass partition, one workstation lit while the rest of the floor sits dark, a closed laptop and an access badge on the desk, straight-on elevation from the corridor looking in, hard late light from a window off to one side, a single ember-orange indicator dot glowing on the closed laptop's edge, wide dark margin along the left third for headline overlay"
+}

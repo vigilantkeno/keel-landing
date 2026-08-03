@@ -112,6 +112,20 @@
       "supporting": [],
       "intent": "commercial",
       "description": "Structured after-the-fact review of a deal that closed lost — separating the reason a rep logs from what actually happened."
+    },
+    {
+      "id": "deal-reflection",
+      "pillar": "deal-reflection-framework",
+      "supporting": [],
+      "intent": "informational",
+      "description": "Private, structured self-review of an open deal before anyone else grades it — the rep's own interrogation, run ahead of the manager-facing version."
+    },
+    {
+      "id": "rep-burnout",
+      "pillar": "rep-quitting-over-ai-monitoring",
+      "supporting": [],
+      "intent": "informational",
+      "description": "Attrition and burnout driven by surveillance-style sales tooling — the quiet cost of converting selling into being evaluated."
     }
   ]
 }

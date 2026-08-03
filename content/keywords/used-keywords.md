@@ -62,3 +62,5 @@ post that covers it).
 | 2026-08-02 | AI for relationship selling | AI for relationship sellers | ai-for-relationship-selling | PUBLISHED |
 | 2026-08-03 | AI for new sales rep | AI for new sales hire; new AE ramp; first 90 days AE; sales rep first 90 days | ai-for-new-sales-rep | PUBLISHED |
 | 2026-08-03 | personal CRM for sales rep | personal CRM for one person; solo CRM for sales | personal-crm-for-sales-rep | PUBLISHED |
+| 2026-08-03 | deal reflection framework | how to think about a deal; deal stress test questions; deal walk through AI; AE self-deal review | deal-reflection-framework | PUBLISHED |
+| 2026-08-03 | rep quitting over AI monitoring | sales rep burnout AI monitoring; sales rep burnout from monitoring | rep-quitting-over-ai-monitoring | PUBLISHED |
