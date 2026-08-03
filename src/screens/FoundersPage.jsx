@@ -100,28 +100,38 @@ export default function FoundersPage() {
             letterSpacing: "0.22em", marginTop: 10, marginBottom: mobile ? 28 : 36 }}>
             KEEP IT SIMPLE, SARA
           </div>
-          <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "center",
+          {/* Both glyphs are centered inside an identical-height box, so the
+              captions line up and the icons share one horizontal center
+              line. The handset needs a nudge on top of that: its path only
+              spans y≈6–35 of the 48-unit viewBox, so its optical center
+              sits ~3.5 units above the box center — scaled, that's the
+              translateY below. Without it the phone floats high. */}
+          <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center",
             gap: mobile ? 32 : 56, marginBottom: mobile ? 24 : 32 }}>
             {/* Phone — a rep calls Sara. Hand-drawn, not from an icon set.
                 Sized up ~1.35x vs chat: the handset glyph only fills about
                 half its own viewBox, so an identical width/height renders
                 visibly smaller than the chat glyph despite the same box. */}
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
-              <svg width={mobile ? 54 : 75} height={mobile ? 54 : 75} viewBox="0 0 48 48" fill="none"
-                aria-hidden="true">
-                <path d="M15 8c2 0 4 4 4 6s-2 3-2 4c1 3 4 6 7 7 1 0 2-2 4-2s6 2 6 4-3 5-5 5c-8 0-19-11-19-19 0-2 3-5 5-5Z"
-                  stroke={O} strokeWidth="2" strokeLinejoin="round" />
-              </svg>
+              <div style={{ height: mobile ? 54 : 75, display: "flex", alignItems: "center" }}>
+                <svg width={mobile ? 54 : 75} height={mobile ? 54 : 75} viewBox="0 0 48 48" fill="none"
+                  aria-hidden="true" style={{ transform: `translateY(${mobile ? 4 : 5.5}px)` }}>
+                  <path d="M15 8c2 0 4 4 4 6s-2 3-2 4c1 3 4 6 7 7 1 0 2-2 4-2s6 2 6 4-3 5-5 5c-8 0-19-11-19-19 0-2 3-5 5-5Z"
+                    stroke={O} strokeWidth="2" strokeLinejoin="round" />
+                </svg>
+              </div>
               <div style={{ fontFamily: F.mono, fontSize: mobile ? 9 : 10, color: MICRO,
                 letterSpacing: "0.18em" }}>CALL HER</div>
             </div>
             {/* Chat — a rep texts Sara. */}
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
-              <svg width={mobile ? 40 : 56} height={mobile ? 40 : 56} viewBox="0 0 48 48" fill="none"
-                aria-hidden="true">
-                <rect x="6" y="8" width="36" height="24" rx="4" stroke={O} strokeWidth="2" />
-                <path d="M14 32v8l10-8" stroke={O} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
-              </svg>
+              <div style={{ height: mobile ? 54 : 75, display: "flex", alignItems: "center" }}>
+                <svg width={mobile ? 40 : 56} height={mobile ? 40 : 56} viewBox="0 0 48 48" fill="none"
+                  aria-hidden="true">
+                  <rect x="6" y="8" width="36" height="24" rx="4" stroke={O} strokeWidth="2" />
+                  <path d="M14 32v8l10-8" stroke={O} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+                </svg>
+              </div>
               <div style={{ fontFamily: F.mono, fontSize: mobile ? 9 : 10, color: MICRO,
                 letterSpacing: "0.18em" }}>TEXT HER</div>
             </div>
