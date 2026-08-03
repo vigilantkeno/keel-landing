@@ -25,6 +25,29 @@
             "profileVisits": null,
             "qualitativeNote": null
           }
+        },
+        {
+          "spec": "nwtd-shadow-map",
+          "sourceClaim": "shadow-it-as-a-map",
+          "series": "Nobody writes this down",
+          "format": "image",
+          "platform": "facebook",
+          "account": "Keel - AI for Sales Reps (pageId 1153992504473553)",
+          "captionVariant": "facebook",
+          "publishState": "published",
+          "publishedAt": "2026-08-03",
+          "publisher": "native-business-suite",
+          "postSubmissionId": null,
+          "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02tKncXTw6kgvnQYoUjSj4bUMop9FKbGLWzviQE9HZTNQA7Gfs9yYpTbB2wjL8zi9Pl&id=61592915756441",
+          "notes": "First FB Page post, published natively by the founder per warm-up ramp week 1. Ramp continues native through week 2.",
+          "analytics": {
+            "saves": null,
+            "shares": null,
+            "comments": null,
+            "clicks": null,
+            "profileVisits": null,
+            "qualitativeNote": null
+          }
         }
       ]
     }
