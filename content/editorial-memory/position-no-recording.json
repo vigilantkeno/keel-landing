@@ -1,0 +1,9 @@
+{
+  "concept": "Not recording is a design choice, not a limitation",
+  "type": "position",
+  "status": "candidate",
+  "introducedIn": "gong-alternative-without-recording",
+  "canonicalExplanation": "Keel doesn't record, transcribe, or store customer conversations — by design. The rep's own account of what happened, spoken or typed afterward, is the source of truth. No tape means no artifact to subpoena, no consent question, and nothing for a compliance team to review.",
+  "reuseWhen": ["privacy positioning", "regulated verticals", "recording critiques"],
+  "avoidWhen": ["claiming compliance certifications — structural facts only, verified by the buyer's own team"]
+}

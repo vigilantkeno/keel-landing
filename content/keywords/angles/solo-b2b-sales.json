@@ -1,0 +1,14 @@
+{
+  "keyword": "solo b2b sales",
+  "slug": "solo-b2b-sales",
+  "legacyBackfill": true,
+  "tier": "coverage",
+  "archetype": "problem-deep-dive",
+  "uniqueAngle": {
+    "existingConsensus": "B2B selling presumes a team: SDRs feeding AEs, managers coaching, ops maintaining systems.",
+    "keelClaim": "A solo seller runs every role at once, and the tooling assumption of a supporting cast is the hidden tax on every system they touch.",
+    "supportingReason": "Every workflow built for handoffs becomes overhead when the same person is both sides of the handoff."
+  },
+  "beliefShift": null,
+  "originalAsset": null
+}

@@ -1,0 +1,14 @@
+{
+  "keyword": "lost deal analysis",
+  "slug": "lost-deal-analysis",
+  "legacyBackfill": true,
+  "tier": "coverage",
+  "archetype": "framework-driven",
+  "uniqueAngle": {
+    "existingConsensus": "Lost-deal reviews are CRM hygiene: pick a loss reason from the dropdown and move on.",
+    "keelClaim": "The dropdown hides the lesson \u2014 a real post-mortem interrogates what you knew and when, and most losses were visible earlier than anyone admits.",
+    "supportingReason": "Loss reasons chosen for reporting convenience erase the pattern a rep could actually learn from."
+  },
+  "beliefShift": null,
+  "originalAsset": null
+}

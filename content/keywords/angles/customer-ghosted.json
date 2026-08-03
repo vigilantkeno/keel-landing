@@ -1,0 +1,14 @@
+{
+  "keyword": "customer ghosted",
+  "slug": "customer-ghosted",
+  "legacyBackfill": true,
+  "tier": "coverage",
+  "archetype": "framework-driven",
+  "uniqueAngle": {
+    "existingConsensus": "A silent customer is a lost customer; move on.",
+    "keelClaim": "Silence is ambiguous, not conclusive \u2014 a ghosted deal is a diagnostic problem before it is a pipeline verdict.",
+    "supportingReason": "Timing, internal politics, and unresolved risk all read as silence; each has a different correct response."
+  },
+  "beliefShift": null,
+  "originalAsset": null
+}

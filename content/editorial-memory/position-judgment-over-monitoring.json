@@ -1,0 +1,9 @@
+{
+  "concept": "Tools should improve judgment, not monitor activity",
+  "type": "position",
+  "status": "candidate",
+  "introducedIn": "gong-anxiety",
+  "canonicalExplanation": "Keel rejects the premise that watching reps more closely makes them better. Honest thinking requires the absence of an audience; a rep who is being scored performs confidence instead of diagnosing deals. The product exists to sharpen judgment in private, not to report on it.",
+  "reuseWhen": ["surveillance critiques", "coaching philosophy", "culture arguments"],
+  "avoidWhen": ["attacking managers as people — the critique is structural, about tooling incentives"]
+}

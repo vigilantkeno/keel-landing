@@ -1,0 +1,10 @@
+{
+  "concept": "The reflection is the work.",
+  "type": "aphorism",
+  "status": "accepted",
+  "ratified": "2026-08-03 — named a first-class reusable brand statement in the founder-approved S0 judgment ruling",
+  "introducedIn": "deal-reflection-framework",
+  "canonicalExplanation": "The meeting is the performance; the reflection is the work. Pipeline reviews score confidence — the review that changes a deal happens privately, before anyone asks.",
+  "reuseWhen": ["deal reviews", "pipeline meetings", "post-call habits", "social brand statements"],
+  "avoidWhen": ["contexts that would trivialize it into a productivity tip"]
+}

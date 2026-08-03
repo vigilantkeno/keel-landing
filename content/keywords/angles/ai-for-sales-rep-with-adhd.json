@@ -1,0 +1,14 @@
+{
+  "keyword": "ai for sales rep with adhd",
+  "slug": "ai-for-sales-rep-with-adhd",
+  "legacyBackfill": true,
+  "tier": "coverage",
+  "archetype": "problem-deep-dive",
+  "uniqueAngle": {
+    "existingConsensus": "Sales admin problems are discipline problems: use the CRM more consistently.",
+    "keelClaim": "The tooling assumes a brain that holds thoughts until a form appears \u2014 for an ADHD rep the gap between insight and capture is where everything falls out, and that is a design flaw, not a character flaw.",
+    "supportingReason": "Sales rewards ADHD strengths in the room and punishes the between-moments; capture must move to the moment of insight."
+  },
+  "beliefShift": null,
+  "originalAsset": null
+}

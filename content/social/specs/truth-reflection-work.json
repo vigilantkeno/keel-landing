@@ -1,0 +1,8 @@
+{
+  "id": "truth-reflection-work",
+  "layout": "truth",
+  "series": "Sales truths",
+  "line1": "The meeting is the performance.",
+  "line2": "The reflection is the work.",
+  "source": { "type": "memory", "id": "the-reflection-is-the-work" }
+}
