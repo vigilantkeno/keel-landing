@@ -64,3 +64,32 @@ Rendered specs (all from ACCEPTED memory records unless noted):
 Captions for all rendered specs: `captions/samples.md` (IG + FB pairs,
 banned-claims-clean). Spec #1 renders but must not publish before its
 aphorism's status flip.
+
+## Warm-up ramp (adopted 2026-08-03 — new-account flag risk)
+
+Blotato's own guidance: brand-new Pages posting via API get flagged.
+The Keel FB Page is brand-new and IG is young, so the 14-day seed
+stretches into a ~5-week ramp. Rules:
+
+1. **Week 1 — native only.** 2 posts, published manually by the founder
+   in Meta Business Suite (no API). Founder also does ordinary human
+   things: follow a handful of relevant pages, like/reply from the Page,
+   fill every profile field. No Blotato calls to Meta this week.
+2. **Week 2 — native, 2-3 posts.** Still Business Suite. Off-hour,
+   human-looking times (never :00 on the hour).
+3. **Week 3+ — Blotato allowed.** Max 3 posts/week, never more than one
+   per day, IG and FB staggered by hours (variants are already
+   never-identical by contract).
+4. **Never** burst-backfill the library, and never schedule a batch
+   that posts at identical minute-offsets — that is the API signature
+   the heuristics catch.
+5. The library is evergreen claims; there is no freshness deadline.
+   Slow costs nothing.
+
+Publishing remains per-batch founder-approved regardless of channel.
+
+Connected state (2026-08-03): FB Page "Keel - AI for Sales Reps"
+pageId 1153992504473553 via Blotato connection 44460;
+IG @getkeel.io (62742, story/reel mediaType — feed/carousel support
+unverified, Business Suite is the fallback). Old empty FB connection
+44454 to be removed in the Blotato dashboard.
