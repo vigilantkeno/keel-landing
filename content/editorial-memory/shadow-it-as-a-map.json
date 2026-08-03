@@ -1,0 +1,9 @@
+{
+  "concept": "shadow IT as a map",
+  "status": "accepted",
+  "ratified": "2026-08-03 — founder-approved editorial-ambition package; concept pre-existed in the corpus",
+  "introducedIn": "shadow-it-sales-reps",
+  "canonicalExplanation": "Unsanctioned tools aren't reps going rogue — they're reps drawing a map of every place the sanctioned stack failed them badly enough that they built their own. Read the map instead of confiscating it.",
+  "reuseWhen": ["BYOAI", "unsanctioned tools", "IT policy", "why reps route around official stacks"],
+  "avoidWhen": ["genuine data-exfiltration or security-incident contexts — the metaphor must not excuse real breaches"]
+}

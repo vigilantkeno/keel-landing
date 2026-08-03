@@ -71,6 +71,22 @@ any external knowledge base, project context, or connector.
    - Cluster: use an existing cluster from `clusters.json`, or add a
      new cluster entry in the same commit (respect the
      one-pillar-per-cluster rule).
+   - EDITORIAL AMBITION (contract §4c): before writing, check
+     `content/keywords/angles/<keyword>.json`. If it exists: the
+     article's thesis IS uniqueAngle.keelClaim, argued against
+     existingConsensus via supportingReason; declare the record's
+     archetype in frontmatter as `archetype`; include the
+     originalAsset when non-null; honor beliefShift when non-null.
+     If tier is "reference" or "flagship", DO NOT write it headless —
+     skip the row like HOLD-WEB and report it for a supervised
+     session. Rows without an angle record are legacy — write as
+     before (records are backfilled at queue refill). Always consult
+     `content/editorial-memory/`: reuse accepted records'
+     canonicalExplanation phrasing for established concepts, respect
+     avoidWhen, and when you coin a genuinely new concept, add a
+     `status: "candidate"` record in the same commit — NEVER
+     "accepted"; only the founder ratifies. Declare angle + archetype
+     in the PR description.
    - MOBILE RHYTHM (contract §4b, gate-enforced): default paragraph is
      1-2 sentences; 3 is the ceiling; never 4+ sentences or 90+ words.
      Post-level: mean <=2.2 sentences/paragraph, at least ~15%
