@@ -60,3 +60,5 @@ post that covers it).
 | 2026-08-02 | AI for sales rep introverts | AI for introverted sales; sales tools for introverts; introvert-friendly sales AI; Gong for introverts | ai-for-sales-rep-introverts | PUBLISHED |
 | 2026-08-02 | lost deal analysis | post-mortem on a lost deal; why did we lose this deal; lost deal review; deal autopsy | lost-deal-analysis | PUBLISHED |
 | 2026-08-02 | AI for relationship selling | AI for relationship sellers | ai-for-relationship-selling | PUBLISHED |
+| 2026-08-03 | AI for new sales rep | AI for new sales hire; new AE ramp; first 90 days AE; sales rep first 90 days | ai-for-new-sales-rep | PUBLISHED |
+| 2026-08-03 | personal CRM for sales rep | personal CRM for one person; solo CRM for sales | personal-crm-for-sales-rep | PUBLISHED |

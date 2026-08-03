@@ -29,13 +29,15 @@ exist soon" links, ever. When the generator can fetch, treat
 the committed snapshot.
 
 <!-- ALLOWLIST:BEGIN -->
-**Live as of 2026-08-02** (regenerate: `npm run content:contract`):
+**Live as of 2026-08-03** (regenerate: `npm run content:contract`):
 
 | Path | Piece |
 |---|---|
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
 | `/founders` | CTA target — temporary redirect to `/` until the real page ships |
+| `/blog/personal-crm-for-sales-rep` | A Personal CRM for Sales Reps: What the Company Record Never Asks For |
+| `/blog/ai-for-new-sales-rep` | AI for the New Sales Rep: Built for the First 90 Days, Not the Tenth Quarter |
 | `/blog/ai-for-relationship-selling` | AI for Relationship Selling: Built for the Deal That Takes a Year, Not One Call |
 | `/blog/lost-deal-analysis` | Lost Deal Analysis: What Actually Killed the Deal, Not What You Told Your Manager (pillar) |
 | `/blog/ai-for-sales-rep-introverts` | AI for the Introverted Sales Rep: Built for How You Actually Recharge |
