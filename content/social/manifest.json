@@ -1,4 +1,32 @@
 {
-  "$comment": "Social publication ledger — see SOCIAL.md. Append-only; analytics fields fill post-publication.",
-  "campaigns": {}
+  "$comment": "Social publication ledger \u2014 see SOCIAL.md. Append-only; analytics fields fill post-publication.",
+  "campaigns": {
+    "meta-seed-2026-08": {
+      "posts": [
+        {
+          "spec": "truth-nobody-writes",
+          "sourceClaim": "aphorism-nobody-writes-this-down",
+          "series": "Sales Truths",
+          "format": "reel",
+          "platform": "instagram",
+          "account": "@getkeel.io",
+          "captionVariant": "instagram",
+          "publishState": "published",
+          "publishedAt": "2026-08-03",
+          "publisher": "blotato",
+          "postSubmissionId": "4bc3f09e-8c1c-45df-bcd9-182879848c85",
+          "url": "https://www.instagram.com/reel/DbloqU3CCab/",
+          "notes": "First live post. Founder-approved one-off ahead of the week-1 native window (founder call, 2026-08-03). Cover = final frame; silent reel; shareToFeed on.",
+          "analytics": {
+            "saves": null,
+            "shares": null,
+            "comments": null,
+            "clicks": null,
+            "profileVisits": null,
+            "qualitativeNote": null
+          }
+        }
+      ]
+    }
+  }
 }
