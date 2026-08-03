@@ -1,0 +1,18 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "personal-crm-for-sales-rep",
+  "sourceCandidate": "personal-crm-for-sales-rep-1-55d3.png",
+  "normalizedAt": "2026-08-03T08:21:05.750Z",
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A fanned stack of manila and bone index cards on black, macro three-quarter crop running out of frame, hard side light from the left, one ember-orange tab standing proud above the rest of the stack, faint white dot-matrix embossed on the front card, right third of the frame empty, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A fanned stack of manila and bone index cards on black, macro three-quarter crop running out of frame, hard side light from the left, one ember-orange tab standing proud above the rest of the stack, faint white dot-matrix embossed on the front card, right third of the frame empty"
+}
