@@ -99,7 +99,7 @@
     },
     {
       "id": "byoai-shadow-ai",
-      "pillar": null,
+      "pillar": "byoai-sales",
       "supporting": [
         "ai-for-sales-reps-that-thinks-with-you"
       ],

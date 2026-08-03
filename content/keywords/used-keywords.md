@@ -64,3 +64,4 @@ post that covers it).
 | 2026-08-03 | personal CRM for sales rep | personal CRM for one person; solo CRM for sales | personal-crm-for-sales-rep | PUBLISHED |
 | 2026-08-03 | deal reflection framework | how to think about a deal; deal stress test questions; deal walk through AI; AE self-deal review | deal-reflection-framework | PUBLISHED |
 | 2026-08-03 | rep quitting over AI monitoring | sales rep burnout AI monitoring; sales rep burnout from monitoring | rep-quitting-over-ai-monitoring | PUBLISHED |
+| 2026-08-03 | BYOAI sales | BYOAI sales rep; shadow AI in sales; reps using personal AI; AI tool my manager can't see; shadow AI | byoai-sales | PUBLISHED |
