@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "byoai-sales",
+  "sourceCandidate": "byoai-sales-1-ca6d.png",
+  "normalizedAt": "2026-08-03T20:29:28.633Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A desk split cleanly down the middle, left half a closed corporate laptop in shadow, right half a phone propped upright with its screen lit, straight-on elevation, hard light falling only across the right half, a single ember-orange rectangular panel glowing from the phone's screen, the boundary between the two halves a thin hard-edged line, wide dark margin above for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A desk split cleanly down the middle, left half a closed corporate laptop in shadow, right half a phone propped upright with its screen lit, straight-on elevation, hard light falling only across the right half, a single ember-orange rectangular panel glowing from the phone's screen, the boundary between the two halves a thin hard-edged line, wide dark margin above for headline overlay"
+}
