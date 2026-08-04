@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "human",
+  "slug": "ai-for-hallway-conversations",
+  "sourceCandidate": "ai-for-hallway-conversations-1-95bf.png",
+  "normalizedAt": "2026-08-04T08:18:22.118Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Two suited silhouettes paused at eye level in a dim corridor, one glancing back mid-sentence toward the other, single-point perspective receding down the hallway to a far ember-orange doorway standing open, hard directional light spilling long across the floor from that doorway, wide dark negative space to the left of the pair, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Two suited silhouettes paused at eye level in a dim corridor, one glancing back mid-sentence toward the other, single-point perspective receding down the hallway to a far ember-orange doorway standing open, hard directional light spilling long across the floor from that doorway, wide dark negative space to the left of the pair"
+}
