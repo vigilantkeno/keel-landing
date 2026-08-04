@@ -37,7 +37,8 @@
       "id": "field-sales-ai",
       "pillar": "in-person-sales-meeting-ai",
       "supporting": [
-        "ai-for-relationship-selling"
+        "ai-for-relationship-selling",
+        "ai-for-industrial-sales"
       ],
       "intent": "informational",
       "description": "AI for in-person, field-heavy selling where no screen or recording device is present."
@@ -76,7 +77,8 @@
       "id": "founder-led-sales",
       "pillar": "founder-to-first-ae",
       "supporting": [
-        "solo-b2b-sales"
+        "solo-b2b-sales",
+        "founder-led-sales-tools"
       ],
       "intent": "commercial",
       "description": "Founders selling solo and the transition to a first sales hire \u2014 the judgment that has to transfer, not just the process."

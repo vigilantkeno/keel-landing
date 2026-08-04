@@ -67,3 +67,5 @@ post that covers it).
 | 2026-08-03 | BYOAI sales | BYOAI sales rep; shadow AI in sales; reps using personal AI; AI tool my manager can't see; shadow AI | byoai-sales | PUBLISHED |
 | 2026-08-04 | drive home from sales meeting | parking lot debrief sales; drive-home debrief method; in-the-car debrief | drive-home-from-sales-meeting | PUBLISHED |
 | 2026-08-04 | AI for hallway conversations | AI for informal conversations; AI for coffee chat; AI for lunch meeting; AI for casual conversations; AI for off-the-cuff conversations | ai-for-hallway-conversations | PUBLISHED |
+| 2026-08-04 | founder-led sales tools | founder sales tools; founder doing it all | founder-led-sales-tools | PUBLISHED |
+| 2026-08-04 | AI for industrial sales | AI for B2B field sales; AI for off-the-grid sales | ai-for-industrial-sales | PUBLISHED |
