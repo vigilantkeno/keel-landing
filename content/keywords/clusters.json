@@ -126,6 +126,13 @@
       "supporting": [],
       "intent": "informational",
       "description": "Attrition and burnout driven by surveillance-style sales tooling — the quiet cost of converting selling into being evaluated."
+    },
+    {
+      "id": "drive-home-debrief",
+      "pillar": "drive-home-from-sales-meeting",
+      "supporting": [],
+      "intent": "informational",
+      "description": "The unscheduled minutes right after a meeting ends — parking lot, car, hallway — where the read on what happened is sharpest and a desk-bound CRM entry always arrives too late."
     }
   ]
 }
