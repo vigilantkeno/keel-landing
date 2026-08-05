@@ -69,3 +69,5 @@ post that covers it).
 | 2026-08-04 | AI for hallway conversations | AI for informal conversations; AI for coffee chat; AI for lunch meeting; AI for casual conversations; AI for off-the-cuff conversations | ai-for-hallway-conversations | PUBLISHED |
 | 2026-08-04 | founder-led sales tools | founder sales tools; founder doing it all | founder-led-sales-tools | PUBLISHED |
 | 2026-08-04 | AI for industrial sales | AI for B2B field sales; AI for off-the-grid sales | ai-for-industrial-sales | PUBLISHED |
+| 2026-08-05 | deal review without manager | pipeline review without manager; before the deal review what to think about; deal health check AE | deal-review-without-manager | PUBLISHED |
+| 2026-08-05 | sales rep privacy concerns | keeping a sales conversation off the record; honest sales conversations | sales-rep-privacy-concerns | PUBLISHED |

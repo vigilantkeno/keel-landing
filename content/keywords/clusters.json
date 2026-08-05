@@ -51,7 +51,8 @@
         "two-party-consent-states-sales-calls",
         "shadow-it-sales-reps",
         "gong-alternative-without-recording",
-        "ai-sales-tool-no-manager-reporting"
+        "ai-sales-tool-no-manager-reporting",
+        "sales-rep-privacy-concerns"
       ],
       "intent": "informational",
       "description": "The rep-side cost of call recording and scoring \u2014 anxiety, legal exposure, scorecard distortion, and the private alternative."
@@ -118,7 +119,9 @@
     {
       "id": "deal-reflection",
       "pillar": "deal-reflection-framework",
-      "supporting": [],
+      "supporting": [
+        "deal-review-without-manager"
+      ],
       "intent": "informational",
       "description": "Private, structured self-review of an open deal before anyone else grades it — the rep's own interrogation, run ahead of the manager-facing version."
     },

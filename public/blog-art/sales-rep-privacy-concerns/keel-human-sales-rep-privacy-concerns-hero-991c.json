@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "human",
+  "slug": "sales-rep-privacy-concerns",
+  "sourceCandidate": "sales-rep-privacy-concerns-1-991c.png",
+  "normalizedAt": "2026-08-05T14:43:19.859Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single silhouetted figure seen through a lit interior window from a dark corridor outside, straight-on elevation, the window's bone-white glow the only lit plane in the frame, one small ember-orange panel glowing on a surface just inside the glass under the figure's hand, the outer two-thirds of the frame in near-black, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single silhouetted figure seen through a lit interior window from a dark corridor outside, straight-on elevation, the window's bone-white glow the only lit plane in the frame, one small ember-orange panel glowing on a surface just inside the glass under the figure's hand, the outer two-thirds of the frame in near-black"
+}
