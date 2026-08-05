@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "ai-for-industrial-sales",
+  "sourceCandidate": "ai-for-industrial-sales-1-f989.png",
+  "normalizedAt": "2026-08-04T19:46:25.989Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A tall industrial catwalk and steel gantry rising through several stories of a dark plant interior, straight-on low-angle viewpoint looking up, one hard shaft of daylight cutting down from a high skylight, a single thin ember-orange indicator line running the length of a control panel rail at the base, the upper structure fading to near-black, wide empty space above, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A tall industrial catwalk and steel gantry rising through several stories of a dark plant interior, straight-on low-angle viewpoint looking up, one hard shaft of daylight cutting down from a high skylight, a single thin ember-orange indicator line running the length of a control panel rail at the base, the upper structure fading to near-black, wide empty space above"
+}
