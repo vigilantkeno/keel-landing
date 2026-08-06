@@ -71,3 +71,5 @@ post that covers it).
 | 2026-08-04 | AI for industrial sales | AI for B2B field sales; AI for off-the-grid sales | ai-for-industrial-sales | PUBLISHED |
 | 2026-08-05 | deal review without manager | pipeline review without manager; before the deal review what to think about; deal health check AE | deal-review-without-manager | PUBLISHED |
 | 2026-08-05 | sales rep privacy concerns | keeping a sales conversation off the record; honest sales conversations | sales-rep-privacy-concerns | PUBLISHED |
+| 2026-08-06 | customer said call back next quarter | customer said no budget; customer said they're interested; customer said call me back | customer-said-call-back-next-quarter | PUBLISHED |
+| 2026-08-06 | champion stopped responding | champion changed roles; champion got fired | champion-stopped-responding | PUBLISHED |
