@@ -22,7 +22,10 @@
     {
       "id": "deal-memory-drift",
       "pillar": "customer-ghosted",
-      "supporting": [],
+      "supporting": [
+        "customer-said-call-back-next-quarter",
+        "champion-stopped-responding"
+      ],
       "intent": "informational",
       "description": "Champions going quiet, buyers never engaged, context lost between calls."
     },
@@ -69,7 +72,9 @@
       "pillar": "ai-for-sales-rep-with-adhd",
       "supporting": [
         "ai-for-sales-rep-introverts",
-        "ai-for-new-sales-rep"
+        "ai-for-new-sales-rep",
+        "ai-for-sales-rep-who-hates-cold-calling",
+        "ai-for-struggling-sales-rep"
       ],
       "intent": "commercial",
       "description": "Specific AE personas \u2014 ADHD, introverts, new hires, reps who hate cold calling \u2014 where generic sales AI misses persona-specific friction."

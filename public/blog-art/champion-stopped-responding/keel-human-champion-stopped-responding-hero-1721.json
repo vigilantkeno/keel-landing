@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "human",
+  "slug": "champion-stopped-responding",
+  "sourceCandidate": "champion-stopped-responding-1-1721.png",
+  "normalizedAt": "2026-08-06T08:17:14.820Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Two silhouetted figures at a long table in a dim glass-walled room, seen from the dark corridor outside, one chair pushed back and empty on the near side, straight-on elevation, the room's single bone-white wall the only lit plane, a phone lying face-down on the table with a thin ember-orange line of light escaping from beneath it, the outer frame falling to near-black, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Two silhouetted figures at a long table in a dim glass-walled room, seen from the dark corridor outside, one chair pushed back and empty on the near side, straight-on elevation, the room's single bone-white wall the only lit plane, a phone lying face-down on the table with a thin ember-orange line of light escaping from beneath it, the outer frame falling to near-black"
+}
