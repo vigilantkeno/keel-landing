@@ -75,3 +75,5 @@ post that covers it).
 | 2026-08-06 | champion stopped responding | champion changed roles; champion got fired | champion-stopped-responding | PUBLISHED |
 | 2026-08-06 | AI for sales rep who hates cold calling | AI for warm outreach; sales rep relationship focus | ai-for-sales-rep-who-hates-cold-calling | PUBLISHED |
 | 2026-08-06 | AI for struggling sales rep | — | ai-for-struggling-sales-rep | PUBLISHED |
+| 2026-08-07 | what to do after a sales meeting in person | field sales reflection after a meeting; 5 minute sales debrief | what-to-do-after-a-sales-meeting-in-person | PUBLISHED |
+| 2026-08-07 | after the call AI for sales | — | after-the-call-ai-for-sales | PUBLISHED |

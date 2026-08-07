@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "what-to-do-after-a-sales-meeting-in-person",
+  "sourceCandidate": "what-to-do-after-a-sales-meeting-in-person-1-58ff.png",
+  "normalizedAt": "2026-08-07T08:20:49.934Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "An empty office corridor seen straight-on in three-quarter perspective, cool grey walls and a polished concrete floor receding toward a half-open door at the far end, the door's gap glowing warm ember-orange and spilling a thin wedge of light across the floor, no figures, wide bone-toned ceiling panel catching the cool light overhead, left third of the frame empty, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "An empty office corridor seen straight-on in three-quarter perspective, cool grey walls and a polished concrete floor receding toward a half-open door at the far end, the door's gap glowing warm ember-orange and spilling a thin wedge of light across the floor, no figures, wide bone-toned ceiling panel catching the cool light overhead, left third of the frame empty"
+}

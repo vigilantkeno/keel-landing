@@ -4,7 +4,9 @@
     {
       "id": "unrecordable-moments",
       "pillar": "what-call-recording-cant-capture",
-      "supporting": [],
+      "supporting": [
+        "after-the-call-ai-for-sales"
+      ],
       "intent": "informational",
       "description": "Deal context that happens where no meeting bot can follow."
     },
@@ -140,7 +142,9 @@
     {
       "id": "drive-home-debrief",
       "pillar": "drive-home-from-sales-meeting",
-      "supporting": [],
+      "supporting": [
+        "what-to-do-after-a-sales-meeting-in-person"
+      ],
       "intent": "informational",
       "description": "The unscheduled minutes right after a meeting ends — parking lot, car, hallway — where the read on what happened is sharpest and a desk-bound CRM entry always arrives too late."
     }
