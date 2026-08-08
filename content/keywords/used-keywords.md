@@ -77,3 +77,5 @@ post that covers it).
 | 2026-08-06 | AI for struggling sales rep | — | ai-for-struggling-sales-rep | PUBLISHED |
 | 2026-08-07 | what to do after a sales meeting in person | field sales reflection after a meeting; 5 minute sales debrief | what-to-do-after-a-sales-meeting-in-person | PUBLISHED |
 | 2026-08-07 | after the call AI for sales | — | after-the-call-ai-for-sales | PUBLISHED |
+| 2026-08-08 | privacy-first AI for sales | AI sales tool compliance | privacy-first-ai-for-sales | PUBLISHED |
+| 2026-08-08 | phone sales AI no recording | phone prospecting without recording; AI for phone sales rep; phone sales follow up | phone-sales-ai-no-recording | PUBLISHED |

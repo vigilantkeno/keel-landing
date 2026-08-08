@@ -29,13 +29,30 @@ exist soon" links, ever. When the generator can fetch, treat
 the committed snapshot.
 
 <!-- ALLOWLIST:BEGIN -->
-**Live as of 2026-08-03** (regenerate: `npm run content:contract`):
+**Live as of 2026-08-08** (regenerate: `npm run content:contract`):
 
 | Path | Piece |
 |---|---|
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
 | `/founders` | CTA target — temporary redirect to `/` until the real page ships |
+| `/blog/phone-sales-ai-no-recording` | Phone Sales AI Without Recording: A Framework for the Call Volume, Not the Transcript (pillar) |
+| `/blog/privacy-first-ai-for-sales` | Privacy-First AI for Sales: The One Question That Actually Tests the Label |
+| `/blog/after-the-call-ai-for-sales` | AI for After the Sales Call: The Sixty Seconds Before the Read Fades |
+| `/blog/what-to-do-after-a-sales-meeting-in-person` | What to Do After a Sales Meeting in Person: The Car Was Never the Point |
+| `/blog/ai-for-struggling-sales-rep` | AI for the Struggling Sales Rep: Find the One Stage That's Actually Broken |
+| `/blog/ai-for-sales-rep-who-hates-cold-calling` | AI for the Sales Rep Who Hates Cold Calling: A Framework for Warm Outreach Instead |
+| `/blog/champion-stopped-responding` | Your Champion Stopped Responding? Figure Out Which Kind of Silence This Is First |
+| `/blog/customer-said-call-back-next-quarter` | Customer Said "Call Back Next Quarter"? Here's What That Actually Buys You |
+| `/blog/sales-rep-privacy-concerns` | Sales Rep Privacy Concerns Are Not a Compliance Problem |
+| `/blog/deal-review-without-manager` | Deal Review Without a Manager: The Version You Run Before the Real One |
+| `/blog/ai-for-industrial-sales` | AI for Industrial Sales: The Environment Everyone Assumes Rules It Out |
+| `/blog/founder-led-sales-tools` | Founder-Led Sales Tools: The Framework for What Actually Earns a Seat in Your Stack |
+| `/blog/ai-for-hallway-conversations` | AI for Hallway Conversations: The Ninety Seconds No Meeting Tool Covers |
+| `/blog/drive-home-from-sales-meeting` | The Drive Home From a Sales Meeting Is the Best Debrief You're Skipping (pillar) |
+| `/blog/byoai-sales` | BYOAI Sales: Why Reps Keep Bringing Their Own AI to Work (pillar) |
+| `/blog/rep-quitting-over-ai-monitoring` | Rep Quitting Over AI Monitoring: The Attrition Nobody's Tracking (pillar) |
+| `/blog/deal-reflection-framework` | Deal Reflection Framework: The Seven Questions to Ask Before Your Manager Does (pillar) |
 | `/blog/personal-crm-for-sales-rep` | A Personal CRM for Sales Reps: What the Company Record Never Asks For |
 | `/blog/ai-for-new-sales-rep` | AI for the New Sales Rep: Built for the First 90 Days, Not the Tenth Quarter |
 | `/blog/ai-for-relationship-selling` | AI for Relationship Selling: Built for the Deal That Takes a Year, Not One Call |
