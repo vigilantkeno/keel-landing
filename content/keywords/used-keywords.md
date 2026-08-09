@@ -79,3 +79,5 @@ post that covers it).
 | 2026-08-07 | after the call AI for sales | — | after-the-call-ai-for-sales | PUBLISHED |
 | 2026-08-08 | privacy-first AI for sales | AI sales tool compliance | privacy-first-ai-for-sales | PUBLISHED |
 | 2026-08-08 | phone sales AI no recording | phone prospecting without recording; AI for phone sales rep; phone sales follow up | phone-sales-ai-no-recording | PUBLISHED |
+| 2026-08-09 | voicemail follow up AI | missed call AI follow up; after hours sales follow up | voicemail-follow-up-ai | PUBLISHED |
+| 2026-08-09 | how to reflect on a sales call | sales meeting reflection questions; post-meeting reflection sales rep; self-debrief sales call; sales rep reflection method | how-to-reflect-on-a-sales-call | PUBLISHED |

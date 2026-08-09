@@ -143,7 +143,8 @@
       "id": "drive-home-debrief",
       "pillar": "drive-home-from-sales-meeting",
       "supporting": [
-        "what-to-do-after-a-sales-meeting-in-person"
+        "what-to-do-after-a-sales-meeting-in-person",
+        "how-to-reflect-on-a-sales-call"
       ],
       "intent": "informational",
       "description": "The unscheduled minutes right after a meeting ends — parking lot, car, hallway — where the read on what happened is sharpest and a desk-bound CRM entry always arrives too late."
@@ -151,7 +152,9 @@
     {
       "id": "phone-voicemail",
       "pillar": "phone-sales-ai-no-recording",
-      "supporting": [],
+      "supporting": [
+        "voicemail-follow-up-ai"
+      ],
       "intent": "commercial",
       "description": "High-volume phone prospecting — calls, voicemails, no-answers — where the fix for lost follow-up is a fast spoken note, not a recording of every dial."
     }
