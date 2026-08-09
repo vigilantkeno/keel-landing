@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "voicemail-follow-up-ai",
+  "sourceCandidate": "voicemail-follow-up-ai-1-bade.png",
+  "normalizedAt": "2026-08-09T08:20:11.193Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A spiral-bound call log pad on a dark desk, macro three-quarter crop running out of frame, rows of short hand-drawn dashes marking calls that went to voicemail, hard raking light from one side, a single ember-orange line drawn under one row where a callback was promised, a pen resting beside it, right third of the frame empty, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A spiral-bound call log pad on a dark desk, macro three-quarter crop running out of frame, rows of short hand-drawn dashes marking calls that went to voicemail, hard raking light from one side, a single ember-orange line drawn under one row where a callback was promised, a pen resting beside it, right third of the frame empty"
+}
