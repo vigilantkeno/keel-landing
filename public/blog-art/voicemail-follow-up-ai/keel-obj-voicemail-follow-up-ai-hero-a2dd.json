@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "voicemail-follow-up-ai",
+  "sourceCandidate": "voicemail-follow-up-ai-1-a2dd.png",
+  "normalizedAt": "2026-08-09T17:20:03.307Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A phone dock at night on a dark desk, macro three-quarter crop with the device running slightly out of frame, hard side light from the left, a single ember-orange message-waiting dot glowing on the handset base, a faint white number badge visible but illegible, right third of the frame empty, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A phone dock at night on a dark desk, macro three-quarter crop with the device running slightly out of frame, hard side light from the left, a single ember-orange message-waiting dot glowing on the handset base, a faint white number badge visible but illegible, right third of the frame empty"
+}
