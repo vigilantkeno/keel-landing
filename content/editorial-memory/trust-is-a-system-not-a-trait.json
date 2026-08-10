@@ -1,0 +1,9 @@
+{
+  "concept": "Trust-based selling is a system, not a personality trait",
+  "type": "position",
+  "status": "candidate",
+  "introducedIn": "trust-based-selling",
+  "canonicalExplanation": "Trust-based selling gets misread as a soft skill some reps are naturally better at. It isn't — it's what's left when a sales org removes the incentive to perform for an audience. Give a rep judgment instead of a scorecard, and the honest read on a deal becomes the default output instead of something coached out of them.",
+  "reuseWhen": ["trust culture", "sales autonomy", "surveillance critique", "coaching philosophy"],
+  "avoidWhen": ["contexts arguing trust means no structure or accountability — it's judgment without an audience, not the absence of process"]
+}

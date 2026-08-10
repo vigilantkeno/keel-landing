@@ -29,13 +29,17 @@ exist soon" links, ever. When the generator can fetch, treat
 the committed snapshot.
 
 <!-- ALLOWLIST:BEGIN -->
-**Live as of 2026-08-08** (regenerate: `npm run content:contract`):
+**Live as of 2026-08-10** (regenerate: `npm run content:contract`):
 
 | Path | Piece |
 |---|---|
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
 | `/founders` | CTA target — temporary redirect to `/` until the real page ships |
+| `/blog/trust-based-selling` | Trust-Based Selling: Why It's a System, Not a Personality Trait (pillar) |
+| `/blog/how-to-wake-up-a-deal` | How to Wake Up a Deal That's Gone Quiet, Not Dead |
+| `/blog/how-to-reflect-on-a-sales-call` | How to Reflect on a Sales Call: The Recap Isn't the Reflection |
+| `/blog/voicemail-follow-up-ai` | Voicemail Follow-Up AI: The Promise You Made and Almost Forgot |
 | `/blog/phone-sales-ai-no-recording` | Phone Sales AI Without Recording: A Framework for the Call Volume, Not the Transcript (pillar) |
 | `/blog/privacy-first-ai-for-sales` | Privacy-First AI for Sales: The One Question That Actually Tests the Label |
 | `/blog/after-the-call-ai-for-sales` | AI for After the Sales Call: The Sixty Seconds Before the Read Fades |

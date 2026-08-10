@@ -26,7 +26,8 @@
       "pillar": "customer-ghosted",
       "supporting": [
         "customer-said-call-back-next-quarter",
-        "champion-stopped-responding"
+        "champion-stopped-responding",
+        "how-to-wake-up-a-deal"
       ],
       "intent": "informational",
       "description": "Champions going quiet, buyers never engaged, context lost between calls."
@@ -154,6 +155,13 @@
       "supporting": [],
       "intent": "commercial",
       "description": "High-volume phone prospecting — calls, voicemails, no-answers — where the fix for lost follow-up is a fast spoken note, not a recording of every dial."
+    },
+    {
+      "id": "trust-based-sales",
+      "pillar": "trust-based-selling",
+      "supporting": [],
+      "intent": "informational",
+      "description": "Trust as a structural property of a sales org, not a rep's personality — what it takes to build it, and what surveillance-style monitoring costs it."
     }
   ]
 }
