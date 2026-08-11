@@ -112,7 +112,7 @@ const JSON_LD = `{
               "name": "Will my manager see what I tell Sara?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "No. Sara reports to you. Nothing goes up the org chart unless you share it."
+                "text": "No. Sara reports to you. Nothing goes up the org chart unless you choose to share it."
               }
             },
             {

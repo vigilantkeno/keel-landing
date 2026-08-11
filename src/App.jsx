@@ -1053,7 +1053,7 @@ export default function LandingPage() {
                 b:"Free while we build with you. No credit card. No trial clock. Early access that actually means early.", d:0.1 },
               { n:"03", h:"Rep-first. Always.",
                 b:"Sara reports to you, not your manager. Everything stays with you first.",
-                bold:"Your manager never sees what you tell Sara. Ever.", d:0.2 },
+                bold:"Sara doesn't report your private working context to your manager unless you choose to share it.", d:0.2 },
             ].map(({ n, h, b, bold, d }) => (
               <div key={n} className={`sc${perksVis?" v":""}`}
                 style={{ padding: m?"20px 0 20px 20px":"32px 28px",
