@@ -154,6 +154,13 @@
       "supporting": [],
       "intent": "commercial",
       "description": "High-volume phone prospecting — calls, voicemails, no-answers — where the fix for lost follow-up is a fast spoken note, not a recording of every dial."
+    },
+    {
+      "id": "trust-based-sales",
+      "pillar": "trust-based-selling",
+      "supporting": [],
+      "intent": "informational",
+      "description": "Trust-based selling as a methodology, and the private judgment it actually depends on before a rep ever opens their mouth in front of a buyer."
     }
   ]
 }

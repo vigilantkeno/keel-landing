@@ -81,3 +81,5 @@ post that covers it).
 | 2026-08-08 | phone sales AI no recording | phone prospecting without recording; AI for phone sales rep; phone sales follow up | phone-sales-ai-no-recording | PUBLISHED |
 | 2026-08-09 | voicemail follow up AI | missed call AI follow up; after hours sales follow up | voicemail-follow-up-ai | PUBLISHED |
 | 2026-08-09 | how to reflect on a sales call | sales meeting reflection questions; post-meeting reflection sales rep; self-debrief sales call; sales rep reflection method | how-to-reflect-on-a-sales-call | PUBLISHED |
+| 2026-08-11 | how to wake up a deal | how to revive dead deal; customer went cold; customer stopped opening emails | how-to-wake-up-a-deal | PUBLISHED |
+| 2026-08-11 | trust based selling | high trust sales; trust based sales culture; high trust sales culture; trust based sales process | trust-based-selling | PUBLISHED |
