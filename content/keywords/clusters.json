@@ -112,7 +112,8 @@
       "id": "byoai-shadow-ai",
       "pillar": "byoai-sales",
       "supporting": [
-        "ai-for-sales-reps-that-thinks-with-you"
+        "ai-for-sales-reps-that-thinks-with-you",
+        "alternative-to-call-recording"
       ],
       "intent": "commercial",
       "description": "Reps bringing their own AI tools to work instead of the sanctioned surveillance stack — the thinking-partner category the official tools were never built to serve."
@@ -162,7 +163,9 @@
     {
       "id": "trust-based-sales",
       "pillar": "trust-based-selling",
-      "supporting": [],
+      "supporting": [
+        "sales-rep-autonomy"
+      ],
       "intent": "informational",
       "description": "Trust as a structural property of a sales org, not a rep's personality — what it takes to build it, and what surveillance-style monitoring costs it."
     }

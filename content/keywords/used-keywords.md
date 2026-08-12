@@ -83,3 +83,5 @@ post that covers it).
 | 2026-08-09 | how to reflect on a sales call | sales meeting reflection questions; post-meeting reflection sales rep; self-debrief sales call; sales rep reflection method | how-to-reflect-on-a-sales-call | PUBLISHED |
 | 2026-08-10 | how to wake up a deal | how to revive dead deal; customer went cold; customer stopped opening emails | how-to-wake-up-a-deal | PUBLISHED |
 | 2026-08-10 | trust based selling | high trust sales; trust based sales culture; high trust sales culture; trust based sales process | trust-based-selling | PUBLISHED |
+| 2026-08-12 | sales rep autonomy | sales rep autonomy vs control; sales rep autonomy AI; sales rep empowerment | sales-rep-autonomy | PUBLISHED |
+| 2026-08-12 | alternative to call recording | no recording sales tool; AI for sales reps without recording; I hate call recording | alternative-to-call-recording | PUBLISHED |
