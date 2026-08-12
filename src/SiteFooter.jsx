@@ -43,6 +43,11 @@ export default function SiteFooter({ mobile }) {
             onMouseLeave={e => { e.currentTarget.style.color = MICRO; }}>
             BLOG
           </a>
+          <a href="/manifesto" style={linkStyle}
+            onMouseEnter={e => { e.currentTarget.style.color = "#888"; }}
+            onMouseLeave={e => { e.currentTarget.style.color = MICRO; }}>
+            MANIFESTO
+          </a>
           <a href="/terms" style={linkStyle}
             onMouseEnter={e => { e.currentTarget.style.color = "#888"; }}
             onMouseLeave={e => { e.currentTarget.style.color = MICRO; }}>

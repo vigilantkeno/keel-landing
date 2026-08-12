@@ -58,7 +58,7 @@ for (const p of posts) {
 // yet) — a 404 in a published post is worse than a build failure here.
 // Checks /blog/<slug> against the actual post set and any other site-internal
 // path (including absolute getkeel.io URLs) against the routes we serve.
-const SITE_ROUTES = new Set(['/', '/blog', '/founders', '/terms', '/privacy', '/sms-consent', '/feed.xml', '/sitemap.xml']);
+const SITE_ROUTES = new Set(['/', '/blog', '/founders', '/manifesto', '/terms', '/privacy', '/sms-consent', '/feed.xml', '/sitemap.xml']);
 const knownSlugs = new Set(posts.map((p) => p.slug).filter(Boolean));
 const publishedSlugs = new Set(posts.filter((p) => p.status === 'published' && p.claimsReviewed === true).map((p) => p.slug));
 for (const p of posts) {

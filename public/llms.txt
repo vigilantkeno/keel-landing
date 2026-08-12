@@ -38,7 +38,7 @@ Founded 2026. Early access is limited and granted in waves as applications are r
 ## Common questions
 
 - Is Sara always on? — Once you're in, yes. Access is application-reviewed.
-- Will my manager see what I tell Sara? — No. Sara reports to you.
+- Will my manager see what I tell Sara? — No. Sara reports to you. Nothing goes up the org chart unless you choose to share it.
 - Does she record my customer calls? — Never.
 - Do I need a clean CRM? — No.
 - Do I need IT/manager approval? — No. Individual early access.
@@ -46,6 +46,7 @@ Founded 2026. Early access is limited and granted in waves as applications are r
 ## Links
 
 - Main site: https://getkeel.io
+- Manifesto: https://getkeel.io/manifesto
 - Founders Club waitlist: https://getkeel.io/#waitlist
 - Contact: hello@getkeel.io
 - Twitter / X: https://x.com/getkeel
@@ -53,6 +54,7 @@ Founded 2026. Early access is limited and granted in waves as applications are r
 
 ## Optional
 
+- [Manifesto](https://getkeel.io/manifesto)
 - [Privacy policy](https://getkeel.io/privacy)
 - [Terms](https://getkeel.io/terms)
 
