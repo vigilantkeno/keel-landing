@@ -97,7 +97,8 @@
       "id": "second-brain",
       "pillar": "second-brain-for-sales-rep",
       "supporting": [
-        "personal-crm-for-sales-rep"
+        "personal-crm-for-sales-rep",
+        "note-taking-for-sales-reps"
       ],
       "intent": "commercial",
       "description": "Personal knowledge management and second-brain systems, rebuilt for the pace and rhythm of a sales rep's day."
@@ -171,6 +172,13 @@
       ],
       "intent": "informational",
       "description": "Trust as a structural property of a sales org, not a rep's personality — what it takes to build it, and what surveillance-style monitoring costs it."
+    },
+    {
+      "id": "pre-meeting-reflection",
+      "pillar": "pre-meeting-reflection",
+      "supporting": [],
+      "intent": "informational",
+      "description": "The rehearsal that happens before a call, not after it — deciding in advance how you'll respond to the moment most likely to matter, instead of improvising it live."
     }
   ]
 }
