@@ -87,3 +87,5 @@ post that covers it).
 | 2026-08-12 | alternative to call recording | no recording sales tool; AI for sales reps without recording; I hate call recording | alternative-to-call-recording | PUBLISHED |
 | 2026-08-13 | Gong criticism | Gong backlash; Gong reps hate; Gong invasive; Gong bad for sales culture; Gong scorecard complaint | gong-criticism | PUBLISHED |
 | 2026-08-13 | how to bounce back from a loss | after losing a deal; sales rep after a loss; deal loss recovery; sales loss reflection; deal loss reflection; lost deal framework | how-to-bounce-back-from-a-loss | PUBLISHED |
+| 2026-08-13 | pre-meeting reflection | pre-call thinking; thinking through a deal; deal strategy before call; mental rehearsal sales; sales call preparation; deal preparation | pre-meeting-reflection | PUBLISHED |
+| 2026-08-13 | note-taking for sales reps | note-taking system for sales; personal sales notes; sales rep PKM; personal knowledge management sales | note-taking-for-sales-reps | PUBLISHED |

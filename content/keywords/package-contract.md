@@ -29,13 +29,19 @@ exist soon" links, ever. When the generator can fetch, treat
 the committed snapshot.
 
 <!-- ALLOWLIST:BEGIN -->
-**Live as of 2026-08-10** (regenerate: `npm run content:contract`):
+**Live as of 2026-08-13** (regenerate: `npm run content:contract`):
 
 | Path | Piece |
 |---|---|
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
 | `/founders` | CTA target — temporary redirect to `/` until the real page ships |
+| `/blog/note-taking-for-sales-reps` | Note-Taking for Sales Reps: Why the Notion Template Keeps Going Empty |
+| `/blog/pre-meeting-reflection` | Pre-Meeting Reflection: The Real Prep Happens After the Research Stops (pillar) |
+| `/blog/how-to-bounce-back-from-a-loss` | How to Bounce Back From a Loss Before Your Next Call |
+| `/blog/gong-criticism` | Gong Criticism: The Four Complaints Are All the Same Complaint |
+| `/blog/alternative-to-call-recording` | Alternative to Call Recording: What to Actually Look For |
+| `/blog/sales-rep-autonomy` | Sales Rep Autonomy: The Three Conditions That Make It Real |
 | `/blog/trust-based-selling` | Trust-Based Selling: Why It's a System, Not a Personality Trait (pillar) |
 | `/blog/how-to-wake-up-a-deal` | How to Wake Up a Deal That's Gone Quiet, Not Dead |
 | `/blog/how-to-reflect-on-a-sales-call` | How to Reflect on a Sales Call: The Recap Isn't the Reflection |
