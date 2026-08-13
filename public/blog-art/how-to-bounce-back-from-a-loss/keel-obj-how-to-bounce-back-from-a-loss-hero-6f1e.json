@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "how-to-bounce-back-from-a-loss",
+  "sourceCandidate": "how-to-bounce-back-from-a-loss-1-6f1e.png",
+  "normalizedAt": "2026-08-13T02:02:56.021Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single closed notebook and a phone face-down on a narrow desk, one small pool of hard overhead light isolating just the two objects, everything else in the frame falling to near-black, straight-on elevation, a single ember-orange line drawn across the notebook's cover like a name crossed off a list, generous dark margin surrounding the lit pool on all sides, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single closed notebook and a phone face-down on a narrow desk, one small pool of hard overhead light isolating just the two objects, everything else in the frame falling to near-black, straight-on elevation, a single ember-orange line drawn across the notebook's cover like a name crossed off a list, generous dark margin surrounding the lit pool on all sides"
+}

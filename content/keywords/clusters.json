@@ -58,7 +58,8 @@
         "shadow-it-sales-reps",
         "gong-alternative-without-recording",
         "ai-sales-tool-no-manager-reporting",
-        "sales-rep-privacy-concerns"
+        "sales-rep-privacy-concerns",
+        "gong-criticism"
       ],
       "intent": "informational",
       "description": "The rep-side cost of call recording and scoring \u2014 anxiety, legal exposure, scorecard distortion, and the private alternative."
@@ -121,7 +122,9 @@
     {
       "id": "lost-deal-postmortem",
       "pillar": "lost-deal-analysis",
-      "supporting": [],
+      "supporting": [
+        "how-to-bounce-back-from-a-loss"
+      ],
       "intent": "commercial",
       "description": "Structured after-the-fact review of a deal that closed lost — separating the reason a rep logs from what actually happened."
     },
