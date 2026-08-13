@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "pre-meeting-reflection",
+  "sourceCandidate": "pre-meeting-reflection-1-737a.png",
+  "normalizedAt": "2026-08-13T08:16:54.974Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single index card standing upright in a shallow tray of blank cards on a black desk, close macro crop with the standing card running out of the top of frame, hard raking light from the left, one ember-orange tab clipped to the standing card's edge, the rest of the tray falling into graphite shadow, generous dark margin to the right for text, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single index card standing upright in a shallow tray of blank cards on a black desk, close macro crop with the standing card running out of the top of frame, hard raking light from the left, one ember-orange tab clipped to the standing card's edge, the rest of the tray falling into graphite shadow, generous dark margin to the right for text"
+}
