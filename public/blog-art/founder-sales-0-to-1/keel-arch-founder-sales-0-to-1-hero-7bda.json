@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "founder-sales-0-to-1",
+  "sourceCandidate": "founder-sales-0-to-1-1-7bda.png",
+  "normalizedAt": "2026-08-14T08:23:12.741Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A narrow poured-concrete stairwell rising several flights into near-black, framed straight-on from the bottom looking up, no figure present, a single bone-white landing lit at the top where a door stands open, one ember-orange panel of light spilling through that doorway onto the top step, the walls on either side falling to deep shadow, a tight crop that cuts the frame on both sides so the stairwell reads taller than it is, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A narrow poured-concrete stairwell rising several flights into near-black, framed straight-on from the bottom looking up, no figure present, a single bone-white landing lit at the top where a door stands open, one ember-orange panel of light spilling through that doorway onto the top step, the walls on either side falling to deep shadow, a tight crop that cuts the frame on both sides so the stairwell reads taller than it is"
+}
