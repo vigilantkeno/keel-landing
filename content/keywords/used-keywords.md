@@ -89,3 +89,5 @@ post that covers it).
 | 2026-08-13 | how to bounce back from a loss | after losing a deal; sales rep after a loss; deal loss recovery; sales loss reflection; deal loss reflection; lost deal framework | how-to-bounce-back-from-a-loss | PUBLISHED |
 | 2026-08-13 | pre-meeting reflection | pre-call thinking; thinking through a deal; deal strategy before call; mental rehearsal sales; sales call preparation; deal preparation | pre-meeting-reflection | PUBLISHED |
 | 2026-08-13 | note-taking for sales reps | note-taking system for sales; personal sales notes; sales rep PKM; personal knowledge management sales | note-taking-for-sales-reps | PUBLISHED |
+| 2026-08-14 | founder sales 0 to 1 | first 10 customers founder; solo SaaS sales | founder-sales-0-to-1 | PUBLISHED |
+| 2026-08-14 | personal AI vs enterprise AI | personal AI for work; personal sales AI not visible to company | personal-ai-vs-enterprise-ai | PUBLISHED |
