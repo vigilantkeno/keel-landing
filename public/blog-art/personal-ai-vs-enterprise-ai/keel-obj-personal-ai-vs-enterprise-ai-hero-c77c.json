@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "personal-ai-vs-enterprise-ai",
+  "sourceCandidate": "personal-ai-vs-enterprise-ai-1-c77c.png",
+  "normalizedAt": "2026-08-14T08:23:13.684Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Two bone-colored folders side by side on a black desk, otherwise identical, macro three-quarter crop with hard raking light from one side, a single ember-orange tab standing proud from the spine of the folder on the right while the folder on the left sits flat and untouched, generous empty space above for headline overlay, deep black surrounding both folders, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Two bone-colored folders side by side on a black desk, otherwise identical, macro three-quarter crop with hard raking light from one side, a single ember-orange tab standing proud from the spine of the folder on the right while the folder on the left sits flat and untouched, generous empty space above for headline overlay, deep black surrounding both folders"
+}
