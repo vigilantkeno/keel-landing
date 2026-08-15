@@ -179,6 +179,20 @@
       "supporting": [],
       "intent": "informational",
       "description": "The rehearsal that happens before a call, not after it — deciding in advance how you'll respond to the moment most likely to matter, instead of improvising it live."
+    },
+    {
+      "id": "customer-ai-trust",
+      "pillar": "customer-ai-trust",
+      "supporting": [],
+      "intent": "informational",
+      "description": "The customer's side of AI on a sales call — what earns trust when they ask what a tool does, and what a vague answer costs."
+    },
+    {
+      "id": "conference-follow-up",
+      "pillar": "conference-follow-up-ai",
+      "supporting": [],
+      "intent": "commercial",
+      "description": "Trade-show and conference lead follow-up — why speed alone doesn't save a cold lead, and what has to be captured on the floor to make the follow-up land."
     }
   ]
 }
