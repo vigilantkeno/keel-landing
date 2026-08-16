@@ -133,7 +133,8 @@
       "id": "deal-reflection",
       "pillar": "deal-reflection-framework",
       "supporting": [
-        "deal-review-without-manager"
+        "deal-review-without-manager",
+        "how-to-assess-a-deal-honestly"
       ],
       "intent": "informational",
       "description": "Private, structured self-review of an open deal before anyone else grades it — the rep's own interrogation, run ahead of the manager-facing version."
@@ -141,7 +142,9 @@
     {
       "id": "rep-burnout",
       "pillar": "rep-quitting-over-ai-monitoring",
-      "supporting": [],
+      "supporting": [
+        "why-sales-reps-quit"
+      ],
       "intent": "informational",
       "description": "Attrition and burnout driven by surveillance-style sales tooling — the quiet cost of converting selling into being evaluated."
     },
