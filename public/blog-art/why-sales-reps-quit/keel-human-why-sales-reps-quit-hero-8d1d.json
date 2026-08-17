@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "human",
+  "slug": "why-sales-reps-quit",
+  "sourceCandidate": "why-sales-reps-quit-1-8d1d.png",
+  "normalizedAt": "2026-08-17T08:21:38.483Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Two silhouetted figures in a dim office corridor at dusk, one seated at a desk in the background and one standing at a half-open glass door in the foreground, straight-on elevation, late-afternoon raking light from the left, a single ember-orange band glowing along the door's edge under the standing figure's hand as they hold it open, the corridor beyond falling to near-black, generous negative space to the right for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Two silhouetted figures in a dim office corridor at dusk, one seated at a desk in the background and one standing at a half-open glass door in the foreground, straight-on elevation, late-afternoon raking light from the left, a single ember-orange band glowing along the door's edge under the standing figure's hand as they hold it open, the corridor beyond falling to near-black, generous negative space to the right for headline overlay"
+}
