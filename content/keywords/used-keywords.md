@@ -93,5 +93,5 @@ post that covers it).
 | 2026-08-14 | personal AI vs enterprise AI | personal AI for work; personal sales AI not visible to company | personal-ai-vs-enterprise-ai | PUBLISHED |
 | 2026-08-15 | customer AI trust | customer trust AI; building customer trust sales; customer asks is this recorded; customer consent recording; customer recorded call | customer-ai-trust | PUBLISHED |
 | 2026-08-15 | conference follow up AI | trade show follow up AI; post conference follow up; conference lead follow up; conference networking follow up; AI for trade show leads; personal AI for trade show; trade show lead management | conference-follow-up-ai | PUBLISHED |
-| 2026-08-16 | how to assess a deal honestly | MEDDPICC after the call | how-to-assess-a-deal-honestly | PUBLISHED |
-| 2026-08-16 | why sales reps quit | sales rep burnout; sustainable sales career; sales career longevity | why-sales-reps-quit | PUBLISHED |
+| 2026-08-17 | how to assess a deal honestly | MEDDPICC after the call | how-to-assess-a-deal-honestly | PUBLISHED |
+| 2026-08-17 | why sales reps quit | sales rep burnout; sustainable sales career; sales career longevity | why-sales-reps-quit | PUBLISHED |
