@@ -27,7 +27,36 @@ one row when done.
 Queue empty (or fewer than 2 unused rows): process what exists, then
 stop and report "queue needs curation" — a clean outcome, not an
 error. Humans (or a supervised Claude session, not this routine)
-refill the queue from the backlog.
+refill the queue from the backlog or current supervised SEO research.
+
+### Supervised queue-curation guardrails
+
+The backlog is a starting reference, not a closed keyword universe.
+Net-new targets may be added directly to the curated queue when a
+supervised session verifies all of the following:
+
+- current Semrush US keyword difficulty is 30 or lower and volume is
+  at least 40; deeper long-tail rows at volume 20–39 are allowed only
+  when difficulty is 10 or lower and product fit is exceptional
+  (refresh data if the snapshot is more than 90 days old);
+- the query has clear B2B-sales intent and strong fit with Keel's
+  rep-first deal-intelligence product;
+- its intent is distinct from every target and consolidated secondary
+  in `used-keywords.md`; close variants are folded into one row;
+- the row has a resolved cluster and pillar/spoke role, with a new
+  cluster's pillar placed before its spokes; and
+- brand/vendor comparisons or claims that require live verification
+  remain `HOLD-WEB:` rows.
+
+These are curation-time guardrails only. The scheduled routine never
+researches keywords, changes priority, or promotes backlog rows.
+
+For supervised Semrush rows, `Pri` is 30% keyword-difficulty inverse,
+20% log-scaled US volume (normalized at 2,000 searches/month), 30%
+product fit, and 20% conversion value. A low-data row with zero known
+SERP results receives a 20-point confidence penalty rather than being
+treated as genuinely zero difficulty. Rows 60–109 use the 2026-08-18
+US snapshot.
 
 Why the queue is not in raw table order: the backlog's v4 rows were
 appended after v3 and never re-sorted — e.g. "customer ghosted" (84.50,
@@ -98,6 +127,56 @@ priority, adjusted so each cluster's pillar ships before its spokes
 | 57 | conference follow up AI | 64.50 | conference-follow-up (new) | yes | trade show follow up AI; post conference follow up; conference lead follow up; conference networking follow up; AI for trade show leads; personal AI for trade show; trade show lead management |
 | 58 | how to assess a deal honestly | 63.25 | deal-reflection (new) | no | MEDDPICC after the call |
 | 59 | why sales reps quit | 58.50 | rep-burnout (new) | no | sales rep burnout; sustainable sales career; sales career longevity |
+| 60 | AI call analysis | 92.33 | post-call-intelligence (new) | yes | sales call analysis; sales call analytics; post call analysis; AI call analytics |
+| 61 | sales coaching software | 90.64 | rep-first-coaching (new) | yes | sales coaching tools; AI sales coaching software |
+| 62 | sales lead evaluation framework | 87.58 | deal-qualification (new) | yes | sales qualification framework; deal qualification framework; sales opportunity qualification |
+| 63 | sales pipeline health | 75.77 | pipeline-health (new) | yes | sales pipeline health metrics |
+| 64 | sales forecasting techniques | 72.47 | forecast-clarity (new) | yes | sales forecasting methods; B2B sales forecasting |
+| 65 | sales call transcript analysis metrics | 90.01 | post-call-intelligence (new) | no | sales call rating criteria metrics |
+| 66 | AI sales coaching for reps | 89.95 | rep-first-coaching (new) | no | AI sales coach; AI coaching for sales reps |
+| 67 | sales coaching app | 88.79 | rep-first-coaching (new) | no | mobile sales coaching |
+| 68 | deal coaching | 86.02 | rep-first-coaching (new) | no | AI deal coaching; deal coaching questions; deal coaching framework |
+| 69 | call intelligence solutions | 85.78 | post-call-intelligence (new) | no | call intelligence software; sales call intelligence |
+| 70 | SaaS sales coaching | 84.49 | rep-first-coaching (new) | no | one-on-one sales coaching; personal sales coaching |
+| 71 | AI to analyze calls | 83.89 | post-call-intelligence (new) | no | AI to analyze sales calls |
+| 72 | call analytics tools | 81.55 | post-call-intelligence (new) | no | call analytics software |
+| 73 | sales conversation intelligence | 81.22 | post-call-intelligence (new) | no | conversation intelligence for sales |
+| 74 | sales call coaching | 81.13 | rep-first-coaching (new) | no | — |
+| 75 | sales call performance | 79.92 | post-call-intelligence (new) | no | — |
+| 76 | how to measure sales conversation quality and effectiveness | 79.67 | post-call-intelligence (new) | no | — |
+| 77 | inside sales call metrics | 79.35 | post-call-intelligence (new) | no | — |
+| 78 | tools to measure talk-to-listen ratio in sales calls | 79.35 | post-call-intelligence (new) | no | how to measure talk time ratios in sales conversations |
+| 79 | effective sales coaching questions | 79.35 | rep-first-coaching (new) | no | sales coaching checklist |
+| 80 | B2B lead qualification | 78.59 | deal-qualification (new) | no | — |
+| 81 | how to conduct a pipeline review using analytics | 78.07 | pipeline-health (new) | no | — |
+| 82 | forecast by rep | 77.55 | forecast-clarity (new) | no | — |
+| 83 | slow sales pipeline | 77.25 | pipeline-health (new) | no | stalled pipeline |
+| 84 | sales pipeline automation | 76.44 | pipeline-health (new) | no | automated sales pipeline |
+| 85 | sales discovery questions | 75.95 | deal-qualification (new) | no | discovery call questions; B2B sales discovery questions |
+| 86 | pipeline forecasting | 75.84 | forecast-clarity (new) | no | — |
+| 87 | sales discovery process | 75.77 | deal-qualification (new) | no | — |
+| 88 | sales pipeline review | 75.47 | pipeline-health (new) | no | sales pipeline review questions |
+| 89 | how to prevent pipeline bloat in sales forecasting | 75.17 | pipeline-health (new) | no | — |
+| 90 | pipeline coverage ratio | 74.68 | pipeline-health (new) | no | — |
+| 91 | best practices for pipeline review meetings | 74.27 | pipeline-health (new) | no | — |
+| 92 | sales pipeline optimization | 74.27 | pipeline-health (new) | no | — |
+| 93 | MEDDIC questions | 74.22 | deal-qualification (new) | no | MEDDIC discovery questions; MEDDPICC questions; best MEDDIC questions |
+| 94 | benefits of sales coaching | 73.92 | rep-first-coaching (new) | no | why sales coaching is important |
+| 95 | sales forecasting vs pipeline management | 73.59 | forecast-clarity (new) | no | pipeline vs forecast |
+| 96 | lead qualification checklist | 73.18 | deal-qualification (new) | no | sales qualification checklist |
+| 97 | SaaS sales forecasting | 73.02 | forecast-clarity (new) | no | — |
+| 98 | lead qualification questions | 72.93 | deal-qualification (new) | no | qualifying questions; sales qualification questions |
+| 99 | how to improve sales forecast accuracy | 72.72 | forecast-clarity (new) | no | — |
+| 100 | sales coaching plan | 72.47 | rep-first-coaching (new) | no | — |
+| 101 | opportunity forecasting | 72.15 | forecast-clarity (new) | no | — |
+| 102 | sales pipeline report example | 71.92 | pipeline-health (new) | no | what is a pipeline report |
+| 103 | sales qualification process | 71.49 | deal-qualification (new) | no | — |
+| 104 | sales coaching framework | 71.22 | rep-first-coaching (new) | no | — |
+| 105 | account-based forecasting | 69.82 | forecast-clarity (new) | no | — |
+| 106 | lead qualification framework | 69.42 | deal-qualification (new) | no | — |
+| 107 | forecast accuracy formula | 66.69 | forecast-clarity (new) | no | sales forecast accuracy; how to calculate forecast accuracy |
+| 108 | sales forecast calculator | 64.52 | forecast-clarity (new) | no | — |
+| 109 | deal qualification checklist | 61.01 | deal-qualification (new) | no | how to qualify a sales opportunity |
 
 Competitor/brand rows (4–8, 18, 25, 26 — all `HOLD-WEB:`): every claim
 about a third-party product must be verifiable from that vendor's own
