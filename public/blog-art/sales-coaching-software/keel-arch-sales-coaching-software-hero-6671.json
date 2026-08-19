@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "sales-coaching-software",
+  "sourceCandidate": "sales-coaching-software-1-6671.png",
+  "normalizedAt": "2026-08-19T08:16:05.386Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A long dim office corridor at night, in the middle distance one small glass-walled room glows warm from a single desk lamp lighting a notepad, straight-on elevation looking down the length of the corridor, an ember-orange panel of light spilling from that one room onto the corridor floor, a larger conference room further down the hall left completely dark, wide negative space in the near foreground for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A long dim office corridor at night, in the middle distance one small glass-walled room glows warm from a single desk lamp lighting a notepad, straight-on elevation looking down the length of the corridor, an ember-orange panel of light spilling from that one room onto the corridor floor, a larger conference room further down the hall left completely dark, wide negative space in the near foreground for headline overlay"
+}
