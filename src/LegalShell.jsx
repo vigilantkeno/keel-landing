@@ -71,7 +71,7 @@ export default function LegalShell({ title, children }) {
           marginBottom: 8, lineHeight: 1.05 }}>{title}</h1>
         <p style={{ fontFamily: F.mono, fontSize: 9, color: "#444",
           letterSpacing: "0.12em", marginBottom: 40 }}>
-          LAST UPDATED: JULY 6, 2026 · KEEL IS OPERATED BY PLANTLY, LLC
+          LAST UPDATED: AUGUST 19, 2026 · KEEL IS OPERATED BY PLANTLY, LLC
         </p>
         {children}
       </main>

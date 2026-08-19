@@ -21,7 +21,9 @@ export default function PrivacyPage() {
         </P>
         <P>
           If you opt in to SMS messaging, we collect your phone number and related consent
-          records. We may also collect usage information, device and browser data, and
+          records. If voice access is enabled for your account and you call Keel, we collect
+          call metadata such as your phone number, the time the call was placed, and its
+          duration. We may also collect usage information, device and browser data, and
           technical logs needed to operate and secure the Service.
         </P>
       </Section>
@@ -48,7 +50,20 @@ export default function PrivacyPage() {
         </P>
       </Section>
 
-      <Section title="5. How We Share Information">
+      <Section title="5. Voice Calls">
+        <P>
+          Where voice access is enabled for your account, calls you place to Keel are answered
+          by Sara, Keel's AI, rather than by a person. We do not enable call recording or transcription without telling you first and obtaining any consent required by law.
+        </P>
+        <P>
+          Voice consent is recorded separately from SMS consent and can be withdrawn
+          separately: turning off voice access does not affect text messaging, and replying
+          STOP to a text stops all Keel text messaging. We use call metadata to operate,
+          support, and secure the Service, as described in this Policy.
+        </P>
+      </Section>
+
+      <Section title="6. How We Share Information">
         <P>
           We do not sell your personal information. We may share information with service
           providers that help us host, secure, deliver messages, process forms, or support
@@ -60,7 +75,7 @@ export default function PrivacyPage() {
         </P>
       </Section>
 
-      <Section title="6. Data Retention">
+      <Section title="7. Data Retention">
         <P>
           We retain information for as long as needed to provide the Service, comply with
           legal obligations, resolve disputes, and enforce agreements. Retention periods may
@@ -68,14 +83,14 @@ export default function PrivacyPage() {
         </P>
       </Section>
 
-      <Section title="7. Security">
+      <Section title="8. Security">
         <P>
           We use reasonable administrative, technical, and organizational measures designed
           to protect information. No method of transmission or storage is completely secure.
         </P>
       </Section>
 
-      <Section title="8. Your Choices">
+      <Section title="9. Your Choices">
         <P>
           You may opt out of operational SMS messages at any time by replying STOP. You may
           request access, correction, or deletion of certain information by contacting us,
@@ -83,21 +98,21 @@ export default function PrivacyPage() {
         </P>
       </Section>
 
-      <Section title="9. Children's Privacy">
+      <Section title="10. Children's Privacy">
         <P>
           The Service is not directed to children under 18, and we do not knowingly collect
           personal information from children.
         </P>
       </Section>
 
-      <Section title="10. Changes">
+      <Section title="11. Changes">
         <P>
           We may update this Privacy Policy from time to time. The "Last Updated" date above
           reflects the most recent revision. Material changes will be posted on this page.
         </P>
       </Section>
 
-      <Section title="11. Contact">
+      <Section title="12. Contact">
         <P>
           Privacy questions may be sent to{" "}
           <a href="mailto:hello@getkeel.io" style={{ color: "#FF5A1F" }}>hello@getkeel.io</a>.
