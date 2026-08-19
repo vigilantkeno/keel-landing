@@ -196,6 +196,20 @@
       "supporting": [],
       "intent": "commercial",
       "description": "Trade-show and conference lead follow-up — why speed alone doesn't save a cold lead, and what has to be captured on the floor to make the follow-up land."
+    },
+    {
+      "id": "post-call-intelligence",
+      "pillar": "ai-call-analysis",
+      "supporting": [],
+      "intent": "informational",
+      "description": "What's actually worth analyzing after a sales call, versus what a scored transcript measures — the rep's own read instead of a talk-ratio number."
+    },
+    {
+      "id": "rep-first-coaching",
+      "pillar": "sales-coaching-software",
+      "supporting": [],
+      "intent": "commercial",
+      "description": "Sales coaching software built to inform the rep first instead of the manager reviewing them — coaching that lands the same day, not the same quarter."
     }
   ]
 }

@@ -95,3 +95,5 @@ post that covers it).
 | 2026-08-15 | conference follow up AI | trade show follow up AI; post conference follow up; conference lead follow up; conference networking follow up; AI for trade show leads; personal AI for trade show; trade show lead management | conference-follow-up-ai | PUBLISHED |
 | 2026-08-17 | how to assess a deal honestly | MEDDPICC after the call | how-to-assess-a-deal-honestly | PUBLISHED |
 | 2026-08-17 | why sales reps quit | sales rep burnout; sustainable sales career; sales career longevity | why-sales-reps-quit | PUBLISHED |
+| 2026-08-19 | AI call analysis | sales call analysis; sales call analytics; post call analysis; AI call analytics | ai-call-analysis | PUBLISHED |
+| 2026-08-19 | sales coaching software | sales coaching tools; AI sales coaching software | sales-coaching-software | PUBLISHED |
