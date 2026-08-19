@@ -21,7 +21,8 @@ export default function TermsPage() {
         <P>
           Keel provides AI-assisted deal intelligence tools for B2B sales professionals,
           including post-call debriefs, coaching notifications, and related operational
-          features. The Service is intended for business use by individual reps and teams.
+          features. Keel is delivered by text message and, where enabled, by voice call.
+          The Service is intended for business use by individual reps and teams.
         </P>
         <P>
           Features, availability, and access may change as Keel evolves through beta and
@@ -66,7 +67,27 @@ export default function TermsPage() {
         </P>
       </Section>
 
-      <Section title="6. Intellectual Property">
+      <Section title="6. Voice Calls">
+        <P>
+          Keel offers an optional voice channel. Where voice access is enabled for your
+          account, you can call Keel's number and speak with Sara, Keel's AI. You are talking
+          with an AI, not a person.
+        </P>
+        <P>
+          Voice access is not enabled by default. It requires separate consent, and you can
+          turn it off at any time without affecting text messaging. Turning off voice does not
+          stop text messages; replying STOP to a text stops all Keel text messaging.
+        </P>
+        <P>
+          Keel does not place outbound voice calls to you as part of this feature. We do not enable call recording or transcription without telling you first and obtaining any consent required by law.
+        </P>
+        <P>
+          Your carrier's standard voice and data rates may apply. Consent to use voice is not
+          a condition of purchase.
+        </P>
+      </Section>
+
+      <Section title="7. Intellectual Property">
         <P>
           The Service, including software, branding, content, and design, is owned by
           Plantly or its licensors and is protected by applicable intellectual property laws.
@@ -74,7 +95,7 @@ export default function TermsPage() {
         </P>
       </Section>
 
-      <Section title="7. Disclaimers">
+      <Section title="8. Disclaimers">
         <P>
           The Service is provided on an "as is" and "as available" basis. To the fullest
           extent permitted by law, Plantly disclaims all warranties, whether express or
@@ -87,7 +108,7 @@ export default function TermsPage() {
         </P>
       </Section>
 
-      <Section title="8. Limitation of Liability">
+      <Section title="9. Limitation of Liability">
         <P>
           To the fullest extent permitted by law, Plantly will not be liable for any indirect,
           incidental, special, consequential, or punitive damages, or for any loss of profits,
@@ -96,14 +117,14 @@ export default function TermsPage() {
         </P>
       </Section>
 
-      <Section title="9. Termination">
+      <Section title="10. Termination">
         <P>
           We may suspend or terminate access to the Service if you violate these Terms or if
           we discontinue the Service. You may stop using the Service at any time.
         </P>
       </Section>
 
-      <Section title="10. Changes">
+      <Section title="11. Changes">
         <P>
           We may update these Terms from time to time. The "Last Updated" date above reflects
           the most recent revision. Continued use of the Service after changes become effective
@@ -111,7 +132,7 @@ export default function TermsPage() {
         </P>
       </Section>
 
-      <Section title="11. Contact">
+      <Section title="12. Contact">
         <P>
           Questions about these Terms may be sent to{" "}
           <a href="mailto:hello@getkeel.io" style={{ color: "#FF5A1F" }}>hello@getkeel.io</a>.
