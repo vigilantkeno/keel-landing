@@ -97,3 +97,5 @@ post that covers it).
 | 2026-08-17 | why sales reps quit | sales rep burnout; sustainable sales career; sales career longevity | why-sales-reps-quit | PUBLISHED |
 | 2026-08-19 | AI call analysis | sales call analysis; sales call analytics; post call analysis; AI call analytics | ai-call-analysis | PUBLISHED |
 | 2026-08-19 | sales coaching software | sales coaching tools; AI sales coaching software | sales-coaching-software | PUBLISHED |
+| 2026-08-20 | sales lead evaluation framework | sales qualification framework; deal qualification framework; sales opportunity qualification | sales-lead-evaluation-framework | PUBLISHED |
+| 2026-08-20 | sales pipeline health | sales pipeline health metrics | sales-pipeline-health | PUBLISHED |
