@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { F, MICRO, O } from '../../src/brand';
 
 // Blog index: featured tile + 1px-gap tiled grid, with client-side search
@@ -137,6 +137,77 @@ function FoundersTile() {
   );
 }
 
+// The chip row overflows once the cluster count grows past what fits, and
+// the scrollbar is hidden for aesthetic reasons — so with nothing else, a
+// clipped chip at the edge reads as "the row ends here" rather than "drag
+// to see more". These edge fades plus a click-to-nudge arrow are the fix:
+// CSS-only affordance on both edges, a real click target on the right one.
+function ChipRow({ clusters, cluster, setCluster }) {
+  const scrollerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const updateEdges = useCallback(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 1);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
+  }, []);
+
+  useEffect(() => {
+    updateEdges();
+    const el = scrollerRef.current;
+    if (!el || typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(updateEdges);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [updateEdges, clusters]);
+
+  const nudge = (dir) => {
+    scrollerRef.current?.scrollBy({ left: dir * 220, behavior: 'smooth' });
+  };
+
+  return (
+    <div style={{ position: 'relative' }}>
+      <div ref={scrollerRef} className="kbi-chips" onScroll={updateEdges}
+        style={{ display: 'flex', gap: 8, overflowX: 'auto',
+          paddingBottom: 4, scrollbarWidth: 'none' }}>
+        {['all', ...clusters].map((c) => (
+          <button key={c} onClick={() => setCluster(c)}
+            style={{ fontFamily: F.mono, fontSize: 9, letterSpacing: '0.12em',
+              whiteSpace: 'nowrap', cursor: 'pointer', padding: '6px 12px',
+              background: cluster === c ? O : 'transparent',
+              color: cluster === c ? '#000' : MICRO,
+              border: `1px solid ${cluster === c ? O : BORDER}` }}>
+            {c === 'all' ? 'ALL' : clusterLabel(c)}
+          </button>
+        ))}
+      </div>
+
+      {canScrollLeft && (
+        <div aria-hidden style={{ position: 'absolute', left: 0, top: 0, bottom: 4,
+          width: 32, background: `linear-gradient(to right, ${BK}, transparent)`,
+          pointerEvents: 'none' }} />
+      )}
+
+      {canScrollRight && (
+        <>
+          <div aria-hidden style={{ position: 'absolute', right: 0, top: 0, bottom: 4,
+            width: 48, background: `linear-gradient(to left, ${BK}, transparent)`,
+            pointerEvents: 'none' }} />
+          <button onClick={() => nudge(1)} aria-label="Show more categories"
+            style={{ position: 'absolute', right: 0, top: 0, bottom: 4,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              width: 26, background: 'transparent', border: 'none', cursor: 'pointer',
+              color: O, fontFamily: F.mono, fontSize: 13 }}>
+            →
+          </button>
+        </>
+      )}
+    </div>
+  );
+}
+
 export default function BlogIndexGrid({ posts }) {
   const [query, setQuery] = useState('');
   const [cluster, setCluster] = useState('all');
@@ -186,19 +257,7 @@ export default function BlogIndexGrid({ posts }) {
             border: `1px solid ${BORDER}`, color: '#F0F0F0', padding: '11px 14px',
             fontFamily: F.mono, fontSize: 11, letterSpacing: '0.1em', outline: 'none' }}
         />
-        <div className="kbi-chips" style={{ display: 'flex', gap: 8, overflowX: 'auto',
-          paddingBottom: 4, scrollbarWidth: 'none' }}>
-          {['all', ...clusters].map((c) => (
-            <button key={c} onClick={() => setCluster(c)}
-              style={{ fontFamily: F.mono, fontSize: 9, letterSpacing: '0.12em',
-                whiteSpace: 'nowrap', cursor: 'pointer', padding: '6px 12px',
-                background: cluster === c ? O : 'transparent',
-                color: cluster === c ? '#000' : MICRO,
-                border: `1px solid ${cluster === c ? O : BORDER}` }}>
-              {c === 'all' ? 'ALL' : clusterLabel(c)}
-            </button>
-          ))}
-        </div>
+        <ChipRow clusters={clusters} cluster={cluster} setCluster={setCluster} />
       </div>
 
       {filtering && (
