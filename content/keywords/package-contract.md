@@ -1,4 +1,4 @@
-# Keel Package Contract — v1.4 (2026-08-03)
+# Keel Package Contract — v1.5 (2026-08-21)
 
 **What this is.** The one file that travels with every article-package
 request. A package produced under this contract imports with zero
@@ -142,10 +142,14 @@ frontmatter; a hand-written block can only agree or introduce a bug.
 
 **Art fields (optional, v1.2+):** packages MAY include the illustration
 router record (`artFamily`, `artAperture`, `artSignature`,
-`artOrangeRole`, `artTension`, `artBrief`, `artLiteralness`,
-`artThumbnail`, `heroAlt`) per `content/art/STYLE_SPEC.md` v1.1. Never
-`heroImage` — images are generated and selected in supervised sessions
-only. Omitted = briefs are authored at import time.
+`artOrangeRole`, `artFigurePresentation`, `artTension`, `artBrief`,
+`artLiteralness`, `artThumbnail`, `heroAlt`) per
+`content/art/STYLE_SPEC.md` v1.2. `artFigurePresentation` (v1.5,
+2026-08-21) is required whenever the record is included at all — not
+just for `human`-family posts — because a figure can appear inside an
+`arch` scene too; `none` is the correct value when no figure is in
+frame. Never `heroImage` — images are generated and selected in
+supervised sessions only. Omitted = briefs are authored at import time.
 
 ## 3. Citations and numbers
 
@@ -360,6 +364,16 @@ sections.
 ---
 
 **Changelog**
+- v1.5 (2026-08-21): §2 art fields — added `artFigurePresentation`
+  (STYLE_SPEC.md v1.2), required on every illustration router record.
+  Founder feedback: hero imagery read as all-male because every figure
+  brief was gender-neutral text ("a suited figure"), which the image
+  model was defaulting to masculine-presenting. Backfilled onto the 23
+  existing posts whose art briefs actually show a figure — all
+  confirmed masculine-presenting on inspection — so the corpus's
+  balance-check history is honest from day one instead of starting
+  blind. ROUTINE.md's authority-chain line, which had been pointing at
+  a stale "(v1.2)", is corrected to match this version.
 - v1.4 (2026-08-03): §3 machine-enforced — `content:citations` gate (no
   network, in `content:check`, grandfathered on/before 2026-08-03) plus
   `content:cite` supervised verifier and debt worklist. Citations are now

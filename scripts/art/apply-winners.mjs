@@ -59,6 +59,7 @@ for (const b of briefs) {
     ...(b.apertureType ? [`artAperture: ${yq(b.apertureType)}`] : []),
     ...(b.compositionSignature ? [`artSignature: ${yq(b.compositionSignature)}`] : []),
     ...(b.orangeRole ? [`artOrangeRole: ${yq(b.orangeRole)}`] : []),
+    ...(b.figurePresentation ? [`artFigurePresentation: ${yq(b.figurePresentation)}`] : []),
     `artBrief: ${yq(b.slots)}`,
     `heroImage: ${yq(heroPath)}`,
     `heroAlt: ${yq(b.alt)}`,

@@ -10,6 +10,19 @@
 > hero-placement mix, figure posture rules, a light-fill allowance, and
 > a thumbnail luminance floor. v1.0 stands except where amended.
 
+> **v1.2 (2026-08-21, drafted — pending founder review).** Founder
+> feedback: the imagery reads as all-male, which is a real problem for
+> a female audience. Every figure brief up to this point was already
+> gender-neutral text — "a suited figure," "two silhouetted figures" —
+> which turned out not to be neutral in practice: an unspecified
+> business silhouette defaults to masculine-presenting in generation,
+> even with no face and no props to key off. v1.2 requires every brief
+> to state a figure presentation explicitly (or declare "none") and
+> checks it the same mechanical way composition-signature and aperture
+> variety are already checked, so the corpus can't silently drift back
+> to one gender the way it drifted to noir in Batch 1. v1.1 stands
+> except where amended.
+
 Every image on getkeel.io is generated inside this system: dark,
 architectural, editorial, quietly uncanny. No stock photography, ever.
 This file is the production contract — families, composition, prompts,
@@ -179,6 +192,19 @@ something the subject owns, holds, or operates.
   upright, frontal or mid-action — writing, presenting, closing a laptop
   — never only a distant walking-away silhouette. Silhouette/no-faces
   rules unchanged.
+- **Figure presentation** *(v1.2)*. A silhouette with no visible face
+  still reads as gendered — through clothing silhouette and hair
+  length, not features. Left unspecified, that reads masculine by
+  default, so state it: alternate a fitted-blazer-and-trouser cut
+  against a fitted-blazer-and-skirt-or-dress cut, and vary hair length,
+  across the corpus. Convey it through cut and hairstyle only — never
+  through props like a handbag or jewelry, which reads as a caricature
+  the system's restraint can't absorb. New paired and group scenes
+  default to genuinely mixed presentation — one of each — unless the
+  brief has a specific reason not to. Every brief declares what it
+  actually shows (or "none," if no figure is in frame) so the mix can
+  be checked the way aperture and signature already are — see
+  "Figure-presentation parity" below.
 - **Light fill** *(v1.1)*. One *dominant* hard-edged source, plus an
   optional quiet cool ambient fill so scenes are not 90% black with one
   spotlight. The interrogation-room look is off-system.
@@ -186,6 +212,39 @@ something the subject owns, holds, or operates.
   of the frame; reject any frame where >75% collapses into
   undifferentiated dark; the concept must survive grayscale at 320px.
   Black grounds the image — it must never erase the idea.
+
+## Figure-presentation parity *(v1.2)*
+
+Every brief declares `figurePresentation`: `feminine-presenting` ·
+`masculine-presenting` · `mixed` · `none`. Required on every brief
+regardless of family — `none` is a real, valid answer for an object or
+architecture shot with nobody in it.
+
+`feminine-presenting`/`masculine-presenting` describe what's actually
+in frame, solo *or* uniform pair/group — two figures who both read
+masculine are still `masculine-presenting`, not `mixed`. `mixed` is
+reserved for a scene that genuinely shows more than one presentation.
+Don't let "it's a pair" default the field to `mixed` unless the pair
+actually is.
+
+- A figure-bearing image's presentation (`feminine-presenting` or
+  `masculine-presenting`) may not repeat the presentation of the most
+  recent non-`none`, non-`mixed` image before it, published or queued
+  in the same batch — the same rule aperture subtypes already follow,
+  applied to gender presentation instead of aperture shape.
+- Across any 8 consecutive `feminine-presenting`/`masculine-presenting`
+  images, neither should exceed 6 (a ~3:1 skew) — checked as a
+  warning, not a hard fail, so one deliberate exception (a specific
+  person's actual presentation in a customer-story image, say) doesn't
+  block a batch.
+- New paired/group scenes default to genuinely `mixed` presentation
+  going forward unless the brief has a specific reason not to — the
+  existing corpus's uniform pairs are backfilled as what they show,
+  not rewritten as what they should have been.
+- Mechanically enforced by `scripts/art/lint-briefs.mjs` the same way
+  aperture and signature variety are — this is not an honour-system
+  rule, on purpose, because the honour system is what produced the
+  all-male corpus in the first place.
 
 ## Do / don't
 
@@ -224,11 +283,15 @@ Exact suffix and negative strings live in `style.json` (`styleSuffix`,
 ### Worked examples
 
 **Architecture** — "How Keel decides what to escalate"
-> A curved concrete mezzanine sweeping to the right, a single suited figure
-> walking away from camera, low three-quarter viewpoint, late-afternoon
-> raking light from the right, an ember-orange doorway at the end of the
-> corridor spilling light across the floor, left half of the frame in deep
+> A curved concrete mezzanine sweeping to the right, a single figure in a
+> fitted blazer and knee-length skirt, hair in a low bun, walking away
+> from camera, low three-quarter viewpoint, late-afternoon raking light
+> from the right, an ember-orange doorway at the end of the corridor
+> spilling light across the floor, left half of the frame in deep
 > shadow + STYLE SUFFIX
+>
+> *(figurePresentation: feminine-presenting — cut and hair carry it,
+> not a prop or a face)*
 
 **Object** — "What Keel remembers about an account"
 > A fanned stack of manila and bone file folders on black, macro
@@ -238,9 +301,14 @@ Exact suffix and negative strings live in `style.json` (`styleSuffix`,
 
 **Human** — "Running a debrief that actually changes behavior"
 > Three silhouetted figures in a glass-walled meeting room seen from the
-> dark corridor outside, straight-on elevation, the room's bone-white wall
-> the only lit plane, a small ember-orange square on the presentation
-> board, the outer two-thirds of the frame in near-black + STYLE SUFFIX
+> dark corridor outside — two in a fitted blazer-and-trouser cut, one in
+> a fitted blazer-and-skirt cut with longer hair — straight-on elevation,
+> the room's bone-white wall the only lit plane, a small ember-orange
+> square on the presentation board, the outer two-thirds of the frame in
+> near-black + STYLE SUFFIX
+>
+> *(figurePresentation: mixed — the paired/group default, not a special
+> case)*
 
 **Abstract** — "Routing every inbound message"
 > Twenty thin horizontal lines converging through a single small aperture
@@ -267,9 +335,9 @@ width; the deep blacks band badly below q80.
 1. **Classify.** From the article title and outline, pick one family and
    one concrete noun. If no physical object or space can be named, default
    to Architecture. *In this repo, classification happens at article-write
-   time* — the article routine writes `artFamily`, `artBrief`, and
-   `heroAlt` into post frontmatter. It needs article context and no
-   network, so it runs where the context is.
+   time* — the article routine writes `artFamily`, `artBrief`,
+   `artFigurePresentation`, and `heroAlt` into post frontmatter. It needs
+   article context and no network, so it runs where the context is.
 2. **Assemble.** Fill the six slots, append the fixed suffix and negative
    list. Slots are the only free text; the suffix is never edited per image.
 3. **Generate 4, keep 1.** Four candidates at 16:9. A human picks one
@@ -294,5 +362,7 @@ Example: `keel-obj-account-memory-hero-8842.webp`
 - [ ] At most two accent colors.
 - [ ] Reads at 320px wide as a single shape.
 - [ ] Doesn't repeat the previous three images on the page.
+- [ ] Figure presentation stated explicitly and doesn't repeat the last
+      figure-bearing image (or "none" is correctly declared).
 - [ ] Prompt + seed logged.
 - [ ] Alt text written (accessibility + SEO; not optional).
