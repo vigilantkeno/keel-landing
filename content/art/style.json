@@ -250,7 +250,7 @@
     "Prompt + seed logged.",
     "Alt text written (accessibility + SEO; not optional)."
   ],
-  "contractVersion": "1.1",
+  "contractVersion": "1.2",
   "v11": {
     "$comment": "v1.1 confidence amendments (founder-approved 2026-08-02). Enforced by scripts/art/lint-briefs.mjs before any generation.",
     "heroMix": {
@@ -312,5 +312,26 @@
       "literalnessRisk",
       "thumbnailRisk"
     ]
+  },
+  "v12": {
+    "$comment": "v1.2 figure-presentation-parity amendment (drafted 2026-08-21, pending founder review). Founder feedback: hero imagery reads as all-male. Every figure brief was already gender-neutral text (\"a suited figure\"), which was not neutral in practice — the image model defaults an unspecified business silhouette to masculine-presenting. Enforced by scripts/art/lint-briefs.mjs alongside v1.1.",
+    "figurePresentationValues": [
+      "feminine-presenting",
+      "masculine-presenting",
+      "mixed",
+      "none"
+    ],
+    "figurePresentationRules": [
+      "required on every brief regardless of family — \"none\" is the correct value when no figure is in frame",
+      "convey presentation through clothing silhouette (fitted blazer + trouser cut vs. blazer + skirt or dress cut) and hair length only — never props like a handbag or jewelry, which read as caricature",
+      "a solo figure's presentation may not repeat the most recent figure-bearing image's presentation, published or queued in the same batch",
+      "a paired/group scene defaults to mixed presentation unless the brief has a specific reason not to",
+      "across any 8 consecutive solo-figure images (context + batch), neither presentation should exceed 6 — warned, not hard-failed"
+    ],
+    "extraBriefFields": [
+      "figurePresentation"
+    ],
+    "rollingBalanceWindow": 8,
+    "rollingBalanceMax": 6
   }
 }

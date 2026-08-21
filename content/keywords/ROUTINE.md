@@ -15,7 +15,7 @@ any external knowledge base, project context, or connector.
 
 ## Authority chain
 
-1. `content/keywords/package-contract.md` (v1.2) — the content
+1. `content/keywords/package-contract.md` (v1.5) — the content
    contract. Read it in full before writing anything. Frontmatter
    schema, byline policy, one-CTA rule, citation rules, banned claims,
    date rules, package structure.
@@ -97,21 +97,34 @@ any external knowledge base, project context, or connector.
    - ART BRIEF (text only — scheduled runs can NEVER generate images):
      while you still hold the article's full context, write the
      illustration router record into frontmatter per
-     `content/art/STYLE_SPEC.md` (contract v1.1):
+     `content/art/STYLE_SPEC.md` (contract v1.2):
        `artFamily` (arch|obj|human|abs — respect the hero mix: 40%
        object still-life, 25% architecture no-human, 20% pairs, 15%
        upright/mid-action solo), `artAperture` (door|tab|dot|line|
        panel), `artSignature` (one of the nine composition signatures),
        `artOrangeRole` (possession|destination — default possession;
-       destination is capped 1-in-5), `artTension` (one sentence: the
-       article's conceptual tension), `artBrief` (the six-slot scene,
-       figures tiny/distant or upright/mid-action, never a lone
-       walking-away silhouette unless quota allows), `artLiteralness`
-       and `artThumbnail` (low|medium — if honestly "high", re-concept),
-       and `heroAlt`.
+       destination is capped 1-in-5), `artFigurePresentation`
+       (feminine-presenting|masculine-presenting|mixed|none — required
+       on every post, not just `human`-family ones; `none` when no
+       figure is in frame, including a distant/background figure inside
+       an `arch` scene), `artTension` (one sentence: the article's
+       conceptual tension), `artBrief` (the six-slot scene, figures
+       tiny/distant or upright/mid-action, never a lone walking-away
+       silhouette unless quota allows — when a figure appears, state
+       presentation through clothing cut and hair length, e.g. "a
+       fitted blazer and skirt, hair in a low bun" vs. "a fitted blazer
+       and trousers" — never through props like a handbag or jewelry),
+       `artLiteralness` and `artThumbnail` (low|medium — if honestly
+       "high", re-concept), and `heroAlt`.
      CHECK VARIETY FIRST: read `artSignature`/`artAperture` from the 4
      most recently published posts and pick values that don't repeat
      them (no same signature within 4, no same aperture twice running).
+     Do the same for `artFigurePresentation`: it may not repeat the
+     most recent published post's presentation (skip past any `none`/
+     `mixed` posts to find it) — the corpus was 100% masculine-
+     presenting before 2026-08-21, so early runs after that date will
+     almost always need `feminine-presenting`. A paired/group scene
+     defaults to genuinely `mixed` (one of each), not two of the same.
      Do NOT write `heroImage` — that is set by the supervised art pass.
 4. Gate each article: `npm run content:check`, then
    `VERCEL_ENV=production npm run build`. On failure: fix and re-run

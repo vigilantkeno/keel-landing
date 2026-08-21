@@ -18,14 +18,22 @@ const posts = readdirSync(postsDir).map((dir) => {
   return data;
 });
 
-// variety context: the most recent published posts that carry a signature
+// variety context: published posts that carry a signature, oldest first.
+// Aperture/signature checks only ever look at the trailing 4 of this list,
+// but the figure-presentation balance check (v1.2) wants real history —
+// posts that predate the field simply have figurePresentation undefined
+// here, which lint-briefs.mjs correctly excludes from the balance count
+// (not the same as an honest "none" — figure-bearing posts backfilled
+// with their real value in the same PR that introduced this field do
+// count, so the count reflects the corpus, not just future publishes).
 const withArt = posts
   .filter((p) => p.artSignature && p.heroImage)
   .sort((a, b) => order.indexOf(a.slug) - order.indexOf(b.slug));
-const context = withArt.slice(-4).map((p) => ({
+const context = withArt.map((p) => ({
   slug: p.slug,
   apertureType: p.artAperture,
   compositionSignature: p.artSignature,
+  figurePresentation: p.artFigurePresentation,
 }));
 
 // pending: router record present, heroImage absent, published only
@@ -43,6 +51,7 @@ const pending = posts
     orangeRole: p.artOrangeRole,
     literalnessRisk: p.artLiteralness ?? 'low',
     thumbnailRisk: p.artThumbnail ?? 'low',
+    figurePresentation: p.artFigurePresentation ?? 'none',
   }));
 
 if (!pending.length) {
