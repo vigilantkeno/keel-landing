@@ -99,3 +99,5 @@ post that covers it).
 | 2026-08-19 | sales coaching software | sales coaching tools; AI sales coaching software | sales-coaching-software | PUBLISHED |
 | 2026-08-20 | sales lead evaluation framework | sales qualification framework; deal qualification framework; sales opportunity qualification | sales-lead-evaluation-framework | PUBLISHED |
 | 2026-08-20 | sales pipeline health | sales pipeline health metrics | sales-pipeline-health | PUBLISHED |
+| 2026-08-21 | sales forecasting techniques | sales forecasting methods; B2B sales forecasting | sales-forecasting-techniques | PUBLISHED |
+| 2026-08-21 | sales call transcript analysis metrics | sales call rating criteria metrics | sales-call-transcript-analysis-metrics | PUBLISHED |

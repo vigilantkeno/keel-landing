@@ -200,7 +200,9 @@
     {
       "id": "post-call-intelligence",
       "pillar": "ai-call-analysis",
-      "supporting": [],
+      "supporting": [
+        "sales-call-transcript-analysis-metrics"
+      ],
       "intent": "informational",
       "description": "What's actually worth analyzing after a sales call, versus what a scored transcript measures — the rep's own read instead of a talk-ratio number."
     },
@@ -224,6 +226,13 @@
       "supporting": [],
       "intent": "informational",
       "description": "What aggregate pipeline metrics can't catch — individual deals a rep already knows are dead but hasn't marked closed-lost."
+    },
+    {
+      "id": "forecast-clarity",
+      "pillar": "sales-forecasting-techniques",
+      "supporting": [],
+      "intent": "informational",
+      "description": "Forecasting techniques only improve on the honesty of the inputs feeding them — the rep's private read on a deal, before it gets rounded up into a number someone else has to defend."
     }
   ]
 }
