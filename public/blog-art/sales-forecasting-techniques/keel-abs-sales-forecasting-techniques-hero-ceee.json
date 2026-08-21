@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "abs",
+  "slug": "sales-forecasting-techniques",
+  "sourceCandidate": "sales-forecasting-techniques-1-ceee.png",
+  "normalizedAt": "2026-08-21T08:15:55.363Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Roughly twenty thin bone-white lines converging from the frame's edges toward a single point left of center, flat elevation on black with no perspective, even diffuse light with one hard accent at the convergence point, a small ember-orange dot marking exactly where the lines meet and hold, wide empty margin to the right for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Roughly twenty thin bone-white lines converging from the frame's edges toward a single point left of center, flat elevation on black with no perspective, even diffuse light with one hard accent at the convergence point, a small ember-orange dot marking exactly where the lines meet and hold, wide empty margin to the right for headline overlay"
+}
