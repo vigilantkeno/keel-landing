@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "sales-coaching-app",
+  "sourceCandidate": "sales-coaching-app-1-1e08.png",
+  "normalizedAt": "2026-08-22T08:16:06.192Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A phone lying face-up on a car center console at dusk, screen dark except for a single small ember-orange notification dot in the top corner, macro three-quarter crop with the phone's edge running out of frame near the bottom, hard raking light from the passenger window catching the phone's edge, faint bone dot-matrix texture of the console stitching beneath it, wide negative space above for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A phone lying face-up on a car center console at dusk, screen dark except for a single small ember-orange notification dot in the top corner, macro three-quarter crop with the phone's edge running out of frame near the bottom, hard raking light from the passenger window catching the phone's edge, faint bone dot-matrix texture of the console stitching beneath it, wide negative space above for headline overlay"
+}
