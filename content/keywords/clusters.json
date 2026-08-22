@@ -209,7 +209,7 @@
     {
       "id": "rep-first-coaching",
       "pillar": "sales-coaching-software",
-      "supporting": [],
+      "supporting": ["ai-sales-coaching-for-reps", "sales-coaching-app"],
       "intent": "commercial",
       "description": "Sales coaching software built to inform the rep first instead of the manager reviewing them — coaching that lands the same day, not the same quarter."
     },
