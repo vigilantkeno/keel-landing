@@ -101,3 +101,5 @@ post that covers it).
 | 2026-08-20 | sales pipeline health | sales pipeline health metrics | sales-pipeline-health | PUBLISHED |
 | 2026-08-21 | sales forecasting techniques | sales forecasting methods; B2B sales forecasting | sales-forecasting-techniques | PUBLISHED |
 | 2026-08-21 | sales call transcript analysis metrics | sales call rating criteria metrics | sales-call-transcript-analysis-metrics | PUBLISHED |
+| 2026-08-22 | AI sales coaching for reps | AI sales coach; AI coaching for sales reps | ai-sales-coaching-for-reps | PUBLISHED |
+| 2026-08-22 | sales coaching app | mobile sales coaching | sales-coaching-app | PUBLISHED |
