@@ -201,7 +201,8 @@
       "id": "post-call-intelligence",
       "pillar": "ai-call-analysis",
       "supporting": [
-        "sales-call-transcript-analysis-metrics"
+        "sales-call-transcript-analysis-metrics",
+        "call-intelligence-solutions"
       ],
       "intent": "informational",
       "description": "What's actually worth analyzing after a sales call, versus what a scored transcript measures — the rep's own read instead of a talk-ratio number."
@@ -209,7 +210,7 @@
     {
       "id": "rep-first-coaching",
       "pillar": "sales-coaching-software",
-      "supporting": ["ai-sales-coaching-for-reps", "sales-coaching-app"],
+      "supporting": ["ai-sales-coaching-for-reps", "sales-coaching-app", "deal-coaching"],
       "intent": "commercial",
       "description": "Sales coaching software built to inform the rep first instead of the manager reviewing them — coaching that lands the same day, not the same quarter."
     },

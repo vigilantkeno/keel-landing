@@ -103,3 +103,5 @@ post that covers it).
 | 2026-08-21 | sales call transcript analysis metrics | sales call rating criteria metrics | sales-call-transcript-analysis-metrics | PUBLISHED |
 | 2026-08-22 | AI sales coaching for reps | AI sales coach; AI coaching for sales reps | ai-sales-coaching-for-reps | PUBLISHED |
 | 2026-08-22 | sales coaching app | mobile sales coaching | sales-coaching-app | PUBLISHED |
+| 2026-08-23 | deal coaching | AI deal coaching; deal coaching questions; deal coaching framework | deal-coaching | PUBLISHED |
+| 2026-08-23 | call intelligence solutions | call intelligence software; sales call intelligence | call-intelligence-solutions | PUBLISHED |
