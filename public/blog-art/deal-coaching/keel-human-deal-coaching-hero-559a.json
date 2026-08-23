@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "human",
+  "slug": "deal-coaching",
+  "sourceCandidate": "deal-coaching-1-559a.png",
+  "normalizedAt": "2026-08-23T08:15:43.840Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Two silhouetted figures at a small round table in a dim room, one in a fitted blazer-and-trouser cut and one in a fitted blazer-and-skirt cut with hair pulled back, seen from just outside an open doorway at eye level, straight-on elevation, warm raking light from a desk lamp catching an open notebook between them, a single ember-orange panel glowing on a tablet screen face-up on the table, wide negative space to the left of the frame for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Two silhouetted figures at a small round table in a dim room, one in a fitted blazer-and-trouser cut and one in a fitted blazer-and-skirt cut with hair pulled back, seen from just outside an open doorway at eye level, straight-on elevation, warm raking light from a desk lamp catching an open notebook between them, a single ember-orange panel glowing on a tablet screen face-up on the table, wide negative space to the left of the frame for headline overlay"
+}

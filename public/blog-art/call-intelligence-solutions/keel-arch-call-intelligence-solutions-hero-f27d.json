@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "call-intelligence-solutions",
+  "sourceCandidate": "call-intelligence-solutions-1-f27d.png",
+  "normalizedAt": "2026-08-23T08:15:44.917Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A dark server corridor viewed through a large glass interior window from an even darker hallway outside, straight-on elevation, rows of black equipment racks receding in strict perspective, hard cool light spilling from within onto the near glass, a single ember-orange doorway glowing at the far end of the corridor beyond the racks, wide negative space in the foreground hallway for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A dark server corridor viewed through a large glass interior window from an even darker hallway outside, straight-on elevation, rows of black equipment racks receding in strict perspective, hard cool light spilling from within onto the near glass, a single ember-orange doorway glowing at the far end of the corridor beyond the racks, wide negative space in the foreground hallway for headline overlay"
+}
