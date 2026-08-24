@@ -105,3 +105,5 @@ post that covers it).
 | 2026-08-22 | sales coaching app | mobile sales coaching | sales-coaching-app | PUBLISHED |
 | 2026-08-23 | deal coaching | AI deal coaching; deal coaching questions; deal coaching framework | deal-coaching | PUBLISHED |
 | 2026-08-23 | call intelligence solutions | call intelligence software; sales call intelligence | call-intelligence-solutions | PUBLISHED |
+| 2026-08-24 | SaaS sales coaching | one-on-one sales coaching; personal sales coaching | saas-sales-coaching | PUBLISHED |
+| 2026-08-24 | AI to analyze calls | AI to analyze sales calls | ai-to-analyze-calls | PUBLISHED |
