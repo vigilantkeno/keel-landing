@@ -48,6 +48,52 @@
             "profileVisits": null,
             "qualitativeNote": null
           }
+        },
+        {
+          "spec": "truth-the-tape",
+          "sourceClaim": "the-tape",
+          "series": "Sales Truths",
+          "format": "reel",
+          "platform": "instagram",
+          "account": "@getkeel.io",
+          "captionVariant": "instagram",
+          "publishState": "queued",
+          "publishedAt": null,
+          "publisher": "blotato",
+          "postSubmissionId": null,
+          "url": null,
+          "notes": "IG batch 2, post 1 of 2. Warm-up ramp resumed after the 2026-08-03 seed pair. Same publish path as truth-nobody-writes: Blotato accountId 62742, mediaType=reel, cover = final frame, silent, shareToFeed on. Awaiting per-batch founder approval.",
+          "analytics": {
+            "saves": null,
+            "shares": null,
+            "comments": null,
+            "clicks": null,
+            "profileVisits": null,
+            "qualitativeNote": null
+          }
+        },
+        {
+          "spec": "nwtd-unrecordable",
+          "sourceClaim": "the-unrecordable-moment",
+          "series": "Nobody writes this down",
+          "format": "image",
+          "platform": "instagram",
+          "account": "@getkeel.io",
+          "captionVariant": "instagram",
+          "publishState": "queued",
+          "publishedAt": null,
+          "publisher": "pending-path-decision",
+          "postSubmissionId": null,
+          "url": null,
+          "notes": "IG batch 2, post 2 of 2. First 'Nobody writes this down' asset on IG (the series has only run on FB). 1080x1350 feed image. PUBLISH PATH UNRESOLVED: blotato_list_accounts reports IG requiredFields mediaType=story|reel, so a feed image may be rejected; fall back to Meta Business Suite manual rather than downgrading the series to a story. Awaiting per-batch founder approval.",
+          "analytics": {
+            "saves": null,
+            "shares": null,
+            "comments": null,
+            "clicks": null,
+            "profileVisits": null,
+            "qualitativeNote": null
+          }
         }
       ]
     }
