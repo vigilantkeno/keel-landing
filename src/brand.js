@@ -7,14 +7,17 @@ export const OL = "#FF7A3D";
 export const BK = "#0B0B0B";
 export const BK2 = "#0F0F0F";
 
+// The families are defined by next/font in app/layout.jsx, which self-hosts them
+// and exposes each as a CSS variable on <html>. Each var() already carries
+// next/font's metric-adjusted fallback; the name after the comma is a second
+// safety net so a missing variable degrades to the font rather than to nothing.
 export const F = {
-  sans: "'Plus Jakarta Sans',sans-serif",
-  mono: "'DM Mono',monospace",
-  cond: "'Barlow Condensed',sans-serif",
+  sans: "var(--font-sans,'Plus Jakarta Sans'),sans-serif",
+  mono: "var(--font-mono,'DM Mono'),monospace",
+  cond: "var(--font-cond,'Barlow Condensed'),sans-serif",
 };
 
 export const GLOBAL_STYLE = `
-  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
   * { box-sizing:border-box; margin:0; padding:0; }
   @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
   input:focus, select:focus { border-color:#FF5A1F !important; outline:none; }

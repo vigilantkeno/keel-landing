@@ -1,5 +1,29 @@
 import { Analytics } from '@vercel/analytics/react';
+import { Barlow_Condensed, Plus_Jakarta_Sans, DM_Mono } from 'next/font/google';
 import { GLOBAL_STYLE } from '../src/brand';
+
+// Self-hosted at build time. These previously loaded via an @import inside
+// GLOBAL_STYLE, which the preload scanner cannot see: the browser had to parse
+// the inline <style> before it could even request fonts.googleapis.com, then
+// parse THAT before requesting fonts.gstatic.com — a three-level serial chain
+// across two third-party origins, all of it ahead of first paint. next/font
+// downloads the files at build time and serves them from our own origin, so the
+// chain collapses to one level on an already-warm connection.
+//
+// Weights are exactly the ones the app uses; adding one here costs a real file.
+const cond = Barlow_Condensed({
+  subsets: ['latin'], weight: ['800', '900'],
+  display: 'swap', variable: '--font-cond',
+});
+const sans = Plus_Jakarta_Sans({
+  subsets: ['latin'], weight: ['400', '500', '600', '700'],
+  display: 'swap', variable: '--font-sans',
+});
+const mono = DM_Mono({
+  subsets: ['latin'], weight: ['400', '500'],
+  display: 'swap', variable: '--font-mono',
+});
+const FONT_VARS = `${sans.variable} ${mono.variable} ${cond.variable}`;
 
 // Ported verbatim from the CRA public/index.html <head>. Next's metadata API
 // renders these server-side, so crawlers see them without executing JS
@@ -138,10 +162,8 @@ const JSON_LD = `{
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={FONT_VARS}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <style dangerouslySetInnerHTML={{ __html: GLOBAL_STYLE }} />
         <script
           type="application/ld+json"
