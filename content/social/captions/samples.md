@@ -67,7 +67,13 @@ The demo was recorded. The lunch wasn't. Guess where the deal moved.
 
 Meeting bots capture the scheduled parts of selling. Trust gets built in the unscheduled parts — the hallway, the walk to the parking lot, the second coffee.
 
-What's the most important deal moment you never could have recorded?
+The full argument is on the blog — "What Call Recording Can't Capture."
+Link in bio.
+
+*Ending varied per SOCIAL.md ("endings vary… not every caption sells the
+click"): IG post #1 closed on a question, so this one closes on the
+essay. Original question close, held as the alternate: "What's the most
+important deal moment you never could have recorded?"*
 
 **Facebook:**
 Every tool in the conversation-intelligence category shares one blind spot: it can only capture conversations that happen where a bot is welcome.
