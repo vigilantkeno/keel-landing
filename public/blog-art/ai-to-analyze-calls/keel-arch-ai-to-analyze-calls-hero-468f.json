@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "ai-to-analyze-calls",
+  "sourceCandidate": "ai-to-analyze-calls-1-468f.png",
+  "normalizedAt": "2026-08-24T08:14:31.958Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single hairline seam of light dividing a dark room in half, straight-on elevation, the near half in near-black with one ember-orange line traced along the floor seam catching the edge of a plain closed notebook resting beside it, the far half rendered in flat graphite shadow with no visible detail or objects, hard raking light from directly overhead, wide negative space in the upper right of the frame for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single hairline seam of light dividing a dark room in half, straight-on elevation, the near half in near-black with one ember-orange line traced along the floor seam catching the edge of a plain closed notebook resting beside it, the far half rendered in flat graphite shadow with no visible detail or objects, hard raking light from directly overhead, wide negative space in the upper right of the frame for headline overlay"
+}
