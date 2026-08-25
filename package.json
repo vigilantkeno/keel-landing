@@ -22,7 +22,8 @@
     "content:rhythm": "node scripts/content/check-rhythm.mjs",
     "content:angles": "node scripts/content/lint-angles.mjs",
     "content:citations": "node scripts/content/check-citations.mjs",
-    "content:cite": "node scripts/content/cite.mjs"
+    "content:cite": "node scripts/content/cite.mjs",
+    "seo:indexnow": "node scripts/seo/indexnow.mjs"
   },
   "eslintConfig": {
     "extends": [
