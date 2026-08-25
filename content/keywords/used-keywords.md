@@ -107,3 +107,5 @@ post that covers it).
 | 2026-08-23 | call intelligence solutions | call intelligence software; sales call intelligence | call-intelligence-solutions | PUBLISHED |
 | 2026-08-24 | SaaS sales coaching | one-on-one sales coaching; personal sales coaching | saas-sales-coaching | PUBLISHED |
 | 2026-08-24 | AI to analyze calls | AI to analyze sales calls | ai-to-analyze-calls | PUBLISHED |
+| 2026-08-25 | call analytics tools | call analytics software | call-analytics-tools | PUBLISHED |
+| 2026-08-25 | sales conversation intelligence | conversation intelligence for sales | sales-conversation-intelligence | PUBLISHED |

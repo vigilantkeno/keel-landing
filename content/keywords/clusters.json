@@ -202,7 +202,9 @@
       "pillar": "ai-call-analysis",
       "supporting": [
         "sales-call-transcript-analysis-metrics",
-        "call-intelligence-solutions"
+        "call-intelligence-solutions",
+        "call-analytics-tools",
+        "sales-conversation-intelligence"
       ],
       "intent": "informational",
       "description": "What's actually worth analyzing after a sales call, versus what a scored transcript measures — the rep's own read instead of a talk-ratio number."
