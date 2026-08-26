@@ -109,3 +109,5 @@ post that covers it).
 | 2026-08-24 | AI to analyze calls | AI to analyze sales calls | ai-to-analyze-calls | PUBLISHED |
 | 2026-08-25 | call analytics tools | call analytics software | call-analytics-tools | PUBLISHED |
 | 2026-08-25 | sales conversation intelligence | conversation intelligence for sales | sales-conversation-intelligence | PUBLISHED |
+| 2026-08-26 | sales call coaching | — | sales-call-coaching | PUBLISHED |
+| 2026-08-26 | sales call performance | — | sales-call-performance | PUBLISHED |
