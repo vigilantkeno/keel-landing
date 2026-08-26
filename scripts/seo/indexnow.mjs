@@ -58,6 +58,22 @@ async function resolveUrls() {
   return argv.filter((a) => !a.startsWith("--"));
 }
 
+/**
+ * The key file must be reachable and contain exactly the key. Anything else
+ * means the submission would be accepted and then silently dropped.
+ */
+async function keyIsLive(keyLocation, key) {
+  try {
+    const res = await fetch(keyLocation, { redirect: "follow" });
+    if (!res.ok) return { ok: false, why: `returned ${res.status} ${res.statusText}` };
+    const body = (await res.text()).trim();
+    if (body !== key) return { ok: false, why: "is reachable but does not contain the key" };
+    return { ok: true };
+  } catch (err) {
+    return { ok: false, why: `could not be fetched (${err.message})` };
+  }
+}
+
 async function main() {
   const urls = await resolveUrls();
 
@@ -71,13 +87,23 @@ async function main() {
   urls.forEach((u) => console.log(`  ${u}`));
   if (DRY) return console.log("IndexNow: dry run — nothing sent.");
 
+  // Pre-flight. IndexNow answers 202 for "received, key validation pending",
+  // which is indistinguishable from success at the call site — a submission
+  // against a missing key file looks like it worked and is then discarded.
+  const keyLocation = `https://${HOST}/${KEY}.txt`;
+  const live = await keyIsLive(keyLocation, KEY);
+  if (!live.ok) {
+    fail(`refusing to submit — ${keyLocation} ${live.why}.\n` +
+         "The key file must be deployed and serving the key before submissions validate.");
+  }
+
   const res = await fetch(ENDPOINT, {
     method: "POST",
     headers: { "Content-Type": "application/json; charset=utf-8" },
     body: JSON.stringify({
       host: HOST,
       key: KEY,
-      keyLocation: `https://${HOST}/${KEY}.txt`,
+      keyLocation,
       urlList: urls,
     }),
   });

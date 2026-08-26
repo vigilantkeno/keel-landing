@@ -1,0 +1,38 @@
+# Ping IndexNow after a production deploy goes live.
+#
+# Deliberately not part of `next build`: Vercel builds before the new content
+# is reachable, so a build-time ping can send engines to the previous page.
+# `deployment_status` fires once Vercel reports the deployment succeeded,
+# which is the first moment the URLs actually resolve to the new content.
+name: IndexNow
+
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "changed (lastmod window) or sitemap (everything)"
+        required: false
+        default: changed
+        type: choice
+        options: [changed, sitemap]
+
+jobs:
+  submit:
+    # Production successes only. Preview deploys must never be submitted.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       contains(fromJSON('["Production","production"]'), github.event.deployment_status.environment))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Submit changed URLs
+        if: github.event_name != 'workflow_dispatch' || inputs.mode == 'changed'
+        run: node scripts/seo/indexnow.mjs --changed 3
+      - name: Submit every sitemap URL
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'sitemap'
+        run: node scripts/seo/indexnow.mjs --sitemap
