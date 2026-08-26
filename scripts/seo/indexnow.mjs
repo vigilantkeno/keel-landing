@@ -75,7 +75,8 @@ async function keyIsLive(keyLocation, key) {
 }
 
 async function main() {
-  const urls = await resolveUrls();
+  const explicit = !argv.includes("--changed") && !argv.includes("--sitemap");
+  let urls = await resolveUrls();
 
   if (!urls.length) {
     console.log("IndexNow: nothing to submit.");
@@ -83,6 +84,18 @@ async function main() {
   }
   const foreign = urls.filter((u) => !u.startsWith(`https://${HOST}/`));
   if (foreign.length) fail(`URLs must be on https://${HOST}/ — got ${foreign[0]}`);
+
+  // Only announce what is actually deployed. --changed and --sitemap already
+  // read the live sitemap, so they carry this for free; explicitly passed URLs
+  // do not, and a typo or a not-yet-published slug would otherwise send
+  // crawlers to a 404.
+  if (explicit) {
+    const live = (await sitemapUrls()).map((e) => e.loc);
+    const missing = urls.filter((u) => !live.includes(u));
+    for (const u of missing) console.log(`IndexNow: not in the live sitemap, skipping — ${u}`);
+    urls = urls.filter((u) => live.includes(u));
+    if (!urls.length) return console.log("IndexNow: no submittable URLs.");
+  }
 
   urls.forEach((u) => console.log(`  ${u}`));
   if (DRY) return console.log("IndexNow: dry run — nothing sent.");
