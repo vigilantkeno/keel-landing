@@ -111,3 +111,5 @@ post that covers it).
 | 2026-08-25 | sales conversation intelligence | conversation intelligence for sales | sales-conversation-intelligence | PUBLISHED |
 | 2026-08-26 | sales call coaching | — | sales-call-coaching | PUBLISHED |
 | 2026-08-26 | sales call performance | — | sales-call-performance | PUBLISHED |
+| 2026-08-27 | how to measure sales conversation quality and effectiveness | — | how-to-measure-sales-conversation-quality-and-effectiveness | PUBLISHED |
+| 2026-08-27 | inside sales call metrics | — | inside-sales-call-metrics | PUBLISHED |

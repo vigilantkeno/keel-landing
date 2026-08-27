@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "abs",
+  "slug": "inside-sales-call-metrics",
+  "sourceCandidate": "inside-sales-call-metrics-1-0451.png",
+  "normalizedAt": "2026-08-27T08:16:14.358Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Three bands of thin horizontal lines — a dense cluster, a medium cluster, and a single fine line — running left to right and converging toward a small vertical threshold on the right edge, flat elevation, no perspective, black field, bone and periwinkle lines throughout, one ember-orange line marking the point where all three bands meet, wide empty margin on the left for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Three bands of thin horizontal lines — a dense cluster, a medium cluster, and a single fine line — running left to right and converging toward a small vertical threshold on the right edge, flat elevation, no perspective, black field, bone and periwinkle lines throughout, one ember-orange line marking the point where all three bands meet, wide empty margin on the left for headline overlay"
+}

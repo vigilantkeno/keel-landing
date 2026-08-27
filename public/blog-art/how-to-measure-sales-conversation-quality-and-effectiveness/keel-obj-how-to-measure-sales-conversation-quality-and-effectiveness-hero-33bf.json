@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "how-to-measure-sales-conversation-quality-and-effectiveness",
+  "sourceCandidate": "how-to-measure-sales-conversation-quality-and-effectiveness-1-33bf.png",
+  "normalizedAt": "2026-08-27T08:16:13.425Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single printed call-scorecard sheet lying at an angle on a black desk, the sheet split cleanly down the middle between hard raking light and deep shadow, tight three-quarter crop with the top corner running out of frame, one small ember-orange dot glowing in the scoring column brighter than the printed numbers around it, faint bone dot-matrix grid printed across the sheet, left third of the frame left empty for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single printed call-scorecard sheet lying at an angle on a black desk, the sheet split cleanly down the middle between hard raking light and deep shadow, tight three-quarter crop with the top corner running out of frame, one small ember-orange dot glowing in the scoring column brighter than the printed numbers around it, faint bone dot-matrix grid printed across the sheet, left third of the frame left empty for headline overlay"
+}
