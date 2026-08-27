@@ -36,8 +36,22 @@ export default function BlogShell({ eyebrow = "BLOG", title, lead, meta, crumbs,
           <span style={{ fontFamily: F.sans, fontWeight: 600, fontSize: mobile ? 19 : 21,
             letterSpacing: "-0.025em", color: "#FFF" }}>keel</span>
         </a>
-        <a href="/blog" style={{ fontFamily: F.mono, fontSize: 9, color: MICRO,
-          letterSpacing: "0.18em", textDecoration: "none" }}>BLOG</a>
+        <div style={{ display: "flex", alignItems: "center", gap: mobile ? 10 : 20 }}>
+          {!mobile && (
+            <a href="/blog" style={{ fontFamily: F.mono, fontSize: 9, color: MICRO,
+              letterSpacing: "0.18em", textDecoration: "none" }}>BLOG</a>
+          )}
+          <a href="/#cta-email"
+            onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,90,31,0.12)"; }}
+            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; }}
+            style={{ background: "transparent", color: O,
+              border: `1px solid ${O}`, textDecoration: "none",
+              padding: mobile ? "10px 16px" : "11px 22px", fontFamily: F.sans,
+              fontWeight: 700, fontSize: 13, transition: "all 0.15s",
+              letterSpacing: "0.01em", whiteSpace: "nowrap" }}>
+            Apply for Early Access
+          </a>
+        </div>
       </nav>
 
       <main style={{ maxWidth: wide ? 1160 : 720, margin: "0 auto",
