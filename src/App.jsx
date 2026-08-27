@@ -190,6 +190,8 @@ const inputBase = {
   fontFamily:"'Plus Jakarta Sans',sans-serif",
   transition:"border-color 0.15s",
   WebkitAppearance:"none", borderRadius:0,
+  // Anchor targets (/#cta-email) must clear the sticky nav.
+  scrollMarginTop:76,
 };
 
 function Field({ label, children }) {
@@ -223,7 +225,7 @@ function Select({ value, onChange, children, ...rest }) {
    Step 1 — email (fast, low friction)
    Step 2 — qualifying info (company, role, deal load, CRM)
 ──────────────────────────────────────────────────────────────────────────────── */
-export function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
+export function WaitlistForm({ mobile, center, liveCount, onSuccess, inputId }) {
   const [step,   setStep]   = useState(1);
   const [email,  setEmail]  = useState("");
   const [fields, setFields] = useState({
@@ -275,7 +277,7 @@ export function WaitlistForm({ mobile, center, liveCount, onSuccess }) {
         <div style={{ display:"flex", flexDirection: mobile?"column":"row",
           marginBottom:14,
           boxShadow: mobile?"none":`0 0 0 1px #2A2A2A` }}>
-          <input id="cta-email" type="email"
+          <input id={inputId} type="email"
             placeholder="your@company.com"
             value={email}
             onChange={e => setEmail(e.target.value)}
@@ -860,7 +862,7 @@ export default function LandingPage() {
             </div>
             <div style={{ animation:"fadeUp 0.4s ease 1.12s both" }}>
               <WaitlistForm mobile={m} liveCount={liveCount}
-                onSuccess={handleSuccess}/>
+                inputId="cta-email" onSuccess={handleSuccess}/>
             </div>
           </div>
 

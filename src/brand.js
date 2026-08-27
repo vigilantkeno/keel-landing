@@ -21,4 +21,9 @@ export const GLOBAL_STYLE = `
   * { box-sizing:border-box; margin:0; padding:0; }
   @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
   input:focus, select:focus { border-color:#FF5A1F !important; outline:none; }
+  /* iOS Safari auto-zooms any focused field whose font-size is under 16px;
+     !important because field sizes are set inline. 767 matches useMobile(). */
+  @media (max-width:767px) {
+    input, select, textarea { font-size:16px !important; }
+  }
 `;
