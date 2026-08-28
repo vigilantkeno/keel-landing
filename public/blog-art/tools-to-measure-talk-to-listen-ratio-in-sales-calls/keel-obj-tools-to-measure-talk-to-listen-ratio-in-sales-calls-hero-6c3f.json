@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "tools-to-measure-talk-to-listen-ratio-in-sales-calls",
+  "sourceCandidate": "tools-to-measure-talk-to-listen-ratio-in-sales-calls-1-6c3f.png",
+  "normalizedAt": "2026-08-28T08:15:13.134Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A row of file folders standing upright in a black metal drawer, each tab a slightly different height and shade of bone against the dark case, seen straight-on at eye level with the nearest folder's edge running out of frame on the left, hard raking light from above catching the tab edges cleanly, one tab glowing ember-orange brighter and sharper than the rest, wide negative space above the drawer for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A row of file folders standing upright in a black metal drawer, each tab a slightly different height and shade of bone against the dark case, seen straight-on at eye level with the nearest folder's edge running out of frame on the left, hard raking light from above catching the tab edges cleanly, one tab glowing ember-orange brighter and sharper than the rest, wide negative space above the drawer for headline overlay"
+}
