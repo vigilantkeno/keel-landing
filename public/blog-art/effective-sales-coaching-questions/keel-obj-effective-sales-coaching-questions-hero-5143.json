@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "effective-sales-coaching-questions",
+  "sourceCandidate": "effective-sales-coaching-questions-1-5143.png",
+  "normalizedAt": "2026-08-28T14:49:39.183Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A loose fan of index cards spread across a black desk, each card marked with a few quick graphite pencil strokes suggesting handwriting rather than legible words, viewed close-up from a low angle with the nearest card's corner running out of frame at the bottom, hard raking light from the left catching the card edges cleanly, one card's corner lit ember-orange brighter than the rest of the fan, wide negative space to the right of the frame for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A loose fan of index cards spread across a black desk, each card marked with a few quick graphite pencil strokes suggesting handwriting rather than legible words, viewed close-up from a low angle with the nearest card's corner running out of frame at the bottom, hard raking light from the left catching the card edges cleanly, one card's corner lit ember-orange brighter than the rest of the fan, wide negative space to the right of the frame for headline overlay"
+}
