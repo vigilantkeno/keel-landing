@@ -113,3 +113,5 @@ post that covers it).
 | 2026-08-26 | sales call performance | — | sales-call-performance | PUBLISHED |
 | 2026-08-27 | how to measure sales conversation quality and effectiveness | — | how-to-measure-sales-conversation-quality-and-effectiveness | PUBLISHED |
 | 2026-08-27 | inside sales call metrics | — | inside-sales-call-metrics | PUBLISHED |
+| 2026-08-28 | tools to measure talk-to-listen ratio in sales calls | how to measure talk time ratios in sales conversations | tools-to-measure-talk-to-listen-ratio-in-sales-calls | PUBLISHED |
+| 2026-08-28 | effective sales coaching questions | sales coaching checklist | effective-sales-coaching-questions | PUBLISHED |
