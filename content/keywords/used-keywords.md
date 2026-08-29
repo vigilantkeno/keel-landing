@@ -115,3 +115,5 @@ post that covers it).
 | 2026-08-27 | inside sales call metrics | — | inside-sales-call-metrics | PUBLISHED |
 | 2026-08-28 | tools to measure talk-to-listen ratio in sales calls | how to measure talk time ratios in sales conversations | tools-to-measure-talk-to-listen-ratio-in-sales-calls | PUBLISHED |
 | 2026-08-28 | effective sales coaching questions | sales coaching checklist | effective-sales-coaching-questions | PUBLISHED |
+| 2026-08-29 | B2B lead qualification | — | b2b-lead-qualification | PUBLISHED |
+| 2026-08-29 | how to conduct a pipeline review using analytics | — | how-to-conduct-a-pipeline-review-using-analytics | PUBLISHED |
