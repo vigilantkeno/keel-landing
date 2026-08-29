@@ -220,14 +220,14 @@
     {
       "id": "deal-qualification",
       "pillar": "sales-lead-evaluation-framework",
-      "supporting": [],
+      "supporting": ["b2b-lead-qualification"],
       "intent": "informational",
       "description": "Qualifying a lead honestly before it becomes a pipeline entry someone else has to defend — the private read that happens before a scorecard gets involved."
     },
     {
       "id": "pipeline-health",
       "pillar": "sales-pipeline-health",
-      "supporting": [],
+      "supporting": ["how-to-conduct-a-pipeline-review-using-analytics"],
       "intent": "informational",
       "description": "What aggregate pipeline metrics can't catch — individual deals a rep already knows are dead but hasn't marked closed-lost."
     },
