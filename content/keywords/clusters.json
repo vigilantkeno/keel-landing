@@ -227,14 +227,14 @@
     {
       "id": "pipeline-health",
       "pillar": "sales-pipeline-health",
-      "supporting": ["how-to-conduct-a-pipeline-review-using-analytics"],
+      "supporting": ["how-to-conduct-a-pipeline-review-using-analytics", "slow-sales-pipeline"],
       "intent": "informational",
       "description": "What aggregate pipeline metrics can't catch — individual deals a rep already knows are dead but hasn't marked closed-lost."
     },
     {
       "id": "forecast-clarity",
       "pillar": "sales-forecasting-techniques",
-      "supporting": [],
+      "supporting": ["forecast-by-rep"],
       "intent": "informational",
       "description": "Forecasting techniques only improve on the honesty of the inputs feeding them — the rep's private read on a deal, before it gets rounded up into a number someone else has to defend."
     }

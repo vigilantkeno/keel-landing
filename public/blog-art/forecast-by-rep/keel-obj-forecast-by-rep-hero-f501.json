@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "forecast-by-rep",
+  "sourceCandidate": "forecast-by-rep-1-f501.png",
+  "normalizedAt": "2026-08-30T08:13:01.159Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A row of bone-white index cards fanned across a black desk, one card per rep, macro three-quarter crop running out of frame on both sides, hard raking side light from the left, the row split into two uneven groups by a thin black gap, one card in the smaller group carrying a single ember-orange tab standing proud of the stack, right third of the frame left empty for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A row of bone-white index cards fanned across a black desk, one card per rep, macro three-quarter crop running out of frame on both sides, hard raking side light from the left, the row split into two uneven groups by a thin black gap, one card in the smaller group carrying a single ember-orange tab standing proud of the stack, right third of the frame left empty for headline overlay"
+}
