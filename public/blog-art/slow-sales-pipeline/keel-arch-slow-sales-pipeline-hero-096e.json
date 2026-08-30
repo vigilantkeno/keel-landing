@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "slow-sales-pipeline",
+  "sourceCandidate": "slow-sales-pipeline-1-096e.png",
+  "normalizedAt": "2026-08-30T08:13:02.406Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A tall concrete stairwell shaft seen from directly below, looking straight up through five visible landings toward a skylight far above, low-angle vertical viewpoint with strong convergent lines, even cool ambient light on the bare concrete walls, one mid-level landing lit through its own window panel in warm ember-orange while every other landing stays bone-grey, deep black filling the corners of the frame, wide empty margin at the base for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A tall concrete stairwell shaft seen from directly below, looking straight up through five visible landings toward a skylight far above, low-angle vertical viewpoint with strong convergent lines, even cool ambient light on the bare concrete walls, one mid-level landing lit through its own window panel in warm ember-orange while every other landing stays bone-grey, deep black filling the corners of the frame, wide empty margin at the base for headline overlay"
+}
