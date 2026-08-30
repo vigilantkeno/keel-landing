@@ -117,3 +117,5 @@ post that covers it).
 | 2026-08-28 | effective sales coaching questions | sales coaching checklist | effective-sales-coaching-questions | PUBLISHED |
 | 2026-08-29 | B2B lead qualification | — | b2b-lead-qualification | PUBLISHED |
 | 2026-08-29 | how to conduct a pipeline review using analytics | — | how-to-conduct-a-pipeline-review-using-analytics | PUBLISHED |
+| 2026-08-30 | forecast by rep | — | forecast-by-rep | PUBLISHED |
+| 2026-08-30 | slow sales pipeline | stalled pipeline | slow-sales-pipeline | PUBLISHED |
