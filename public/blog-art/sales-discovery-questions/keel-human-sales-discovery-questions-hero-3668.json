@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "human",
+  "slug": "sales-discovery-questions",
+  "sourceCandidate": "sales-discovery-questions-1-3668.png",
+  "normalizedAt": "2026-08-31T08:17:18.247Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Two silhouetted figures seated across a small round table in a tight pool of warm light within a much larger dark room, one in a fitted blazer-and-trouser cut and one in a fitted blazer-and-skirt cut with shoulder-length hair, three-quarter elevation viewpoint, the light contained closely to the table's circle while the rest of the room falls to near-black, a single ember-orange dot glowing on the edge of a closed notebook between them, wide dark margin on the left for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Two silhouetted figures seated across a small round table in a tight pool of warm light within a much larger dark room, one in a fitted blazer-and-trouser cut and one in a fitted blazer-and-skirt cut with shoulder-length hair, three-quarter elevation viewpoint, the light contained closely to the table's circle while the rest of the room falls to near-black, a single ember-orange dot glowing on the edge of a closed notebook between them, wide dark margin on the left for headline overlay"
+}
