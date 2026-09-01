@@ -121,3 +121,5 @@ post that covers it).
 | 2026-08-30 | slow sales pipeline | stalled pipeline | slow-sales-pipeline | PUBLISHED |
 | 2026-08-31 | sales pipeline automation | automated sales pipeline | sales-pipeline-automation | PUBLISHED |
 | 2026-08-31 | sales discovery questions | discovery call questions; B2B sales discovery questions | sales-discovery-questions | PUBLISHED |
+| 2026-09-01 | pipeline forecasting | — | pipeline-forecasting | PUBLISHED |
+| 2026-09-01 | sales discovery process | — | sales-discovery-process | PUBLISHED |

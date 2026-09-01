@@ -29,13 +29,47 @@ exist soon" links, ever. When the generator can fetch, treat
 the committed snapshot.
 
 <!-- ALLOWLIST:BEGIN -->
-**Live as of 2026-08-13** (regenerate: `npm run content:contract`):
+**Live as of 2026-09-01** (regenerate: `npm run content:contract`):
 
 | Path | Piece |
 |---|---|
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
 | `/founders` | CTA target — temporary redirect to `/` until the real page ships |
+| `/blog/sales-discovery-process` | The Sales Discovery Process Most Teams Run Is a Script, Not a Filter |
+| `/blog/pipeline-forecasting` | Pipeline Forecasting: The Model Gets Smarter, the Input Never Does |
+| `/blog/sales-discovery-questions` | Sales Discovery Questions: The Ones That Cost the Prospect Something to Answer |
+| `/blog/sales-pipeline-automation` | Sales Pipeline Automation: What's Safe to Hand to Software, and What Isn't |
+| `/blog/slow-sales-pipeline` | Slow Sales Pipeline: The Bottleneck Is One Stage, Not the Whole Funnel |
+| `/blog/forecast-by-rep` | Forecast By Rep: The Report That Flags a Number, Never the Reason |
+| `/blog/how-to-conduct-a-pipeline-review-using-analytics` | How to Conduct a Pipeline Review Using Analytics Without Losing the Deal in the Dashboard |
+| `/blog/b2b-lead-qualification` | B2B Lead Qualification: The Signals a CRM Field Can't Fake |
+| `/blog/effective-sales-coaching-questions` | Effective Sales Coaching Questions: The Difference Is What They're Actually Testing |
+| `/blog/tools-to-measure-talk-to-listen-ratio-in-sales-calls` | Tools to Measure Talk-to-Listen Ratio in Sales Calls: What Actually Differs Between Them |
+| `/blog/inside-sales-call-metrics` | Inside Sales Call Metrics: What Each Number Actually Measures (and Misses) |
+| `/blog/how-to-measure-sales-conversation-quality-and-effectiveness` | How to Measure Sales Conversation Quality and Effectiveness: The Composite Score Is the Wrong Instrument |
+| `/blog/sales-call-performance` | Sales Call Performance: A Good Score and a Good Call Aren't the Same Thing |
+| `/blog/sales-call-coaching` | Sales Call Coaching: Coaching the Skill Isn't Coaching the Deal |
+| `/blog/sales-conversation-intelligence` | Sales Conversation Intelligence: The Word 'Intelligence' Is Doing the Heavy Lifting |
+| `/blog/call-analytics-tools` | Call Analytics Tools: Three Kinds, and Only One Reports to You |
+| `/blog/ai-to-analyze-calls` | AI to Analyze Calls Is Solving the Wrong Problem |
+| `/blog/saas-sales-coaching` | SaaS Sales Coaching: The One-on-One Version Most Platforms Skip |
+| `/blog/call-intelligence-solutions` | Call Intelligence Solutions: Four Questions Before You Buy One |
+| `/blog/deal-coaching` | Deal Coaching: Why the Moment That Needed It Never Makes the 1:1 |
+| `/blog/sales-coaching-app` | Sales Coaching App: Why Most of Them Aren't Actually Mobile |
+| `/blog/ai-sales-coaching-for-reps` | AI Sales Coaching for Reps: Two Products Share One Name |
+| `/blog/sales-call-transcript-analysis-metrics` | Sales Call Transcript Analysis Metrics: The Numbers and What They Miss |
+| `/blog/sales-forecasting-techniques` | Sales Forecasting Techniques: The One Variable No Formula Fixes (pillar) |
+| `/blog/sales-pipeline-health` | Sales Pipeline Health: The Metric That Never Makes the Dashboard (pillar) |
+| `/blog/sales-lead-evaluation-framework` | Sales Lead Evaluation Framework: Four Questions to Ask Before It Hits Pipeline (pillar) |
+| `/blog/sales-coaching-software` | Sales Coaching Software: Built to Coach You, or Built to Score You (pillar) |
+| `/blog/ai-call-analysis` | AI Call Analysis: What's Actually Worth Analyzing After a Sales Call (pillar) |
+| `/blog/why-sales-reps-quit` | Why Sales Reps Quit: Comp Is the Answer Nobody Has to Argue With |
+| `/blog/how-to-assess-a-deal-honestly` | How to Assess a Deal Honestly: MEDDPICC After the Call Is Already Compromised |
+| `/blog/conference-follow-up-ai` | Conference Follow-Up AI: The Badge Scan Isn't the Problem. The Blank Memory Is. (pillar) |
+| `/blog/customer-ai-trust` | Customer AI Trust: What to Say When They Ask If This Is Being Recorded (pillar) |
+| `/blog/personal-ai-vs-enterprise-ai` | Personal AI vs Enterprise AI: The Sales Floor Already Picked a Winner |
+| `/blog/founder-sales-0-to-1` | Founder Sales 0 to 1: What Gets the First Customer to Say Yes With Nothing to Point To |
 | `/blog/note-taking-for-sales-reps` | Note-Taking for Sales Reps: Why the Notion Template Keeps Going Empty |
 | `/blog/pre-meeting-reflection` | Pre-Meeting Reflection: The Real Prep Happens After the Research Stops (pillar) |
 | `/blog/how-to-bounce-back-from-a-loss` | How to Bounce Back From a Loss Before Your Next Call |

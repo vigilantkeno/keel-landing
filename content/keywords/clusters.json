@@ -220,7 +220,7 @@
     {
       "id": "deal-qualification",
       "pillar": "sales-lead-evaluation-framework",
-      "supporting": ["b2b-lead-qualification"],
+      "supporting": ["b2b-lead-qualification", "sales-discovery-process"],
       "intent": "informational",
       "description": "Qualifying a lead honestly before it becomes a pipeline entry someone else has to defend — the private read that happens before a scorecard gets involved."
     },
@@ -234,7 +234,7 @@
     {
       "id": "forecast-clarity",
       "pillar": "sales-forecasting-techniques",
-      "supporting": ["forecast-by-rep"],
+      "supporting": ["forecast-by-rep", "pipeline-forecasting"],
       "intent": "informational",
       "description": "Forecasting techniques only improve on the honesty of the inputs feeding them — the rep's private read on a deal, before it gets rounded up into a number someone else has to defend."
     }
