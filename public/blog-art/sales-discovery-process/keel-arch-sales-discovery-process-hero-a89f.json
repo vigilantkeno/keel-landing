@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "sales-discovery-process",
+  "sourceCandidate": "sales-discovery-process-1-a89f.png",
+  "normalizedAt": "2026-09-01T08:18:17.548Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single glass-walled meeting room glowing softly in an otherwise vast dark open-plan floor, straight-on elevation shot from across the empty floor, the room's bone-white interior the only lit plane, a small ember-orange panel lit on the wall just inside the doorway, wide dark margin on the left for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single glass-walled meeting room glowing softly in an otherwise vast dark open-plan floor, straight-on elevation shot from across the empty floor, the room's bone-white interior the only lit plane, a small ember-orange panel lit on the wall just inside the doorway, wide dark margin on the left for headline overlay"
+}
