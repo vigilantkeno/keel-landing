@@ -123,3 +123,5 @@ post that covers it).
 | 2026-08-31 | sales discovery questions | discovery call questions; B2B sales discovery questions | sales-discovery-questions | PUBLISHED |
 | 2026-09-01 | pipeline forecasting | — | pipeline-forecasting | PUBLISHED |
 | 2026-09-01 | sales discovery process | — | sales-discovery-process | PUBLISHED |
+| 2026-09-02 | sales pipeline review | sales pipeline review questions | sales-pipeline-review | PUBLISHED |
+| 2026-09-02 | how to prevent pipeline bloat in sales forecasting | — | how-to-prevent-pipeline-bloat-in-sales-forecasting | PUBLISHED |
