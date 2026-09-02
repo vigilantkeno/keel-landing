@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "how-to-prevent-pipeline-bloat-in-sales-forecasting",
+  "sourceCandidate": "how-to-prevent-pipeline-bloat-in-sales-forecasting-1-0c57.png",
+  "normalizedAt": "2026-09-02T08:16:17.271Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A tall stack of index cards fanned across a dark desk, several cards squared and flush, one card near the middle sitting slightly proud and out of alignment with the rest, overhead macro crop running out of frame on three sides, hard raking light from the left, a single ember-orange line struck through the misaligned card, faint bone dot-matrix texture on the desk beneath, bottom third of the frame left empty for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A tall stack of index cards fanned across a dark desk, several cards squared and flush, one card near the middle sitting slightly proud and out of alignment with the rest, overhead macro crop running out of frame on three sides, hard raking light from the left, a single ember-orange line struck through the misaligned card, faint bone dot-matrix texture on the desk beneath, bottom third of the frame left empty for headline overlay"
+}
