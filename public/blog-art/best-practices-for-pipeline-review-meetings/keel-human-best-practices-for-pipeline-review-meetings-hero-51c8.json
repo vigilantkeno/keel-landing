@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "human",
+  "slug": "best-practices-for-pipeline-review-meetings",
+  "sourceCandidate": "best-practices-for-pipeline-review-meetings-1-51c8.png",
+  "normalizedAt": "2026-09-03T08:17:02.205Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Three silhouetted figures seated at a dark conference table seen straight-on from the doorway, two in a fitted blazer-and-trouser cut and one in a fitted blazer-and-skirt cut with longer hair, a lit presentation screen behind them the only bone-white plane in the frame, a single small ember-orange rectangle glowing on the screen, the rest of the room in near-black, right third of the frame left empty for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Three silhouetted figures seated at a dark conference table seen straight-on from the doorway, two in a fitted blazer-and-trouser cut and one in a fitted blazer-and-skirt cut with longer hair, a lit presentation screen behind them the only bone-white plane in the frame, a single small ember-orange rectangle glowing on the screen, the rest of the room in near-black, right third of the frame left empty for headline overlay"
+}
