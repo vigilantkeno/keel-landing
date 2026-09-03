@@ -29,13 +29,17 @@ exist soon" links, ever. When the generator can fetch, treat
 the committed snapshot.
 
 <!-- ALLOWLIST:BEGIN -->
-**Live as of 2026-09-01** (regenerate: `npm run content:contract`):
+**Live as of 2026-09-03** (regenerate: `npm run content:contract`):
 
 | Path | Piece |
 |---|---|
 | `/` | Home (Apply flow) |
 | `/blog` | Blog index |
 | `/founders` | CTA target — temporary redirect to `/` until the real page ships |
+| `/blog/best-practices-for-pipeline-review-meetings` | Best Practices for Pipeline Review Meetings: Most of the List Is Furniture |
+| `/blog/pipeline-coverage-ratio` | Pipeline Coverage Ratio: The 3x Rule Was Never Calculated From Your Numbers |
+| `/blog/how-to-prevent-pipeline-bloat-in-sales-forecasting` | How to Prevent Pipeline Bloat in Sales Forecasting: The Fix Isn't a Smarter Model |
+| `/blog/sales-pipeline-review` | Sales Pipeline Review: The Meeting Is a Report-Out, Not a Diagnosis |
 | `/blog/sales-discovery-process` | The Sales Discovery Process Most Teams Run Is a Script, Not a Filter |
 | `/blog/pipeline-forecasting` | Pipeline Forecasting: The Model Gets Smarter, the Input Never Does |
 | `/blog/sales-discovery-questions` | Sales Discovery Questions: The Ones That Cost the Prospect Something to Answer |

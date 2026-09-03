@@ -227,7 +227,7 @@
     {
       "id": "pipeline-health",
       "pillar": "sales-pipeline-health",
-      "supporting": ["how-to-conduct-a-pipeline-review-using-analytics", "slow-sales-pipeline", "sales-pipeline-review", "how-to-prevent-pipeline-bloat-in-sales-forecasting"],
+      "supporting": ["how-to-conduct-a-pipeline-review-using-analytics", "slow-sales-pipeline", "sales-pipeline-review", "how-to-prevent-pipeline-bloat-in-sales-forecasting", "pipeline-coverage-ratio", "best-practices-for-pipeline-review-meetings"],
       "intent": "informational",
       "description": "What aggregate pipeline metrics can't catch — individual deals a rep already knows are dead but hasn't marked closed-lost."
     },

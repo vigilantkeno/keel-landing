@@ -125,3 +125,5 @@ post that covers it).
 | 2026-09-01 | sales discovery process | — | sales-discovery-process | PUBLISHED |
 | 2026-09-02 | sales pipeline review | sales pipeline review questions | sales-pipeline-review | PUBLISHED |
 | 2026-09-02 | how to prevent pipeline bloat in sales forecasting | — | how-to-prevent-pipeline-bloat-in-sales-forecasting | PUBLISHED |
+| 2026-09-03 | pipeline coverage ratio | — | pipeline-coverage-ratio | PUBLISHED |
+| 2026-09-03 | best practices for pipeline review meetings | — | best-practices-for-pipeline-review-meetings | PUBLISHED |
