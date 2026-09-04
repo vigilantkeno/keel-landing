@@ -127,3 +127,5 @@ post that covers it).
 | 2026-09-02 | how to prevent pipeline bloat in sales forecasting | — | how-to-prevent-pipeline-bloat-in-sales-forecasting | PUBLISHED |
 | 2026-09-03 | pipeline coverage ratio | — | pipeline-coverage-ratio | PUBLISHED |
 | 2026-09-03 | best practices for pipeline review meetings | — | best-practices-for-pipeline-review-meetings | PUBLISHED |
+| 2026-09-04 | sales pipeline optimization | — | sales-pipeline-optimization | PUBLISHED |
+| 2026-09-04 | MEDDIC questions | MEDDIC discovery questions; MEDDPICC questions; best MEDDIC questions | meddic-questions | PUBLISHED |
