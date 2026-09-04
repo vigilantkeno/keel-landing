@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "human",
+  "slug": "meddic-questions",
+  "sourceCandidate": "meddic-questions-1-a9d0.png",
+  "normalizedAt": "2026-09-04T08:21:00.004Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single figure in a fitted suit jacket and trousers, short cropped hair, seen through a glass-walled office at night from the dark corridor outside, seated at a desk checking items on a printed sheet, straight-on elevation, the room's bone-white desk lamp the only lit plane, one small ember-orange indicator dot lit on a device beside the sheet, the outer two-thirds of the frame in near-black, left third empty for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single figure in a fitted suit jacket and trousers, short cropped hair, seen through a glass-walled office at night from the dark corridor outside, seated at a desk checking items on a printed sheet, straight-on elevation, the room's bone-white desk lamp the only lit plane, one small ember-orange indicator dot lit on a device beside the sheet, the outer two-thirds of the frame in near-black, left third empty for headline overlay"
+}
