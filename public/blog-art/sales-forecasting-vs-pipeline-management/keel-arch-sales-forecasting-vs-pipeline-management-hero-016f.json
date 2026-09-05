@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "sales-forecasting-vs-pipeline-management",
+  "sourceCandidate": "sales-forecasting-vs-pipeline-management-1-016f.png",
+  "normalizedAt": "2026-09-05T08:12:13.012Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A corridor split down the middle by a hard architectural seam, left side a row of identical bone-white doors receding in strict perspective, right side opening into a single unlit threshold with an ember-orange doorway glowing at the far end, low three-quarter viewpoint, hard raking light from the left wall, the doorway the only saturated color in the frame, wide dark margin above the seam for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A corridor split down the middle by a hard architectural seam, left side a row of identical bone-white doors receding in strict perspective, right side opening into a single unlit threshold with an ember-orange doorway glowing at the far end, low three-quarter viewpoint, hard raking light from the left wall, the doorway the only saturated color in the frame, wide dark margin above the seam for headline overlay"
+}
