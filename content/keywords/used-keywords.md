@@ -129,3 +129,5 @@ post that covers it).
 | 2026-09-03 | best practices for pipeline review meetings | — | best-practices-for-pipeline-review-meetings | PUBLISHED |
 | 2026-09-04 | sales pipeline optimization | — | sales-pipeline-optimization | PUBLISHED |
 | 2026-09-04 | MEDDIC questions | MEDDIC discovery questions; MEDDPICC questions; best MEDDIC questions | meddic-questions | PUBLISHED |
+| 2026-09-05 | benefits of sales coaching | why sales coaching is important | benefits-of-sales-coaching | PUBLISHED |
+| 2026-09-05 | sales forecasting vs pipeline management | pipeline vs forecast | sales-forecasting-vs-pipeline-management | PUBLISHED |
