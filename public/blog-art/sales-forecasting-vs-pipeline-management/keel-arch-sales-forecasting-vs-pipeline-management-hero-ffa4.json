@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "sales-forecasting-vs-pipeline-management",
+  "sourceCandidate": "sales-forecasting-vs-pipeline-management-1-ffa4.png",
+  "normalizedAt": "2026-09-06T08:13:36.702Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A wide corridor split down its center by a structural concrete beam, the near half lit in flat bone-white light and the far half sinking into near-black, low straight-on elevation, hard raking light entering from a single ember-orange doorway at the end of the dark half, negative space held in the lit near half for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A wide corridor split down its center by a structural concrete beam, the near half lit in flat bone-white light and the far half sinking into near-black, low straight-on elevation, hard raking light entering from a single ember-orange doorway at the end of the dark half, negative space held in the lit near half for headline overlay"
+}
