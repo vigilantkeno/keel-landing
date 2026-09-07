@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "abs",
+  "slug": "sales-forecasting-vs-pipeline-management",
+  "sourceCandidate": "sales-forecasting-vs-pipeline-management-1-0763.png",
+  "normalizedAt": "2026-09-07T08:14:27.464Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Eighteen thin bone-white horizontal lines of varying length flowing left to right and converging through a single narrow ember-orange aperture before fanning out into a smaller, evenly ordered dot grid, flat elevation with no perspective, black field, one line visibly kinked and rerouted before it reaches the aperture, periwinkle used sparingly on two background lines only, wide empty margin on the right for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Eighteen thin bone-white horizontal lines of varying length flowing left to right and converging through a single narrow ember-orange aperture before fanning out into a smaller, evenly ordered dot grid, flat elevation with no perspective, black field, one line visibly kinked and rerouted before it reaches the aperture, periwinkle used sparingly on two background lines only, wide empty margin on the right for headline overlay"
+}
