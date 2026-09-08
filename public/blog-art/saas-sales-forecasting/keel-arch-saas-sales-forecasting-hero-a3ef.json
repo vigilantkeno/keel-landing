@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "saas-sales-forecasting",
+  "sourceCandidate": "saas-sales-forecasting-1-a3ef.png",
+  "normalizedAt": "2026-09-08T08:16:02.574Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A tall narrow stairwell shaft viewed straight up from the base, receding through six evenly spaced landings toward a vanishing point, hard raking light from one side, a single lit ember-orange panel set into the wall at one mid-level landing, the rest of the landings in flat bone-grey shadow, wide dark margin at the base for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A tall narrow stairwell shaft viewed straight up from the base, receding through six evenly spaced landings toward a vanishing point, hard raking light from one side, a single lit ember-orange panel set into the wall at one mid-level landing, the rest of the landings in flat bone-grey shadow, wide dark margin at the base for headline overlay"
+}
