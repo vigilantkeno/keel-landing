@@ -1,0 +1,50 @@
+# Merge the routine's article PR automatically once its build is green.
+#
+# The routine opens a PR every morning. When one sits unmerged, the next
+# day's run re-selects the same top-2 queue rows — used-keywords.md on
+# main never updated — and opens a duplicate of it. That cascade is what
+# produced #114–#117: four PRs carrying two distinct article pairs, three
+# of them closed as redundant. Auto-merge removes the cause, not the
+# symptom: the ledger lands the same day, so tomorrow's run moves on.
+#
+# Scope is claude/** on purpose — the routine's own branch namespace, the
+# same one art.yml keys off. Human branches still merge by hand, so a
+# work-in-progress feature branch is never published just because its
+# preview build went green.
+#
+# "Green" here means the required Vercel status. Vercel runs `next build`,
+# which runs `npm run content:check` first — banned claims, citations,
+# mobile rhythm, the internal-link allowlist, frontmatter and cluster
+# schema. A contract violation still blocks the merge exactly as before.
+#
+# Recorded trade-off (CONTENT_PIPELINE.md §4): the Vercel preview stops
+# being a human review surface. Every mechanical gate is unchanged, but
+# nobody eyeballs the rendered page before it is public. Reverting is one
+# line — delete this file, or unset "Allow auto-merge" on the repo.
+#
+# Trigger is pull_request, not pull_request_target: the routine pushes
+# branches to this repo rather than a fork, so the token already has the
+# write scope, and none of pull_request_target's risks apply.
+
+name: auto-merge
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  enable:
+    if: startsWith(github.event.pull_request.head.ref, 'claude/')
+    runs-on: ubuntu-latest
+    steps:
+      # No checkout — this job only calls the API.
+      - name: Enable auto-merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: gh pr merge "$PR" --auto --merge --repo "$REPO"
