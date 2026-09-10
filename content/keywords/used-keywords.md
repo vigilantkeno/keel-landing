@@ -133,3 +133,5 @@ post that covers it).
 | 2026-09-05 | sales forecasting vs pipeline management | pipeline vs forecast | sales-forecasting-vs-pipeline-management | PUBLISHED |
 | 2026-09-09 | lead qualification checklist | sales qualification checklist | lead-qualification-checklist | PUBLISHED |
 | 2026-09-09 | SaaS sales forecasting | — | saas-sales-forecasting | PUBLISHED |
+| 2026-09-10 | lead qualification questions | qualifying questions; sales qualification questions | lead-qualification-questions | PUBLISHED |
+| 2026-09-10 | how to improve sales forecast accuracy | — | how-to-improve-sales-forecast-accuracy | PUBLISHED |
