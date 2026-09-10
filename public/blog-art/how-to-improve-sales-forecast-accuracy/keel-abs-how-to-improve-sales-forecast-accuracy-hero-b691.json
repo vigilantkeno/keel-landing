@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "abs",
+  "slug": "how-to-improve-sales-forecast-accuracy",
+  "sourceCandidate": "how-to-improve-sales-forecast-accuracy-1-b691.png",
+  "normalizedAt": "2026-09-10T08:14:34.899Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "Twenty thin horizontal lines drifting apart across the left half of the frame, converging sharply through a single narrow ember-orange slot at center, then reassembling into an ordered bone dot grid on the right, flat elevation, no perspective, black field, mostly bone and graphite lines with three ember-orange lines feeding the slot, wide empty margin at the top for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "Twenty thin horizontal lines drifting apart across the left half of the frame, converging sharply through a single narrow ember-orange slot at center, then reassembling into an ordered bone dot grid on the right, flat elevation, no perspective, black field, mostly bone and graphite lines with three ember-orange lines feeding the slot, wide empty margin at the top for headline overlay"
+}
