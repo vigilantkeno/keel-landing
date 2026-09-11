@@ -213,7 +213,7 @@
     {
       "id": "rep-first-coaching",
       "pillar": "sales-coaching-software",
-      "supporting": ["ai-sales-coaching-for-reps", "sales-coaching-app", "deal-coaching", "effective-sales-coaching-questions"],
+      "supporting": ["ai-sales-coaching-for-reps", "sales-coaching-app", "deal-coaching", "effective-sales-coaching-questions", "sales-coaching-plan"],
       "intent": "commercial",
       "description": "Sales coaching software built to inform the rep first instead of the manager reviewing them — coaching that lands the same day, not the same quarter."
     },
@@ -234,7 +234,7 @@
     {
       "id": "forecast-clarity",
       "pillar": "sales-forecasting-techniques",
-      "supporting": ["forecast-by-rep", "pipeline-forecasting", "sales-forecasting-vs-pipeline-management", "saas-sales-forecasting"],
+      "supporting": ["forecast-by-rep", "pipeline-forecasting", "sales-forecasting-vs-pipeline-management", "saas-sales-forecasting", "opportunity-forecasting"],
       "intent": "informational",
       "description": "Forecasting techniques only improve on the honesty of the inputs feeding them — the rep's private read on a deal, before it gets rounded up into a number someone else has to defend."
     }
