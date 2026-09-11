@@ -135,3 +135,5 @@ post that covers it).
 | 2026-09-09 | SaaS sales forecasting | — | saas-sales-forecasting | PUBLISHED |
 | 2026-09-10 | lead qualification questions | qualifying questions; sales qualification questions | lead-qualification-questions | PUBLISHED |
 | 2026-09-10 | how to improve sales forecast accuracy | — | how-to-improve-sales-forecast-accuracy | PUBLISHED |
+| 2026-09-11 | sales coaching plan | — | sales-coaching-plan | PUBLISHED |
+| 2026-09-11 | opportunity forecasting | — | opportunity-forecasting | PUBLISHED |
