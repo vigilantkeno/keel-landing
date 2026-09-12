@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "sales-qualification-process",
+  "sourceCandidate": "sales-qualification-process-1-ace5.png",
+  "normalizedAt": "2026-09-12T08:13:04.712Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single interior wall dividing a room into two equal planes, straight-on elevation, one side lit in flat bone-white light and the other left in near-black shadow, a narrow ember-orange strip of light bleeding through a crack at the base of the dividing wall, no figures in frame, wide negative space along the top third for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single interior wall dividing a room into two equal planes, straight-on elevation, one side lit in flat bone-white light and the other left in near-black shadow, a narrow ember-orange strip of light bleeding through a crack at the base of the dividing wall, no figures in frame, wide negative space along the top third for headline overlay"
+}

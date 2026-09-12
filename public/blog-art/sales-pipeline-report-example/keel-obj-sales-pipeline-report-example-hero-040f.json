@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "sales-pipeline-report-example",
+  "sourceCandidate": "sales-pipeline-report-example-1-040f.png",
+  "normalizedAt": "2026-09-12T08:13:03.781Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A stack of printed pipeline report pages on a dark wood desk, seen from a high three-quarter angle, the top page pulled slightly forward and marked with a single ember-orange index tab at its edge, columns of typed bone-white text visible on the page under one raking desk-lamp light from the left, the rest of the desk and room fading to near-black, no figures in frame, generous negative space to the right for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A stack of printed pipeline report pages on a dark wood desk, seen from a high three-quarter angle, the top page pulled slightly forward and marked with a single ember-orange index tab at its edge, columns of typed bone-white text visible on the page under one raking desk-lamp light from the left, the rest of the desk and room fading to near-black, no figures in frame, generous negative space to the right for headline overlay"
+}

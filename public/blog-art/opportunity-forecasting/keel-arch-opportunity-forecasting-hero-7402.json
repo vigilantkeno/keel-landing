@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "arch",
+  "slug": "opportunity-forecasting",
+  "sourceCandidate": "opportunity-forecasting-1-7402.png",
+  "normalizedAt": "2026-09-12T08:13:02.679Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A long, narrow concrete corridor receding to a single lit doorway at the far end, straight-on elevation, no figures in frame, late-afternoon raking light entering from a high side window and cutting hard shadow bars across the floor, the doorway at the end glowing ember-orange as the only saturated color in the frame, walls otherwise bare near-black concrete, generous negative space along the top third for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A long, narrow concrete corridor receding to a single lit doorway at the far end, straight-on elevation, no figures in frame, late-afternoon raking light entering from a high side window and cutting hard shadow bars across the floor, the doorway at the end glowing ember-orange as the only saturated color in the frame, walls otherwise bare near-black concrete, generous negative space along the top third for headline overlay"
+}
