@@ -137,3 +137,5 @@ post that covers it).
 | 2026-09-10 | how to improve sales forecast accuracy | — | how-to-improve-sales-forecast-accuracy | PUBLISHED |
 | 2026-09-11 | sales coaching plan | — | sales-coaching-plan | PUBLISHED |
 | 2026-09-11 | opportunity forecasting | — | opportunity-forecasting | PUBLISHED |
+| 2026-09-12 | sales pipeline report example | what is a pipeline report | sales-pipeline-report-example | PUBLISHED |
+| 2026-09-12 | sales qualification process | — | sales-qualification-process | PUBLISHED |
