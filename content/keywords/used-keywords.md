@@ -139,3 +139,5 @@ post that covers it).
 | 2026-09-11 | opportunity forecasting | — | opportunity-forecasting | PUBLISHED |
 | 2026-09-12 | sales pipeline report example | what is a pipeline report | sales-pipeline-report-example | PUBLISHED |
 | 2026-09-12 | sales qualification process | — | sales-qualification-process | PUBLISHED |
+| 2026-09-13 | sales coaching framework | — | sales-coaching-framework | PUBLISHED |
+| 2026-09-13 | account-based forecasting | — | account-based-forecasting | PUBLISHED |
