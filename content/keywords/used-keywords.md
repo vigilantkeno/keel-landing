@@ -141,3 +141,5 @@ post that covers it).
 | 2026-09-12 | sales qualification process | — | sales-qualification-process | PUBLISHED |
 | 2026-09-13 | sales coaching framework | — | sales-coaching-framework | PUBLISHED |
 | 2026-09-13 | account-based forecasting | — | account-based-forecasting | PUBLISHED |
+| 2026-09-14 | lead qualification framework | — | lead-qualification-framework | PUBLISHED |
+| 2026-09-14 | forecast accuracy formula | sales forecast accuracy; how to calculate forecast accuracy | forecast-accuracy-formula | PUBLISHED |
