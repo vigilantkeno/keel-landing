@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "abs",
+  "slug": "forecast-accuracy-formula",
+  "sourceCandidate": "forecast-accuracy-formula-1-f6a0.png",
+  "normalizedAt": "2026-09-14T08:17:42.912Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single tall vertical line running the full height of the frame on black, flat elevation, no perspective, the line bending slightly right above the midpoint and slightly left below it, a small ember-orange dot marking the exact point where the two bends cross back to center, the rest of the line in flat bone-white, wide empty margins on both sides for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single tall vertical line running the full height of the frame on black, flat elevation, no perspective, the line bending slightly right above the midpoint and slightly left below it, a small ember-orange dot marking the exact point where the two bends cross back to center, the rest of the line in flat bone-white, wide empty margins on both sides for headline overlay"
+}

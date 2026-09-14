@@ -1,0 +1,37 @@
+{
+  "styleVersion": "keel_illustration_v1",
+  "family": "obj",
+  "slug": "lead-qualification-framework",
+  "sourceCandidate": "lead-qualification-framework-1-9166.png",
+  "normalizedAt": "2026-09-14T08:17:42.229Z",
+  "master": {
+    "width": 1536,
+    "height": 864
+  },
+  "shipped": {
+    "hero": [
+      1440,
+      810
+    ],
+    "card": [
+      800,
+      533
+    ],
+    "og": [
+      1200,
+      630
+    ]
+  },
+  "blackPoint": {
+    "measuredMin": 0,
+    "mappedTo": 11
+  },
+  "emberTarget": "#FF5A1F",
+  "grain": 0.02,
+  "grainAppliedAt": "ship",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "quality": "medium",
+  "prompt": "A single scoring card lying on a black desk, tight overhead crop with the edges of the card running out of frame on three sides, one raking light source from the upper left, three checkbox rows printed in flat bone-white with the middle box filled in solid ember-orange, the other two boxes left empty outlines, no figures in frame, wide negative space in the lower right for headline overlay, modern editorial poster illustration, flat screen-print planes with fine paper grain, near-black #0B0B0B ground, bone #EDE7DC lit plane, single saturated ember-orange #FF5A1F accent, optional periwinkle #6E86D6 secondary, hard-edged directional light, thin precise linework, generous negative space, restrained corporate mood, slightly uncanny, no text, no logos, no faces",
+  "slots": "A single scoring card lying on a black desk, tight overhead crop with the edges of the card running out of frame on three sides, one raking light source from the upper left, three checkbox rows printed in flat bone-white with the middle box filled in solid ember-orange, the other two boxes left empty outlines, no figures in frame, wide negative space in the lower right for headline overlay"
+}
