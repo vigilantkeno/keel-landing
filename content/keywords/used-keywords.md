@@ -143,3 +143,5 @@ post that covers it).
 | 2026-09-13 | account-based forecasting | — | account-based-forecasting | PUBLISHED |
 | 2026-09-14 | lead qualification framework | — | lead-qualification-framework | PUBLISHED |
 | 2026-09-14 | forecast accuracy formula | sales forecast accuracy; how to calculate forecast accuracy | forecast-accuracy-formula | PUBLISHED |
+| 2026-09-14 | sales forecast calculator | — | sales-forecast-calculator | PUBLISHED |
+| 2026-09-14 | deal qualification checklist | how to qualify a sales opportunity | deal-qualification-checklist | PUBLISHED |
